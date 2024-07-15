@@ -400,10 +400,10 @@
   #cs-navigation .cs-ul {
     width: auto;
     min-width: 100vw;
-    height: 65vh;
+    height: 100vh;
     margin: 0;
     /* 28px - 40px */
-    padding: 8rem clamp(1.75rem, 3vw, 2.5rem) 5.125rem 1.25rem;
+    padding: 8rem clamp(1.75rem, 3vw, 2.5rem) 11.375rem 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

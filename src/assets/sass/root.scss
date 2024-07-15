@@ -485,11 +485,11 @@
         .cs-ul {
             width: auto;
             min-width: 100vw;
-            height: 65vh;
+            height: 100vh;
             margin: 0;
             /* 28px - 40px */
             padding: calc(128 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem)
-                calc(82 / 16 * 1rem) calc(20 / 16 * 1rem);
+                calc(182 / 16 * 1rem) calc(20 / 16 * 1rem);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
