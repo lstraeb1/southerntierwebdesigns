@@ -322,28 +322,31 @@
         background-color: #fff;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         position: fixed;
-        z-index: 10000;
+        z-index: 2;
 
-        &:before {
-            opacity: 0;
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0; /* Start from the right */
-            bottom: 0;
-            width: 0; /* Start with width 0 */
-            background-color: var(--secondary);
-            transition: width 0.4s ease, opacity 0.3s;
-            z-index: -1; /* Ensure it is behind the main content */
-        }
+        // &:before {
+        //     opacity: 0;
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0; /* Start from the right */
+        //     bottom: 0;
+        //     width: 0; /* Start with width 0 */
+        //     background-color: var(--secondary);
+        //     transition: width 0.8s ease, opacity 0.3s;
+        //     z-index: -1; /* Ensure it is behind the main content */
+        // }
 
         &.cs-active {
-            &:before {
-                width: 100%; /* Slide to full width */
-                opacity: 1;
+            .cs-logo {
+                /* makes it turn white */
+                filter: grayscale(1) brightness(1000%);
+                // transition-delay: 0.8s;
+                transform: rotateY(360deg);
             }
 
             .cs-ul-wrapper {
+                z-index: 3;
                 opacity: 1;
                 transform: scaleX(1);
                 // transition-delay: 0.2s;
@@ -375,6 +378,7 @@
             justify-content: center;
             align-items: center;
             z-index: 10;
+            transition: transform 0.8s, filter 0.8s;
 
             img {
                 width: 100%;
@@ -423,6 +427,7 @@
             /* 14px - 16px */
             height: clamp(1.15rem, 1.75vw, 1.3rem);
             position: relative;
+            z-index: 4;
         }
 
         .cs-line {
@@ -466,14 +471,15 @@
             // box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
             opacity: 0;
             position: absolute;
-            top: 100%;
+            top: 0%;
             right: 0;
             left: auto;
             z-index: -1;
             // overflow: hidden;
             transform: scaleX(0);
-            transition: transform 0.4s, opacity 0.3s;
+            transition: transform 0.8s, opacity 0.3s;
             transform-origin: top right;
+            z-index: 1000
         }
 
         .cs-ul {
@@ -482,8 +488,8 @@
             height: 65vh;
             margin: 0;
             /* 28px - 40px */
-            padding: calc(68 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem)
-                calc(32 / 16 * 1rem) calc(30 / 16 * 1rem);
+            padding: calc(128 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem)
+                calc(82 / 16 * 1rem) calc(20 / 16 * 1rem);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
