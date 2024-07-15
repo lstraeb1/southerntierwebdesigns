@@ -323,7 +323,6 @@
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         position: fixed;
         z-index: 10000;
-        transition-delay: 0.2s;
 
         &:before {
             opacity: 0;
@@ -334,7 +333,7 @@
             bottom: 0;
             width: 0; /* Start with width 0 */
             background-color: var(--secondary);
-            transition: width 0.4s, opacity 0.3s;
+            transition: width 0.4s ease, opacity 0.3s;
             z-index: -1; /* Ensure it is behind the main content */
         }
 
