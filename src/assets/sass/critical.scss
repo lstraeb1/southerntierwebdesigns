@@ -79,7 +79,7 @@
         .cs-divider1 {
             position: absolute;
             bottom: -1px;
-            left: 0;
+            left: -1px;
             width: 100%;
             overflow: hidden;
             line-height: 0;
@@ -92,6 +92,7 @@
 
                 .cls-3 {
                     fill: #FFFFFF;
+                    transition: 0.3s ease;
                 }
 
                 .cls-2, .cls-1 {
@@ -181,7 +182,7 @@
     }
 }
 
-/* Large Desktop - 1024px */
+/* Laptop - 1024px */
 @media only screen and (min-width: 64rem) {
     #hero-408 {
         /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
@@ -233,6 +234,30 @@
         /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
         padding: calc(264/16 * 1rem);
         padding-bottom: 30vw;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-408 {
+            .cs-title,
+            .cs-text,
+            .cs-header,
+            .cs-button-transparent {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-logo {
+                filter: grayscale(1) brightness(400%);
+            }
+
+            .cs-divider1 {
+                .cls-3 {
+                    fill: var(--dark);
+                }
+            }
+        }
     }
 }
 
