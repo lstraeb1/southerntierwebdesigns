@@ -100,3 +100,12 @@ document.addEventListener("keydown", (event) => {
         toggleMenu();
     }
 });
+
+document.addEventListener('scroll', () => {
+    const nav = document.getElementById('cs-navigation');
+    if (window.scrollY > 0) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+});

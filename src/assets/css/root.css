@@ -36,10 +36,14 @@
     margin: 0 0 1rem 0;
     max-width: 43.75rem;
     font-size: var(--headerFontSize);
+    font-family: "Anton";
     line-height: 1.2em;
     font-weight: 400;
-    color: #FFFFFF;
+    color: #000;
     text-align: inherit;
+  }
+  .alt-title {
+    color: var(--primary);
   }
   .alt-text {
     color: var(--primary);
@@ -201,7 +205,7 @@
     width: 2.5em;
     height: 1.25em;
     position: absolute;
-    top: 1.375rem;
+    top: 1.5rem;
     right: 4.375rem;
     z-index: 1000;
     overflow: hidden;
@@ -221,6 +225,7 @@
     right: 0;
     bottom: 0;
     background-color: rgb(75, 73, 74);
+    box-shadow: inset 2px 2px 2px rgb(46, 45, 45);
     transition: 0.4s;
     border-radius: 30px;
   }
@@ -231,7 +236,7 @@
     width: 1em;
     border-radius: 20px;
     left: 0.15em;
-    bottom: 0.16em;
+    bottom: 0.1em;
     background-color: black;
     box-shadow: inset 4px -2px 0 0 white;
     transition: 0.4s;
@@ -271,10 +276,26 @@
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     padding: 0.75rem 1rem;
-    background-color: #fff;
+    background-color: none;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 2;
+  }
+  #cs-navigation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: opacity 0.4s ease-in-out, color 0.3s ease-in-out;
+    z-index: -1;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+  }
+  #cs-navigation.scrolled::after {
+    opacity: 0.9;
   }
   #cs-navigation.cs-active .cs-logo {
     /* makes it turn white */
@@ -354,7 +375,7 @@
   }
   #cs-navigation .cs-line {
     width: 100%;
-    height: 2px;
+    height: 3px;
     background-color: var(--primary);
     border-radius: 2px;
     position: absolute;
@@ -362,7 +383,7 @@
     transform: translateX(-50%);
   }
   #cs-navigation .cs-line1 {
-    top: 0;
+    top: 20%;
     transition: transform 0.5s, top 0.3s, left 0.3s;
     animation-duration: 0.7s;
     animation-timing-function: ease;
@@ -371,7 +392,7 @@
     transform-origin: center;
   }
   #cs-navigation .cs-line2 {
-    top: 50%;
+    top: 80%;
     transform: translateX(-50%) translateY(-50%);
     transition: top 0.3s, left 0.3s, transform 0.5s;
     animation-duration: 0.7s;
@@ -382,10 +403,11 @@
   #cs-navigation .cs-line3 {
     bottom: 0;
     transition: bottom 0.3s, opacity 0.3s;
+    display: none;
   }
   #cs-navigation .cs-ul-wrapper {
     height: 100vh;
-    background-color: var(--secondary);
+    background-color: #000;
     opacity: 0;
     position: absolute;
     top: 0%;
@@ -420,7 +442,7 @@
     /* transition from these values */
     transform: translateX(-2.5rem);
     transition: transform 0.6s, opacity 0.9s;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid #fff;
     padding-bottom: 1rem;
   }
   #cs-navigation .cs-li:nth-of-type(1) {
@@ -682,6 +704,30 @@
     position: fixed;
     z-index: 10000;
   }
+  #cs-navigation::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    transition: opacity 0.4s ease-in-out, color 0.3s ease-in-out;
+    z-index: -1;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+  }
+  #cs-navigation.scrolled::after {
+    opacity: 0.9;
+  }
+  #cs-navigation.scrolled .cs-logo {
+    /* makes it turn white */
+    filter: grayscale(1) brightness(1000%);
+    transform: rotateY(360deg);
+  }
+  #cs-navigation.scrolled .cs-li-link.cs-active {
+    color: var(--primary);
+  }
   #cs-navigation .cs-container {
     width: 100%;
     max-width: 80rem;
@@ -689,7 +735,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 1.5rem;
+    gap: 14rem;
   }
   #cs-navigation .cs-toggle {
     display: none;
@@ -705,6 +751,7 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
+    transition: transform 0.4s;
   }
   #cs-navigation .cs-logo img {
     width: 100%;
@@ -749,9 +796,6 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 64rem) {
-  body.dark-mode #cs-navigation {
-    background-color: var(--dark);
-  }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it turn white */
     filter: grayscale(1) brightness(1000%);

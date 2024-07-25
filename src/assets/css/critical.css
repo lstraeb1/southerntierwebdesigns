@@ -48,6 +48,7 @@
   #hero-408 .cs-text {
     margin-bottom: 2rem;
     font-weight: normal;
+    font-family: "Work Sans";
   }
   #hero-408 .cs-stat-group {
     width: 100%;
@@ -156,17 +157,17 @@
     display: none;
   }
 }
-/* Laptop - 1024px */
+/* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #hero-408 {
     /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-    padding-bottom: 34vw;
+    padding-bottom: 38vw;
   }
   #hero-408 .cs-content {
     width: 100%;
   }
   #hero-408 .cs-stat-group {
-    width: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -210,6 +211,21 @@
   body.dark-mode #hero-408 .cs-header,
   body.dark-mode #hero-408 .cs-button-transparent {
     color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #hero-408:before {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Black Color Overlay */
+    content: "";
+    opacity: 0.7;
+    display: block;
+    background: #15161d;
+    height: 100%;
+    width: 100%;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
   }
   body.dark-mode #hero-408 .cs-logo {
     filter: grayscale(1) brightness(400%);
