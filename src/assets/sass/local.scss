@@ -568,7 +568,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
     }
@@ -817,5 +817,161 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---        Get To Know         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #hero-1426 {
+        /* Centers button */
+        padding: var(--sectionPadding);
+        text-align: center;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                opacity: 0.6;
+            }
+
+            &:before {
+                content: "";
+                background: url("/assets/images/concrete_debris_019_0000 copy.png");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+                height: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+                transform: rotate(145deg);
+                opacity: 0.4;
+                position: absolute;
+                top: -100px; /* Lock to the top */
+                right: -100px; /* Lock to the right */
+                z-index: 1; /* Ensure it is above other content */
+                pointer-events: none; /* Prevent interaction */
+            }
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: calc(48 / 16 * 1rem);
+        }
+
+        .cs-content {
+            width: 100%;
+            max-width: calc(630 / 16 * 1rem);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .cs-picture {
+            width: 100%;
+            margin: calc(64 / 16 * 1rem) auto;
+            max-width: calc(350 / 16 * 1rem);
+            min-height: calc(362 / 16 * 1rem);
+            border-radius: 30% 70% 38% 62% / 48% 30% 70% 52%
+            ;
+            /* clips img tag corners */
+            overflow: hidden;
+            display: block;
+            position: relative;
+            z-index: 1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+
+        .cs-h2 {
+            font-family: "Anton";
+            font-weight: 800;
+            color: var(--secondary-alt);
+        }
+
+        .cs-h3 {
+            font-size: var(--bodyFontSize);
+            margin-bottom: calc(24 / 16 * 1rem);
+        }
+
+        
+        .cs-button-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            gap: calc(48 / 16 * 1rem);
+            height: auto; /* Adjust based on your layout needs */
+
+            .social-link {
+                img {
+                    transition: transform 0.4s ease;
+                    width: calc(48 / 16 * 1rem);
+                    height: auto;
+                    animation: bounce 1s infinite; /* 1s duration, infinite repeats */
+                    &:hover {
+                        transform: scale(1.25);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #hero-1426 {
+        .cs-background {
+
+            &:before {
+                top: -500px;
+                right: 10px;
+                width: 70%;
+                height: 100%;    
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 84rem) {
+    #hero-1426 {
+        .cs-background {
+            &:before {
+                top: -200px;
+                right: -200PX;
+            }
+        }
+    }
+}
+                                
                                 
                                 

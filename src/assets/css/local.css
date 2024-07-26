@@ -495,7 +495,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 /* Small Desktop - 1024px */
@@ -700,6 +700,133 @@
   }
   #gallery-1752 .cs-item:nth-of-type(4), #gallery-1752 .cs-item:nth-of-type(5) {
     grid-column: span 4;
+  }
+}
+/*-- -------------------------- -->
+<---        Get To Know         -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-1426 {
+    /* Centers button */
+    padding: var(--sectionPadding);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-1426 .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  #hero-1426 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+  #hero-1426 .cs-background:before {
+    content: "";
+    background: url("/assets/images/concrete_debris_019_0000 copy.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 37.5rem; /* Specify fixed size or use % based on the image size */
+    height: 37.5rem; /* Specify fixed size or use % based on the image size */
+    transform: rotate(145deg);
+    opacity: 0.4;
+    position: absolute;
+    top: -100px; /* Lock to the top */
+    right: -100px; /* Lock to the right */
+    z-index: 1; /* Ensure it is above other content */
+    pointer-events: none; /* Prevent interaction */
+  }
+  #hero-1426 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  #hero-1426 .cs-content {
+    width: 100%;
+    max-width: 39.375rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #hero-1426 .cs-picture {
+    width: 100%;
+    margin: 4rem auto;
+    max-width: 21.875rem;
+    min-height: 22.625rem;
+    border-radius: 30% 70% 38% 62%/48% 30% 70% 52%;
+    /* clips img tag corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-1426 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  #hero-1426 .cs-h2 {
+    font-family: "Anton";
+    font-weight: 800;
+    color: var(--secondary-alt);
+  }
+  #hero-1426 .cs-h3 {
+    font-size: var(--bodyFontSize);
+    margin-bottom: 1.5rem;
+  }
+  #hero-1426 .cs-button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 3rem;
+    height: auto; /* Adjust based on your layout needs */
+  }
+  #hero-1426 .cs-button-group .social-link img {
+    transition: transform 0.4s ease;
+    width: 3rem;
+    height: auto;
+    animation: bounce 1s infinite; /* 1s duration, infinite repeats */
+  }
+  #hero-1426 .cs-button-group .social-link img:hover {
+    transform: scale(1.25);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #hero-1426 .cs-background:before {
+    top: -500px;
+    right: 10px;
+    width: 70%;
+    height: 100%;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 84rem) {
+  #hero-1426 .cs-background:before {
+    top: -200px;
+    right: -200PX;
   }
 }
 
