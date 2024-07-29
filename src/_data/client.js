@@ -1,13 +1,13 @@
 module.exports = {
     "name": "Southern Tier Web Designs",
-    "email": "-",
+    "email": "liam@southerntierwebdesigns.com",
     "phoneForTel": "845-754-6086",
     "phoneFormatted": "(845) 754-6086",
     "address": {
-        "lineOne": "36 Farr Ave",
-        "city": "Johnson City",
+        "lineOne": "238 West Main St.",
+        "city": "Port Jervis",
         "state": "NY",
-        "zip": "13790",
+        "zip": "12771",
         "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
     },
     "socials": {
