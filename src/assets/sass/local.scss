@@ -40,6 +40,10 @@
             grid-template-columns: repeat(12, 1fr);
             /* 16px - 20px */
             gap: clamp(1rem, 2.3vw, 1.25rem);
+            border: 1px solid #e8e8e8;
+            border-bottom: 4px solid var(--primary);
+            // border-radius: calc(16 / 16 * 1rem);
+            box-shadow: 12px 22px 12px #EEEEEE;
         }
 
         .cs-item {
@@ -50,8 +54,6 @@
             /* 24px - 32px */
             padding: clamp(1.5rem, 3vw, 2rem);
             background-color: #fff;
-            border: 1px solid #e8e8e8;
-            border-radius: calc(16 / 16 * 1rem);
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
             grid-column: span 12;
@@ -62,17 +64,6 @@
             justify-content: center;
             position: relative;
             z-index: 1;
-            transition:
-                box-shadow 0.3s,
-                border-color 0.3s;
-
-            &:hover {
-                box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.12);
-                border-color: transparent;
-                .cs-h3 {
-                    color: var(--primary);
-                }
-            }
         }
 
         .cs-image-group {
@@ -158,6 +149,51 @@
     }
 }
 
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-1130 {
+            .cs-item {
+                background-color: var(--dark);
+                border-color: rgba(255, 255, 255, 0.2);
+
+                &:hover {
+                    .cs-h3 {
+                        color: var(--secondary);
+                    }
+                }
+            }
+
+            .cs-topper {
+                color: var(--secondary);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-icon {
+                filter: grayscale(0.5) brightness(1000%);
+            }
+
+            .cs-graphic {
+                opacity: 0.7;
+            }
+
+            .cs-card-group {
+                box-shadow: 12px 22px 12px #181818;
+            }
+        }
+    }
+}
+
 /*-- -------------------------- -->
 <---           Stats            -->
 <--- -------------------------- -*/
@@ -166,6 +202,39 @@
 @media only screen and (min-width: 0rem) {
     #stats-1643 {
         padding: var(--sectionPadding);
+        position: relative;
+
+        &:before {
+            content: "";
+            background: url("/assets/images/featured-service-debris.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+            height: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+            transform: rotate(220deg);
+            opacity: 0.4;
+            position: absolute;
+            bottom: -100px; /* Lock to the top */
+            right: -300px; /* Lock to the right */
+            z-index: -1; /* Ensure it is above other content */
+            pointer-events: none; /* Prevent interaction */
+        }
+
+        &:after {
+            content: "";
+            background: url("/assets/images/featured-service-debris-bottom.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+            height: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+            transform: rotate(50deg);
+            opacity: 0.4;
+            position: absolute;
+            top: -100px; /* Lock to the top */
+            left: -200px; /* Lock to the right */
+            z-index: -1; /* Ensure it is above other content */
+            pointer-events: none; /* Prevent interaction */
+        }
 
         .cs-container {
             width: 100%;
@@ -430,6 +499,28 @@
     }
 }
 
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #stats-1643 {
+            .cs-title,
+            .cs-text,
+            .cs-item-text,
+            .cs-h3,
+            .cs-number,
+            .cs-desc {
+                color: var(--bodyTextColorWhite);
+            }
+            .cs-text,
+            .cs-item-text,
+            .cs-desc {
+                opacity: .8;
+            }
+        }
+    }
+}
+                                
+
 /*-- -------------------------- -->
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
@@ -590,6 +681,29 @@
             width: 55%;
             /* sends it to the right in the 2nd position */
             order: 2;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbsr-1444 {
+            .cs-title,
+            .cs-text,
+            .cs-li,
+            .cs-h3, 
+            .cs-li-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-li-text, .cs-text {
+                opacity: .8;
+            }
+
+            .cs-li-picture {
+                background-color: var(--dark);
+            }
         }
     }
 }
@@ -968,6 +1082,28 @@
     }
 }
 
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-1426 {
+            .dark-hide {
+                display: none;
+            }
+
+            .cs-h2 {
+                color: #FFFFFF;
+            }
+
+            .cs-background {
+                &:before {
+                    opacity: 0.72;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
 /*-- -------------------------- -->
 <---         Why Choose         -->
 <--- -------------------------- -*/
@@ -1192,6 +1328,36 @@
         }
     }
 }
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #why-choose-1571 {
+            background-color: var(--dark);
+
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item-text {
+                opacity: 0.8;
+            }
+
+            .cs-background {
+                opacity: .3;
+                filter: brightness(30%);
+            }
+        }
+    }
+}
+                                
                                 
 /*-- -------------------------- -->
 <---          Pricing           -->

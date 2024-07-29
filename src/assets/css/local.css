@@ -36,6 +36,9 @@
     grid-template-columns: repeat(12, 1fr);
     /* 16px - 20px */
     gap: clamp(1rem, 2.3vw, 1.25rem);
+    border: 1px solid #e8e8e8;
+    border-bottom: 4px solid var(--primary);
+    box-shadow: 12px 22px 12px #EEEEEE;
   }
   #services-1130 .cs-item {
     width: 100%;
@@ -45,8 +48,6 @@
     /* 24px - 32px */
     padding: clamp(1.5rem, 3vw, 2rem);
     background-color: #fff;
-    border: 1px solid #e8e8e8;
-    border-radius: 1rem;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     grid-column: span 12;
@@ -57,14 +58,6 @@
     justify-content: center;
     position: relative;
     z-index: 1;
-    transition: box-shadow 0.3s, border-color 0.3s;
-  }
-  #services-1130 .cs-item:hover {
-    box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.12);
-    border-color: transparent;
-  }
-  #services-1130 .cs-item:hover .cs-h3 {
-    color: var(--primary);
   }
   #services-1130 .cs-image-group {
     width: 6.25rem;
@@ -136,6 +129,37 @@
     grid-column: span 3;
   }
 }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #services-1130 .cs-item {
+    background-color: var(--dark);
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+  body.dark-mode #services-1130 .cs-item:hover .cs-h3 {
+    color: var(--secondary);
+  }
+  body.dark-mode #services-1130 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #services-1130 .cs-title,
+  body.dark-mode #services-1130 .cs-text,
+  body.dark-mode #services-1130 .cs-h3,
+  body.dark-mode #services-1130 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #services-1130 .cs-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #services-1130 .cs-icon {
+    filter: grayscale(0.5) brightness(1000%);
+  }
+  body.dark-mode #services-1130 .cs-graphic {
+    opacity: 0.7;
+  }
+  body.dark-mode #services-1130 .cs-card-group {
+    box-shadow: 12px 22px 12px #181818;
+  }
+}
 /*-- -------------------------- -->
 <---           Stats            -->
 <--- -------------------------- -*/
@@ -143,6 +167,37 @@
 @media only screen and (min-width: 0rem) {
   #stats-1643 {
     padding: var(--sectionPadding);
+    position: relative;
+  }
+  #stats-1643:before {
+    content: "";
+    background: url("/assets/images/featured-service-debris.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 37.5rem; /* Specify fixed size or use % based on the image size */
+    height: 37.5rem; /* Specify fixed size or use % based on the image size */
+    transform: rotate(220deg);
+    opacity: 0.4;
+    position: absolute;
+    bottom: -100px; /* Lock to the top */
+    right: -300px; /* Lock to the right */
+    z-index: -1; /* Ensure it is above other content */
+    pointer-events: none; /* Prevent interaction */
+  }
+  #stats-1643:after {
+    content: "";
+    background: url("/assets/images/featured-service-debris-bottom.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 37.5rem; /* Specify fixed size or use % based on the image size */
+    height: 37.5rem; /* Specify fixed size or use % based on the image size */
+    transform: rotate(50deg);
+    opacity: 0.4;
+    position: absolute;
+    top: -100px; /* Lock to the top */
+    left: -200px; /* Lock to the right */
+    z-index: -1; /* Ensure it is above other content */
+    pointer-events: none; /* Prevent interaction */
   }
   #stats-1643 .cs-container {
     width: 100%;
@@ -369,6 +424,22 @@
     left: 0;
   }
 }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #stats-1643 .cs-title,
+  body.dark-mode #stats-1643 .cs-text,
+  body.dark-mode #stats-1643 .cs-item-text,
+  body.dark-mode #stats-1643 .cs-h3,
+  body.dark-mode #stats-1643 .cs-number,
+  body.dark-mode #stats-1643 .cs-desc {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #stats-1643 .cs-text,
+  body.dark-mode #stats-1643 .cs-item-text,
+  body.dark-mode #stats-1643 .cs-desc {
+    opacity: 0.8;
+  }
+}
 /*-- -------------------------- -->
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/
@@ -512,6 +583,22 @@
     width: 55%;
     /* sends it to the right in the 2nd position */
     order: 2;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #sbsr-1444 .cs-title,
+  body.dark-mode #sbsr-1444 .cs-text,
+  body.dark-mode #sbsr-1444 .cs-li,
+  body.dark-mode #sbsr-1444 .cs-h3,
+  body.dark-mode #sbsr-1444 .cs-li-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #sbsr-1444 .cs-li-text, body.dark-mode #sbsr-1444 .cs-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #sbsr-1444 .cs-li-picture {
+    background-color: var(--dark);
   }
 }
 /*-- -------------------------- -->
@@ -825,6 +912,19 @@
     right: -200PX;
   }
 }
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #hero-1426 .dark-hide {
+    display: none;
+  }
+  body.dark-mode #hero-1426 .cs-h2 {
+    color: #FFFFFF;
+  }
+  body.dark-mode #hero-1426 .cs-background:before {
+    opacity: 0.72;
+    display: block;
+  }
+}
 /*-- -------------------------- -->
 <---         Why Choose         -->
 <--- -------------------------- -*/
@@ -1018,6 +1118,28 @@
 @media only screen and (min-width: 64rem) {
   #why-choose-1571 .cs-item {
     flex-direction: row;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #why-choose-1571 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #why-choose-1571 .cs-topper {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #why-choose-1571 .cs-title,
+  body.dark-mode #why-choose-1571 .cs-text,
+  body.dark-mode #why-choose-1571 .cs-h3,
+  body.dark-mode #why-choose-1571 .cs-item-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #why-choose-1571 .cs-item-text {
+    opacity: 0.8;
+  }
+  body.dark-mode #why-choose-1571 .cs-background {
+    opacity: 0.3;
+    filter: brightness(30%);
   }
 }
 /*-- -------------------------- -->

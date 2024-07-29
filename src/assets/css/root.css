@@ -59,9 +59,9 @@
     font-weight: bold;
   }
   .cs-button-solid {
-    font-family: "Work Sans";
+    font-family: "Lato";
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 700;
     /* 46px - 56px */
     line-height: clamp(2.75rem, 5.4vw, 3.4rem);
     text-align: center;
@@ -70,7 +70,7 @@
     margin: 0;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
-    border-radius: 30px;
+    border-radius: 0.625rem;
     border: 3px solid var(--primary);
     padding: 0;
     background-color: none;
@@ -105,7 +105,7 @@
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    font-family: "Work Sans";
+    font-family: "Lato";
     font-size: 100%;
     color: var(--bodyTextColor);
   }
@@ -163,21 +163,21 @@
     font-weight: 400;
     src: url("/assets/fonts/anton-v25-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-  /* work-sans-regular - latin */
+  /* lato-regular - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Work Sans";
+    font-family: "Lato";
     font-style: normal;
     font-weight: 400;
-    src: url("/assets/fonts/work-sans-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url("/assets/fonts/lato-v24-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
-  /* roboto-900 - latin */
+  /* lato-700 - latin */
   @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Lato";
     font-style: normal;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-display: swap;
-    src: local(""), url("/assets/fonts/roboto-v29-latin-900.woff2") format("woff2"), url("/assets/fonts/roboto-v29-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 700;
+    src: url("/assets/fonts/lato-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 }
 /* Reset Margins */
@@ -299,9 +299,6 @@
   #cs-navigation.scrolled:after {
     opacity: 0.9;
   }
-  #cs-navigation.scrolled .cs-line {
-    background-color: black;
-  }
   #cs-navigation.cs-active .cs-logo {
     /* makes it turn white */
     filter: grayscale(1) brightness(1000%);
@@ -353,12 +350,16 @@
     width: clamp(2.75rem, 6vw, 3rem);
     height: clamp(2.75rem, 6vw, 3rem);
     margin: 0 0 0 auto;
-    background-color: transparent;
+    background-color: var(--primary);
     border: none;
-    border-radius: 0.25rem;
+    border-radius: 6.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+  }
+  #cs-navigation .cs-toggle.cs-active {
+    background-color: var(--primary) !important;
   }
   #cs-navigation .cs-active .cs-line1 {
     top: 50%;
@@ -425,7 +426,7 @@
     transform: scaleX(0);
     transition: transform 0.5s ease-in, opacity 0.3s;
     transform-origin: top right;
-    z-index: 1000;
+    z-index: 100;
   }
   #cs-navigation .cs-ul {
     width: auto;
@@ -459,7 +460,7 @@
     color: #FFFFFF;
     display: inline-block;
     position: relative;
-    font-family: "Work Sans";
+    font-family: "Lato";
     font-weight: 400;
     left: 110%;
     transition: left 0.3s;
@@ -702,16 +703,22 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #dbdbdb;
+    background-color: #FFFFFF;
     transition: opacity 0.4s ease-in-out, color 0.3s ease-in-out;
     z-index: -1;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    opacity: 0;
+  }
+  #cs-navigation.scrolled::after {
     opacity: 1;
   }
   #cs-navigation.scrolled .cs-logo {
     /* makes it turn white */
-    filter: grayscale(1) brightness(1000%);
+    filter: grayscale(0) brightness(100%);
     transform: rotateY(360deg);
+  }
+  #cs-navigation.scrolled .cs-li-link {
+    color: #000;
   }
   #cs-navigation.scrolled .cs-li-link.cs-active {
     color: var(--primary);
@@ -723,7 +730,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 14rem;
+    gap: 7.75rem;
   }
   #cs-navigation .cs-toggle {
     display: none;
@@ -739,6 +746,7 @@
     justify-content: center;
     align-items: center;
     z-index: 100;
+    filter: grayscale(1) brightness(1000%);
     transition: transform 0.4s;
   }
   #cs-navigation .cs-logo img {
@@ -779,7 +787,7 @@
     font-weight: 700;
   }
   #cs-navigation .cs-li-link.cs-active {
-    color: var(--primaryDark);
+    color: var(--primary);
   }
 }
 /* Dark Mode */

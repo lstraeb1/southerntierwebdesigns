@@ -48,7 +48,7 @@
   #hero-408 .cs-text {
     margin-bottom: 2rem;
     font-weight: normal;
-    font-family: "Work Sans";
+    font-family: "Lato";
   }
   #hero-408 .cs-stat-group {
     width: 100%;
@@ -90,7 +90,27 @@
     opacity: 0.8;
   }
   #hero-408 .cs-button-solid {
-    color: #FFFFFF;
+    border-color: #FFFFFF;
+    color: var(--primary);
+    background-color: #fff;
+  }
+  #hero-408 .custom-shape-divider-bottom-1722282966 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  #hero-408 .custom-shape-divider-bottom-1722282966 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 115px;
+  }
+  #hero-408 .custom-shape-divider-bottom-1722282966 .shape-fill {
+    fill: #FFFFFF;
   }
   #hero-408 .cs-background {
     width: 100%;
@@ -164,7 +184,7 @@
 @media only screen and (min-width: 64rem) {
   #hero-408 {
     /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-    padding-bottom: 38vw;
+    padding-bottom: 30vw;
   }
   #hero-408 .cs-content {
     width: 100%;
