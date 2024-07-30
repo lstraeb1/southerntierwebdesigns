@@ -82,7 +82,7 @@
         margin: 0;
         /* prevents padding from adding to the width */
         box-sizing: border-box;
-        border-radius: calc(10 / 16 * 1rem);
+        border-radius: calc(5 / 16 * 1rem);
         border: 3px solid var(--primary);
         padding: 0;
         background-color: none;
@@ -328,8 +328,11 @@
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         padding: calc(12 / 16 * 1rem) calc(16 / 16 * 1rem);
-        background-color: none;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14.6px);
+        -webkit-backdrop-filter: blur(14.6px);
+        box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 2px;
         position: fixed;
         z-index: 10;
 
@@ -340,7 +343,6 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #FFFFFF;
             // transform: translateY(-100%);
             transition: opacity 0.4s ease-in-out, color 0.3s ease-in-out;
             z-index: -1; // Place it behind the nav content
@@ -875,7 +877,10 @@
         /* prevents padding and border from affecting height and width */
         box-sizing: border-box;
         padding: 0 calc(16 / 16 * 1rem);
-        background-color: none;
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(14.6px);
+        -webkit-backdrop-filter: blur(14.6px);
         position: fixed;
         z-index: 10000;
 
@@ -886,7 +891,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #FFFFFF;
+            background: rgba(26, 26, 26, 0.08);
+            -webkit-backdrop-filter: blur(27px);
+            backdrop-filter: blur(27px);
             // transform: translateY(-100%);
             transition: opacity 0.4s ease-in-out, color 0.3s ease-in-out;
             z-index: -1; // Place it behind the nav content
@@ -910,7 +917,7 @@
                 color: #000;
 
                 &.cs-active {
-                    color: var(--primary);
+                    // color: var(--primary);
                 }
             }
         }
@@ -985,7 +992,6 @@
             }
 
             &.cs-active {
-                color: var(--primary);
             }
         }
     }
@@ -1262,7 +1268,8 @@
             /* 14px - 16px */
             font-size: clamp(0.875rem, 1.5vw, 1rem);
             width: 100%;
-            color: var(--primary);
+            color: var(--bodyTextColor);
+            font-weight: 700;
             display: flex;
             flex-direction: column;
             justify-content: center;

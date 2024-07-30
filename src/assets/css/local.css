@@ -37,7 +37,8 @@
     /* 16px - 20px */
     gap: clamp(1rem, 2.3vw, 1.25rem);
     border: 1px solid #e8e8e8;
-    border-bottom: 4px solid var(--primary);
+    border-radius: 1rem;
+    border-bottom: 6px solid var(--primary);
     box-shadow: 12px 22px 12px #EEEEEE;
   }
   #services-1130 .cs-item {
@@ -58,6 +59,7 @@
     justify-content: center;
     position: relative;
     z-index: 1;
+    border-radius: 1rem;
   }
   #services-1130 .cs-image-group {
     width: 6.25rem;
@@ -1181,10 +1183,9 @@
     padding-bottom: clamp(5.25rem, 7vw, 6rem);
     width: 100%;
     max-width: 25.8125rem;
-    border: 2px solid var(--primary);
-    border-radius: 1rem;
+    border: 1px solid #cecece;
+    border-radius: 0.625rem;
     background: #fff;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
   }
@@ -1197,7 +1198,7 @@
     transition-delay: 0.2s;
   }
   #pricing-357 .cs-popular {
-    background: linear-gradient(var(--primary), #119ce2);
+    margin-top: calc(1.5rem - 6vw);
     border: none;
     position: relative;
     /* clips the popular tag */
@@ -1205,6 +1206,7 @@
     /* send to the top */
     z-index: 2;
     order: -1;
+    border: 3px solid var(--primary);
   }
   #pricing-357 .cs-popular:before {
     /* Most Popular Tag */
@@ -1214,29 +1216,28 @@
     text-align: center;
     line-height: 1.8125em;
     font-weight: 400;
-    width: 10.625rem;
+    width: 100%;
     padding: 0 0.75rem;
     color: var(--bodyTextColorWhite);
-    background-color: var(--secondary);
+    background-color: var(--primary);
     position: absolute;
     display: block;
-    top: 1.25rem;
-    right: -3.75rem;
-    transform: rotate(42deg);
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
   }
-  #pricing-357 .cs-popular .cs-price {
-    color: #FFFFFF;
+  #pricing-357 .cs-popular .cs-h3 {
+    margin-top: calc(1.5rem + 25px);
   }
   #pricing-357 .cs-popular .cs-h3,
   #pricing-357 .cs-popular .cs-item-text,
   #pricing-357 .cs-popular .cs-included,
   #pricing-357 .cs-popular .cs-li,
   #pricing-357 .cs-popular .cs-small {
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
   }
   #pricing-357 .cs-popular .cs-button-solid {
-    background-color: none;
-    border-color: var(--secondary);
+    background-color: var(--primary);
     color: #FFFFFF;
     width: 100%;
     left: 50%;
@@ -1244,11 +1245,8 @@
     width: 90%;
   }
   #pricing-357 .cs-popular .cs-button-solid:hover {
-    background-color: var(--secondary);
-  }
-  #pricing-357 .cs-popular .cs-li-img {
-    /* turns the check mark white */
-    filter: brightness(900%);
+    background-color: transparent;
+    color: #000;
   }
   #pricing-357 .cs-h3 {
     font-family: "Anton";
@@ -1294,7 +1292,7 @@
   }
   #pricing-357 .cs-small {
     font-size: 0.875rem;
-    font-family: "Work Sans";
+    font-family: "Lato";
     font-weight: 400;
     color: #4e4b66;
   }
@@ -1358,6 +1356,7 @@
   }
   #pricing-357 .cs-button-solid:hover {
     background-color: var(--primary);
+    color: #FFFFFF;
   }
 }
 /* Tablet 768px */
@@ -1386,11 +1385,6 @@
   }
 }
 /* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #pricing-357 .cs-popular {
-    transform: scale(1.15);
-  }
-}
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #pricing-357 {
@@ -1407,11 +1401,11 @@
     color: var(--bodyTextColorWhite);
   }
   body.dark-mode #pricing-357 .cs-item {
-    background: var(--accent);
+    background: none;
     border-color: var(--medium);
   }
   body.dark-mode #pricing-357 .cs-popular {
-    background: var(--primary);
+    border-color: var(--primary);
   }
   body.dark-mode #pricing-357 .cs-h3,
   body.dark-mode #pricing-357 .cs-item-text,

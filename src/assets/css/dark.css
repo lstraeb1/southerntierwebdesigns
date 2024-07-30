@@ -22,6 +22,9 @@
   body.dark-mode h6 {
     color: #fff;
   }
+  body.dark-mode .cs-button-solid {
+    color: #FFFFFF;
+  }
   body.dark-mode .light {
     display: none;
   }

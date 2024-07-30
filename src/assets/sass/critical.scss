@@ -77,32 +77,6 @@
             }
         }
 
-        .cs-divider1 {
-            position: absolute;
-            bottom: -1px;
-            left: -1px;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-            z-index: 2;
-
-            svg {
-                position: relative;
-                display: block;
-                width: 100%;
-
-                .cls-3 {
-                    fill: #FFFFFF;
-                    transition: 0.3s ease;
-                }
-
-                .cls-2, .cls-1 {
-                    fill: var(--primary);
-                    opacity: 0.8;
-                }
-            }
-        }
-
         .cs-button-solid {
             border-color: #FFFFFF;
             color: var(--primary);
@@ -128,6 +102,7 @@
         
         .custom-shape-divider-bottom-1722282966 .shape-fill {
             fill: #FFFFFF;
+            transition: all 0.3s;
         }
 
         .cs-background {
@@ -276,30 +251,28 @@
                 color: var(--bodyTextColorWhite);
             }
 
-            &:before {
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                /* Black Color Overlay */
-                content: "";
-                opacity: 0.7;
-                display: block;
-                background: #15161d;
-                height: 100%;
-                width: 100%;
-                /* prevents the cursor from interacting with it */
-                pointer-events: none;
+            .cs-background {
+                &:before {
+                    /* background color overlay */
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    background: #000000;
+                    opacity: 0.9;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                }
             }
 
             .cs-logo {
                 filter: grayscale(1) brightness(400%);
             }
 
-            .cs-divider1 {
-                .cls-3 {
-                    fill: var(--dark);
-                }
+            .custom-shape-divider-bottom-1722282966 .shape-fill {
+                fill: var(--dark);
             }
         }
     }

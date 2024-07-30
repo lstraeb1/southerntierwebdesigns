@@ -41,8 +41,8 @@
             /* 16px - 20px */
             gap: clamp(1rem, 2.3vw, 1.25rem);
             border: 1px solid #e8e8e8;
-            border-bottom: 4px solid var(--primary);
-            // border-radius: calc(16 / 16 * 1rem);
+            border-radius: calc(16 / 16 * 1rem);
+            border-bottom: 6px solid var(--primary);
             box-shadow: 12px 22px 12px #EEEEEE;
         }
 
@@ -64,6 +64,7 @@
             justify-content: center;
             position: relative;
             z-index: 1;
+            border-radius: calc(16 / 16 * 1rem);
         }
 
         .cs-image-group {
@@ -1401,10 +1402,10 @@
             padding-bottom: clamp(5.25rem, 7vw, 6rem);
             width: 100%;
             max-width: calc(413 / 16 * 1rem);
-            border: 2px solid var(--primary);
-            border-radius: calc(16 / 16 * 1rem);
+            border: 1px solid #cecece;
+            border-radius: calc(10 / 16 * 1rem);
             background: #fff;
-            box-shadow: 0 12px 36px rgb(0, 0, 0, 0.25);
+            // box-shadow: 0 12px 36px rgb(0, 0, 0, 0.25);
             /* prevents padding from adding to height and width */
             box-sizing: border-box;
 
@@ -1424,10 +1425,7 @@
         }
 
         .cs-popular {
-            background: linear-gradient(
-                var(--primary),
-                #119ce2
-            );
+            margin-top: calc(1.5rem - 6vw); 
             border: none;
             position: relative;
             /* clips the popular tag */
@@ -1435,6 +1433,7 @@
             /* send to the top */
             z-index: 2;
             order: -1;
+            border: 3px solid var(--primary);
 
             &:before {
                 /* Most Popular Tag */
@@ -1444,19 +1443,20 @@
                 text-align: center;
                 line-height: calc(29 / 16 * 1em);
                 font-weight: 400;
-                width: calc(170 / 16 * 1rem);
+                width: 100%;
                 padding: 0 calc(12 / 16 * 1rem);
                 color: var(--bodyTextColorWhite);
-                background-color: var(--secondary);
+                background-color: var(--primary);
                 position: absolute;
                 display: block;
-                top: calc(20 / 16 * 1rem);
-                right: calc(-60 / 16 * 1rem);
-                transform: rotate(42deg);
+                top: 0;
+                right: 50%;
+                transform: translateX(50%);
+                // transform: rotate(42deg);
             }
 
-            .cs-price {
-                color: #FFFFFF;
+            .cs-h3 {
+                margin-top: calc(1.5rem + 25px);
             }
 
             .cs-h3,
@@ -1464,12 +1464,11 @@
             .cs-included,
             .cs-li,
             .cs-small {
-                color: var(--bodyTextColorWhite);
+                color: var(--bodyTextColor);
             }
 
             .cs-button-solid {
-                background-color: none;
-                border-color: var(--secondary);
+                background-color: var(--primary);
                 color: #FFFFFF;
                 width: 100%;
                 left: 50%;
@@ -1477,13 +1476,9 @@
                 width: 90%;
 
                 &:hover {
-                    background-color: var(--secondary);
+                    background-color: transparent;
+                    color: #000;
                 }
-            }
-
-            .cs-li-img {
-                /* turns the check mark white */
-                filter: brightness(900%);
             }
         }
 
@@ -1540,7 +1535,7 @@
 
         .cs-small {
             font-size: calc(14 / 16 * 1rem);
-            font-family: "Work Sans";
+            font-family: "Lato";
             font-weight: 400;
             color: #4e4b66;
         }
@@ -1612,6 +1607,7 @@
 
             &:hover {
                 background-color: var(--primary);
+                color: #FFFFFF;
             }
         }
     }
@@ -1651,13 +1647,13 @@
 }
 
 /* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #pricing-357 {
-        .cs-popular {
-            transform: scale(1.15);
-        }
-    }
-}
+// @media only screen and (min-width: 64rem) {
+//     #pricing-357 {
+//         .cs-popular {
+//             transform: scale(1.15);
+//         }
+//     }
+// }
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
@@ -1677,11 +1673,11 @@
             }
 
             .cs-item {
-                background: var(--accent);
+                background: none;
                 border-color: var(--medium);
             }
             .cs-popular {
-                background: var(--primary);
+                border-color: var(--primary);
             }
 
             .cs-h3,

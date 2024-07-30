@@ -67,28 +67,6 @@
     height: auto;
     object-fit: cover;
   }
-  #hero-408 .cs-divider1 {
-    position: absolute;
-    bottom: -1px;
-    left: -1px;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: 2;
-  }
-  #hero-408 .cs-divider1 svg {
-    position: relative;
-    display: block;
-    width: 100%;
-  }
-  #hero-408 .cs-divider1 svg .cls-3 {
-    fill: #FFFFFF;
-    transition: 0.3s ease;
-  }
-  #hero-408 .cs-divider1 svg .cls-2, #hero-408 .cs-divider1 svg .cls-1 {
-    fill: var(--primary);
-    opacity: 0.8;
-  }
   #hero-408 .cs-button-solid {
     border-color: #FFFFFF;
     color: var(--primary);
@@ -111,6 +89,7 @@
   }
   #hero-408 .custom-shape-divider-bottom-1722282966 .shape-fill {
     fill: #FFFFFF;
+    transition: all 0.3s;
   }
   #hero-408 .cs-background {
     width: 100%;
@@ -235,25 +214,23 @@
   body.dark-mode #hero-408 .cs-button-transparent {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #hero-408:before {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* Black Color Overlay */
+  body.dark-mode #hero-408 .cs-background:before {
+    /* background color overlay */
     content: "";
-    opacity: 0.7;
+    position: absolute;
     display: block;
-    background: #15161d;
     height: 100%;
     width: 100%;
-    /* prevents the cursor from interacting with it */
-    pointer-events: none;
+    background: #000000;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
   body.dark-mode #hero-408 .cs-logo {
     filter: grayscale(1) brightness(400%);
   }
-  body.dark-mode #hero-408 .cs-divider1 .cls-3 {
+  body.dark-mode #hero-408 .custom-shape-divider-bottom-1722282966 .shape-fill {
     fill: var(--dark);
   }
 }
