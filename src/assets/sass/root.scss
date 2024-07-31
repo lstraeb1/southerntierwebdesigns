@@ -9,12 +9,12 @@
     // Website colors
     :root {
         --primary: #119ce2;
-        --primaryLight: #f39167;
-        --secondary: #FF6F61;
-        --secondaryLight: #61708a;
+        --primaryLight: #70c4ee;
+        --secondary: #007ad0;
+        --secondaryLight: #66afe3;
         --primaryDark: #2D3142;
         --bodyTextColor: #4e4b66;
-        --bodyTextColorWhite: #fafbfc;
+        --bodyTextColorWhite: #FFFFFF;
 
         /* 13px - 16px */
         --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -290,7 +290,7 @@
         
         input:checked + .slider:before {
             transform: translateX(1.25em);
-            background-color: var(--secondary);
+            background-color: #FE9A2E;
             box-shadow: none;
         }
     }
@@ -393,6 +393,12 @@
             .cs-li-link {
                 left: 0;
             }
+
+            .mobile-only {
+                .cs-button-solid, .cs-button-2 {
+                    left: 0;
+                }
+            }
         }
 
         .cs-container {
@@ -431,7 +437,7 @@
             width: clamp(2.75rem, 6vw, 3rem);
             height: clamp(2.75rem, 6vw, 3rem);
             margin: 0 0 0 auto;
-            background-color: var(--primary);
+            background-color: var(--secondary);
             border: none;
             border-radius: calc(100 / 16 * 1rem);
             display: flex;
@@ -466,13 +472,13 @@
             /* 24px - 28px */
             width: clamp(2rem, 2.5vw, 2.25rem);
             /* 14px - 16px */
-            height: clamp(1.15rem, 1.75vw, 1.3rem);
+            height: clamp(0.85rem, 1.45vw, 1rem);
             position: relative;
             z-index: 4;
         }
 
         .cs-line {
-            width: 100%;
+            width: 65%;
             height: 2px;
             background-color: #FFFFFF;
             border-radius: 0px;
@@ -482,7 +488,7 @@
         }
 
         .cs-line1 {
-            top: 20%;
+            top: 0;
             transition: transform 0.5s, top 0.3s, left 0.3s;
             animation-duration: 0.7s;
             animation-timing-function: ease;
@@ -492,7 +498,7 @@
         }
 
         .cs-line2 {
-            top: 80%;
+            top: 50%;
             transform: translateX(-50%) translateY(-50%);
             transition: top 0.3s, left 0.3s, transform 0.5s;
             animation-duration: 0.7s;
@@ -504,12 +510,12 @@
         .cs-line3 {
             bottom: 0;
             transition: bottom 0.3s, opacity 0.3s;
-            display: none;
+            // display: none;
         }
 
         .cs-ul-wrapper {
             height: 100vh;
-            background-color: #333333;
+            background-color: #181818;
             // box-shadow: inset rgba(0, 0, 0, 0.2) 0px 8px 24px;
             opacity: 0;
             position: absolute;
@@ -582,7 +588,7 @@
 
         .cs-li-link {
             /* 16px - 24px */
-            font-size: clamp(1.75rem, 3.25vw, 2.25rem);
+            font-size: clamp(1.5rem, 3vw, 2rem);
             line-height: 1.2em;
             text-decoration: none;
             margin: 0;
@@ -614,8 +620,50 @@
             }
         }
 
-        .cs-button-solid {
-            display: none;
+        .mobile-only {
+            padding: 0;
+            gap: 1;
+            .cs-button-solid {
+                width: 100%;
+                margin-top: 10%;
+                display: inline-block;
+                color: #FFFFFF;
+                position: relative;
+                left: 110%;
+                background: var(--primary);
+                transition: left 0.3s;
+                transition-delay: 900ms;
+                transition-property: left;
+            }
+
+            .cs-button-2 {
+                width: 100%;
+                margin-top: 20%;
+                display: inline-block;
+                color: #FFFFFF;
+                position: relative;
+                left: 110%;
+                transition: left 0.3s;
+                transition-delay: 900ms;
+                transition-property: left;
+                font-family: "Lato";
+                font-size: calc(16/16 * 1rem);
+                font-weight: 700;
+                /* 46px - 56px */
+                line-height: clamp(2.75rem, 5.4vw, 3.4rem);
+                text-align: center;
+                text-decoration: none;
+                min-width: calc(176/16 * 1rem);
+                margin: 0;
+                /* prevents padding from adding to the width */
+                box-sizing: border-box;
+                border-radius: calc(5 / 16 * 1rem);
+                border: 3px solid #FFFFFF;
+                padding: 0;
+                background-color: none;
+                color: #FFFFFF;
+                z-index: 1;
+            }
         }
     }
 }
@@ -839,6 +887,10 @@
                 }
             }
         }
+
+        .mobile-only {
+            display: none;
+        }
     }
 }
 
@@ -878,7 +930,7 @@
         box-sizing: border-box;
         padding: 0 calc(16 / 16 * 1rem);
         background: rgba(255, 255, 255, 0.08);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: rgba(53, 53, 53, 0.5) 0px 1px 2px;
         backdrop-filter: blur(14.6px);
         -webkit-backdrop-filter: blur(14.6px);
         position: fixed;
@@ -1321,6 +1373,32 @@
 
         .cs-submit {
             width: auto;
+            font-family: "Lato";
+            font-size: calc(16/16 * 1rem);
+            font-weight: 700;
+            /* 46px - 56px */
+            line-height: clamp(2.75rem, 5.4vw, 3.4rem);
+            text-align: center;
+            text-decoration: none;
+            min-width: calc(176/16 * 1rem);
+            margin: 0;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            border-radius: calc(5 / 16 * 1rem);
+            border: 3px solid var(--primary);
+            padding: 0;
+            background-color: transparent;
+            color: black;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            transition: color 0.3s, background-color 0.3s;
+
+        &:hover {
+            background-color: var(--primary);
+            color: #FFFFFF;
+            font-weight: 700;
+        }
         }
     }
 }
@@ -1352,7 +1430,7 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #contact-1392 {
-            background-color: rgba(0, 0, 0, 0.2);
+            background-color: var(--dark);
             .cs-title,
             .cs-text,
             .cs-header,
@@ -1388,9 +1466,10 @@
                     opacity: 0.8;
                 }
             }
-
-            .cs-graphic {
-                opacity: 0.4;
+            
+            .cs-submit {
+                color: #ffffff;
+                background: transparent;
             }
         }
     }
@@ -1587,7 +1666,13 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #footer-1392 {
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: var(--dark);
+
+            .cs-graphic {
+                .white-space {
+                    fill: var(--dark);
+                }
+            }
         }
     }
 }
