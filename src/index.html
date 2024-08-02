@@ -12,12 +12,15 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css"/>
+    <link rel="stylesheet" href="/assets/css/local.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/local.css" />
+    </noscript>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <link rel="preload" as="image" href="/assets/images/flying-computer-mockup-m.png">
-    <link rel="preload" as="image" href="/assets/images/hero-bg-m.jpg">
+    <link rel="preload" as="image" href="/assets/images/flying-desktop-mockup-m.webp">
+    <link rel="preload" as="image" href="/assets/images/hero-bg-m.webp">
 
 
     <!-- Script for Netlify Identity -->
@@ -56,7 +59,7 @@ eleventyNavigation:
             </div>
             <div class="cs-stat-group">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/flying-desktop-mockup.png">
+                    <source media="(max-width: 600px)" srcset="/assets/images/flying-desktop-mockup-m.webp">
                     <source media="(min-width: 601px)" srcset="/assets/images/flying-desktop-mockup.png">
                     <img decoding="async" src="/assets/images/flying-desktop-mockup.png" alt="Desktop mockup" width="2516" height="1680" aria-hidden="true">
                 </picture>
@@ -68,7 +71,7 @@ eleventyNavigation:
             </svg>
         </div>
         <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.jpg">
+            <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.webp">
             <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.jpg">
             <img decoding="async" src="/assets/images/hero-bg.jpg" alt="background" width="1920" height="1280" aria-hidden="true">
         </picture>
@@ -130,7 +133,7 @@ eleventyNavigation:
                 <h2 class="cs-title"><span class="alt-title">Custom Websites</span> Expertly Crafted To Get You More Exposure</h2>
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="/assets/images/Desktop-screen-mockup-m.png">
+                    <source media="(max-width: 600px)" srcset="/assets/images/Desktop-screen-mockup-m.webp">
                     <!--Tablet and above Image-->
                     <source media="(min-width: 601px)" srcset="/assets/images/Desktop-screen-mockup.png">
                     <img loading="lazy" decoding="async" src="/assets/images/Desktop-screen-mockup.png" alt="desktop screen mockup" width="1662" height="1600">
@@ -179,7 +182,7 @@ eleventyNavigation:
     <section id="sbsr-1444">
         <div class="cs-container">
             <picture class="cs-picture">
-                <source media="(max-width: 600px)" srcset="/assets/images/bway-cafe-mockup-m.png">
+                <source media="(max-width: 600px)" srcset="/assets/images/bway-cafe-mockup-m.webp">
                 <source media="(min-width: 601px)" srcset="/assets/images/bway-cafe-mockup.png">
                 <img loading="lazy" decoding="async" src="/assets/images/bway-cafe-mockup.png" alt="Broadway cafe website" width="1300" height="1516" aria-hidden="true">
             </picture>
@@ -242,7 +245,7 @@ eleventyNavigation:
                         <p class="cs-hover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum quos quod. Fuga dolor quis dignissimos est aliquam tempore natus illo tenetur rem amet commodi, non illum nemo, facere id.</p>
                     </a>
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/stein-mockup2-m.jpg">
+                        <source media="(max-width: 600px)" srcset="/assets/images/stein-mockup2-m.webp">
                         <source media="(min-width: 601px)" srcset="/assets/images/stein-mockup2.jpg">
                         <img decoding="async" src="/assets/images/stein-mockup2.jpg" alt="person" width="1280" height="1118" aria-hidden="true" loading="lazy">
                     </picture>
@@ -254,7 +257,7 @@ eleventyNavigation:
                         <p class="cs-hover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum quos quod. Fuga dolor quis dignissimos est aliquam tempore natus illo tenetur rem amet commodi, non illum nemo, facere id.</p>
                     </a>
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/subg-mockup-m.jpg">
+                        <source media="(max-width: 600px)" srcset="/assets/images/subg-mockup-m.webp">
                         <source media="(min-width: 601px)" srcset="/assets/images/subg-mockup.jpg">
                         <img decoding="async" src="/assets/images/subg-mockup.jpg" alt="person" width="1280" height="1118" aria-hidden="true" loading="lazy">
                     </picture>
@@ -266,7 +269,7 @@ eleventyNavigation:
                         <p class="cs-hover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum quos quod. Fuga dolor quis dignissimos est aliquam tempore natus illo tenetur rem amet commodi, non illum nemo, facere id.</p>
                     </a>
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="/assets/images/coming-soon-mockup-m.jpeg">
+                        <source media="(max-width: 600px)" srcset="/assets/images/coming-soon-mockup-m.webp">
                         <source media="(min-width: 601px)" srcset="/assets/images/coming-soon-mockup.jpg">
                         <img decoding="async" src="/assets/images/coming-soon-mockup.jpg" alt="person" width="1280" height="1118" aria-hidden="true" loading="lazy">
                     </picture>
@@ -287,7 +290,7 @@ eleventyNavigation:
                     My name is Liam and I'm a passionate web developer serving clients across the US. I first found my passion for coding and web design a little over a year ago. After thousands of hours of tireless work towards refining my skills, I launched Southern Tier Web Designs, a company that understands small businesses because we are one. My goal is to provide business owners the peace of mind they deserve when it comes to their online presence. We'll take care of your website so you can focus on what really matters to you: your business.
                 </p>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/headshot-m.jpg">
+                    <source media="(max-width: 600px)" srcset="/assets/images/headshot-m.webp">
                     <source media="(min-width: 601px)" srcset="/assets/images/headshot.jpg">
                     <img decoding="async" src="/assets/images/headshot.jpg" alt="Liam photo" width="700" height="724" aria-hidden="true" loading="lazy">
                 </picture>
