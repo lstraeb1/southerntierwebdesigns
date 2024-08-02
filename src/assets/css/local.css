@@ -800,35 +800,16 @@
     position: relative;
     z-index: 1;
   }
-  #hero-1426 .cs-background {
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  #hero-1426 .cs-background img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.6;
-  }
-  #hero-1426 .cs-background:before {
+  #hero-1426:before {
     content: "";
-    background: url("/assets/images/concrete_debris_019_0000 copy.png");
+    background: url("/assets/images/concrete_debris_019_0000.png");
     background-size: contain;
     background-repeat: no-repeat;
     width: 37.5rem; /* Specify fixed size or use % based on the image size */
     height: 37.5rem; /* Specify fixed size or use % based on the image size */
-    transform: rotate(145deg);
-    opacity: 0.4;
+    transform: rotate(0deg);
     position: absolute;
-    top: -100px; /* Lock to the top */
+    top: -50px; /* Lock to the top */
     right: -100px; /* Lock to the right */
     z-index: 1; /* Ensure it is above other content */
     pointer-events: none; /* Prevent interaction */
@@ -900,18 +881,18 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #hero-1426 .cs-background:before {
-    top: -500px;
-    right: 10px;
+  #hero-1426:before {
+    top: -100px;
+    right: -100px;
     width: 70%;
     height: 100%;
   }
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 84rem) {
-  #hero-1426 .cs-background:before {
-    top: -200px;
-    right: -200PX;
+  #hero-1426:before {
+    top: -100px;
+    right: -300PX;
   }
 }
 /* Dark Mode */
@@ -1216,13 +1197,13 @@
     /* 16px - 20px */
     font-size: clamp(1rem, 2vw, 1.25rem);
     font-weight: 700;
-    margin-right: 2.75rem;
+    margin-right: 2rem;
     /* 40px - 52px */
     width: clamp(2.5rem, 5.1vw, 3.25rem);
     height: clamp(2.5rem, 5.1vw, 3.25rem);
     border-radius: 50%;
     color: var(--bodyTextColorWhite);
-    background-color: var(--primary);
+    background-color: var(--secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1245,8 +1226,9 @@
     transform: translateY(-50%);
   }
   #steps-276 .cs-h2 {
-    margin-bottom: 1rem;
+    font-size: 1rem;
     font-family: "Anton";
+    display: none;
   }
   #steps-276 .cs-item-text {
     /* 14px - 16px */
@@ -1254,6 +1236,7 @@
     line-height: 1.5em;
     margin: 0;
     color: var(--bodyTextColor);
+    margin-left: 10px;
   }
 }
 /* Tablet - 768px */
@@ -1299,6 +1282,12 @@
     /* use calc() to multiply clamp value by -1 to get a negative clamp value */
     bottom: calc(clamp(1.5rem, 2.9vw, 1.75rem) * -1);
     transform: translateX(-50%);
+  }
+  #steps-276 .cs-h2 {
+    margin-bottom: 1rem;
+    font-family: "Anton";
+    font-size: 1.5rem;
+    display: block;
   }
 }
 /* Dark Mode */
