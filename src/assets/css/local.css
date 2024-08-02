@@ -226,7 +226,7 @@
     max-width: 30ch;
   }
   #stats-1643 .cs-picture {
-    width: 100%;
+    width: 110%;
     height: 95vw;
     max-height: 25rem;
     display: block;
@@ -239,7 +239,7 @@
     object-fit: cover;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -20px;
   }
   #stats-1643 .cs-quote {
     width: 4.625rem;
@@ -408,12 +408,12 @@
 /* large Desktop */
 @media only screen and (min-width: 84rem) {
   #stats-1643 .cs-picture {
-    width: 40%;
+    width: 45%;
     height: 100%;
     max-height: 50rem;
     display: block;
     position: absolute;
-    left: 10%;
+    left: 15%;
     z-index: -1;
   }
   #stats-1643 .cs-picture img {
@@ -1206,7 +1206,7 @@
     height: clamp(2.5rem, 5.1vw, 3.25rem);
     border-radius: 50%;
     color: var(--bodyTextColorWhite);
-    background-color: var(--secondary);
+    background-color: var(--secondaryDark);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -79,7 +79,7 @@
 
         .cs-button-solid {
             border-color: #FFFFFF;
-            color: var(--primary);
+            color: var(--secondaryDark);
             background-color: #fff;
         }
 
@@ -208,7 +208,7 @@
                 width: 100%;
 
                 img {
-                    width: 100%;
+                    width: 85%;
                     transform: scale(1.9);
                     height: auto;
                     object-fit: cover;
