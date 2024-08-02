@@ -1387,7 +1387,7 @@
             border-radius: calc(5 / 16 * 1rem);
             border: 3px solid var(--primary);
             padding: 0;
-            background-color: transparent;
+            background: none;
             color: black;
             display: inline-block;
             position: relative;
@@ -1469,7 +1469,7 @@
             
             .cs-submit {
                 color: #ffffff;
-                background: transparent;
+                background: none;
             }
         }
     }
