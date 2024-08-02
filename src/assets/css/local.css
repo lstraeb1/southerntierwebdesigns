@@ -831,6 +831,9 @@
     justify-content: center;
     flex-direction: column;
   }
+  #hero-1426 .cs-text {
+    font-weight: 400;
+  }
   #hero-1426 .cs-picture {
     width: 100%;
     margin: 4rem auto;
@@ -855,7 +858,7 @@
   #hero-1426 .cs-h2 {
     font-family: "Anton";
     font-weight: 800;
-    color: var(--secondary-alt);
+    color: #000;
   }
   #hero-1426 .cs-h3 {
     font-size: var(--bodyFontSize);

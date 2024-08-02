@@ -290,7 +290,7 @@
         
         input:checked + .slider:before {
             transform: translateX(1.25em);
-            background-color: #FE9A2E;
+            background-color: #FFFFFF;
             box-shadow: none;
         }
     }
@@ -969,7 +969,7 @@
                 color: #000;
 
                 &.cs-active {
-                    color: var(--primary);
+                    border-bottom: 4px solid var(--secondary);
                 }
             }
         }
@@ -1023,7 +1023,7 @@
 
         .cs-li {
             list-style: none;
-            padding: calc(16 / 16 * 1rem) 0;
+            // padding: calc(20 / 16 * 1rem) 0;
             /* prevent flexbox from squishing it */
             flex: none;
         }
@@ -1034,17 +1034,21 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
+            padding: calc(20 / 16 * 1rem) 0;
             color: #FFFFFF;
             display: block;
             position: relative;
-            transition: color 0.2s ease-in-out;
+            transition: color 0.2s ease-in-out, border-bottom 0.2s;
             &:hover {
-                color: var(--primaryDark);
+                // color: var(--primaryLight);
                 font-weight: 700;
+                color: #ededed;
+                // border-bottom: 2px solid white;
             }
 
-            // &.cs-active {
-            // }
+            &.cs-active {
+                border-bottom: 3px solid white;
+            }
         }
     }
 }
@@ -1066,7 +1070,7 @@
 
             .cs-li-link {
                 &.cs-active {
-                    color: var(--primary);
+                    border-bottom: 4px solid var(--primary);
                 }
                 &:hover {
                     color: var(--primary);

@@ -977,6 +977,10 @@
             flex-direction: column;
         }
 
+        .cs-text {
+            font-weight: 400;
+        }
+
         .cs-picture {
             width: 100%;
             margin: calc(64 / 16 * 1rem) auto;
@@ -1004,7 +1008,7 @@
         .cs-h2 {
             font-family: "Anton";
             font-weight: 800;
-            color: var(--secondary-alt);
+            color: #000;
         }
 
         .cs-h3 {
