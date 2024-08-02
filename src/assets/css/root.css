@@ -773,6 +773,9 @@
   #cs-navigation.scrolled .cs-li-link {
     color: #000;
   }
+  #cs-navigation.scrolled .cs-li-link.cs-active {
+    color: var(--primary);
+  }
   #cs-navigation .cs-container {
     width: 100%;
     max-width: 80rem;
@@ -1101,6 +1104,34 @@
     margin-bottom: 0.75rem;
     font-family: inherit;
   }
+  #contact-1392 .cs-submit {
+    width: auto;
+    font-family: "Lato";
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.75rem, 5.4vw, 3.4rem);
+    text-align: center;
+    text-decoration: none;
+    max-width: 11rem;
+    margin: 0;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    border-radius: 0.3125rem;
+    border: 3px solid var(--primary);
+    padding: 0;
+    background: none;
+    color: black;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s, background-color 0.3s;
+  }
+  #contact-1392 .cs-submit:hover {
+    background-color: var(--primary);
+    color: #FFFFFF;
+    font-weight: 700;
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
@@ -1113,34 +1144,6 @@
     width: 47%;
     /* prevents flexbox from squishing it */
     flex: none;
-  }
-  #contact-1392 .cs-submit {
-    width: auto;
-    font-family: "Lato";
-    font-size: 1rem;
-    font-weight: 700;
-    /* 46px - 56px */
-    line-height: clamp(2.75rem, 5.4vw, 3.4rem);
-    text-align: center;
-    text-decoration: none;
-    min-width: 11rem;
-    margin: 0;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    border-radius: 0.3125rem;
-    border: 3px solid var(--primary);
-    padding: 0;
-    background-color: transparent;
-    color: black;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    transition: color 0.3s, background-color 0.3s;
-  }
-  #contact-1392 .cs-submit:hover {
-    background-color: var(--primary);
-    color: #FFFFFF;
-    font-weight: 700;
   }
 }
 /* Desktop - 1024px */
@@ -1196,7 +1199,7 @@
   }
   body.dark-mode #contact-1392 .cs-submit {
     color: #ffffff;
-    background: transparent;
+    background: none;
   }
 }
 /*-- -------------------------- -->

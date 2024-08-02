@@ -1,7 +1,7 @@
 ---
 title: 'Websites For Small Businesses | Southern Tier Web Designs | Binghamton, NY'
 description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
+preloadImg: 
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -14,6 +14,11 @@ eleventyNavigation:
 {% block head %}
     <link rel="stylesheet" href="/assets/css/local.css"/>
     <link rel="stylesheet" href="/assets/css/critical.css"/>
+    
+    <!-- Preloads -->
+    <link rel="preload" as="image" href="/assets/images/flying-computer-mockup-m.png">
+    <link rel="preload" as="image" href="/assets/images/hero-bg-m.jpg">
+
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -51,9 +56,9 @@ eleventyNavigation:
             </div>
             <div class="cs-stat-group">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/flying-computer-mockup.png">
+                    <source media="(max-width: 600px)" srcset="/assets/images/flying-computer-mockup-m.png">
                     <source media="(min-width: 601px)" srcset="/assets/images/flying-computer-mockup.png">
-                    <img loading="lazy" decoding="async" src="/assets/images/flying-computer-mockup.png" alt="Desktop mockup" width="1000" height="667" aria-hidden="true">
+                    <img loading="lazy" decoding="async" src="/assets/images/flying-computer-mockup.png" alt="Desktop mockup" width="1288" height="859" aria-hidden="true">
                 </picture>
             </div>
         </div>
@@ -63,9 +68,9 @@ eleventyNavigation:
             </svg>
         </div>
         <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="/assets/images/hero-bg.jpg">
+            <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.jpg">
             <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.jpg">
-            <img loading="lazy" decoding="async" src="/assets/images/hero-bg.jpg" alt="background" width="2100" height="1400" aria-hidden="true">
+            <img loading="lazy" decoding="async" src="/assets/images/hero-bg.jpg" alt="background" width="1920" height="1280" aria-hidden="true">
         </picture>
     </section>
 
@@ -412,6 +417,52 @@ eleventyNavigation:
                     </li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   Steps                      -->
+    <!-- ============================================ -->
+
+    <section id="steps-276">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">Our <span class="alt-title">Seamless</span> Web Design Process</h2>
+                <p class="cs-text">
+                    Creating your perfect website is a collaborative and streamlined experience. We follow these steps for each of our projects to bring your vision to life.
+                </p>
+            </div>
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <span class="cs-number">01</span>
+                    <h2 class="cs-h2">Contract Signing</h2>
+                    <p class="cs-item-text">
+                        Begin the process by signing the contract and paying the initial invoice. 
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">02</span>
+                    <h2 class="cs-h2">Design Approval</h2>
+                    <p class="cs-item-text">
+                        Review and approve the initial design concepts presented. 
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">03</span>
+                    <h2 class="cs-h2">Coding and Demo Link Approval</h2>
+                    <p class="cs-item-text">
+                        We code your website and provide a demo link for your approval.
+                    </p>
+                </li>
+                <li class="cs-item">
+                    <span class="cs-number">04</span>
+                    <h2 class="cs-h2">Final Optimization and Launch</h2>
+                    <p class="cs-item-text">
+                        Final optimizations are made for speed and performance.  
+                    </p>
+                </li>
+            </ul>
+            <a href="" class="cs-button-solid">GET IN TOUCH</a>
         </div>
     </section>
                                     

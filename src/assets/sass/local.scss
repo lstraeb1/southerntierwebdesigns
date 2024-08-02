@@ -1358,6 +1358,218 @@
         }
     }
 }
+
+/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #steps-276 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            max-width: 20ch;
+        }
+
+        .cs-text {
+            font-weight: 400;
+        }
+
+        .cs-card-group {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            /* changes to 1100px at tablet */
+            max-width: calc(400 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(24 / 16 * 1rem);
+            position: relative;
+
+            &:before {
+                /* list line connector */
+                content: "";
+                width: 1px;
+                background: #1a1a1a;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                /* no height, set it as a top to bottom.  
+                It will grow with newly added text in the .cs-item-text */
+                top: calc(16 / 16 * 1rem);
+                bottom: calc(24 / 16 * 1rem);
+                left: calc(56 / 16 * 1rem);
+            }
+        }
+
+        .cs-item {
+            text-align: left;
+            list-style: none;
+            margin: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .cs-number {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            font-weight: 700;
+            margin-right: calc(44 / 16 * 1rem);
+            /* 40px - 52px */
+            width: clamp(2.5rem, 5.1vw, 3.25rem);
+            height: clamp(2.5rem, 5.1vw, 3.25rem);
+            border-radius: 50%;
+            color: var(--bodyTextColorWhite);
+            background-color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            position: relative;
+
+            &:before {
+                /* list circle */
+                content: "";
+                width: calc(8 / 16 * 1rem);
+                height: calc(8 / 16 * 1rem);
+                background: #1a1a1a;
+                border-radius: 50%;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                top: 50%;
+                right: calc(-20 / 16 * 1rem);
+                transform: translateY(-50%);
+            }
+        }
+
+        .cs-h2 {
+            margin-bottom: calc(16 / 16 * 1rem);
+            font-family: "Anton";
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 2vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #steps-276 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-card-group {
+            max-width: calc(1100 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            column-gap: calc(32 / 16 * 1em);
+
+            &:before {
+                /* reset width */
+                width: auto;
+                height: 1px;
+                /* 60px - 76px */
+                top: clamp(3.75rem, 7.5vw, 4.75rem);
+                /* 80px - 110px */
+                left: clamp(5rem, 10.5vw, 6.875rem);
+                right: clamp(5rem, 10.5vw, 6.875rem);
+            }
+        }
+
+        .cs-item {
+            text-align: center;
+            width: calc(218 / 16 * 1rem);
+            /* remove margin from mobile */
+            margin: 0;
+            /* orient to vertical spacing */
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-number {
+            margin: 0;
+            /* 40px - 60px */
+            margin-bottom: clamp(2.5rem, 6vw, 3.75rem);
+
+            &:before {
+                top: auto;
+                left: 50%;
+                /* -24px to -28px */
+                /* use calc() to multiply clamp value by -1 to get a negative clamp value */
+                bottom: calc(clamp(1.5rem, 2.9vw, 1.75rem) * -1);
+                transform: translateX(-50%);
+            }
+        }
+    }
+} 
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #steps-276 {
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+
+            .cs-title,
+            .cs-text,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+
+            .cs-card-group {
+                &:before {
+                    background: var(--bodyTextColorWhite);
+                }
+            }
+
+            .cs-number {
+                &:before {
+                    background-color: var(--bodyTextColorWhite);
+                }
+            }
+        }
+    }
+}
+
                                 
                                 
 /*-- -------------------------- -->
