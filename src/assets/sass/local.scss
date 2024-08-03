@@ -954,7 +954,7 @@
             position: absolute;
             top: -50px; /* Lock to the top */
             right: -100px; /* Lock to the right */
-            z-index: 1; /* Ensure it is above other content */
+            z-index: 0; /* Ensure it is above other content */
             pointer-events: none; /* Prevent interaction */
         }
 

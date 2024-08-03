@@ -838,7 +838,7 @@
   }
   #cs-navigation .cs-li-link:hover {
     font-weight: 700;
-    color: #ededed;
+    color: #272727;
   }
   #cs-navigation .cs-li-link.cs-active {
     border-bottom: 3px solid white;
