@@ -103,7 +103,7 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener('scroll', () => {
     const nav = document.getElementById('cs-navigation');
-    if (window.scrollY > 0) {
+    if (window.scrollY > 350) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');

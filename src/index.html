@@ -24,7 +24,7 @@ eleventyNavigation:
 
 
     <!-- Script for Netlify Identity -->
-    <!-- <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
         if (window.netlifyIdentity) {
             window
@@ -39,7 +39,7 @@ eleventyNavigation:
                     }
                 });
         }
-    </script> -->
+    </script>
 {% endblock %}
 
 {% block body %}
@@ -55,7 +55,7 @@ eleventyNavigation:
                 <p class="cs-text">
                     Whether you're a small business looking to establish an online presence or a growing company seeking to enhance your digital footprint, we have the expertise to bring your vision to life.
                 </p>
-                <a href="" class="cs-button-solid">CONTACT US</a>
+                <a href="/contact" class="cs-button-solid">CONTACT US</a>
             </div>
             <div class="cs-stat-group">
                 <picture class="cs-picture">
@@ -104,7 +104,8 @@ eleventyNavigation:
                 </li>
                 <li class="cs-item">
                     <div class="cs-image-group">
-                        <img class="cs-graphic" loading="lazy" decoding="async" src="/assets/svgs/logo.svg" alt="graphic" width="100" height="103">                    </div>
+                        <img class="cs-graphic" loading="lazy" decoding="async" src="/assets/svgs/logo.svg" alt="graphic" width="100" height="103">                    
+                    </div>
                     <h1 class="cs-h3">Logos & Branding</h1>
                     <p class="cs-item-text">
                         We craft professional logos that capture your brand's essence, ensuring unique and memorable designs that establish strong brand recognition and trust.
@@ -242,7 +243,7 @@ eleventyNavigation:
                     <a href="" class="cs-link">
                         <h2 class="cs-h2">Stein Design And Build</h2>
                         <h3 class="cs-h3">Syracuse, NY</h3>
-                        <p class="cs-hover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum quos quod. Fuga dolor quis dignissimos est aliquam tempore natus illo tenetur rem amet commodi, non illum nemo, facere id.</p>
+                        <p class="cs-hover-text">Stein Design and Build, a Syracuse-based contracting company, specializes in residential and commercial projects, offering quality craftsmanship and innovative design solutions.</p>
                     </a>
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)" srcset="/assets/images/stein-mockup2-m.webp">
@@ -254,7 +255,7 @@ eleventyNavigation:
                     <a href="https://subgbjj.com/" class="cs-link">
                         <h2 class="cs-h2">SUB-G Brazilian Jiu-Jitsu</h2>
                         <h3 class="cs-h3">Port Jervis, NY</h3>
-                        <p class="cs-hover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum quos quod. Fuga dolor quis dignissimos est aliquam tempore natus illo tenetur rem amet commodi, non illum nemo, facere id.</p>
+                        <p class="cs-hover-text">Sub G Brazilian Jiu-Jitsu in Port Jervis, NY, provides top-tier martial arts training, focusing on discipline, fitness, and self-defense for all ages and skill levels.</p>
                     </a>
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)" srcset="/assets/images/subg-mockup-m.webp">
@@ -263,10 +264,10 @@ eleventyNavigation:
                     </picture>
                 </li>
                 <li class="cs-item">
-                    <a href="" class="cs-link">
+                    <a href="/" class="cs-link">
                         <h2 class="cs-h2">Your Business</h2>
                         <h3 class="cs-h3">Los Angeles, CA</h3>
-                        <p class="cs-hover-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex cum quos quod. Fuga dolor quis dignissimos est aliquam tempore natus illo tenetur rem amet commodi, non illum nemo, facere id.</p>
+                        <p class="cs-hover-text">Your business could be featured next! Showcase your unique services and attract more clients with a custom-designed website by Southern Tier Web Designs. Contact us today!</p>
                     </a>
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)" srcset="/assets/images/coming-soon-mockup-m.webp">
@@ -297,13 +298,13 @@ eleventyNavigation:
                 <h2 class="cs-h2">Liam Straebler</h2>
                 <h3 class="cs-h3">Owner & Web Developer</h3>
                 <div class="cs-button-group">
-                    <a href="" class="social-link" aria-label="phone">
+                    <a href="tel:{{client.phoneForTel}}" class="social-link" aria-label="phone">
                         <img src="/assets/svgs/telephone.svg" alt="phone-icon" loading="lazy" decoding="async" aria-hidden="true" width="48" height="48">
                     </a>
-                    <a href="" class="social-link" aria-label="email">
+                    <a href="mailto:{{client.email}}" class="social-link" aria-label="email">
                         <img src="/assets/svgs/gmail.svg" alt="gmail-icon" loading="lazy" decoding="async" aria-hidden="true" width="48" height="48">
                     </a>
-                    <a href="" class="social-link" aria-label="linkedin">
+                    <a href="https://www.linkedin.com/in/liam-straebler-2952b2294/" class="social-link" aria-label="linkedin">
                         <img src="/assets/svgs/linkedin.svg" alt="linkedIn icon" loading="lazy" decoding="async" aria-hidden="true" width="48" height="48">
                     </a>
                 </div>
@@ -465,7 +466,7 @@ eleventyNavigation:
                     </p>
                 </li>
             </ul>
-            <a href="" class="cs-button-solid">GET IN TOUCH</a>
+            <a href="/contact" class="cs-button-solid">GET IN TOUCH</a>
         </div>
     </section>
                                     
@@ -512,7 +513,7 @@ eleventyNavigation:
                             Domain purchase $25/year
                         </li>
                     </ul>
-                    <a href="/basic.html" class="cs-button-solid">CONTACT US</a>
+                    <a href="/contact" class="cs-button-solid">CONTACT US</a>
                 </li>
                 <!-- Option 2 -->
                 <li class="cs-item cs-popular">
@@ -554,7 +555,7 @@ eleventyNavigation:
                             Domain purchase $25/year
                         </li>
                     </ul>
-                    <a href="/basic.html" class="cs-button-solid">CONTACT US</a>
+                    <a href="/contact" class="cs-button-solid">CONTACT US</a>
                 </li>
                 <!-- Option 3 -->
                 <li class="cs-item">
@@ -584,7 +585,7 @@ eleventyNavigation:
                             Additional functionality
                         </li>
                     </ul>
-                    <a href="/basic.html" class="cs-button-solid">CONTACT US</a>
+                    <a href="/contact" class="cs-button-solid">CONTACT US</a>
                 </li>
             </ul>
         </div>
