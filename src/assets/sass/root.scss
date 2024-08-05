@@ -68,7 +68,7 @@
         line-height: 1.5em;
         color: var(--bodyTextColor);
         text-align: inherit;
-        font-weight: bold;
+        font-weight: 400;
     }
 
     .cs-button-solid {
@@ -1124,7 +1124,7 @@
             margin: 0 auto;
             margin-top: calc(70 / 16 * 1rem);
             margin-bottom: calc(30 / 16 * 1rem);
-            max-width: calc(500 / 16 * 1rem);
+            max-width: calc(700 / 16 * 1rem);
             width: 96%;
             font-size: calc(64 / 30 * 1rem);
             color: #fff;

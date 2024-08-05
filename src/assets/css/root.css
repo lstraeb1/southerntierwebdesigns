@@ -57,7 +57,7 @@
     line-height: 1.5em;
     color: var(--bodyTextColor);
     text-align: inherit;
-    font-weight: bold;
+    font-weight: 400;
   }
   .cs-button-solid {
     font-family: "Lato";
@@ -899,7 +899,7 @@
     margin: 0 auto;
     margin-top: 4.375rem;
     margin-bottom: 1.875rem;
-    max-width: 31.25rem;
+    max-width: 43.75rem;
     width: 96%;
     font-size: 2.1333333333rem;
     color: #fff;

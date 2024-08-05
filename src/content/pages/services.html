@@ -1,0 +1,169 @@
+---
+title: 'Services | Southern Tier Web Designs'
+description: 'Description for <meta> description and OG tags'
+preloadImg: '/assets/images/office-interior-page.jpg'
+permalink: 'services/'
+eleventyNavigation:
+    key: Name to appear in navigation
+    order: 300
+    parent: Optional - Put another page's "key" here to create a dropdown
+    hideOnMobile: Optional - set to "true" to hide on devices from, and below, 1023px
+    hideOnDesktop: Optional - set to "true" to hide on devices above, and including, 1024px
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/services.css">
+{% endblock %}
+
+{% block body %}
+    
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Services</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="/assets/images/office-interior-page.jpg">
+            <source media="(min-width: 601px)" srcset="/assets/images/office-interior-page.jpg">
+            <img aria-hidden="true" decoding="async" src="/assets/images/office-interior-page.jpg" alt="office space" loading="eager" width="2500" height="1667">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Side by Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs-1901">
+        <div class="cs-container">
+            <div class="cs-content">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/svgs/web_14138863.svg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/svgs/web_14138863.svg">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/web_14138863.svg" alt="people" width="608" height="406">
+                </picture>
+                <div class="cs-wrapper cs-wrapper1">
+                    <h2 class="cs-title">Tailored <span class="alt-title">SEO</span> Solutions for Your Business</h2>
+                    <p class="cs-text">
+                        Our SEO services are designed to boost your website's visibility and drive organic traffic. Each site is custom coded and optimized to meet the latest search engine guidelines, ensuring it performs exceptionally well and pleases Google's algorithms. Our strategies focus on improving your site's ranking, making it easier for potential customers to find your business online.
+                    </p>
+                    <p class="cs-text">
+                        By integrating SEO best practices into our custom-coded websites, we provide a seamless and efficient solution that enhances both user experience and search engine performance. Our personalized approach ensures that every aspect of your site, from keyword optimization to technical SEO, is tailored to your specific needs. This dedication to excellence helps your website achieve higher rankings and attract more qualified leads.
+                    </p>
+                    <a class="cs-button-solid" href="">REACH OUT</a>
+                </div>
+            </div>
+            <div class="cs-content">
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/svgs/optimization_12096626.svg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/svgs/optimization_12096626.svg">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/optimization_12096626.svg" alt="people" width="608" height="406">
+                </picture>
+                <div class="cs-wrapper cs-wrapper2">
+                    <h2 class="cs-title">Exceptional <span class="alt-title">Web Design</span> Tailored to Your Business</h2>
+                    <p class="cs-text">
+                        At Southern Tier Web Designs, we specialize in creating custom websites that reflect your unique brand and business goals. Our web design services focus on using clean, efficient code to ensure optimal performance and a superior user experience. Each website is crafted with attention to detail, guaranteeing a professional, polished look that sets you apart from the competition.
+                    </p>
+                    <p class="cs-text">
+                        We take the time to understand your specific needs and vision, ensuring a personalized approach to every project. By avoiding generic website builders, we deliver custom-coded solutions that are both flexible and scalable. This commitment to quality and customization means your website will not only look great but also perform exceptionally well, helping you attract and retain more customers.
+                    </p>
+                    <a class="cs-button-solid" href="">REACH OUT</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                 Portfolio                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1752">
+        <div class="cs-container">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <a href="" class="cs-link">
+                        <h2 class="cs-h2">Stein Design And Build</h2>
+                        <h3 class="cs-h3">Syracuse, NY</h3>
+                        <p class="cs-hover-text">Stein Design and Build, a Syracuse-based contracting company, specializes in residential and commercial projects, offering quality craftsmanship and innovative design solutions.</p>
+                    </a>
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/stein-mockup2-m.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/stein-mockup2.jpg">
+                        <img decoding="async" src="/assets/images/stein-mockup2.jpg" alt="person" width="1280" height="1118" aria-hidden="true" loading="lazy">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="https://subgbjj.com/" class="cs-link">
+                        <h2 class="cs-h2">SUB-G Brazilian Jiu-Jitsu</h2>
+                        <h3 class="cs-h3">Port Jervis, NY</h3>
+                        <p class="cs-hover-text">SUB-G Brazilian Jiu-Jitsu in Port Jervis, NY, provides top-tier martial arts training, focusing on discipline, fitness, and self-defense for all ages and skill levels.</p>
+                    </a>
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/subg-mockup-m.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/subg-mockup.jpg">
+                        <img decoding="async" src="/assets/images/subg-mockup.jpg" alt="person" width="1280" height="1118" aria-hidden="true" loading="lazy">
+                    </picture>
+                </li>
+                <li class="cs-item">
+                    <a href="/" class="cs-link">
+                        <h2 class="cs-h2">Your Business</h2>
+                        <h3 class="cs-h3">Los Angeles, CA</h3>
+                        <p class="cs-hover-text">Your business could be featured next! Showcase your unique services and attract more clients with a custom-designed website by Southern Tier Web Designs. Contact us today!</p>
+                    </a>
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/coming-soon-mockup-m.webp">
+                        <source media="(min-width: 601px)" srcset="/assets/images/coming-soon-mockup.jpg">
+                        <img decoding="async" src="/assets/images/coming-soon-mockup.jpg" alt="person" width="1280" height="1118" aria-hidden="true" loading="lazy">
+                    </picture>
+                </li>
+            </ul>
+        </div>
+    </section>   
+
+    <!-- ============================================ -->
+    <!--                 Side By Side                 -->
+    <!-- ============================================ -->
+
+    <section id="sbs-1308">
+        <div class="cs-container">
+            <!-- Left Image Section -->
+            <div class="cs-image-group">
+                <!--Image-->
+                <picture class="cs-picture">
+                    <img loading="lazy" decoding="async" src="/assets/svgs/optimize_2344734.svg" alt="meeting" width="430" height="430" aria-hidden="true">
+                </picture>
+            </div>
+            <!-- Right Content Section-->
+            <div class="cs-content">
+                <h2 class="cs-title">Reliable Website Management and <span class="alt-title">Maintenance</span></h2>
+                <p class="cs-text">
+                    Our website management and maintenance services ensure your site remains secure, up-to-date, and performing at its best. We handle regular updates, security checks, and performance optimizations, allowing you to focus on your business. We proactively monitors your site, addressing potential issues before they become problems, ensuring a smooth and reliable user experience.
+                </p>
+                <a class="cs-button-solid" aria-label="learn more about our programs" href="">Learn More</a>
+                <ul class="cs-ul">
+                    <li class="cs-item">
+                        <span class="cs-number">40%</span>
+                        <h3 class="cs-h3">Of users abandon <br>a slow site</h3>
+                    </li>
+                    <li class="cs-item">
+                        <span class="cs-number">30,000+</span>
+                        <h3 class="cs-h3">Websites hacked <br>each day</h3>
+                    </li>
+                    <li class="cs-item">
+                        <span class="cs-number">180 +</span>
+                        <h3 class="cs-h3">Learning community members</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+                                    
+                                    
+
+{% endblock %}
