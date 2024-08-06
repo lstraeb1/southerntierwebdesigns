@@ -356,7 +356,7 @@
     width: clamp(2.75rem, 6vw, 3rem);
     height: clamp(2.75rem, 6vw, 3rem);
     margin: 0 0 0 auto;
-    background-color: var(--secondary);
+    background-color: transparent;
     border: none;
     border-radius: 6.25rem;
     display: flex;
@@ -459,13 +459,14 @@
   #cs-navigation .cs-li-link {
     /* 16px - 24px */
     font-size: clamp(1.5rem, 3vw, 2rem);
+    text-transform: uppercase;
     line-height: 1.2em;
     text-decoration: none;
     margin: 0;
     color: #FFFFFF;
     display: inline-block;
     position: relative;
-    font-family: "Lato";
+    font-family: "Anton";
     font-weight: 400;
     left: 110%;
     transition: left 0.3s;
@@ -545,10 +546,13 @@
     background-color: #fff;
   }
   body.dark-mode #cs-navigation .cs-ul-wrapper {
-    background-color: var(--medium);
+    background-color: #000;
   }
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #cs-navigation .cs-li-link .cs-active {
+    color: var(--primary);
   }
 }
 /*-- -------------------------- -->
@@ -782,18 +786,18 @@
   }
   #cs-navigation .cs-container {
     width: 100%;
-    max-width: 80rem;
+    max-width: 61.25rem;
     margin: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 7.75rem;
+    gap: 11.5rem;
   }
   #cs-navigation .cs-toggle {
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
+    width: 14.4%;
     max-width: 21.875rem;
     height: 4.0625rem;
     /* margin-right auto pushes everything away from it to the right */
@@ -829,7 +833,7 @@
   }
   #cs-navigation .cs-li-link {
     /* 14px - 16px */
-    font-size: clamp(1.125rem, 1.25vw, 1.25rem);
+    font-size: clamp(1rem, 1vw, 1rem);
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
@@ -902,6 +906,8 @@
     max-width: 43.75rem;
     width: 96%;
     font-size: 2.1333333333rem;
+    font-family: "Anton";
+    font-weight: 400;
     color: #fff;
     text-align: center;
   }
@@ -922,7 +928,7 @@
     content: "";
     opacity: 0.7;
     display: block;
-    background: #003a63;
+    background: #0360a1;
     height: 100%;
     width: 100%;
   }
@@ -945,6 +951,42 @@
     padding-top: 11.25rem;
     font-size: inherit;
     padding-block-end: 6.25rem;
+  }
+}
+/* Desktop Parallax - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #int-hero .cs-background {
+    background: url("/assets/images/office-interior-page.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* creates the parallax effect */
+    background-attachment: fixed;
+  }
+  #int-hero .cs-background img {
+    display: none;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #int-hero .cs-background:before {
+    /* background color overlay */
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #001727;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  body.dark-mode #int-hero .cs-logo {
+    filter: grayscale(1) brightness(400%);
+  }
+  body.dark-mode #int-hero .custom-shape-divider-bottom-1722282966 .shape-fill {
+    fill: var(--dark);
   }
 }
 /*-- -------------------------- -->

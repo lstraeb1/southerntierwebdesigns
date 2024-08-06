@@ -74,7 +74,7 @@
   }
   #hero-408 .custom-shape-divider-bottom-1722282966 {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -163,7 +163,7 @@
 @media only screen and (min-width: 64rem) {
   #hero-408 {
     /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-    padding-bottom: 30vw;
+    padding-bottom: 25vw;
   }
   #hero-408 .cs-content {
     width: 100%;
@@ -203,7 +203,7 @@
   #hero-408 {
     /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
     padding: 16.5rem;
-    padding-bottom: 30vw;
+    padding-bottom: 20vw;
   }
 }
 /* Dark Mode */

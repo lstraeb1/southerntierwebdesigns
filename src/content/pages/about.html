@@ -1,7 +1,7 @@
 ---
 title: 'About | Code Stitch Web Designs'
 description: 'Meta description for the page'
-preloadImg: ''
+preloadImg: '/assets/images/office-interior-page-m.webp'
 permalink: 'about/'
 eleventyNavigation:
     key: About Us
@@ -22,10 +22,10 @@ eleventyNavigation:
 
     <section id="int-hero">
         <h1 id="home-h">About Us</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/office-interior-page.jpg">
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="/assets/images/office-interior-page-m.webp">
             <source media="(min-width: 601px)" srcset="/assets/images/office-interior-page.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/office-interior-page.jpg" alt="office space" loading="eager" width="2500" height="1667">
+            <img aria-hidden="true" decoding="async" src="/assets/images/office-interior-page.jpg" alt="office space" loading="eager" width="3840" height="954">
         </picture>
     </section>
 
@@ -37,10 +37,10 @@ eleventyNavigation:
         <div class="cs-container">
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="">
+                <source media="(max-width: 600px)" srcset="/assets/images/about-page-headshot-m.webp">
                 <!--Tablet and above Image-->
                 <source media="(min-width: 601px)" srcset="/assets/images/about-page-headshot.jpg">
-                <img loading="lazy" decoding="async" src="/assets/images/about-page-headshot.jpg" alt="therapy" width="630" height="775">
+                <img loading="lazy" decoding="async" src="/assets/images/about-page-headshot.jpg" alt="Liam" width="1260" height="1070">
             </picture>                                            
             <div class="cs-content">
                 <h2 class="cs-title">Dedicated To <span class="alt-title">Exceptional</span> Web Design And SEO</h2>
@@ -71,7 +71,7 @@ eleventyNavigation:
             <ul class="cs-card-group">
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild.svg" alt="heart icon" width="42" height="42" aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="/assets/svgs/public-service.svg" alt="heart icon" width="42" height="42" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Personal Attention</h3>
                     <p class="cs-item-text">
@@ -80,7 +80,7 @@ eleventyNavigation:
                 </li>
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/toolbox.svg" alt="toolbox icon" width="42" height="42" aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="/assets/svgs/programming.svg" alt="toolbox icon" width="42" height="42" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Custom Coded Websites</h3>
                     <p class="cs-item-text">
@@ -89,7 +89,7 @@ eleventyNavigation:
                 </li>
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/ribbon.svg" alt="ribbon icon" width="32" height="42" aria-hidden="true">
+                        <img loading="lazy" decoding="async" src="/assets/svgs/find.svg" alt="ribbon icon" width="32" height="42" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">Attention To Detail</h3>
                     <p class="cs-item-text">
@@ -100,10 +100,7 @@ eleventyNavigation:
             <a href="" class="cs-button-solid">CONTACT US</a>
         </div>
     </section>
-                                                                    
     
-                                    
-
     {% include 'components/cta.html' %}
 
 {% endblock %}
