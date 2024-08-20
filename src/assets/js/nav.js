@@ -103,9 +103,11 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener('scroll', () => {
     const nav = document.getElementById('cs-navigation');
-    if (window.scrollY > 350) {
-      nav.classList.add('scrolled');
+    const scrollThreshold = window.location.pathname === '/' ? 850 : 450;
+    
+    if (window.scrollY > scrollThreshold) {
+        nav.classList.add('scrolled');
     } else {
-      nav.classList.remove('scrolled');
+        nav.classList.remove('scrolled');
     }
 });

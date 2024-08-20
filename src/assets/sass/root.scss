@@ -357,6 +357,27 @@
             }
         }
 
+        &.scrolled {
+            .cs-logo {
+                /* makes it turn white */
+                filter: grayscale(0) brightness(100%);
+                // transition-delay: 0.8s;
+                transform: rotateY(360deg);
+            }
+
+            .cs-li-link {
+                color: #000;
+
+                &:hover {
+                    color: #272727;
+                }
+
+                &.cs-active {
+                    border-bottom: 4px solid var(--secondary);
+                }
+            }
+        }
+
         // &:before {
         //     opacity: 0;
         //     content: "";
@@ -371,12 +392,6 @@
         // }
 
         &.cs-active {
-            .cs-logo {
-                /* makes it turn white */
-                filter: grayscale(1) brightness(1000%);
-                // transition-delay: 0.8s;
-                transform: rotateY(360deg);
-            }
 
             .cs-ul-wrapper {
                 z-index: 3;
@@ -410,8 +425,9 @@
         }
 
         .cs-logo {
-            width: 40%;
-            max-width: calc(146 / 16 * 1rem);
+            filter: grayscale(1) brightness(1000%);
+            width: 50%;
+            max-width: calc(196 / 16 * 1rem);
             height: 100%;
             margin: 0 auto 0 0;
             /* prevents padding and border from affecting height and width */
@@ -438,7 +454,7 @@
             width: clamp(2.75rem, 6vw, 3rem);
             height: clamp(2.75rem, 6vw, 3rem);
             margin: 0 0 0 auto;
-            background-color: transparent;
+            background-color: var(--primary);
             border: none;
             border-radius: calc(100 / 16 * 1rem);
             display: flex;
@@ -988,10 +1004,11 @@
             width: 100%;
             max-width: calc(980 / 16 * 1rem);
             margin: auto;
+            margin-left: 0;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            gap: calc(184 / 16 * 1rem);
+            gap: calc(84 / 16 * 1rem);
         }
 
         .cs-toggle {
@@ -999,9 +1016,9 @@
         }
 
         .cs-logo {
-            width: 14.4%;
-            max-width: calc(350 / 16 * 1rem);
-            height: calc(65 / 16 * 1rem);
+            width: 30.4%;
+            max-width: calc(450 / 16 * 1rem);
+            height: calc(75 / 16 * 1rem);
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
@@ -1044,7 +1061,7 @@
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
-            padding: calc(20 / 16 * 1rem) 0;
+            padding: calc(25 / 16 * 1rem) 0;
             color: #FFFFFF;
             display: block;
             position: relative;
@@ -1067,7 +1084,12 @@
 @media only screen and (min-width: 64rem) {
     body.dark-mode {
         #cs-navigation {
-            // background-color: var(--dark);
+
+            &.scrolled {
+                .cs-logo {
+                    transform: rotateY(0);
+                }
+            }
 
             .cs-logo {
                 /* makes it turn white */
