@@ -333,7 +333,7 @@
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(14.6px);
         -webkit-backdrop-filter: blur(14.6px);
-        box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 2px;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px;
         position: fixed;
         z-index: 10;
 
@@ -360,36 +360,12 @@
         &.scrolled {
             .cs-logo {
                 /* makes it turn white */
-                filter: grayscale(0) brightness(100%);
+                filter: none;
+                // transition: all 0.5s;
                 // transition-delay: 0.8s;
                 transform: rotateY(360deg);
             }
-
-            .cs-li-link {
-                color: #000;
-
-                &:hover {
-                    color: #272727;
-                }
-
-                &.cs-active {
-                    border-bottom: 4px solid var(--secondary);
-                }
-            }
         }
-
-        // &:before {
-        //     opacity: 0;
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0; /* Start from the right */
-        //     bottom: 0;
-        //     width: 0; /* Start with width 0 */
-        //     background-color: var(--secondary);
-        //     transition: width 0.8s ease, opacity 0.3s;
-        //     z-index: -1; /* Ensure it is behind the main content */
-        // }
 
         &.cs-active {
 
@@ -437,7 +413,7 @@
             justify-content: center;
             align-items: center;
             z-index: 10;
-            transition: transform 0.8s, filter 0.8s;
+            transition: transform 0.8s;
 
             img {
                 width: 100%;
@@ -545,6 +521,7 @@
             transition: transform 0.5s ease-in, opacity 0.3s;
             transform-origin: top right;
             z-index: 100;
+            overflow: auto;
         }
 
         .cs-ul {
@@ -555,12 +532,12 @@
             /* 28px - 40px */
             padding: calc(128 / 16 * 1rem) clamp(1.75rem, 3vw, 2.5rem)
                 calc(182 / 16 * 1rem) calc(20 / 16 * 1rem);
+            padding-bottom: calc(30 / 16 * 1rem);
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-end;
-            gap: calc(28 / 16 * 1rem);
-            overflow: scroll;
+            gap: calc(18 / 16 * 1rem);
         }
 
         .cs-li {
@@ -708,7 +685,7 @@
             .cs-li-link {
                 color: var(--bodyTextColorWhite);
 
-                .cs-active {
+                &.cs-active {
                     color: var(--primary);
                 }
             }

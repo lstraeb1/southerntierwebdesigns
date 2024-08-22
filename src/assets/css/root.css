@@ -283,7 +283,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(14.6px);
     -webkit-backdrop-filter: blur(14.6px);
-    box-shadow: rgba(255, 255, 255, 0.5) 0px 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 0px;
     position: fixed;
     z-index: 10;
   }
@@ -304,17 +304,8 @@
   }
   #cs-navigation.scrolled .cs-logo {
     /* makes it turn white */
-    filter: grayscale(0) brightness(100%);
+    filter: none;
     transform: rotateY(360deg);
-  }
-  #cs-navigation.scrolled .cs-li-link {
-    color: #000;
-  }
-  #cs-navigation.scrolled .cs-li-link:hover {
-    color: #272727;
-  }
-  #cs-navigation.scrolled .cs-li-link.cs-active {
-    border-bottom: 4px solid var(--secondary);
   }
   #cs-navigation.cs-active .cs-ul-wrapper {
     z-index: 3;
@@ -351,7 +342,7 @@
     justify-content: center;
     align-items: center;
     z-index: 10;
-    transition: transform 0.8s, filter 0.8s;
+    transition: transform 0.8s;
   }
   #cs-navigation .cs-logo img {
     width: 100%;
@@ -442,6 +433,7 @@
     transition: transform 0.5s ease-in, opacity 0.3s;
     transform-origin: top right;
     z-index: 100;
+    overflow: auto;
   }
   #cs-navigation .cs-ul {
     width: auto;
@@ -450,12 +442,12 @@
     margin: 0;
     /* 28px - 40px */
     padding: 8rem clamp(1.75rem, 3vw, 2.5rem) 11.375rem 1.25rem;
+    padding-bottom: 1.875rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    gap: 1.75rem;
-    overflow: scroll;
+    gap: 1.125rem;
   }
   #cs-navigation .cs-li {
     text-align: right;
@@ -561,7 +553,7 @@
   body.dark-mode #cs-navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
   }
-  body.dark-mode #cs-navigation .cs-li-link .cs-active {
+  body.dark-mode #cs-navigation .cs-li-link.cs-active {
     color: var(--primary);
   }
 }

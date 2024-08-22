@@ -512,6 +512,11 @@
             .cs-desc {
                 color: var(--bodyTextColorWhite);
             }
+
+            .infinity {
+                filter: grayscale(1) brightness(1000%);
+            }
+
             .cs-text,
             .cs-item-text,
             .cs-desc {

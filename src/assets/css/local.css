@@ -436,6 +436,9 @@
   body.dark-mode #stats-1643 .cs-desc {
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #stats-1643 .infinity {
+    filter: grayscale(1) brightness(1000%);
+  }
   body.dark-mode #stats-1643 .cs-text,
   body.dark-mode #stats-1643 .cs-item-text,
   body.dark-mode #stats-1643 .cs-desc {

@@ -2,6 +2,7 @@
 const bodyElement = document.querySelector("body");
 const navbarMenu = document.querySelector("#cs-navigation");
 const hamburgerMenu = document.querySelector("#cs-navigation .cs-toggle");
+const body = document.querySelector("body");
 
 // Function to toggle the aria-expanded attribute
 function toggleAriaExpanded(element) {
