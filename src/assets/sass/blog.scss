@@ -331,7 +331,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            border: 1px solid #ebebeb;
+            border: 1px solid var(--primary);
             border-radius: calc(8 / 16 * 1em);
             width: 100%;
             padding: calc(35 / 16 * 1em) calc(30 / 16 * 1em);
@@ -343,7 +343,9 @@
             margin-bottom: calc(30 / 16 * 1rem);
             font-size: calc(20 / 16 * 1em);
             font-weight: bold;
-            color: var(--headerColor);
+            font-family: "Anton";
+            font-weight: 400;
+            color: var(--secondary);
             text-align: center;
 
             &:after {
@@ -405,7 +407,8 @@
             font-size: calc(15 / 16 * 1rem);
             line-height: 1.5em;
             font-weight: 700;
-            color: var(--headerColor);
+            color: #000;
+            font-family: "Lato";
         }
 
         .feature-date {
@@ -519,8 +522,9 @@
                 margin-bottom: calc(16 / 16 * 1rem);
                 font-size: calc(28 / 16 * 1rem);
                 line-height: 1.5em;
-                font-weight: 700;
-                color: var(--headerColor);
+                font-weight: 400;
+                color: var(--secondary);
+                font-family: "Anton";
             }
 
             h3 {

@@ -281,7 +281,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid #ebebeb;
+    border: 1px solid var(--primary);
     border-radius: 0.5em;
     width: 100%;
     padding: 2.1875em 1.875em;
@@ -292,7 +292,9 @@
     margin-bottom: 1.875rem;
     font-size: 1.25em;
     font-weight: bold;
-    color: var(--headerColor);
+    font-family: "Anton";
+    font-weight: 400;
+    color: var(--secondary);
     text-align: center;
   }
   .blog-sidebar .blog-header:after {
@@ -347,7 +349,8 @@
     font-size: 0.9375rem;
     line-height: 1.5em;
     font-weight: 700;
-    color: var(--headerColor);
+    color: #000;
+    font-family: "Lato";
   }
   .blog-sidebar .feature-date {
     display: block;
@@ -448,8 +451,9 @@
     margin-bottom: 1rem;
     font-size: 1.75rem;
     line-height: 1.5em;
-    font-weight: 700;
-    color: var(--headerColor);
+    font-weight: 400;
+    color: var(--secondary);
+    font-family: "Anton";
   }
   .blog-article #blog-content h3 {
     margin-bottom: 1rem;

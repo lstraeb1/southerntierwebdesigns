@@ -104,11 +104,20 @@ document.addEventListener("keydown", (event) => {
 
 document.addEventListener('scroll', () => {
     const nav = document.getElementById('cs-navigation');
-    const scrollThreshold = window.location.pathname === '/' ? 850 : 450;
-    
+    let scrollThreshold;
+
+    // Set scroll threshold
+    if (window.location.pathname === '/') {
+        scrollThreshold = 925; // Always 850px on the homepage
+    } else {
+        scrollThreshold = window.innerWidth < 768 ? 200 : 450; // 200px for small devices, 450px for larger devices on other pages
+    }
+
+    // Add or remove the 'scrolled' class based on scroll position
     if (window.scrollY > scrollThreshold) {
         nav.classList.add('scrolled');
     } else {
         nav.classList.remove('scrolled');
     }
 });
+

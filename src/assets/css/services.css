@@ -315,7 +315,7 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
     position: relative;
-    z-index: 10;
+    z-index: 1;
   }
   #sbs-1308 .cs-text {
     margin-bottom: 1rem;
@@ -349,7 +349,7 @@
     font-size: 1.5625rem;
     font-family: "Anton";
     line-height: 1.2em;
-    font-weight: 700;
+    font-weight: 400;
     text-align: left;
     color: var(--primary);
     display: block;
