@@ -845,8 +845,12 @@
 }
 /* Dark Mode */
 @media only screen and (min-width: 64rem) {
+  body.dark-mode #cs-navigation.scrolled {
+    background: rgba(37, 37, 37, 0.8);
+  }
   body.dark-mode #cs-navigation.scrolled .cs-logo {
-    transform: rotateY(0);
+    transform: none;
+    filter: none;
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it turn white */
@@ -1228,6 +1232,9 @@
   }
   body.dark-mode #contact-1392 .cs-icon {
     /* makes it white */
+    filter: grayscale(1) brightness(1000%);
+  }
+  body.dark-mode #contact-1392 #linkedin-icon {
     filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #contact-1392 .cs-form {

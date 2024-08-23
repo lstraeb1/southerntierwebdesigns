@@ -252,6 +252,10 @@
                 color: var(--bodyTextColorWhite);
             }
 
+            .alt-dark-title {
+                color: var(--primary);
+            }
+
             .cs-background {
                 &:before {
                     /* background color overlay */

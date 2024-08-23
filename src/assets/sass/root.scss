@@ -1066,8 +1066,13 @@
         #cs-navigation {
 
             &.scrolled {
+                background: rgba(37, 37, 37, 0.8);
+
                 .cs-logo {
-                    transform: rotateY(0);
+                    transform: none;
+                    filter: none;
+                    // transition: all 0.5s;
+                    // transition-delay: 0.8s;
                 }
             }
 
@@ -1519,6 +1524,10 @@
 
             .cs-icon {
                 /* makes it white */
+                filter: grayscale(1) brightness(1000%);
+            }
+
+            #linkedin-icon {
                 filter: grayscale(1) brightness(1000%);
             }
 

@@ -215,6 +215,9 @@
   body.dark-mode #hero-408 .cs-button-transparent {
     color: var(--bodyTextColorWhite);
   }
+  body.dark-mode #hero-408 .alt-dark-title {
+    color: var(--primary);
+  }
   body.dark-mode #hero-408 .cs-background:before {
     /* background color overlay */
     content: "";

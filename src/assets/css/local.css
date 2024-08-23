@@ -1574,7 +1574,7 @@
   }
   body.dark-mode #pricing-357 .cs-item {
     background: none;
-    border-color: var(--medium);
+    border-color: #FFFFFF;
   }
   body.dark-mode #pricing-357 .cs-popular {
     border-color: var(--primary);
