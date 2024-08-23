@@ -7,7 +7,7 @@ description: Discover the key advantages of using custom code over page builders
 author: Liam Straebler
 date: 2024-08-04T21:49:00.000Z
 tags:
-  - post
+  - featured
 image: /assets/images/blog/pagespeed-mockup-blog2.png
 imageAlt: Pagespeed Insights
 ---
