@@ -8,12 +8,12 @@ module.exports = {
         "city": "Port Jervis",
         "state": "NY",
         "zip": "12771",
-        "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+        "mapLink": ""
     },
     "socials": {
         "facebook": "-",
         "instagram": "-",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://www.example.com"
+    "domain": "https://www.southerntierwebdesigns.com"
 };
