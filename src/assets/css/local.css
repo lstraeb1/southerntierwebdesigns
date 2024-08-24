@@ -1023,10 +1023,10 @@
   }
   #why-choose-1571 .cs-image {
     /* all these change on tablet */
-    width: 70vw;
-    max-width: 18.75rem;
-    height: 70vw;
-    max-height: 18.75rem;
+    width: 80vw;
+    max-width: 31.25rem;
+    height: 80vw;
+    max-height: 31.25rem;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -1035,7 +1035,7 @@
   #why-choose-1571 .cs-image img {
     width: 100%;
     height: 100%;
-    max-height: 18.75rem;
+    max-height: 43.75rem;
     object-fit: contain;
     z-index: 1;
   }
@@ -1044,7 +1044,7 @@
     width: 100%;
     height: 100%;
     background-color: var(--primary);
-    opacity: 0.1;
+    opacity: 0.2;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -1054,8 +1054,8 @@
     content: "";
     width: 75%;
     height: 75%;
-    background-color: var(--primary);
-    opacity: 0.3;
+    background-color: var(--secondary);
+    opacity: 0.5;
     border-radius: 50%;
     position: absolute;
     top: 50%;
