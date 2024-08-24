@@ -955,7 +955,7 @@
             width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
             height: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
             transform: rotate(0deg);
-            // opacity: 0.4;
+            opacity: 0.4;
             position: absolute;
             top: -50px; /* Lock to the top */
             right: -100px; /* Lock to the right */
