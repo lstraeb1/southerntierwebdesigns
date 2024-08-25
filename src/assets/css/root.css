@@ -544,6 +544,11 @@
   body.dark-mode #cs-navigation {
     background-color: var(--dark);
   }
+  body.dark-mode #cs-navigation.scrolled .cs-logo {
+    /* makes it white */
+    transform: none;
+    filter: grayscale(1) brightness(1000%);
+  }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it white */
     filter: grayscale(1) brightness(1000%);
@@ -851,7 +856,7 @@
   }
   body.dark-mode #cs-navigation.scrolled .cs-logo {
     transform: none;
-    filter: none;
+    filter: grayscale(1) brightness(1000%);
   }
   body.dark-mode #cs-navigation .cs-logo {
     /* makes it turn white */

@@ -670,6 +670,14 @@
         #cs-navigation {
             background-color: var(--dark);
 
+            &.scrolled {
+                .cs-logo {
+                    /* makes it white */
+                    transform: none;
+                    filter: grayscale(1) brightness(1000%);
+                }
+            }
+
             .cs-logo {
                 /* makes it white */
                 filter: grayscale(1) brightness(1000%);
@@ -1071,7 +1079,7 @@
 
                 .cs-logo {
                     transform: none;
-                    filter: none;
+                    filter: grayscale(1) brightness(1000%);
                     // transition: all 0.5s;
                     // transition-delay: 0.8s;
                 }
