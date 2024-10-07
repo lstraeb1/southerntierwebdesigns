@@ -427,17 +427,19 @@
   .blog-article .blog-dot {
     display: block;
     border-radius: 50%;
-    background-color: #fe4f70;
+    background-color: var(--primary);
     height: 3px;
     width: 3px;
   }
   .blog-article .blog-h1 {
     margin: 1rem 0;
-    max-width: 34.375rem;
+    max-width: 46.875rem;
     font-size: clamp(20px, 5vw, 39px);
     line-height: 1.4em;
-    font-weight: 700;
-    color: var(--headerColor);
+    font-weight: 400;
+    font-family: "Anton";
+    text-transform: uppercase;
+    color: #000;
   }
   .blog-article #blog-content {
     border-top: 1px solid #ebebeb;
@@ -460,11 +462,13 @@
     font-family: "Anton";
   }
   .blog-article #blog-content h3 {
+    text-transform: uppercase;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     line-height: 1.5em;
-    font-weight: 700;
-    color: var(--headerColor);
+    font-weight: 400;
+    font-family: "Anton";
+    color: #000;
   }
   .blog-article #blog-content h4,
   .blog-article #blog-content h5,

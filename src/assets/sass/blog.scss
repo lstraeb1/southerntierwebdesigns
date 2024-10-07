@@ -495,18 +495,20 @@
         .blog-dot {
             display: block;
             border-radius: 50%;
-            background-color: #fe4f70;
+            background-color: var(--primary);
             height: 3px;
             width: 3px;
         }
 
         .blog-h1 {
             margin: calc(16 / 16 * 1rem) 0;
-            max-width: calc(550 / 16 * 1rem);
+            max-width: calc(750 / 16 * 1rem);
             font-size: clamp(20px, 5vw, 39px);
             line-height: 1.4em;
-            font-weight: 700;
-            color: var(--headerColor);
+            font-weight: 400;
+            font-family: "Anton";
+            text-transform: uppercase;
+            color: #000;
         }
 
         #blog-content {
@@ -532,11 +534,13 @@
             }
 
             h3 {
+                text-transform: uppercase;
                 margin-bottom: calc(16 / 16 * 1rem);
                 font-size: calc(24 / 16 * 1rem);
                 line-height: 1.5em;
-                font-weight: 700;
-                color: var(--headerColor);
+                font-weight: 400;
+                font-family: "Anton";
+                color: #000;
             }
 
             h4,
