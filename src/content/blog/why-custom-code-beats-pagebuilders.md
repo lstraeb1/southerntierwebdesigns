@@ -12,8 +12,8 @@ author: Liam Straebler
 date: 2024-08-04T21:49:00.000Z
 tags:
   - featured
-image: /assets/images/blog/custom-code.jpg
-imageAlt: Custom hand coded website
+image: /assets/images/blog/digital-marketing.jpg
+imageAlt: Online Presence
 ---
 ## The Crucial Role of a Website in Today’s Digital Business Landscape
 
