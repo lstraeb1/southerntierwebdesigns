@@ -162,11 +162,13 @@
     width: 3px;
   }
   .recent-articles .blog-h1 {
+    text-transform: uppercase;
+    font-family: "Anton";
     margin: 1rem 0;
     font-size: clamp(20px, 5vw, 32px);
     line-height: 1.4em;
-    font-weight: 700;
-    color: var(--headerColor);
+    font-weight: 400;
+    color: #000;
   }
   .recent-articles .blog-desc {
     margin: 1rem 0 2rem;
@@ -281,12 +283,13 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid var(--primary);
+    border: 1px solid #d6d6d6;
     border-radius: 0.5em;
     width: 100%;
     padding: 2.1875em 1.875em;
   }
   .blog-sidebar .blog-header {
+    text-transform: uppercase;
     position: relative;
     display: block;
     margin-bottom: 1.875rem;
@@ -342,15 +345,16 @@
     object-fit: cover;
   }
   .blog-sidebar .feature-h3 {
+    text-transform: uppercase;
     display: block;
     margin: 0;
     margin-bottom: 0.25rem;
     text-decoration: none;
     font-size: 0.9375rem;
     line-height: 1.5em;
-    font-weight: 700;
+    font-weight: 400;
     color: #000;
-    font-family: "Lato";
+    font-family: "Anton";
   }
   .blog-sidebar .feature-date {
     display: block;
@@ -452,7 +456,7 @@
     font-size: 1.75rem;
     line-height: 1.5em;
     font-weight: 400;
-    color: var(--secondary);
+    color: #000;
     font-family: "Anton";
   }
   .blog-article #blog-content h3 {
