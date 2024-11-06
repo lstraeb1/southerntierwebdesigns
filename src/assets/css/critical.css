@@ -6,8 +6,8 @@
 @media only screen and (min-width: 0rem) {
   #hero-408 {
     /* 200px - 300px - leaving extra space for the navigation */
-    padding: clamp(9rem, 17vw, 14.5rem) 1rem;
-    padding-top: clamp(12.5rem, 25.95vw, 18.75em);
+    padding: clamp(11.25rem, 23.82vw, 18.75rem) 1rem;
+    padding-bottom: 0;
     /* prevents the topper line from causing an overflow */
     overflow: hidden;
     position: relative;
@@ -27,7 +27,6 @@
   }
   #hero-408 .cs-content {
     max-width: 39.375rem;
-    padding-right: 1rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -36,7 +35,7 @@
   }
   #hero-408 .cs-title {
     /* 49px - 84px */
-    font-size: clamp(2.825rem, 6vw, 4rem);
+    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
     max-width: 100%;
     font-family: "Anton";
   }
@@ -68,28 +67,30 @@
     object-fit: cover;
   }
   #hero-408 .cs-button-solid {
-    border-color: #FFFFFF;
-    color: var(--secondaryDark);
-    background-color: #fff;
+    background-color: #FFFFFF;
+    box-shadow: inset 0 -4px 0 #C6C6C6;
+    color: var(--primary);
+    transition: box-shadow 0.3s;
   }
-  #hero-408 .custom-shape-divider-bottom-1722282966 {
+  #hero-408 .cs-button-solid:hover {
+    box-shadow: none;
+  }
+  #hero-408 .custom-shape-divider-bottom-1730738793 {
     position: absolute;
-    bottom: -10px;
+    bottom: -3px;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
-    transform: rotate(180deg);
   }
-  #hero-408 .custom-shape-divider-bottom-1722282966 svg {
+  #hero-408 .custom-shape-divider-bottom-1730738793 svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 115px;
+    height: 40vw;
   }
-  #hero-408 .custom-shape-divider-bottom-1722282966 .shape-fill {
+  #hero-408 .custom-shape-divider-bottom-1730738793 .shape-fill {
     fill: #FFFFFF;
-    transition: all 0.3s;
   }
   #hero-408 .cs-background {
     width: 100%;
@@ -106,6 +107,21 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
+  }
+  #hero-408 .cs-background:before {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Black Color Overlay */
+    content: "";
+    opacity: 0.7;
+    display: block;
+    background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 46%);
+    height: 100%;
+    width: 100%;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
   }
 }
 /* Tablet - 768px */
@@ -163,7 +179,7 @@
 @media only screen and (min-width: 64rem) {
   #hero-408 {
     /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-    padding-bottom: 30vw;
+    padding-bottom: 20vw;
     padding-top: clamp(6.5rem, 19.95vw, 12.75em);
   }
   #hero-408 .cs-content {
@@ -234,7 +250,7 @@
   body.dark-mode #hero-408 .cs-logo {
     filter: grayscale(1) brightness(400%);
   }
-  body.dark-mode #hero-408 .custom-shape-divider-bottom-1722282966 .shape-fill {
+  body.dark-mode #hero-408 .custom-shape-divider-bottom-1730738793 .shape-fill {
     fill: var(--dark);
   }
 }

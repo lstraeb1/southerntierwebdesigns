@@ -1,15 +1,17 @@
 /*-- -------------------------- -->
-<---         Services           -->
+<---          Services          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #services-1130 {
+    #services-470 {
         padding: var(--sectionPadding);
+        position: relative;
 
         .cs-container {
             width: 100%;
-            max-width: calc(1280 / 16 * 1rem);
+            /* changes to 1280px at tablet */
+            max-width: calc(550 / 16 * 1rem);
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -28,124 +30,189 @@
             align-items: center;
         }
 
-        .cs-topper {
-            color: #767676;
-        }
-
         .cs-card-group {
+            width: 100%;
             margin: 0;
             padding: 0;
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             /* 16px - 20px */
-            gap: clamp(1rem, 2.3vw, 1.25rem);
-            border: 1px solid #e8e8e8;
-            border-radius: calc(16 / 16 * 1rem);
-            border-bottom: 6px solid var(--primary);
-            box-shadow: 12px 22px 12px #EEEEEE;
+            gap: clamp(1rem, 1.5vw, 1.25rem);
         }
 
         .cs-item {
             width: 100%;
-            text-align: center;
+            text-align: left;
             list-style: none;
-            margin: 0;
             /* 24px - 32px */
-            padding: clamp(1.5rem, 3vw, 2rem);
-            background-color: #fff;
+            padding: clamp(1.5rem, 3.5vw, 2rem);
+            box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+            border: 2px solid #b4b2c7;
+            background-color: #fafbfc;
+            border-radius: calc(12 / 16 * 1rem);
             /* prevents padding and border from affecting height and width */
             box-sizing: border-box;
-            grid-column: span 12;
-            grid-row: span 1;
+            /* clips the border bottom to match the curve of the border */
+            overflow: hidden;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            /* 16px - 36px */
+            gap: clamp(1.5rem, 3vw, 2.25rem);
             position: relative;
             z-index: 1;
-            border-radius: calc(16 / 16 * 1rem);
+
+            &:hover {
+                &:before {
+                    height: 100%;
+                }
+
+                .cs-h3,
+                .cs-item-text,
+                .cs-link {
+                    color: var(--bodyTextColorWhite);
+                }
+
+                .cs-picture {
+                    border-color: #fff;
+                    img {
+                        /* makes img turn grey, then brightened to get whiter */
+                        filter: grayscale(1) brightness(1000%);
+                    }
+                }
+            }
+
+            &:before {
+                /* border bottom that aniates on hover */
+                content: "";
+                width: 100%;
+                height: calc(6 / 16 * 1rem);
+                background: var(--primary);
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                transition: height 0.3s;
+            }
         }
 
-        .cs-image-group {
-            width: calc(100 / 16 * 1rem);
-            height: auto;
-            /* 20px - 24px */
-            margin: 0 0 clamp(1.25rem, 2.5vw, 1.5rem);
+        .cs-picture {
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            /* 60px - 80px */
+            width: clamp(3.75rem, 7vw, 5rem);
+            height: clamp(3.75rem, 7vw, 5rem);
+            border-radius: 50%;
+            border: clamp(2px, 0.4vw, 4px) solid var(--secondary);
+            /* prevents border from affecting height and width */
+            box-sizing: border-box;
             /* prevents flexbox from squishing it */
             flex: none;
-            position: relative;
-        }
+            z-index: 10;
+            transition: border-color 0.3s;
 
-        .cs-icon {
-            width: calc(48 / 16 * 1rem);
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            opacity: 1;
-            z-index: 2;
-        }
-
-        .cs-graphic {
-            width: 100%;
-            height: auto;
-
-            &:before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(255, 255, 255, 0.4); /* Adjust the opacity here */
-                z-index: 1; /* Place it above the graphic */
+            img {
+                /* 30px - 44px */
+                width: clamp(1.875rem, 4.5vw, 2.75rem);
+                height: auto;
+                display: block;
+                position: relative;
+                z-index: 10;
             }
         }
 
         .cs-h3 {
             /* 20px - 25px */
             font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
-            line-height: 1.2em;
-            font-weight: bold;
-            text-align: inherit;
-            margin: 0 0 calc(12 / 16 * 1rem) 0;
+            font-family: "Anton";
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1.5em;
+            margin: 0;
+            /* 8px - 16px */
+            margin-bottom: clamp(0.5rem, 1.5vw, 1rem);
             color: var(--headerColor);
             transition: color 0.3s;
         }
 
         .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            font-size: calc(14 / 16 * 1rem);
             line-height: 1.5em;
-            max-width: calc(450 / 16 * 1rem);
-            margin: 0;
-            padding: 0;
+            margin: 0 0 calc(24 / 16 * 1rem) 0;
             color: var(--bodyTextColor);
+            transition: color 0.3s;
+        }
+
+        .cs-link {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0;
+            color: var(--primary);
+            position: relative;
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:before {
+                /* hover bar under link */
+                content: "";
+                width: 0%;
+                height: calc(3 / 16 * 1rem);
+                background: currentColor;
+                opacity: 1;
+                position: absolute;
+                display: block;
+                bottom: calc(-3 / 16 * 1rem);
+                left: 0;
+                transition: width 0.3s;
+            }
         }
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #services-1130 {
+    #services-470 {
+        padding-top: calc(50 / 16 * 1rem);
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-card-group {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
         .cs-item {
-            text-align: left;
-            align-items: flex-start;
-            grid-column: span 6;
+            width: clamp(31.5%, 30.5vw, 32.2%);
+            flex-direction: column;
+            gap: calc(24 / 16 * 1rem);
         }
     }
 }
 
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #services-1130 {
+/* Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #services-470 {
+        
+        .cs-text {
+            width: 100%;
+            min-width: calc(780 / 16 * 1rem);
+        }
         .cs-item {
-            grid-column: span 3;
+            flex-direction: row;
         }
     }
 }
@@ -153,73 +220,48 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #services-1130 {
-            .cs-item {
-                background-color: var(--dark);
-                border-color: rgba(255, 255, 255, 0.2);
-
-                &:hover {
-                    .cs-h3 {
-                        color: var(--secondary);
-                    }
-                }
-            }
-
+        #services-470 {
             .cs-topper {
-                color: var(--secondary);
+                color: var(--primaryLight);
             }
 
             .cs-title,
             .cs-text,
-            .cs-h3,
-            .cs-item-text {
+            .cs-heading3 {
                 color: var(--bodyTextColorWhite);
             }
 
-            .cs-text {
-                opacity: 0.8;
+            .cs-item {
+                background-color: var(--accent);
             }
 
-            .cs-icon {
-                filter: grayscale(0.5) brightness(1000%);
+            .cs-h3,
+            .cs-item-text,
+            .cs-link {
+                color: var(--bodyTextColorWhite);
             }
 
-            .cs-graphic {
-                opacity: 0.7;
-            }
-
-            .cs-card-group {
-                box-shadow: 12px 22px 12px #181818;
+            .cs-picture {
+                border-color: #fff;
+                img {
+                    /* makes img turn grey, then brightened to get whiter */
+                    filter: grayscale(1) brightness(1000%);
+                }
             }
         }
     }
 }
 
 /*-- -------------------------- -->
-<---           Stats            -->
+<---       Featured Service     -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #stats-1643 {
         padding: var(--sectionPadding);
+        padding-top: 0;
         position: relative;
-
-        &:before {
-            content: "";
-            background: url("/assets/images/featured-service-debris.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
-            height: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
-            transform: rotate(220deg);
-            opacity: 0.4;
-            position: absolute;
-            bottom: -100px; /* Lock to the top */
-            right: -300px; /* Lock to the right */
-            z-index: -1; /* Ensure it is above other content */
-            pointer-events: none; /* Prevent interaction */
-        }
 
         &:after {
             content: "";
@@ -278,7 +320,6 @@
                 object-fit: cover;
                 position: absolute;
                 top: 0;
-                left: -20px;
             }
         }
 
@@ -397,7 +438,7 @@
             line-height: 1.2em;
             font-weight: 400;
             text-align: left;
-            color: var(--headerColor);
+            color: var(--primary);
             display: block;
             margin: 0 0 calc(4 / 16 * 1rem) 0;
         }
@@ -406,6 +447,7 @@
             font-size: calc(16 / 16 * 1rem);
             line-height: 1.5em;
             font-weight: 400;
+            text-transform: uppercase;
             text-align: left;
             /* auto margin top will push text to bottom if there's only one line */
             margin: 0;
@@ -452,6 +494,7 @@
 /* Small Desktop - 1024px */ 
 @media only screen and (min-width: 64rem) {
     #stats-1643 {
+        padding-top: calc(50 / 16 * 1rem);
         .cs-picture {
             width: 50%;
             height: 100%;
@@ -460,7 +503,7 @@
             display: block;
             position: absolute;
             left: 2%;
-            z-index: -1;
+            z-index: 1;
 
             img {
                 width: auto;
@@ -525,17 +568,297 @@
         }
     }
 }
-                                
 
 /*-- -------------------------- -->
-<---   Side By Side Reverse     -->
+<---          Portfolio         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+    #gallery-1374 {
+        padding: var(--sectionPadding);
+        padding-bottom: calc(100 / 16 * 1rem);
+        position: relative;
+        z-index: 1;
+        /* Prevents overflow from the image going off screen */
+        overflow: hidden;
+        background-color: var(--primary);
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title, .cs-text {
+            color: var(--bodyTextColorWhite);
+        }
+
+        .cs-image-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            /* 16px - 30px */
+            gap: clamp(1rem, 2vw, 1.875rem);
+        }
+
+        .cs-link {
+            text-decoration: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: calc(16 / 16 * 1rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            grid-column: span 12;
+            z-index: 3;
+
+            &:hover {
+
+                .cs-item-text {
+                    box-shadow: none;
+                }
+
+                .cs-icon {
+                    transform: rotate(45deg);
+                }
+
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            /* 344px - 420px */
+            height: clamp(21.5rem, 30vw, 26.25rem);
+            margin: auto;
+            border-radius: calc(24 / 16 * 1rem);
+            display: block;
+            position: relative;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: transform 0.7s;
+            }
+        }
+
+        .cs-item-text {
+            /* 16px - 20px top & bottom, 16px - 40px left & right */
+            padding: clamp(1rem, 2vw, 1.25rem) clamp(1rem, 2.8vw, 2.5rem);
+            background-color: #f7f7f7;
+            box-shadow: inset 0 -4px 0 #C6C6C6;
+            border-radius: calc(24 / 16 * 1rem);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* makes the item text the element that grows to fill the container */
+            flex-grow: 1;
+            gap: calc(16 / 16 * 1rem);
+            transition: box-shadow 0.3s;
+        }
+
+        .cs-flex {
+            display: flex;
+            flex-direction: column;
+            gap: calc(8 / 16 * 1rem);
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 1.8vw, 1.5625rem);
+            line-height: 1.2em;
+            text-align: left;
+            margin: 0;
+            color: #1a1a1a;
+            transition: color 0.3s;
+        }
+
+        .cs-desc {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.2vw, 1rem);
+            line-height: 1.5em;
+            color: #1a1a1a;
+            transition: color 0.3s;
+        }
+
+        .cs-icon-wrapper {
+            width: calc(48 / 16 * 1rem);
+            height: calc(48 / 16 * 1rem);
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents the parent flexbox from shrinking the icon */
+            flex-shrink: 0;
+            transition: border-color 0.3s;
+        }
+
+        .cs-icon {
+            width: auto;
+            height: calc(12 / 16 * 1rem);
+            transition: filter 0.3s, transform 0.3s;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            &:before {
+                /* background color overlay */
+                content: "";
+                position: absolute;
+                display: block;
+                height: 100%;
+                width: 100%;
+                background: var(--primary);
+                opacity: 0.8;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+        }
+
+        .portfolio-shape-divider {
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            z-index: 0;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 40vw;
+            }
+
+            .shape-fill {
+                fill: #FFFFFF;
+            }
+        }
+    }
+}
+
+/* Tablet 768px */
+@media only screen and (min-width: 48rem) {
+    #gallery-1374 {
+        padding-bottom: calc(150 / 16 * 1rem);
+        .cs-item {
+            grid-column: span 1;
+        }
+    }
+}
+
+/* Small Desktop 1024px */
+@media only screen and (min-width: 64rem) {
+    #gallery-1374 {
+        padding-bottom: calc(230 / 16 * 1rem);
+        .cs-item {
+            grid-column: span 1;
+        }
+    }
+}
+
+/* Large Desktop 1024px */
+@media only screen and (min-width: 81.25rem) {
+    #gallery-1374 {
+        padding-bottom: calc(280 / 16 * 1rem);
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #gallery-1374 {
+            .cs-title,
+            .cs-text,
+            .cs-h3 {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---         About Us           -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #sbsr-1444 {
         padding: var(--sectionPadding);
+        padding-top: calc(50 / 16 * 1rem);
         overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &:after {
+            content: "";
+            background: url("/assets/images/featured-service-debris-bottom.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+            height: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
+            transform: rotate(230deg);
+            opacity: 0.2;
+            position: absolute;
+            bottom: -100px; /* Lock to the top */
+            right: -250px; /* Lock to the right */
+            z-index: -1; /* Ensure it is above other content */
+            pointer-events: none; /* Prevent interaction */
+        }
 
         .cs-container {
             width: 100%;
@@ -642,26 +965,78 @@
             color: var(--bodyTextColor);
         }
 
-        .cs-picture {
+        .cs-image-group {
             width: 100%;
-            max-width: calc(650 / 16 * 1rem);
-            min-height: calc(362 / 16 * 1rem);
-            border-radius: calc(24 / 16 * 1rem);
-            /* clips img tag corners */
+            max-width: calc(586 / 16 * 1rem);
+            /* Changes to auto at desktop */
+            height: calc(520 / 16 * 1rem);
+            /* 32px - 48px */
+            border-radius: clamp(2rem, 4vw, 3rem);
+            /* clips the corners of the children around the border radius */
             overflow: hidden;
-            display: block;
             position: relative;
-            z-index: 1;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            /* makes it cover the parent dimensions */
+            object-fit: cover;
+            display: block;
 
             img {
                 width: 100%;
                 height: 100%;
+                /* makes it cover the parent like a backgorund image */
+                object-fit: cover;
                 display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                object-fit: contain;
             }
+        }
+
+        .cs-box {
+            text-align: left;
+            width: 100%;
+            max-width: calc(304 / 16 * 1rem);
+            padding: calc(20 / 16 * 1rem);
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            background-color: var(--secondary);
+            /* 48px - 80px */
+            border-radius: calc(16 / 16 * 1rem);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            // gap: calc(20 / 16 * 1rem);
+            position: absolute;
+            /* 12px - 20px */
+            right: clamp(0.75rem, 1.9vw, 1.5rem);
+            /* 12px - 20px */
+            bottom: clamp(0.75rem, 1.9vw, 1.5rem);
+
+            .cs-h3 {
+                font-family: "Anton";
+                color: var(--bodyTextColorWhite);
+                text-transform: uppercase;
+                font-weight: 400;
+                margin-bottom: 0;
+            }
+        }
+
+        .cs-box-icon {
+            width: calc(80 / 16 * 1rem);
+            height: auto;
+            display: block;
+        }
+
+        .cs-desc {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.2em;
+            text-align: inherit;
+            font-weight: 400;
+            width: 100%;
+            margin: 0;
+            color: var(--bodyTextColorWhite);
         }
     }
 }
@@ -674,19 +1049,17 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: stretch;
-            position: relative;
+        }
+
+        .cs-image-group {
+            height: auto;
+            /* sends it to the right in the 2nd position */
+            order: 2;
         }
 
         .cs-content {
             width: 50%;
             padding: calc(40 / 16 * 1rem) 0;
-        }
-
-        .cs-picture {
-            height: auto;
-            width: 55%;
-            /* sends it to the right in the 2nd position */
-            order: 2;
         }
     }
 }
@@ -715,453 +1088,23 @@
 }
 
 /*-- -------------------------- -->
-<---          Gallery           -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) { 
-
-    @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {
-            transform: translate(-50%, -50%);
-        }
-        40% {
-            transform: translate(-50%, -80%);
-        }
-        60% {
-            transform: translate(-50%, -65%);
-        }
-    } 
-
-    #gallery-1752 {
-        padding: 0;
-        position: relative;
-
-        .cs-container {
-            width: 100%;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
-
-        .cs-card-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-        }
-
-        .cs-item {
-            text-align: left;
-            list-style: none;
-            width: 100%;
-            /* 300px - 400px, changes at desktop to a vw unit */
-            height: clamp(18.75rem, 27vw, 25rem);
-            margin: 0;
-            /* prevents padding and border from affecting height and width */
-            box-sizing: border-box;
-            padding: 0;
-            background-color: #000;
-            grid-column: span 12;
-            position: relative;
-            z-index: 1;
-            pointer-events: none;
-
-            &:before {
-                content: '';
-                width: 100%;
-                height: 100%;
-                background: #000;
-                opacity: 0.2;
-                position: absolute;
-                display: block;
-                top: 0;
-                left: 0;
-                transition: opacity .3s;
-            }
-
-            .cs-button-solid {
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                color: #FFFFFF;
-                background-color: var(--primary);
-                border: none;
-                animation: bounce 2s infinite;
-                pointer-events: all;
-
-                &:hover {
-                    background-color: var(--primary);
-                    color: #FFFFFF;
-                    font-weight: 700;
-                }
-            }
-
-            &:hover {
-                .cs-picture {
-                    img {
-                        transform: scale(1.2);
-                    }
-                }
-
-                .cs-link {
-                    &:before {
-                        opacity: .72;
-                    }
-                }
-
-                .cs-h2, .cs-h3 {
-                    opacity: 1;
-                    /* Return to original position */
-                    transform: translateY(0);
-                    text-align: left;
-                }
-
-                .cs-hover-text {
-                    opacity: 1;
-                    /* Return to original position */
-                    transform: translateY(0);
-                }
-            }
-        }
-        
-        .cs-picture {
-            width: 100%;
-            height: 100%;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            overflow: hidden;
-
-            &:after {
-                /* background color overlay on hover */
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: var(--primary);
-                opacity: 0;
-                display: block;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                transition: opacity 0.3s;
-            }
-
-            img {
-                width: 100%;
-                height: 100%;
-                /* Makes img tag act as a background image */
-                object-fit: cover;
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: transform 0.8s ease-out;
-            }
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #gallery-1752 {
-        .cs-item {
-            grid-column: span 4;
-
-            &:nth-of-type(4), &:nth-of-type(5) {
-                grid-column: span 4;
-            }
-        }
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #gallery-1752 {
-        .cs-card-group {
-            grid-template-columns: repeat(12, 1fr);
-        }
-
-        .cs-item {
-            height: 29vw;
-            grid-column: span 4;
-
-            &:before {
-                opacity: 0;
-            }
-
-            .cs-button-solid {
-                display: none;
-            }
-
-            &:nth-of-type(4), &:nth-of-type(5) {
-                grid-column: span 4;
-            }
-
-            .cs-link {
-                text-align: center;
-                text-decoration: none;
-                align-items: center; /* Center child elements horizontally within the container */
-                width: 100%;
-                height: 100%;
-                box-sizing: border-box;
-                padding: clamp(1.25rem, 2.3vw, 2rem);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                position: relative;
-                z-index: 1;
-                pointer-events: all;
-            
-                &:before {
-                    content: '';
-                    width: 100%;
-                    height: 100%;
-                    background: var(--primary);
-                    opacity: 0;
-                    position: absolute;
-                    display: block;
-                    top: 0;
-                    left: 0;
-                    transition: opacity .3s;
-                }
-            }
-            
-            .cs-icon-wrapper {
-                margin-bottom: calc(32 / 16 * 1rem);
-                opacity: 0;
-                display: inline-flex;
-                justify-content: center;
-                align-items: center;
-                flex: none;
-                position: relative;
-                transform: translateY(1.75rem) rotate(90deg);
-                transition: transform 0.5s, opacity .3s;
-            }
-            
-            .cs-icon {
-                width: clamp(2rem, 5vw, 3.75rem);
-                height: auto;
-            }
-    
-            .cs-h2 {
-                font-family: "Anton";
-                font-size: clamp(2rem, 3vw, 2.125rem)
-            }
-            
-            .cs-h2, .cs-h3 {
-                // font-size: calc(16 / 16 * 1rem);
-                font-weight: 700;
-                line-height: 1.2em;
-                margin-bottom: calc(4 / 16 * 1rem);
-                color: var(--bodyTextColorWhite);
-                opacity: 0;
-                transform: translateY(1.75rem);
-                transition: opacity 0.3s, transform 0.4s ease-out;
-                transition-delay: .05s;
-                text-align: center; /* Ensure the text itself is left-aligned */
-            }
-            
-            .cs-hover-text {
-                font-size: clamp(0.5rem, 1.5vw, 1rem);
-                font-weight: 400;
-                line-height: 1.2em;
-                max-width: calc(330 / 16 * 1rem);
-                margin-top: calc(28 / 16 * 1rem);
-                text-align: center; /* Ensure the text itself is left-aligned */
-                color: #fff;
-                opacity: 0;
-                transform: translateY(1.75rem);
-                transition: opacity 0.3s, transform 0.4s ease-out;
-                transition-delay: .1s;
-            }
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---        Get To Know         -->
+<---        Why Choose          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #hero-1426 {
-        /* Centers button */
+    #why-choose-1371 {
         padding: var(--sectionPadding);
-        text-align: center;
-        overflow: hidden;
+        padding-top: 0;
         position: relative;
+        overflow: hidden;
         z-index: 1;
-
-        &:before {
-            content: "";
-            background: url("/assets/images/concrete_debris_019_0000.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
-            height: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
-            transform: rotate(0deg);
-            opacity: 0.4;
-            position: absolute;
-            top: -50px; /* Lock to the top */
-            right: -100px; /* Lock to the right */
-            z-index: 0; /* Ensure it is above other content */
-            pointer-events: none; /* Prevent interaction */
-        }
 
         .cs-container {
             width: 100%;
             max-width: calc(1280 / 16 * 1rem);
             margin: auto;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: calc(48 / 16 * 1rem);
-        }
-
-        .cs-content {
-            width: 100%;
-            max-width: calc(630 / 16 * 1rem);
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .cs-text {
-            font-weight: 400;
-        }
-
-        .cs-picture {
-            width: 100%;
-            margin: calc(64 / 16 * 1rem) auto;
-            max-width: calc(350 / 16 * 1rem);
-            min-height: calc(362 / 16 * 1rem);
-            border-radius: 30% 70% 38% 62% / 48% 30% 70% 52%
-            ;
-            /* clips img tag corners */
-            overflow: hidden;
-            display: block;
-            position: relative;
-            z-index: 1;
-
-            img {
-                width: 100%;
-                height: 100%;
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                object-fit: cover;
-            }
-        }
-
-        .cs-h2 {
-            font-family: "Anton";
-            font-weight: 800;
-            color: #000;
-        }
-
-        .cs-h3 {
-            font-size: var(--bodyFontSize);
-            margin-bottom: calc(24 / 16 * 1rem);
-        }
-
-        
-        .cs-button-group {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            position: relative;
-            gap: calc(48 / 16 * 1rem);
-            height: auto; /* Adjust based on your layout needs */
-
-            .social-link {
-                img {
-                    transition: transform 0.4s ease;
-                    width: calc(48 / 16 * 1rem);
-                    height: auto;
-                    &:hover {
-                        transform: scale(1.25);
-                    }
-                }
-            }
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero-1426 {
-        &:before {
-            top: -100px;
-            right: -100px;
-            width: 70%;
-            height: 100%;    
-        }
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 84rem) {
-    #hero-1426 {
-        &:before {
-            top: -100px;
-            right: -300PX;
-        }
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-1426 {
-            .dark-hide {
-                display: none;
-            }
-
-            .cs-h2 {
-                color: #FFFFFF;
-            }
-
-            .cs-background {
-                &:before {
-                    opacity: 0.72;
-                    display: block;
-                }
-            }
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---         Why Choose         -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #why-choose-1571 {
-        padding: var(--sectionPadding);
-        position: relative;
-        z-index: 1;
-        overflow: hidden;
-
-        .cs-container {
-            width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: calc(400 / 16 * 1rem);
-            margin: auto; 
-            display: flex; 
             flex-direction: column;
             align-items: center;
             /* 48px - 64px */
@@ -1179,144 +1122,36 @@
         }
 
         .cs-title {
-            max-width: 27ch;
-            margin: 0;
+            max-width: 23ch;
         }
 
-        .cs-topper {
-            color: var(--secondary);
+        .cs-text {
+            max-width: calc(840 / 16 * 1rem);
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            strong {
+                color: var(--headerColor);
+            }
         }
 
-        .cs-card-wrapper {
-            width: 100%;
-            display: grid;
-            grid-auto-flow: row;
-            /* 16px - 20px */
-            column-gap: clamp(1rem, 2vw, 1.25rem);
-            row-gap: calc(40 / 16 * 1rem);
-        }
-
-        .cs-card-group {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            /* 24px - 60px */
-            gap: clamp(1.5rem, 5vw, 3.75rem);
-        }
-
-        .cs-item {
+        .cs-item-picture {
             list-style: none;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: calc(20 / 16 * 1rem);
-        }
-
-        .cs-icon-wrapper {
-            /* 60px - 80px */
-            width: clamp(3.75rem, 5vw, 5rem);
-            height: clamp(3.75rem, 5vw, 5rem);
-            border: 1px solid var(--primary);
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-shrink: 0;
-            position: relative;
-            overflow: hidden;
-            aspect-ratio: 1/1;
-
-            &::before {
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: var(--primary);
-                opacity: 0.1;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-
-        .cs-icon {
-            /* 24px - 36px */
-            width: clamp(1.5rem, 3vw, 2.25rem);
-            height: auto;
-        }
-
-        .cs-h3 {
-            font-size: calc(20 / 16 * 1rem);
-            font-family: "Anton";
-            font-weight: 700;
-            line-height: 1.2em;
-            margin: 0 0 calc(8 / 16 * 1rem);
-            color: var(--headerColor);
-        }
-
-        .cs-item-text {
-            font-size: calc(14 / 16 * 1rem);
-            line-height: 1.5em;
-            margin: 0;
-            color: var(--bodyTextColor);
-        }
-
-        .cs-image {
-            /* all these change on tablet */
-            width: 80vw;
-            max-width: calc(500 / 16 * 1rem);
-            height: 80vw;
-            max-height: calc(500 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            justify-content: center;
-            position: relative;
-
-            img {
-                width: 100%;
-                height: 100%;
-                max-height: calc(700 / 16 * 1rem);
-                object-fit: contain;
-                z-index: 1;
-            }
-
-            &::before {
-                content: "";
-                width: 100%;
-                height: 100%;
-                background-color: var(--primary);
-                opacity: 0.2;
-                border-radius: 50%;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-
-            &::after {
-                content: "";
-                width: 75%;
-                height: 75%;
-                background-color: var(--secondary);
-                opacity: 0.5;
-                border-radius: 50%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        .cs-background {
             width: 100%;
-            height: 100%;
+            grid-column: span 12;
+            position: relative;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: calc(418 / 16 * 1rem);
+            border-radius: calc(24 / 16 * 1rem);
+            overflow: hidden;
             display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
+            position: relative;
+            z-index: 1;
 
             img {
                 width: 100%;
@@ -1327,44 +1162,138 @@
                 left: 0;
             }
         }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            align-items: stretch6;
+            gap: clamp(1rem, 2vw, 1.25rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            /* 16px - 24px */
+            padding: clamp(1rem, 3vw, 1.5rem);
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            background-color: #f7f7f7;
+            border-radius: calc(16 / 16 * 1rem);
+            border: 1px solid #e8e8e8;
+            display: flex;
+            grid-column: span 12;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(12 / 16 * 1rem);
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: var(--primary);
+
+                .cs-h3,
+                .cs-item-text {
+                    color: var(--bodyTextColorWhite);
+                }
+
+                .cs-item-text {
+                    opacity: 0.8;
+                }
+
+                .cs-h3-icon {
+                    filter: grayscale(1) brightness(1000%);
+                }
+            }
+        }
+
+        .cs-h3 {
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: calc(8 / 16 * 1rem);
+            transition: color 0.3s;
+        }
+
+        .cs-h3-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            margin-top: 2px;
+            display: block;
+        }
+
+        .cs-item-text {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            transition:
+                color 0.3s,
+                opacity 0.3s;
+        }
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #why-choose-1571 {
-        .cs-container {
-            max-width: calc(1280 / 16 * 1rem);
-        }
-
-        .cs-card-wrapper {
-            align-items: center;
-            grid-template-columns: repeat(3, 1fr);
-        }
-
+    #why-choose-1371 {
         .cs-item {
-            text-align: left;
-            align-items: start;
-        }
-
-        .cs-image {
-            width: 30vw;
-            max-width: calc(428 / 16 * 1rem);
-            height: 30vw;
-            max-height: calc(430 / 16 * 1rem);
-            
-            img {
-                max-height: calc(430 / 16 * 1rem);
-            }
+            grid-column: span 4;
         }
     }
 }
 
-/* Desktop - 1024px */
+/* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #why-choose-1571 {
+    #why-choose-1371 {
+        padding-top: calc(50 / 16 * 1rem);
+
+        .cs-item-picture {
+            grid-column: 4 / span 6;
+            grid-row: 1 / span 3;
+        }
+
+        .cs-picture {
+            height: 100%;
+        }
+
         .cs-item {
-            flex-direction: row;
+            grid-column: span 2;
+
+            &:nth-of-type(1) {
+                grid-column: 1 / span 3;
+                grid-row: 1 / span 1;
+            }
+
+            &:nth-of-type(2) {
+                grid-column: 1 / span 3;
+                grid-row: 2 / span 1;
+            }
+
+            &:nth-of-type(3) {
+                grid-column: 1 / span 3;
+                grid-row: 3 / span 1;
+            }
+
+            &:nth-of-type(5) {
+                grid-column: 10 / span 3;
+                grid-row: 1 / span 1;
+            }
+
+            &:nth-of-type(6) {
+                grid-column: 10 / span 3;
+                grid-row: 2 / span 1;
+            }
+
+            &:nth-of-type(7) {
+                grid-column: 10 / span 3;
+                grid-row: 3 / span 1;
+            }
         }
     }
 }
@@ -1372,45 +1301,81 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #why-choose-1571 {
-            background-color: var(--dark);
-
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
+        #why-choose-1371 {
             .cs-title,
             .cs-text,
-            .cs-h3,
             .cs-item-text {
                 color: var(--bodyTextColorWhite);
             }
 
+            .cs-text {
+                strong {
+                    color: var(--bodyTextColorWhite);
+                }
+            }
+
+            .cs-text,
             .cs-item-text {
                 opacity: 0.8;
             }
 
-            .cs-background {
-                opacity: .3;
-                filter: brightness(30%);
+            .cs-item {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-color: rgba(255, 255, 255, 0.2);
+
+                &:hover {
+                    background-color: var(--primary);
+                }
+            }
+
+            .cs-h3 {
+                color: var(--bodyTextColorWhite);
             }
         }
     }
 }
 
 /*-- -------------------------- -->
-<---           Steps            -->
+<---        Recent Posts        -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #steps-276 {
+    @keyframes floatAnimation {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-2rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes floatAnimation2 {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-3rem);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    #blog-1369 {
+        padding-top: 0;
         padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
 
         .cs-container {
             width: 100%;
-            /* changes to 1280px at tablet */
-            max-width: calc(550 / 16 * 1rem);
+            /* changes to 1280px on desktop */
+            max-width: calc(700 / 16 * 1rem);
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -1433,193 +1398,322 @@
             max-width: 20ch;
         }
 
-        .cs-text {
-            font-weight: 400;
+        .cs-button-solid {
+            margin: calc(32 / 16 * 1rem) 0 0;
         }
 
         .cs-card-group {
-            padding: 0;
-            margin: 0;
             width: 100%;
-            /* changes to 1100px at tablet */
-            max-width: calc(400 / 16 * 1rem);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: calc(24 / 16 * 1rem);
-            position: relative;
-
-            &:before {
-                /* list line connector */
-                content: "";
-                width: 1px;
-                background: #1a1a1a;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                /* no height, set it as a top to bottom.  
-                It will grow with newly added text in the .cs-item-text */
-                top: calc(16 / 16 * 1rem);
-                bottom: calc(24 / 16 * 1rem);
-                left: calc(56 / 16 * 1rem);
-            }
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: calc(16 / 16 * 1rem);
         }
 
         .cs-item {
-            text-align: left;
             list-style: none;
-            margin: 0;
             display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
+            flex-direction: column;
+            grid-column: span 12;
 
-        .cs-number {
-            /* 16px - 20px */
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            font-weight: 700;
-            margin-right: calc(32 / 16 * 1rem);
-            /* 40px - 52px */
-            width: clamp(2.5rem, 5.1vw, 3.25rem);
-            height: clamp(2.5rem, 5.1vw, 3.25rem);
-            border-radius: 50%;
-            color: var(--bodyTextColorWhite);
-            background-color: var(--secondaryDark);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            /* prevents flexbox from squishing it */
-            flex: none;
-            position: relative;
+            &:hover {
+                .cs-h3,
+                .cs-date,
+                .cs-category {
+                    color: #fff;
+                }
 
-            &:before {
-                /* list circle */
-                content: "";
-                width: calc(8 / 16 * 1rem);
-                height: calc(8 / 16 * 1rem);
-                background: #1a1a1a;
-                border-radius: 50%;
-                opacity: 1;
-                position: absolute;
-                display: block;
-                top: 50%;
-                right: calc(-20 / 16 * 1rem);
-                transform: translateY(-50%);
+                .cs-item-text {
+                    background-color: var(--primary);
+                }
+
+                .cs-icon-wrapper {
+                    border-color: #fff;
+                }
+
+                .cs-icon,
+                .cs-date-icon {
+                    filter: brightness(1000%) grayscale(1);
+                }
+
+                .cs-icon {
+                    transform: rotate(45deg);
+                }
+
+                .cs-category {
+                    &::before {
+                        background-color: #fff;
+                        opacity: 0.2;
+                    }
+                }
             }
         }
 
-        .cs-h2 {
-            // margin-right: calc(16 / 16 * 1rem);
-            font-size: calc(16 / 16 * 1rem);
-            font-family: "Anton";
-            display: none;
+        .cs-link {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            /* if one card has more content then the others, the card will stretch to fill the parent container */
+            flex-grow: 1;
+            gap: calc(16 / 16 * 1rem);
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: calc(320 / 16 * 1rem);
+            margin: 0;
+            border-radius: calc(24 / 16 * 1rem);
+            display: block;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
 
         .cs-item-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 2vw, 1rem);
-            line-height: 1.5em;
+            padding: calc(20 / 16 * 1rem);
+            background-color: #f7f7f7;
+            border-radius: calc(24 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* makes the item text the element that grows to fill the container */
+            flex-grow: 1;
+            transition: background-color 0.3s;
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 1.8vw, 1.5625rem);
+            line-height: 1.2em;
+            text-align: left;
             margin: 0;
-            color: var(--bodyTextColor);
-            margin-left: 10px;
+            color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: calc(16 / 16 * 1rem);
+            transition: color 0.3s;
+        }
+
+        .cs-icon-wrapper {
+            width: calc(48 / 16 * 1rem);
+            height: calc(48 / 16 * 1rem);
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents the parent flexbox from shrinking the icon */
+            flex-shrink: 0;
+            transition: border-color 0.3s;
+        }
+
+        .cs-icon {
+            width: auto;
+            height: calc(12 / 16 * 1rem);
+            transition:
+                filter 0.3s,
+                transform 0.3s;
+        }
+
+        .cs-info {
+            margin: calc(16 / 16 * 1rem) 0 0;
+            padding: calc(16 / 16 * 1rem) 0 0;
+            border-top: 1px solid #e8e8e8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cs-date {
+            font-size: calc(14 / 16 * 1rem);
+            line-height: 1.5em;
+            text-align: left;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: calc(8 / 16 * 1rem);
+            transition: color 0.3s;
+        }
+
+        .cs-date-icon {
+            width: auto;
+            height: calc(24 / 16 * 1rem);
+            transition: filter 0.3s;
+        }
+
+        .cs-category {
+            font-size: calc(14 / 16 * 1rem);
+            /* centers the text if the category bullet has to span multiple lines */
+            text-align: center;
+            padding: calc(4 / 16 * 1rem) calc(16 / 16 * 1rem);
+            color: #1a1a1a;
+            border-radius: calc(80 / 16 * 1rem);
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #e8e8e8;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+            }
+        }
+
+        .cs-bubbles {
+            width: calc(321 / 16 * 1rem);
+            height: calc(423 / 16 * 1rem);
+            display: none;
+            position: absolute;
+            top: calc(139 / 16 * 1rem);
+            right: calc(-140 / 16 * 1rem);
+            z-index: -1;
+
+            &:before {
+                /* white border bubble */
+                content: "";
+                width: calc(264 / 16 * 1rem);
+                height: calc(264 / 16 * 1rem);
+                background: transparent;
+                opacity: 1;
+                border: 1px solid #1a1a1a;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                animation-name: floatAnimation;
+                animation-duration: 5s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
+
+            &:after {
+                /* orange bubble */
+                content: "";
+                width: calc(264 / 16 * 1rem);
+                height: calc(264 / 16 * 1rem);
+                background: var(--primary);
+                opacity: 0.1;
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                z-index: -1;
+                animation-name: floatAnimation2;
+                animation-duration: 14s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: infinite;
+                animation-fill-mode: forwards;
+            }
         }
     }
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #steps-276 {
-        .cs-container {
-            max-width: calc(1280 / 16 * 1rem);
-        }
-
-        .cs-card-group {
-            max-width: calc(1100 / 16 * 1rem);
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-            column-gap: calc(32 / 16 * 1em);
-
-            &:before {
-                /* reset width */
-                width: auto;
-                height: 1px;
-                /* 60px - 76px */
-                top: clamp(3.75rem, 7.5vw, 4.75rem);
-                /* 80px - 110px */
-                left: clamp(5rem, 10.5vw, 6.875rem);
-                right: clamp(5rem, 10.5vw, 6.875rem);
-            }
-        }
-
+    #blog-1369 {
         .cs-item {
-            text-align: center;
-            width: calc(218 / 16 * 1rem);
-            /* remove margin from mobile */
-            margin: 0;
-            /* orient to vertical spacing */
-            flex-direction: column;
-            align-items: center;
+            grid-column: span 6;
         }
 
-        .cs-number {
-            margin: 0;
-            /* 40px - 60px */
-            margin-bottom: clamp(2.5rem, 6vw, 3.75rem);
-
-            &:before {
-                top: auto;
-                left: 50%;
-                /* -24px to -28px */
-                /* use calc() to multiply clamp value by -1 to get a negative clamp value */
-                bottom: calc(clamp(1.5rem, 2.9vw, 1.75rem) * -1);
-                transform: translateX(-50%);
-            }
-        }
-
-        .cs-h2 {
-            margin-bottom: calc(16 / 16 * 1rem);
-            font-family: "Anton";
-            font-size: calc(24 / 16 * 1rem);
+        .cs-bubbles {
             display: block;
-        }
-    }
-} 
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #steps-276 {
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
-            .cs-title,
-            .cs-text,
-            .cs-item-text {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-text {
-                opacity: 0.8;
-            }
-
-            .cs-card-group {
-                &:before {
-                    background: var(--bodyTextColorWhite);
-                }
-            }
-
-            .cs-number {
-                &:before {
-                    background-color: var(--bodyTextColorWhite);
-                }
-            }
         }
     }
 }
 
-                                
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #blog-1369 {
+        padding-top: calc(50 / 16 * 1rem);
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+        }
+
+        .cs-bubbles {
+            top: calc(281 / 16 * 1rem);
+        }
+    }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+    #blog-1369 {
+        .cs-container {
+            flex-direction: row;
+        }
+
+        .cs-content {
+            text-align: left;
+            max-width: calc(305 / 16 * 1rem);
+            align-items: start;
+        }
+
+        .cs-bubbles {
+            margin-right: calc(-990 / 16 * 1rem);
+            top: calc(-20 / 16 * 1rem);
+            right: 50%;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #blog-1369 {
+            .cs-topper {
+                color: var(--primaryLight);
+            }
+            .cs-title,
+            .cs-text,
+            .cs-h3,
+            .cs-date,
+            .cs-category {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text,
+            .cs-date,
+            .cs-category {
+                opacity: 0.8;
+            }
+
+            .cs-button-solid {
+                &::before {
+                    background-color: var(--medium);
+                }
+            }
+
+            .cs-item-text {
+                background-color: var(--medium);
+            }
+
+            .cs-category {
+                &::before {
+                    background-color: var(--accent);
+                }
+            }
+        }
+    }
+}                             
                                 
 /*-- -------------------------- -->
 <---          Pricing           -->
@@ -1629,6 +1723,7 @@
 @media only screen and (min-width: 0rem) {
     #pricing-357 {
         padding: var(--sectionPadding);
+        padding-top: 0;
         background-color: #FFFFFF;
 
         .cs-container {
@@ -1694,7 +1789,7 @@
             /* send to the top */
             z-index: 2;
             order: -1;
-            border: 3px solid var(--primary);
+            border: 3px solid var(--secondary);
 
             &:before {
                 /* Most Popular Tag */
@@ -1707,7 +1802,7 @@
                 width: 100%;
                 padding: 0 calc(12 / 16 * 1rem);
                 color: var(--bodyTextColorWhite);
-                background-color: var(--primary);
+                background-color: var(--secondary);
                 position: absolute;
                 display: block;
                 top: 0;
@@ -1726,20 +1821,6 @@
             .cs-li,
             .cs-small {
                 color: var(--bodyTextColor);
-            }
-
-            .cs-button-solid {
-                background-color: var(--primary);
-                color: #FFFFFF;
-                width: 100%;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 90%;
-
-                &:hover {
-                    background-color: transparent;
-                    color: #000;
-                }
             }
         }
 
@@ -1859,17 +1940,9 @@
         .cs-button-solid {
             position: absolute;
             bottom: calc(48 / 16 * 1rem);
-            background-color: none;
-            color: var(--secondary-alt);
-            transition: background-color 0.3s;
             left: 50%;
             transform: translateX(-50%);
             width: 80%;
-
-            &:hover {
-                background-color: var(--primary);
-                color: #FFFFFF;
-            }
         }
     }
 }
@@ -1908,13 +1981,11 @@
 }
 
 /* Desktop - 1024px */
-// @media only screen and (min-width: 64rem) {
-//     #pricing-357 {
-//         .cs-popular {
-//             transform: scale(1.15);
-//         }
-//     }
-// }
+@media only screen and (min-width: 64rem) {
+    #pricing-357 {
+        padding-top: calc(50 / 16 * 1rem);
+    }
+}
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
