@@ -153,26 +153,11 @@
   }
   #hero-408 .cs-stat-group .cs-picture img {
     width: 100%;
-    transform: scale(2);
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     position: absolute;
     right: 100px;
     z-index: -1;
-  }
-}
-/* Desktop Parallax - 1300px */
-@media only screen and (min-width: 81.25rem) {
-  #hero-408 .cs-background {
-    background: url("/assets/images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* creates the parallax effect */
-    background-attachment: fixed;
-  }
-  #hero-408 .cs-background img {
-    display: none;
   }
 }
 /* Small Desktop - 1024px */
@@ -221,6 +206,20 @@
     /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
     padding: 16.5rem;
     padding-bottom: 20vw;
+  }
+}
+/* Desktop Parallax - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #hero-408 .cs-background {
+    background: url("/assets/images/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* creates the parallax effect */
+    background-attachment: fixed;
+  }
+  #hero-408 .cs-background img {
+    display: none;
   }
 }
 /* Dark Mode */
