@@ -19,7 +19,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <link rel="preload" as="image" href="/assets/images/hero-bg-m.webp">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
 
 
     <!-- Script for Netlify Identity -->
@@ -79,11 +79,11 @@ eleventyNavigation:
                 <path class="shape-fill" d="M1920 2.8262C1822.95 -11.8444 1741.41 62.2423 1650.26 211.883C1536.33 398.933 1449.18 337.417 1236.89 464.951C1067.07 566.979 858.094 507.463 774.836 464.951C731.34 435.777 602.866 394.932 436.934 464.951C229.519 552.475 -3.40345 349.046 -4.86412 179C-6.03266 42.9632 0.843634 355.421 -3.70067 646H949.629H1920V2.8262Z"/>
             </svg>
         </div>
-        <picture class="cs-background">
+        <!-- <picture class="cs-background">
             <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.webp">
             <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.jpg">
             <img decoding="async" src="/assets/images/hero-bg.jpg" loading="eager" alt="background" width="1920" height="975" aria-hidden="true">
-        </picture>
+        </picture> -->
     </section>
 
     <!-- ============================================ -->

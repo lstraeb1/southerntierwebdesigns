@@ -10,6 +10,7 @@
         /* 200px - 300px - leaving extra space for the navigation */
         padding: clamp(11.25rem, 23.82vw, 18.75rem) calc(16/16 * 1rem);
         padding-bottom: 0;
+        background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
         /* prevents the topper line from causing an overflow */
         overflow: hidden;
         position: relative;
