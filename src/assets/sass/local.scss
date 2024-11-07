@@ -265,7 +265,7 @@
 
         &:after {
             content: "";
-            background: url("/assets/images/featured-service-debris-bottom.png");
+            background: url("/assets/svgs/featured-service-debris-bottom.svg");
             background-size: contain;
             background-repeat: no-repeat;
             width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */
@@ -607,7 +607,7 @@
         }
 
         .cs-title, .cs-text {
-            color: var(--bodyTextColorWhite);
+            color: #1a1a1a;
         }
 
         .cs-image-group {
@@ -846,7 +846,7 @@
 
         &:after {
             content: "";
-            background: url("/assets/images/featured-service-debris-bottom.png");
+            background: url("/assets/svgs/featured-service-debris-bottom.svg");
             background-size: contain;
             background-repeat: no-repeat;
             width: calc(600 / 16 * 1rem); /* Specify fixed size or use % based on the image size */

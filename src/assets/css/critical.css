@@ -69,7 +69,7 @@
   #hero-408 .cs-button-solid {
     background-color: #FFFFFF;
     box-shadow: inset 0 -4px 0 #C6C6C6;
-    color: var(--primary);
+    color: var(--secondaryDark);
     transition: box-shadow 0.3s;
   }
   #hero-408 .cs-button-solid:hover {

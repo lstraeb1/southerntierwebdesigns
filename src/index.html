@@ -19,7 +19,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <!-- <link rel="preload" as="image" href="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 489, width: 326 }) | webp %}" type="image/webp"> -->
+    <link rel="preload" as="image" href="/assets/images/hero-bg-m.webp">
 
 
     <!-- Script for Netlify Identity -->
@@ -82,7 +82,7 @@ eleventyNavigation:
         <picture class="cs-background">
             <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.webp">
             <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.jpg">
-            <img decoding="async" src="/assets/images/hero-bg.jpg" alt="background" width="1920" height="975" aria-hidden="true">
+            <img decoding="async" src="/assets/images/hero-bg.jpg" loading="eager" alt="background" width="1920" height="975" aria-hidden="true">
         </picture>
     </section>
 
@@ -214,7 +214,7 @@ eleventyNavigation:
             <ul class="cs-image-group">
                 <!-- Card 1 -->
                 <li class="cs-item">
-                    <a href="/" class="cs-link">
+                    <a href="https://subgbjj.com/" class="cs-link" target="_blank">
                         <picture class="cs-picture">
                            <!--Mobile Image-->
                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 576, height: 688 }) | avif %}" type="image/avif">
@@ -243,7 +243,7 @@ eleventyNavigation:
                 </li>
                 <!-- Card 2 -->
                 <li class="cs-item">
-                    <a href="/" class="cs-link">
+                    <a href="https://steindesignandbuild.com/" class="cs-link">
                         <picture class="cs-picture">
                             <!--Mobile Image-->
                             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 576, height: 688 }) | avif %}" type="image/avif">
@@ -301,7 +301,7 @@ eleventyNavigation:
         <picture class="cs-background">
             <source media="(max-width: 600px)" srcset="/assets/images/portfolio-hexes-bg-m.webp">
             <source media="(min-width: 601px)" srcset="/assets/images/portfolio-hexes-bg.jpg">
-            <img decoding="async" src="/assets/images/portfolio-hexes-bg.jpg" alt="background" width="1920" height="1280" aria-hidden="true">
+            <img decoding="async" src="/assets/images/portfolio-hexes-bg.jpg" loading="lazy" alt="background" width="1920" height="1260" aria-hidden="true">
         </picture>
     </section>
 
@@ -467,7 +467,7 @@ eleventyNavigation:
                     </p>
                 </li>
             </ul>
-            <a href="" class="cs-button-solid">Schedule A Call</a>
+            <a href="/contact" class="cs-button-solid">Schedule A Call</a>
         </div>
     </section>
 
@@ -482,11 +482,11 @@ eleventyNavigation:
                 <p class="cs-text">
                     Stay updated with our expert advice on web design, SEO, and digital marketing strategies to help your business thrive online and attract more customers.
                 </p>
-                <a class="cs-button-solid" href="">Get In Touch</a>
+                <a class="cs-button-solid" href="/contact">Get In Touch</a>
             </div>
             <ul class="cs-card-group">
                 <li class="cs-item">
-                    <a class="cs-link" href="/">
+                    <a class="cs-link" href="/blog/core-web-vitals-impact">
                         <picture class="cs-picture">
                            <!--Mobile Image-->
                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
@@ -522,7 +522,7 @@ eleventyNavigation:
                     </a>
                 </li>
                 <li class="cs-item">
-                    <a class="cs-link" href="/">
+                    <a class="cs-link" href="/blog/why-businesses-need-website/">
                         <picture class="cs-picture">
                             <!--Mobile Image-->
                             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
