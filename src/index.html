@@ -19,7 +19,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 489, width: 326 }) | webp %}" type="image/webp">
+    <!-- <link rel="preload" as="image" href="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 489, width: 326 }) | webp %}" type="image/webp"> -->
 
 
     <!-- Script for Netlify Identity -->
@@ -70,7 +70,7 @@ eleventyNavigation:
                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | avif %}" type="image/avif">
                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | webp %}" type="image/webp">
                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | jpeg %}" type="image/jpeg">
-                   <img src="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 1069, height: 712 }) | jpeg %}" alt="flying desktop mockup of Stein Design and Build" width="1069" height="715" loading="eager" decoding="async" aria-hidden="true">
+                   <img src="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | jpeg %}" alt="flying desktop mockup of Stein Design and Build" width="1069" height="715" loading="eager" decoding="async" aria-hidden="true">
                 </picture>
             </div>
         </div>
@@ -80,9 +80,9 @@ eleventyNavigation:
             </svg>
         </div>
         <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1920, height: 1280 }) | webp %}">
-            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1920, height: 1280 }) | webp %}">
-            <img decoding="async" src="{% getUrl "/assets/images/hero-bg.jpg" | resize({ width: 1920, height: 1280 }) | webp %}" alt="background" aria-hidden="true">
+            <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.webp">
+            <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.jpg">
+            <img decoding="async" src="/assets/images/hero-bg.jpg" alt="background" width="1920" height="975" aria-hidden="true">
         </picture>
     </section>
 
@@ -152,11 +152,19 @@ eleventyNavigation:
             <div class="cs-content">
                 <h2 class="cs-title">Complete Website Services For Just $150/Month</h2>
                 <picture class="cs-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="/assets/images/Desktop-screen-mockup-m.webp">
-                    <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="/assets/images/Desktop-screen-mockup.png">
-                    <img loading="lazy" decoding="async" src="/assets/images/Desktop-screen-mockup.png" alt="desktop screen mockup" width="1662" height="1600">
+                   <!--Mobile Image-->
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 632, height: 608 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 632, height: 608 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 632, height: 608 }) | jpeg %}" type="image/jpeg">
+                   <!--Tablet Image-->
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 1022, height: 734 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 1022, height: 734 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 1022, height: 734 }) | jpeg %}" type="image/jpeg">
+                   <!--Desktop Image-->
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 1662, height: 1600 }) | avif %}" type="image/avif">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 1662, height: 1600 }) | webp %}" type="image/webp">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 1662, height: 1600 }) | jpeg %}" type="image/jpeg">
+                   <img src="{% getUrl "/assets/images/featured-service-subg-mockup.png" | resize({ width: 1662, height: 1600 }) | jpeg %}" alt="desktop mockup of SUB-G website" width="831" height="800" loading="lazy" decoding="async" aria-hidden="true">
                 </picture>
             </div>
             <div class="cs-stats-group">
@@ -208,9 +216,19 @@ eleventyNavigation:
                 <li class="cs-item">
                     <a href="/" class="cs-link">
                         <picture class="cs-picture">
-                            <source media="(max-width: 600px)" srcset="">
-                            <source media="(min-width: 601px)" srcset="">
-                            <img loading="lazy" decoding="async" src="/assets/images/portfolio-subg-mockup.jpeg" alt="fancy house" width="346" height="346">
+                           <!--Mobile Image-->
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 576, height: 688 }) | avif %}" type="image/avif">
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 576, height: 688 }) | webp %}" type="image/webp">
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 576, height: 688 }) | jpeg %}" type="image/jpeg">
+                           <!--Tablet Image-->
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 634, height: 688 }) | avif %}" type="image/avif">
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 634, height: 688 }) | webp %}" type="image/webp">
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 634, height: 688 }) | jpeg %}" type="image/jpeg">
+                           <!--Desktop Image-->
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 814, height: 840 }) | avif %}" type="image/avif">
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 814, height: 840 }) | webp %}" type="image/webp">
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" type="image/jpeg">
+                           <img src="{% getUrl "/assets/images/portfolio-subg-mockup.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" alt="SUB-G BJJ portfolio website" width="407" height="420" loading="lazy" decoding="async" aria-hidden="true">
                         </picture>
                         <div class="cs-item-text">
                             <div class="cs-flex">
@@ -227,19 +245,27 @@ eleventyNavigation:
                 <li class="cs-item">
                     <a href="/" class="cs-link">
                         <picture class="cs-picture">
-                            <source media="(max-width: 600px)" srcset="">
-                            <source media="(min-width: 601px)" srcset="">
-                            <img loading="lazy" decoding="async" src="/assets/images/portfolio-steindesign-mockup.jpeg" alt="modern house" width="346" height="346">
-                        </picture>
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 576, height: 688 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 576, height: 688 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 576, height: 688 }) | jpeg %}" type="image/jpeg">
+                            <!--Tablet Image-->
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 634, height: 688 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 634, height: 688 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 634, height: 688 }) | jpeg %}" type="image/jpeg">
+                            <!--Desktop Image-->
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 814, height: 840 }) | avif %}" type="image/avif">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 814, height: 840 }) | webp %}" type="image/webp">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" type="image/jpeg">
+                            <img src="{% getUrl "/assets/images/portfolio-steindesign-mockup.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" alt="Stein Design and Build portfolio website" width="407" height="420" loading="lazy" decoding="async" aria-hidden="true">
+                         </picture>
                         <div class="cs-item-text">
                             <div class="cs-flex">
                                 <h3 class="cs-h3">Stein Design & Build</h3>
                                 <span class="cs-desc">A landscape contractor in Syracuse, NY</span>
                             </div>
                             <picture class="cs-icon-wrapper">
-                                <img class="cs-icon" decoding="async"
-                                                src="/assets/svgs/portfolio-arrow.svg"
-                                                alt="arrow" width="413" height="374" aria-hidden="true">
+                                <img class="cs-icon" decoding="async" src="/assets/svgs/portfolio-arrow.svg" alt="arrow" width="413" height="374" aria-hidden="true">
                             </picture>
                         </div>
                     </a>
@@ -258,9 +284,7 @@ eleventyNavigation:
                                 <span class="cs-desc">This is Psychologist's Portfolio landing page UI header.</span>
                             </div>
                             <picture class="cs-icon-wrapper">
-                                <img class="cs-icon" decoding="async"
-                                                src="/assets/svgs/portfolio-arrow.svg"
-                                                alt="arrow" width="413" height="374" aria-hidden="true">
+                                <img class="cs-icon" decoding="async" src="/assets/svgs/portfolio-arrow.svg" alt="arrow" width="413" height="374" aria-hidden="true">
                             </picture>
                         </div>
                     </a>
@@ -280,8 +304,7 @@ eleventyNavigation:
             <img decoding="async" src="/assets/images/portfolio-hexes-bg.jpeg" alt="background" width="1920" height="1280" aria-hidden="true">
         </picture>
     </section>
-                                        
-    
+
     <!-- ============================================ -->
     <!--                   About US                   -->
     <!-- ============================================ -->
@@ -290,9 +313,19 @@ eleventyNavigation:
         <div class="cs-container">
             <div class="cs-image-group">
                 <picture class="cs-background">
-                    <source media="(max-width: 600px)" srcset="/assets/images/headshot.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/headshot.jpg">
-                    <img loading="lazy" decoding="async" src="/assets/images/headshot.jpg" alt="Broadway cafe website" width="1300" height="1516" aria-hidden="true">
+                   <!--Mobile Image-->
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 560, height: 1040 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 560, height: 1040 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 560, height: 1040 }) | jpeg %}" type="image/jpeg">
+                   <!--Tablet Image-->
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1100, height: 1040 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1100, height: 1040 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1100, height: 1040 }) | jpeg %}" type="image/jpeg">
+                   <!--Desktop Image-->
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | avif %}" type="image/avif">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | webp %}" type="image/webp">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" type="image/jpeg">
+                   <img src="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" alt="Liam Straebler" width="586" height="805" loading="lazy" decoding="async" aria-hidden="true">
                 </picture>
                 <div class="cs-box">
                     <div class="text">
@@ -391,11 +424,19 @@ eleventyNavigation:
                 </li>
                 <li class="cs-item-picture">
                     <picture class="cs-picture">
-                        <!--Mobile Image-->
-                        <source media="(max-width: 600px)" srcset="">
-                        <!--Tablet and above Image-->
-                        <source media="(min-width: 601px)" srcset="">
-                        <img loading="lazy" decoding="async" src="/assets/images/why-choose-lighthouse-perfect-score.jpg" alt="people" width="590" height="418">
+                       <!--Mobile Image-->
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 576, height: 836 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 576, height: 836 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 576, height: 836 }) | jpeg %}" type="image/jpeg">
+                       <!--Tablet Image-->
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | jpeg %}" type="image/jpeg">
+                       <!--Desktop Image-->
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | avif %}" type="image/avif">
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | webp %}" type="image/webp">
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | jpeg %}" type="image/jpeg">
+                       <img src="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | jpeg %}" alt="perfect website lighthouse score" width="630" height="555" loading="lazy" decoding="async" aria-hidden="true">
                     </picture>
                 </li>
                 <li class="cs-item">
@@ -447,9 +488,19 @@ eleventyNavigation:
                 <li class="cs-item">
                     <a class="cs-link" href="/">
                         <picture class="cs-picture">
-                            <source media="(max-width: 600px)" srcset="">
-                            <source media="(min-width: 601px)" srcset="">
-                            <img decoding="async" src="/assets/images/blog/Screenshot 2024-10-29 190158.png" alt="agency" width="413" height="374" aria-hidden="true">
+                           <!--Mobile Image-->
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                           <!--Tablet Image-->
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 684, height: 640 }) | avif %}" type="image/avif">
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 684, height: 640 }) | webp %}" type="image/webp">
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 684, height: 640 }) | jpeg %}" type="image/jpeg">
+                           <!--Desktop Image-->
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 894, height: 640 }) | avif %}" type="image/avif">
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 894, height: 640 }) | webp %}" type="image/webp">
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 894, height: 640 }) | jpeg %}" type="image/jpeg">
+                           <img src="{% getUrl "/assets/images/blog/blog-3-image.jpg" | resize({ width: 894, height: 640 }) | jpeg %}" alt="perfect lighthouse score" width="447" height="320" loading="lazy" decoding="async" aria-hidden="true">
                         </picture>
                         <div class="cs-item-text">
                             <h3 class="cs-h3">
@@ -473,10 +524,20 @@ eleventyNavigation:
                 <li class="cs-item">
                     <a class="cs-link" href="/">
                         <picture class="cs-picture">
-                            <source media="(max-width: 600px)" srcset="">
-                            <source media="(min-width: 601px)" srcset="">
-                            <img decoding="async" src="/assets/images/blog/digital-marketing.jpg" alt="agency" width="413" height="374" aria-hidden="true">
-                        </picture>
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
+                            <!--Tablet Image-->
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 684, height: 640 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 684, height: 640 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 684, height: 640 }) | jpeg %}" type="image/jpeg">
+                            <!--Desktop Image-->
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 894, height: 640 }) | avif %}" type="image/avif">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 894, height: 640 }) | webp %}" type="image/webp">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 894, height: 640 }) | jpeg %}" type="image/jpeg">
+                            <img src="{% getUrl "/assets/images/blog/digital-marketing.jpg" | resize({ width: 894, height: 640 }) | jpeg %}" alt="digital marketing graphic" width="447" height="320" loading="lazy" decoding="async" aria-hidden="true">
+                         </picture>
                         <div class="cs-item-text">
                             <h3 class="cs-h3">
                                 Why Every Business Needs A Website: Boost Visibility, Credibility, And SEO
