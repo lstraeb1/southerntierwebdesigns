@@ -909,29 +909,92 @@
   }
 }
 /*-- -------------------------- -->
-<---   Interior Page Header     -->
+<---          Banner            -->
 <--- -------------------------- -*/
-/* Mobile */
+/* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #int-hero {
-    z-index: 1;
+  #banner-1519 {
+    padding: var(--sectionPadding);
+    /* 190px - 268px */
+    padding-top: clamp(11.875rem, 25vw, 16.75rem);
+    /* 48px - 100px */
+    padding-bottom: clamp(3rem, 6vw, 6.25rem);
+    /* clips the line from causing overflow issues for going off screen */
+    overflow: hidden;
     position: relative;
+    z-index: 1;
+  }
+  #banner-1519 .cs-container {
+    text-align: center;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 30vh;
-    padding-top: 3.125rem;
+    flex-direction: column;
+    /* 8px - 12px */
+    gap: clamp(0.5rem, 1vw, 0.75rem);
   }
-  #int-hero picture {
-    z-index: -2;
-    position: absolute;
+  #banner-1519 .cs-int-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-weight: 400;
+    font-family: "Anton";
+    text-transform: uppercase;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  #banner-1519 .cs-breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #banner-1519 .cs-link {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #banner-1519 .cs-link:last-of-type {
+    /* remove the chevron on the last list item */
+  }
+  #banner-1519 .cs-link:last-of-type::after {
+    display: none;
+  }
+  #banner-1519 .cs-link:after {
+    /* chevron */
+    content: "";
+    width: 0.4375rem;
+    height: 0.75rem;
+    margin: 0 1rem;
+    background: url("/assets/svgs/interior-banner-chevron.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+  }
+  #banner-1519 .cs-link.cs-active {
+    color: var(--bodyTextColorWhite);
+  }
+  #banner-1519 .cs-background {
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    z-index: -1;
   }
-  #int-hero picture img {
+  #banner-1519 .cs-background img {
     position: absolute;
     top: 0;
     left: 0;
@@ -939,95 +1002,42 @@
     width: 100%;
     object-fit: cover;
   }
-  #int-hero h1 {
-    position: relative;
-    margin: 0 auto;
-    margin-top: 4.375rem;
-    margin-bottom: 1.875rem;
-    max-width: 43.75rem;
-    width: 96%;
-    font-size: 2.1333333333rem;
-    font-family: "Anton";
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-  }
-  #int-hero p {
-    display: block;
-    margin: auto;
-    margin-bottom: 1.875rem;
-    max-width: 25rem;
-    width: 96%;
-    color: #fff;
-    text-align: center;
-  }
-  #int-hero:before {
-    z-index: -1;
+  #banner-1519 .cs-background:before {
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
+    /* Black Color Overlay */
     content: "";
     opacity: 0.7;
     display: block;
-    background: #0360a1;
+    background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 46%);
     height: 100%;
     width: 100%;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
   }
-}
-/* Tablet */
-@media only screen and (min-width: 48rem) {
-  #int-hero {
-    font-size: 100%;
-  }
-  #int-hero h1 {
-    font-size: 4rem;
-  }
-}
-/* Small Desktop */
-@media only screen and (min-width: 64rem) {
-  #int-hero {
-    background-attachment: fixed;
-    min-height: 18.75rem;
+  #banner-1519 .cs-mask {
+    --maskBG: #ffffff;
+    width: 100%;
     height: auto;
-    padding-top: 11.25rem;
-    font-size: inherit;
-    padding-block-end: 6.25rem;
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 100;
   }
 }
-/* Desktop Parallax - 1300px */
-@media only screen and (min-width: 81.25rem) {
-  #int-hero .cs-background {
-    background: url("/assets/images/office-interior-page.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* creates the parallax effect */
-    background-attachment: fixed;
-  }
-  #int-hero .cs-background img {
-    display: none;
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #banner-1519 .cs-mask {
+    --maskBG: var(--dark);
   }
 }
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-  body.dark-mode #int-hero .cs-background:before {
-    /* background color overlay */
-    content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: #001727;
-    opacity: 0.7;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  body.dark-mode #int-hero .cs-logo {
-    filter: grayscale(1) brightness(400%);
-  }
-  body.dark-mode #int-hero .custom-shape-divider-bottom-1722282966 .shape-fill {
-    fill: var(--dark);
+  body.dark-mode #banner-1519 .cs-mask {
+    --maskBG: var(--dark);
   }
 }
 /*-- -------------------------- -->

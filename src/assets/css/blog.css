@@ -276,7 +276,7 @@
     max-width: 49.6875em;
     width: 100%;
     box-sizing: border-box;
-    row-gap: 3.125em;
+    row-gap: 1.25em;
   }
   .blog-sidebar .blog-featured-group {
     display: flex;
@@ -361,6 +361,23 @@
     font-size: 0.875rem;
     line-height: 1.5em;
     color: var(--bodyTextColor);
+  }
+  .blog-sidebar .social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5em;
+    width: 100%;
+  }
+  .blog-sidebar .cs-link {
+    display: inline-block;
+    width: 100%;
+    margin: 0 1.5rem;
+  }
+  .blog-sidebar .cs-icon {
+    display: block; /* Ensures the image is treated as a block element */
+    width: 100%; /* Adjust this to the desired width */
   }
 }
 /* Tablet - 1024px */

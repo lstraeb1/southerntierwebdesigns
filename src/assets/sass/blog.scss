@@ -326,7 +326,7 @@
         max-width: calc(795 / 16 * 1em);
         width: 100%;
         box-sizing: border-box;
-        row-gap: calc(50 / 16 * 1em);
+        row-gap: calc(20 / 16 * 1em);
 
         .blog-featured-group {
             display: flex;
@@ -420,6 +420,27 @@
             font-size: calc(14 / 16 * 1rem);
             line-height: 1.5em;
             color: var(--bodyTextColor);
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            // border: 1px solid #d6d6d6;
+            border-radius: calc(8 / 16 * 1em);
+            width: 100%;
+        }
+
+        .cs-link {
+            display: inline-block;
+            width: 100%;
+            margin: 0 1.5rem;
+        }
+
+        .cs-icon {
+            display: block; /* Ensures the image is treated as a block element */
+            width: 100%; /* Adjust this to the desired width */
         }
     }
 }

@@ -53,7 +53,7 @@
             height: clamp(10rem, 55vw, 33.4375rem);
             box-shadow: 0px 2.80579px 42.0868px rgba(0, 0, 0, 0.16);
             /* 100px - 200px */
-            // border-radius: ;
+            border-radius: calc(24 / 16 * 1rem);
             /* clips img tag corners */
             overflow: hidden;
 
@@ -91,6 +91,315 @@
         .cs-picture {
             width: 47vw;
             position: relative;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #steps-284 {
+        padding: var(--sectionPadding);
+        padding-top: calc(50/ 16 * 1rem);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1104px on tablet */
+            max-width: calc(550 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: calc(434 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        #list-1404 {
+            width: 100%;
+            max-width: calc(630 / 16 * 1rem);
+            margin: 0 0 calc(24 / 16 * 1rem) 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15.265rem, 1fr));
+            align-items: center;
+            gap: clamp(1rem, 2vw, 1.25rem);
+    
+            .cs-item {
+                list-style: none;
+                /* 16px - 24px */
+                padding: clamp(1rem, 3vw, 1.5rem);
+                /* prevents padding from affecting height and width */
+                box-sizing: border-box;
+                background-color: #f7f7f7;
+                border-radius: calc(16 / 16 * 1rem);
+                border: 1px solid #e8e8e8;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: calc(12 / 16 * 1rem);
+            }
+    
+            .cs-h3 {
+                font-size: calc(20 / 16 * 1rem);
+                line-height: 1.2em;
+                font-weight: 700;
+                margin: 0;
+                color: var(--headerColor);
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: calc(8 / 16 * 1rem);
+            }
+    
+            .cs-h3-icon {
+                width: calc(32 / 16 * 1rem);
+                height: auto;
+                display: block;
+            }
+    
+            .cs-item-text {
+                font-size: calc(14 / 16 * 1rem);
+                line-height: 1.5em;
+                margin: 0;
+                color: var(--bodyTextColor);
+            }
+        }
+
+        .cs-right-section {
+            margin: 0;
+            padding: 0;
+            max-width: calc(562 / 16 * 1rem);
+
+            .cs-item {
+                list-style: none;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+    
+                &:nth-of-type(1) {
+                    .cs-item-text {
+                        &:before {
+                            height: 50%;
+                            top: auto;
+                            bottom: -1px;
+                        }
+                    }
+                }
+    
+                &:nth-of-type(2),
+                &:nth-of-type(4) {
+                    justify-content: flex-end;
+                    text-align: right;
+                    .cs-number {
+                        /* Send number to the right */
+                        order: 2;
+                        margin: 0;
+                        /* 15px - 24px */
+                        margin-left: clamp(0.9375rem, 3vw, 1.5rem);
+                    }
+    
+                    .cs-item-text {
+                        /* reverse padding */
+                        padding-left: 0;
+                        /* 15px - 24px */
+                        padding-right: clamp(0.9375rem, 3vw, 1.5rem);
+    
+                        /* reset the border on the :before */
+                        &:before {
+                            border-top: 1px solid var(--secondary);
+                            border-left: none;
+                            border-right: 1px solid var(--secondary);
+                            left: auto;
+                            right: 0;
+                            bottom: 0;
+                            border-radius: 0 calc(8 / 16 * 1rem) calc(8 / 16 * 1rem)
+                                0;
+                        }
+    
+                        &:after {
+                            /* move dot to the right now */
+                            left: auto;
+                            right: calc(-15 / 16 * 1rem);
+                        }
+                    }
+                }
+    
+                &:nth-of-type(3) {
+                    .cs-item-text {
+                        &:before {
+                            height: auto;
+                            border-top: 1px solid var(--secondary);
+                            border-radius: calc(8 / 16 * 1rem) 0 0 calc(8 / 16 * 1rem);
+                            top: 1px;
+                            bottom: 0px;
+                        }
+                    }
+                }
+    
+                &:nth-of-type(4) {
+                    .cs-item-text {
+                        &:before {
+                            height: 50%;
+                            border-radius: 0 calc(8 / 16 * 1rem) 0 0;
+                            border-bottom: none;
+                            top: -1px;
+                        }
+                    }
+                }
+            }
+    
+            .cs-number {
+                /* 16px - 20px */
+                font-size: clamp(1rem, 2vw, 1.25rem);
+                font-weight: 700;
+                /* 15px - 24px */
+                margin-right: clamp(0.9375rem, 3vw, 1.5rem);
+                /* 40px - 52px */
+                width: clamp(2.5rem, 5.1vw, 3.25rem);
+                height: clamp(2.5rem, 5.1vw, 3.25rem);
+                border-radius: 50%;
+                border: 2px solid var(--primary);
+                color: var(--headerColor);
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* prevents flexbox from squishing it */
+                flex: none;
+                position: relative;
+            }
+    
+            .cs-item-text {
+                /* 14px - 16px */
+                font-size: clamp(0.875rem, 1.6vw, 1rem);
+                line-height: 1.5em;
+                margin: 0;
+                max-width: calc(300 / 16 * 1rem);
+                /* 22px - 32px */
+                padding: clamp(1.375rem, 3vw, 2rem) 0;
+                box-sizing: content-box;
+                /* 15px - 24px */
+                padding-left: clamp(0.9375rem, 3vw, 1.5rem);
+                position: relative;
+    
+                &:before {
+                    /* Green line */
+                    content: "";
+                    width: 70%;
+                    height: 100%;
+                    border-radius: 0 0 0 calc(8 / 16 * 1rem);
+                    border-left: 1px solid var(--primary);
+                    border-bottom: 1px solid var(--primary);
+                    box-sizing: content-box;
+                    opacity: 1;
+                    position: absolute;
+                    display: block;
+                    top: 0;
+                    left: 0;
+                }
+    
+                &:after {
+                    /* list circle */
+                    content: "";
+                    width: calc(8 / 16 * 1rem);
+                    height: calc(8 / 16 * 1rem);
+                    background: var(--secondary);
+                    border-radius: 50%;
+                    border: 12px solid #fff;
+                    box-sizing: content-box;
+                    opacity: 1;
+                    position: absolute;
+                    display: block;
+                    top: 50%;
+                    left: calc(-15 / 16 * 1rem);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #steps-284 {
+        .cs-container {
+            max-width: calc(1104 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            column-gap: calc(44 / 16 * 1rem);
+        }
+
+        .cs-content {
+            width: 50%;
+            /* reset margin to play nice with flexbox */
+            margin: 0;
+        }
+
+        .cs-right-section {
+            width: 57%;
+            /* 20px - 25px - this pulls the section up so it's flush with the top of the left section, the padding top on the .cs-item-text is creating a gap at the top of the section. Wrapped in a calc() function to turn clamp() value into a negative number */
+            margin-top: calc(clamp(1.25rem, 2vw, 1.5625rem) * -1);
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #steps-284 {
+            .cs-title,
+            .cs-text,
+            .cs-number {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item-text {
+                &:after {
+                    border: 12px solid var(--dark);
+                }
+            }
+        }
+
+        #list-1404 {
+            .cs-item {
+                background-color: rgba(0, 0, 0, 0.2);
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+
+            .cs-h3,
+            .cs-item-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-item-text {
+                opacity: 0.8;
+            }
+
+            .cs-icon {
+                filter: grayscale(1) brightness(1000%);
+            }
         }
     }
 }
