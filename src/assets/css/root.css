@@ -1321,7 +1321,7 @@
     position: relative;
   }
   #cs-footer-1761 .cs-credit-link:hover {
-    color: var(--primary);
+    text-decoration: underline;
   }
   #cs-footer-1761 .cs-bottom-links {
     display: flex;
