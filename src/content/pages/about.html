@@ -41,9 +41,9 @@ eleventyNavigation:
         <div class="cs-container">
             <picture class="cs-picture">
                <!--Mobile Image-->
-               <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-page-headshot.jpg" | resize({ width: 576, height: 352 }) | avif %}" type="image/avif">
-               <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-page-headshot.jpg" | resize({ width: 576, height: 352 }) | webp %}" type="image/webp">
-               <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-page-headshot.jpg" | resize({ width: 576, height: 352 }) | jpeg %}" type="image/jpeg">
+               <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-page-headshot-m.jpg" | resize({ width: 576, height: 352, position: "top" }) | avif %}" type="image/avif">
+               <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-page-headshot-m.jpg" | resize({ width: 576, height: 352, position: "top" }) | webp %}" type="image/webp">
+               <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-page-headshot-m.jpg" | resize({ width: 576, height: 352, position: "top" }) | jpeg %}" type="image/jpeg">
                <!--Tablet Image-->
                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about-page-headshot.jpg" | resize({ width: 1100, height: 1070 }) | avif %}" type="image/avif">
                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/about-page-headshot.jpg" | resize({ width: 1100, height: 1070 }) | webp %}" type="image/webp">

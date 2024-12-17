@@ -154,6 +154,7 @@
   }
   #hero-408 .cs-stat-group .cs-picture img {
     width: 100%;
+    transform: scale(1.5);
     height: auto;
     object-fit: contain;
     position: absolute;
