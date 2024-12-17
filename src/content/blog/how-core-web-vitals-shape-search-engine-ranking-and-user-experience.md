@@ -11,7 +11,7 @@ author: Liam Straebler
 date: 2024-10-29T18:25:00.000Z
 tags:
   - featured
-image: /assets/images/blog/screenshot-2024-10-29-190158.png
+image: /assets/images/blog/blog-3-image.jpg
 imageAlt: Google Lighthouse Report
 ---
 The internet has for a long time now been a game of speed. When people have questions, they can quickly search it up in Google and get answers within seconds. While this is generally viewed as a positive improvement, the rapidly increasing speed of the internet has made consumers persistently more impatient. Nobody likes to see that continuously spinning circle as they wait for a page to load. The reality is that people want information, and if they can’t have it now, there’s a couple million alternatives to check out.
