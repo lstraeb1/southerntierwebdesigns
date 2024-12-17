@@ -1075,6 +1075,7 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
+        background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
         
         .cs-container {
             text-align: center;
@@ -1578,6 +1579,7 @@
 @media only screen and (min-width: 64rem) {
     #cs-footer-1761 {
         padding-right: 4rem;
+        padding-top: 10rem;
         .cs-container {
             justify-content: space-between;
         }
@@ -1615,6 +1617,19 @@
 
             .shape-fill {
                 transition: fill 0.3s;
+            }
+        }
+    }
+}
+
+// Large Desktop - 1300px 
+@media only screen and (min-width: 92rem) {
+    #cs-footer-1761 {
+        .cs-shape-divider {
+            top: -60px;
+
+            svg {
+                height: 269px;
             }
         }
     }

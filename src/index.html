@@ -109,7 +109,7 @@ eleventyNavigation:
                         <p class="cs-item-text">
                             We create visually stunning, mobile-friendly websites that engage users across all devices.
                         </p>
-                        <a href="" class="cs-link">Read More</a>
+                        <a href="/web-design" class="cs-link">Read More</a>
                     </div>
                 </li>
                 <li class="cs-item">
@@ -135,7 +135,7 @@ eleventyNavigation:
                         <p class="cs-item-text">
                             We provide ongoing support and maintenance to ensure your site is always performing at its best.
                         </p>
-                        <a href="" class="cs-link">Read More</a>
+                        <a href="/web-design" class="cs-link">Read More</a>
                     </div>
                 </li>
             </ul>
@@ -233,7 +233,7 @@ eleventyNavigation:
                         <div class="cs-item-text">
                             <div class="cs-flex">
                                 <h3 class="cs-h3">SUB-G BJJ</h3>
-                                <span class="cs-desc">SUB-G is a martial arts gym in upstate NY</span>
+                                <span class="cs-desc">A Brazilian Jiu-Jitsu and martial arts gym in Port Jervis, NY</span>
                             </div>
                             <picture class="cs-icon-wrapper">
                                 <img class="cs-icon" decoding="async" src="/assets/svgs/portfolio-arrow.svg" alt="arrow" width="413" height="374" aria-hidden="true">
@@ -242,6 +242,35 @@ eleventyNavigation:
                     </a>
                 </li>
                 <!-- Card 2 -->
+                <li class="cs-item">
+                    <a href="https://conroy-collective.netlify.app/" class="cs-link">
+                        <picture class="cs-picture">
+                            <!--Mobile Image-->
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 576, height: 688 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 576, height: 688 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 576, height: 688 }) | jpeg %}" type="image/jpeg">
+                            <!--Tablet Image-->
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 634, height: 688 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 634, height: 688 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 634, height: 688 }) | jpeg %}" type="image/jpeg">
+                            <!--Desktop Image-->
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | avif %}" type="image/avif">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | webp %}" type="image/webp">
+                            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" type="image/jpeg">
+                            <img src="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" alt="Conroy Collective Marketing Agency portfolio website" width="407" height="420" loading="lazy" decoding="async" aria-hidden="true">
+                         </picture>
+                        <div class="cs-item-text">
+                            <div class="cs-flex">
+                                <h3 class="cs-h3">Conroy Collective</h3>
+                                <span class="cs-desc">A brand development agency in Gainesville, FA</span>
+                            </div>
+                            <picture class="cs-icon-wrapper">
+                                <img class="cs-icon" decoding="async" src="/assets/svgs/portfolio-arrow.svg" alt="arrow" width="413" height="374" aria-hidden="true">
+                            </picture>
+                        </div>
+                    </a>
+                </li>
+                <!-- Card 3 -->
                 <li class="cs-item">
                     <a href="https://steindesignandbuild.com/" class="cs-link">
                         <picture class="cs-picture">
@@ -262,26 +291,7 @@ eleventyNavigation:
                         <div class="cs-item-text">
                             <div class="cs-flex">
                                 <h3 class="cs-h3">Stein Design & Build</h3>
-                                <span class="cs-desc">A landscape contractor in Syracuse, NY</span>
-                            </div>
-                            <picture class="cs-icon-wrapper">
-                                <img class="cs-icon" decoding="async" src="/assets/svgs/portfolio-arrow.svg" alt="arrow" width="413" height="374" aria-hidden="true">
-                            </picture>
-                        </div>
-                    </a>
-                </li>
-                <!-- Card 3 -->
-                <li class="cs-item">
-                    <a href="/" class="cs-link">
-                        <picture class="cs-picture">
-                            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-portfolio-3.png">
-                            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-portfolio-3.png">
-                            <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/agency-portfolio-3.png" alt="modern home at night" width="346" height="346">
-                        </picture>
-                        <div class="cs-item-text">
-                            <div class="cs-flex">
-                                <h3 class="cs-h3">Bradley</h3>
-                                <span class="cs-desc">This is Psychologist's Portfolio landing page UI header.</span>
+                                <span class="cs-desc">A landscape contracting and design company in Syracuse, NY</span>
                             </div>
                             <picture class="cs-icon-wrapper">
                                 <img class="cs-icon" decoding="async" src="/assets/svgs/portfolio-arrow.svg" alt="arrow" width="413" height="374" aria-hidden="true">
@@ -314,18 +324,18 @@ eleventyNavigation:
             <div class="cs-image-group">
                 <picture class="cs-background">
                    <!--Mobile Image-->
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 560, height: 1040 }) | avif %}" type="image/avif">
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 560, height: 1040 }) | webp %}" type="image/webp">
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 560, height: 1040 }) | jpeg %}" type="image/jpeg">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 560, height: 1040 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 560, height: 1040 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 560, height: 1040 }) | jpeg %}" type="image/jpeg">
                    <!--Tablet Image-->
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1100, height: 1040 }) | avif %}" type="image/avif">
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1100, height: 1040 }) | webp %}" type="image/webp">
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1100, height: 1040 }) | jpeg %}" type="image/jpeg">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1100, height: 1040 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1100, height: 1040 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1100, height: 1040 }) | jpeg %}" type="image/jpeg">
                    <!--Desktop Image-->
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | avif %}" type="image/avif">
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | webp %}" type="image/webp">
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" type="image/jpeg">
-                   <img src="{% getUrl "/assets/images/headshot.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" alt="Liam Straebler" width="586" height="805" loading="lazy" decoding="async" aria-hidden="true">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | avif %}" type="image/avif">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | webp %}" type="image/webp">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" type="image/jpeg">
+                   <img src="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" alt="Liam Straebler" width="586" height="805" loading="lazy" decoding="async" aria-hidden="true">
                 </picture>
                 <div class="cs-box">
                     <div class="text">
@@ -345,7 +355,7 @@ eleventyNavigation:
                 <ul class="cs-card-group">
                     <li class="cs-li">
                         <picture class="cs-li-picture">
-                            <img class="cs-li-icon" aria-hidden="true" src="/assets/svgs/about-support.svg" decoding="async" alt="support icon" width="42" height="42" loading="lazy">
+                            <img class="cs-li-icon" aria-hidden="true" src="/assets/svgs/about-custom.svg" decoding="async" alt="support icon" width="42" height="42" loading="lazy">
                         </picture>
                         <div class="cs-flex">
                             <h3 class="cs-h3">Custom Design</h3>
@@ -356,7 +366,7 @@ eleventyNavigation:
                     </li>
                     <li class="cs-li">
                         <picture class="cs-li-picture">
-                            <img class="cs-li-icon" aria-hidden="true" src="/assets/svgs/about-custom.svg" decoding="async" alt="creativity icon" width="42" height="42" loading="lazy">
+                            <img class="cs-li-icon" aria-hidden="true" src="/assets/svgs/about-support.svg" decoding="async" alt="creativity icon" width="42" height="42" loading="lazy">
                         </picture>
                         <div class="cs-flex">
                             <h3 class="cs-h3">Ongoing Support</h3>
@@ -367,7 +377,7 @@ eleventyNavigation:
                     </li>
                     <li class="cs-li">
                         <picture class="cs-li-picture">
-                            <img class="cs-li-icon" aria-hidden="true" src="/assets/svgs/about-calendar.svg" decoding="async" alt="calendar icon" width="42" height="42" loading="lazy">
+                            <img class="cs-li-icon" aria-hidden="true" src="/assets/svgs/about-seo-optimization.svg" decoding="async" alt="calendar icon" width="42" height="42" loading="lazy">
                         </picture>
                         <div class="cs-flex">
                             <h3 class="cs-h3">SEO Optimization</h3>
@@ -425,18 +435,18 @@ eleventyNavigation:
                 <li class="cs-item-picture">
                     <picture class="cs-picture">
                        <!--Mobile Image-->
-                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 576, height: 836 }) | avif %}" type="image/avif">
-                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 576, height: 836 }) | webp %}" type="image/webp">
-                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 576, height: 836 }) | jpeg %}" type="image/jpeg">
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 576, height: 836 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 576, height: 836 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 576, height: 836 }) | jpeg %}" type="image/jpeg">
                        <!--Tablet Image-->
-                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | avif %}" type="image/avif">
-                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | webp %}" type="image/webp">
-                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | jpeg %}" type="image/jpeg">
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 1982, height: 836 }) | jpeg %}" type="image/jpeg">
                        <!--Desktop Image-->
-                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | avif %}" type="image/avif">
-                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | webp %}" type="image/webp">
-                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | jpeg %}" type="image/jpeg">
-                       <img src="{% getUrl "/assets/images/why-choose-lighthouse-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | jpeg %}" alt="perfect website lighthouse score" width="630" height="555" loading="lazy" decoding="async" aria-hidden="true">
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | avif %}" type="image/avif">
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | webp %}" type="image/webp">
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | jpeg %}" type="image/jpeg">
+                       <img src="{% getUrl "/assets/images/why-choose-pagespeed-perfect-score.jpg" | resize({ width: 1260, height: 1110 }) | jpeg %}" alt="perfect website lighthouse score" width="630" height="555" loading="lazy" decoding="async" aria-hidden="true">
                     </picture>
                 </li>
                 <li class="cs-item">

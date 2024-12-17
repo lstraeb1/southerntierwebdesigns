@@ -1,11 +1,11 @@
 ---
 title: 'Contact | Southern Tier Web Designs'
 description: "Get in touch with Southern Tier Web Designs in Binghamton, NY. Contact us for custom web design, SEO services, and personalized website management solutions."
-preloadImg: '/assets/images/office-interior-page-m.webp'
+preloadImg: ''
 permalink: 'contact/'
 eleventyNavigation:
     key: Contact Us
-    order: 500
+    order: 600
 ---
 
 {% extends "layouts/base.html" %}
@@ -17,18 +17,61 @@ eleventyNavigation:
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                    LANDING                   -->
+    <!--                   Banner                     -->
     <!-- ============================================ -->
 
-    <section id="int-hero">
-        <h1 id="home-h">Contact Us</h1>
-        <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="/assets/images/office-interior-page-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/office-interior-page.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/office-interior-page.jpg" alt="office space" loading="eager" width="3840" height="954">
-        </picture>
-    </section>
+    <div id="banner-1519">
+        <div class="cs-container">
+            <span class="cs-int-title">Contact Us</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/contact" class="cs-link cs-active">Contact</a>
+            </div>
+        </div>
+        <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="#ffffff"/>
+        </svg>
+    </div>
 
-    {% include 'components/cta.html' %}
+    <!-- ============================================ -->
+    <!--                   Contact                    -->
+    <!-- ============================================ -->
+
+    <section id="contact-2061">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">Now You Know About Us... We Want To Hear From You</h2>
+                <p class="cs-text">We're here to answer your questions, discuss your goals, and explore how we can help your business grow online. Reach out today to start the conversation—let's create something great together!</p>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-2061" name="Contact Form" method="post">
+                <label class="cs-label cs-split">
+                    First Name
+                    <input class="cs-input" required type="text" id="first-name-2061" name="First Name">
+                </label>
+                <label class="cs-label cs-split">
+                    Last Name
+                    <input class="cs-input" required type="text" id="last-name-2061" name="Last Name">
+                </label>
+                <label class="cs-label cs-split">
+                    Email
+                    <input class="cs-input" required type="email" id="email-2061" name="Email">
+                </label>
+                <label class="cs-label cs-split">
+                    Phone Number
+                    <input class="cs-input" required type="tel" id="phone-2061" name="Phone Number">
+                </label>
+                <label class="cs-label cs-message">
+                    Message
+                    <textarea class="cs-input cs-textarea" id="previous-experience-2061" name="Previous Experience" placeholder="Write a message..."></textarea>
+                </label>
+                <div class="cs-wrapper">
+                    <button class="cs-button-solid cs-submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <img class="cs-graphic cs-graphic-left" src="/assets/svgs/contact-drop-left.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
+        <img class="cs-graphic cs-graphic-right" src="/assets/svgs/contact-drop-right.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
+    </section>
 
 {% endblock %}

@@ -1,0 +1,262 @@
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #pricing-357 {
+    padding: var(--sectionPadding);
+    padding-top: 6.25rem;
+    background-color: #FFFFFF;
+  }
+  #pricing-357 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #pricing-357 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  #pricing-357 .cs-item {
+    position: relative;
+    list-style: none;
+    /* 20px - 32px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2.4vw, 2rem);
+    padding-bottom: clamp(5.25rem, 7vw, 6rem);
+    width: 100%;
+    max-width: 25.8125rem;
+    border: 1px solid #cecece;
+    border-radius: 0.625rem;
+    background: #fff;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #pricing-357 .cs-item:nth-of-type(2) .cs-option2-text,
+  #pricing-357 .cs-item:nth-of-type(2) .cs-option1-text {
+    transition-delay: 0.1s;
+  }
+  #pricing-357 .cs-item:nth-of-type(3) .cs-option2-text,
+  #pricing-357 .cs-item:nth-of-type(3) .cs-option1-text {
+    transition-delay: 0.2s;
+  }
+  #pricing-357 .cs-popular {
+    margin-top: calc(1.5rem - 6vw);
+    border: none;
+    position: relative;
+    /* clips the popular tag */
+    overflow: hidden;
+    /* send to the top */
+    z-index: 2;
+    order: -1;
+    border: 3px solid var(--secondary);
+  }
+  #pricing-357 .cs-popular:before {
+    /* Most Popular Tag */
+    content: "POPULAR";
+    font-size: 0.875rem;
+    font-family: "Anton";
+    text-align: center;
+    line-height: 1.8125em;
+    font-weight: 400;
+    width: 100%;
+    padding: 0 0.75rem;
+    color: var(--bodyTextColorWhite);
+    background-color: var(--secondary);
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  #pricing-357 .cs-popular .cs-h3 {
+    margin-top: calc(1.5rem + 25px);
+  }
+  #pricing-357 .cs-popular .cs-h3,
+  #pricing-357 .cs-popular .cs-item-text,
+  #pricing-357 .cs-popular .cs-included,
+  #pricing-357 .cs-popular .cs-li,
+  #pricing-357 .cs-popular .cs-small {
+    color: var(--bodyTextColor);
+  }
+  #pricing-357 .cs-h3 {
+    font-family: "Anton";
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 400;
+    margin: 0 0 0.25rem;
+    padding: 0;
+    color: var(--headerColor);
+  }
+  #pricing-357 .cs-item-text {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    /* 16px - 24px */
+    margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+    padding: 0;
+    color: var(--bodyTextColor);
+  }
+  #pricing-357 .cs-option-group {
+    position: relative;
+  }
+  #pricing-357 .cs-option-group:after {
+    /* top right box */
+    content: "";
+    width: 100%;
+    height: 1px;
+    /* 32px - 40px */
+    margin-bottom: clamp(2rem, 4vw, 2.5rem);
+    background: linear-gradient(90deg, rgba(232, 232, 232, 0.2) 0%, #e8e8e8 53.78%, rgba(232, 232, 232, 0.2) 100%);
+    opacity: 1;
+    position: relative;
+    display: block;
+  }
+  #pricing-357 .cs-price {
+    font-size: 3.0625rem;
+    font-family: "Anton";
+    line-height: 1.2em;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    color: var(--headerColor);
+    /* spans are inline, need to add block for margin to work */
+    display: block;
+  }
+  #pricing-357 .cs-small {
+    font-size: 0.875rem;
+    font-family: "Lato";
+    font-weight: 400;
+    color: #4e4b66;
+  }
+  #pricing-357 .cs-included {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    /* 16px - 24px */
+    margin-bottom: clamp(1rem, 3vw, 1.5rem);
+    color: var(--headerColor);
+    display: block;
+  }
+  #pricing-357 .cs-ul {
+    padding: 0;
+    margin: 0;
+    /* 32px - 40px */
+    margin-bottom: clamp(2rem, 4vw, 2.5rem);
+  }
+  #pricing-357 .cs-li {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #pricing-357 .cs-li:last-of-type {
+    margin-bottom: 0;
+  }
+  #pricing-357 .cs-disabled {
+    /* fades out list items that are disabled from the price tier */
+    filter: grayscale(1);
+    opacity: 0.3;
+  }
+  #pricing-357 .cs-li-img {
+    width: 1.25rem;
+    height: auto;
+    margin-top: 0.1875rem;
+    margin-right: 0.5rem;
+  }
+  #pricing-357 .cs-li-img2 {
+    width: 1.125rem;
+    height: auto;
+    padding-left: 2px;
+    margin-top: 0.1875rem;
+    margin-right: 0.75rem;
+  }
+  #pricing-357 .cs-button-solid {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+  }
+}
+/* Tablet 768px */
+@media only screen and (min-width: 48rem) {
+  #pricing-357 {
+    padding-top: 12.5rem;
+  }
+  #pricing-357 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+  #pricing-357 .cs-item {
+    width: 100%;
+    /* ensures they stay the same height if you add more content */
+    align-self: stretch;
+  }
+  #pricing-357 .cs-popular {
+    /* send back to its original order */
+    order: unset;
+  }
+  #pricing-357 #cs-option2-357:before {
+    top: -0.625rem;
+  }
+  #pricing-357 #cs-option2-357:after {
+    top: -2.1875rem;
+    right: -6.25rem;
+  }
+}
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode #pricing-357 {
+    background-color: var(--dark);
+  }
+  body.dark-mode #pricing-357 .cs-topper {
+    color: var(--primaryLight);
+  }
+  body.dark-mode #pricing-357 .cs-title,
+  body.dark-mode #pricing-357 .cs-text {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #pricing-357 .cs-plan {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #pricing-357 .cs-item {
+    background: none;
+    border-color: #FFFFFF;
+  }
+  body.dark-mode #pricing-357 .cs-popular {
+    border-color: var(--primary);
+  }
+  body.dark-mode #pricing-357 .cs-h3,
+  body.dark-mode #pricing-357 .cs-item-text,
+  body.dark-mode #pricing-357 .cs-price,
+  body.dark-mode #pricing-357 .cs-included,
+  body.dark-mode #pricing-357 .cs-li,
+  body.dark-mode #pricing-357 .cs-small {
+    color: var(--bodyTextColorWhite);
+  }
+  body.dark-mode #pricing-357 .cs-li-img {
+    /* make so bright it turns white */
+    filter: brightness(900%) grayscale(1);
+  }
+}
+
+/*# sourceMappingURL=pricing.css.map */

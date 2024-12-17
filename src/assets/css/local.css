@@ -278,6 +278,7 @@
     object-fit: cover;
     position: absolute;
     top: 0;
+    left: -30px;
   }
   #stats-1643 .cs-quote {
     width: 4.625rem;
@@ -294,8 +295,6 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    max-width: 60ch;
     /* 28px - 40px */
   }
   #stats-1643 .cs-card-group {
@@ -402,6 +401,22 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
+  #stats-1643 .cs-stats-group {
+    justify-content: center;
+    align-items: center;
+  }
+  #stats-1643 .cs-text:first-of-type {
+    margin-top: 5.375rem;
+  }
+  #stats-1643 .cs-picture img {
+    height: 120%;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #stats-1643 {
+    padding-top: 3.125rem;
+  }
   #stats-1643 .cs-container {
     flex-direction: row;
     justify-content: space-between;
@@ -410,22 +425,9 @@
   #stats-1643 .cs-content {
     justify-content: stretch;
   }
-  #stats-1643 .cs-text:first-of-type {
-    margin-top: 5.375rem;
-  }
-  #stats-1643 .cs-picture {
-    height: 80%;
-    max-height: 100%;
-  }
-  #stats-1643 .cs-picture img {
-    width: 100%;
-    height: 70%;
-  }
-}
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #stats-1643 {
-    padding-top: 3.125rem;
+  #stats-1643 .cs-stats-group {
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   #stats-1643 .cs-picture {
     width: 50%;
@@ -439,7 +441,7 @@
   }
   #stats-1643 .cs-picture img {
     width: auto;
-    height: 120%;
+    height: 100%;
     transform: translateX(-20%);
     object-fit: cover;
     position: absolute;
@@ -448,7 +450,7 @@
   }
 }
 /* large Desktop */
-@media only screen and (min-width: 84rem) {
+@media only screen and (min-width: 81.25rem) {
   #stats-1643 .cs-picture {
     width: 45%;
     height: 100%;
@@ -521,7 +523,7 @@
     align-items: center;
   }
   #gallery-1374 .cs-title, #gallery-1374 .cs-text {
-    color: #1a1a1a;
+    color: var(--bodyTextColorWhite);
   }
   #gallery-1374 .cs-image-group {
     width: 100%;
@@ -643,19 +645,6 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-  }
-  #gallery-1374 .cs-background:before {
-    /* background color overlay */
-    content: "";
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    background: var(--primary);
-    opacity: 0.8;
-    top: 0;
-    left: 0;
-    z-index: 1;
   }
   #gallery-1374 .portfolio-shape-divider {
     position: absolute;
@@ -988,6 +977,7 @@
     width: 100%;
     height: 26.125rem;
     border-radius: 1.5rem;
+    border: 1px solid #e8e8e8;
     overflow: hidden;
     display: block;
     position: relative;
@@ -1462,7 +1452,6 @@
 @media only screen and (min-width: 0rem) {
   #pricing-357 {
     padding: var(--sectionPadding);
-    padding-top: 0;
     background-color: #FFFFFF;
   }
   #pricing-357 .cs-container {
@@ -1675,12 +1664,6 @@
   #pricing-357 #cs-option2-357:after {
     top: -2.1875rem;
     right: -6.25rem;
-  }
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-  #pricing-357 {
-    padding-top: 3.125rem;
   }
 }
 /* Dark Mode */

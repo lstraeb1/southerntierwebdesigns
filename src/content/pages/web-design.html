@@ -1,8 +1,8 @@
 ---
 title: 'Web Design | Southern Tier Web Designs'
-description: 'Description for <meta> description and OG tags'
-preloadImg: '/assets/images/imagename.format'
-permalink: '/binghamton/web-design'
+description: "Professional web design services for small businesses. Custom-coded websites, lightning-fast load times, and SEO-focused design to help your business thrive online."
+preloadImg: ''
+permalink: 'web-design/'
 eleventyNavigation:
     key: Web Design
     order: 600
@@ -23,19 +23,121 @@ eleventyNavigation:
         <div class="cs-container">
             <span class="cs-int-title">Web Design</span>
             <div class="cs-breadcrumbs">
-                <a href="" class="cs-link">Home</a>
-                <a href="" class="cs-link cs-active">Web Design</a>
+                <a href="/" class="cs-link">Home</a>
+                <a href="/web-design" class="cs-link cs-active">Web Design</a>
             </div>
         </div>
-        <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.jpg">
-            <img decoding="async" src="/assets/images/hero-bg.jpg" alt="background" width="1920" height="1280" aria-hidden="true">
-        </picture>
         <svg class="cs-mask" xmlns="http://www.w3.org/2000/svg" width="1920" height="136" viewBox="0 0 1920 136" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 136V0C1803.21 45.3334 1445.52 136 951 136C456.485 136 111.116 45.3334 0 0V136H951H1920Z" fill="#ffffff"/>
         </svg>
     </div>
+
+    <!-- ============================================ -->
+    <!--                 Content Page                 -->
+    <!-- ============================================ -->
+
+    <section id="content-page-1402">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <div class="cs-flex">
+                    <picture class="cs-background">
+                       <!--Mobile Image-->
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 576, height: 648 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 576, height: 648 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 576, height: 648 }) | jpeg %}" type="image/jpeg">
+                       <!--Tablet Image-->
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 872, height: 988 }) | avif %}" type="image/avif">
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 872, height: 988 }) | webp %}" type="image/webp">
+                       <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 872, height: 988 }) | jpeg %}" type="image/jpeg">
+                       <!--Desktop Image-->
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 1084, height: 1228 }) | avif %}" type="image/avif">
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 1084, height: 1228 }) | webp %}" type="image/webp">
+                       <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 1084, height: 1228 }) | jpeg %}" type="image/jpeg">
+                       <img src="{% getUrl "/assets/images/web-design-services.jpg" | resize({ width: 1084, height: 1228 }) | jpeg %}" alt="web design process" width="542" height="614" loading="lazy" decoding="async" aria-hidden="true">
+                    </picture>
+                    <div class="cs-box">
+                        <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/web-design-success.svg" alt="business success" width="60" height="60">
+                        <span class="cs-desc">
+                            Websites Designed For Success
+                        </span>
+                    </div>
+                </div>
+                <ul class="cs-card-group">
+                    <li class="cs-item">
+                        <h3 class="cs-h3">
+                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/web-design-stunning.svg" alt="icon" width="32" height="32">
+                            Stunning Designs
+                        </h3>
+                        <p class="cs-item-text">
+                            Our websites aren't just practical; they look sleek and professional too.
+                        </p>
+                    </li>
+                    <li class="cs-item">
+                        <h3 class="cs-h3">
+                            <img class="cs-h3-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/web-design-user.svg" alt="icon" width="32" height="32">
+                            User Focused
+                        </h3>
+                        <p class="cs-item-text">
+                            Accessibility and user-friendliness are part of the entire design process.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="cs-content">
+                <h1 class="cs-title">Professional Web Design Services for Small Businesses</h1>
+                <h2>Expert Hand-Coded Web Design Backed by Proven Results</h2>
+                <p>
+                    At Southern Tier Web Designs, we specialize in custom-coded websites, built from the ground up to ensure a unique, high-quality result for every client. Unlike many agencies that rely on page builders, 
+                    we write clean, optimized code that enhances site performance, security, and scalability. Our focus is on creating a tailored experience that aligns with your business goals, ensuring your website not 
+                    only looks great but functions seamlessly. With our expertise in responsive design, on-page SEO, and fast-loading pages, we provide a web presence that stands out from the competition and delivers long-term success.
+                </p>
+                <h3>What Makes Our Custom Web Design Process Different?</h3>
+                <p>
+                    By opting for a custom website, you get a design tailored specifically to your business needs, not just a generic template with limited functionality. This results in a more polished, professional look, better 
+                    performance, and a user experience that resonates with visitors. Unlike cookie-cutter templates, which can often feel impersonal or outdated, a custom design can grow with your business and evolve as your needs change.
+                </p>
+                <ol>
+                    <li>No Page Builders—Just Clean, Efficient Code</li>
+                    <li>Tailored Design to Reflect Your Brand</li>
+                    <li>Performance and Speed Focus</li>
+                    <li>Mobile-First Approach</li>
+                    <li>SEO from the Ground Up</li>
+                    <li>Ongoing Maintenance and Support</li>
+                </ol>
+                <h4>Custom Coding for a Tailored Web Design Experience</h4>
+                <p>
+                    Unlike other agencies that rely on page builders, which can lead to bloated, generic sites, we write clean, efficient code that's designed specifically for your brand. This approach gives us the flexibility to 
+                    create a unique site tailored to your vision, without limitations. By not using pre-built templates, we deliver a fully optimized, professional website that performs better and stands out from the competition.
+                </p>
+                <h4>The Impact of Fast Load Times</h4>
+                <p>
+                    Website performance, especially load times, plays a critical role in user experience and conversion rates. Studies show that even a one-second delay in page loading can lead to a significant drop in user engagement 
+                    and sales. At Southern Tier Web Designs, we optimize every aspect of your site to ensure it loads quickly and efficiently. We focus on image compression, efficient code, and the latest optimization techniques to keep 
+                    your site running smoothly. <strong>Faster websites not only improve user experience but also boost your search engine rankings</strong>, giving you an edge over competitors with slower sites. Learn more about how load times affect your 
+                    website's performance at our <a href="/blog/core-web-vitals-impact">blog post here.</a>
+                </p>
+                <h4>Continuous Maintenance and Support</h4>
+                <p>
+                    Ongoing website maintenance is essential to keeping your site running smoothly and securely. Regular updates, security patches, and performance checks ensure that your site remains functional and protected from potential threats. With our 
+                    ongoing support, you can rely on us to monitor and maintain your site, making any necessary adjustments or improvements to ensure optimal performance, so you can focus on running your business without worrying about your website.
+                </p>
+                <h4>Custom Websites Offer Enhanced Security</h4>
+                <p>
+                    Custom-built websites are far more secure than those created with page builders. By coding each website from scratch, we can implement unique security measures tailored to your site's specific needs. Unlike template-based sites, which can be vulnerable 
+                    to common attacks due to widespread use, custom websites are designed with security in mind from the ground up. We prioritize best practices, such as secure coding, regular updates, and encrypted connections, ensuring your website and its data remain safe from cyber threats.
+                </p>
+                <h2>Boosting Your Rankings with SEO</h2>
+                <p>
+                    A well-designed website does more than just look great; it plays a vital role in improving your visibility on search engines like Google. On-page SEO, including optimized meta tags, keyword usage, and proper header 
+                    structure, can significantly improve your website's ranking. By ensuring your website is optimized for SEO from the start, you help search engines better understand and index your content, ultimately driving more organic traffic to your site.
+                </p>
+                <p>
+                    In addition to design, technical elements like fast load times, mobile-friendliness, and secure browsing (HTTPS) are important ranking factors. With a custom-built website, we can ensure all these SEO best practices are in place, which gives 
+                    your site the best chance to appear higher in search results. The result? More visitors, better conversion rates, and greater long-term success for your business. Learn more about our <a href="/seo-services">SEO services here.</a>
+                </p>
+            </div>
+        </div>
+    </section>
 
     {% include 'components/cta.html' %}
 {% endblock %}
