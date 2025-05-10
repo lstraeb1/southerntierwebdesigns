@@ -19,7 +19,7 @@
         .cs-container {
             width: 100%;
             /* changes to 100% at tablet */
-            max-width: calc(550 / 16 * 1rem);
+            max-width: calc(650 / 16 * 1rem);
             margin: auto;
             display: flex;
             flex-direction: column;
@@ -53,6 +53,7 @@
         }
 
         .cs-text {
+            font-size: clamp(1rem, 1.5vw, 1.25rem);
             margin-bottom: calc(32/16 * 1rem);
             font-weight: normal;
             font-family: "Lato";
