@@ -1,0 +1,92 @@
+---
+title: 'Website Questionnaire | Southern Tier Web Designs'
+description: "Private questionnaire form for client onboarding."
+preloadImg: ''
+permalink: 'website-questionnaire/'
+eleventyNavigation:
+    key: Website Questionnaire
+    order: 800
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/website-questionnaire.css">
+{% endblock %}
+
+{% block body %}
+    
+    <!-- ============================================ -->
+    <!--                   Contact                    -->
+    <!-- ============================================ -->
+
+    <section id="contact-2061">
+        <div class="cs-container">
+            <div class="cs-content">
+                <h2 class="cs-title">Website Questionnaire</h2>
+                <p class="cs-text">Be as detailed as possible. There's no such thing as too much!</p>
+            </div>
+            <!--Form-->
+            <form class="cs-form" id="cs-form-2061" name="Website Questionnaire Form" method="post" data-netlify="true">
+                <label class="cs-label cs-split">
+                    Full Name
+                    <input class="cs-input" required type="text" id="first-name-2061" name="Full Name" placeholder="Liam Straebler">
+                </label>
+                <label class="cs-label cs-split">
+                    Company Name
+                    <input class="cs-input" required type="text" id="last-name-2061" name="Company Name" placeholder="Company Name">
+                </label>
+                <label class="cs-label cs-split">
+                    Company Phone
+                    <input class="cs-input" required type="tel" id="email-2061" name="Company Phone" placeholder="Company Phone">
+                </label>
+                <label class="cs-label cs-split">
+                    Email Address
+                    <input class="cs-input" required type="email" id="phone-2061" name="Email Address" placeholder="Email">
+                </label>
+                <label class="cs-label cs-message">
+                    Social Media Links
+                    <textarea class="cs-input cs-textarea" name="Social Media Links" placeholder="All links to social media profiles"></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    What are the 3-4 main services you provide? If you only have 1 service, what are the 3-4 main clients you service?
+                    <textarea class="cs-input cs-textarea" required name="Main Services" placeholder="Bathroom remodeling, kitchen remodeling, flooring"></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    What are the 2 big ticket services you offer that make you the most money or that you want to do more of?
+                    <textarea class="cs-input cs-textarea" required name="Top 2 Services" placeholder="We want to focus on kitchen and bathroom remodeling"></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    What are all the other services you offer no matter how small?
+                    <textarea class="cs-input cs-textarea" required name="Other Services" placeholder="We do concrete work, drywall installs, basement remodels..."></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    What 3 qualities separate you from the competition?
+                    <textarea class="cs-input cs-textarea" required name="What makes us better" placeholder="Best customer service, communication, and reliability"></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    About you, what is your experience/expertise, why did you get into business, what's your mission statement?
+                    <textarea class="cs-input cs-textarea" required name="About us" placeholder="We started this company 25 years ago..."></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    Do you have any stats you can tout from your years of experience?
+                    <textarea class="cs-input cs-textarea" name="Stats" placeholder="55 five-star reviews, 1000 completed jobs..."></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    Who is your target demographic?
+                    <textarea class="cs-input cs-textarea" required name="Target Demographic" placeholder="Middle class homeowners aged 30 and up..."></textarea>
+                </label>
+                <label class="cs-label cs-message">
+                    Is there anything else you'd like visitors to know about you?
+                    <textarea class="cs-input cs-textarea" required name="Additional Information" placeholder="We're the best at what we do..."></textarea>
+                </label>
+                <div class="cs-wrapper">
+                    <button class="cs-button-solid cs-submit" type="submit">Submit Answers</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    
+                                    
+{% endblock %}
