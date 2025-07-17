@@ -65,6 +65,93 @@
     border: none;
     border-radius: 0.5rem;
   }
+  #contact-2061 .cs-background {
+    background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
+    border-radius: 12px;
+    max-width: 1300px;
+    min-width: 360px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding: 1rem 0;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #contact-2061 .calendly-inline-widget {
+    width: 90%;
+    border-radius: 0.5rem;
+  }
+  #contact-2061 .cs-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 16px - 32px */
+    gap: clamp(1rem, 3.2vw, 2rem);
+  }
+  #contact-2061 .cs-card-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* 16px - 32px */
+    gap: clamp(1rem, 2vw, 2rem);
+  }
+  #contact-2061 .cs-item {
+    list-style: none;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  #contact-2061 .cs-item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  #contact-2061 .cs-item-number {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #contact-2061 .cs-h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+  }
+  #contact-2061 .cs-item-text {
+    font-size: 1rem;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  #contact-2061 .cs-floater {
+    /* 246px - 582px */
+    width: clamp(15.375rem, 50vw, 36.375rem);
+    height: auto;
+    position: absolute;
+    right: -4rem;
+    top: -0.5rem;
+    z-index: -1;
+  }
+  #contact-2061 .cs-link {
+    color: var(--secondary);
+  }
   #contact-2061 .cs-select,
   #contact-2061 .cs-date {
     /* as the select arrow/date calendar icon are not affected by padding, we can use a transparent border on the select element to pad the arrow as much as we need */
@@ -96,6 +183,11 @@
 @media only screen and (min-width: 48rem) {
   #contact-2061 .cs-content {
     max-width: 80%;
+  }
+  #contact-2061 .cs-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: clamp(4rem, 3.2vw, 5rem);
   }
   #contact-2061 .cs-title {
     max-width: 34.375rem;

@@ -370,6 +370,7 @@
             opacity: 1;
             /* 12px - 24px */
             border-radius: clamp(0.75rem, 2vw, 1.5rem);
+            border: 1px solid #dadada;
             display: block;
             position: absolute;
             top: 0;
@@ -874,6 +875,7 @@
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
+        border: 1px solid #dadada;
         display: flex;
         align-items: center;
         position: fixed;

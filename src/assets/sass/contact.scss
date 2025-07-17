@@ -72,6 +72,105 @@
             border-radius: calc(8/16 * 1rem);
         }
 
+        .cs-background {
+            background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
+            border-radius: 12px;     
+            max-width: 1300px;   
+            min-width: 360px; 
+            margin: 0 auto;    
+            margin-top: calc(64 / 16 * 1rem);      
+            padding: calc(16 / 16 * 1rem) 0; 
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendly-inline-widget {
+            width: 90%;
+            border-radius: calc(8 / 16 * 1rem);
+        }
+
+        .cs-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* 16px - 32px */
+            gap: clamp(1rem, 3.2vw, 2rem);
+        }
+
+        .cs-card-group {
+            // width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            /* 16px - 32px */
+            gap: clamp(1rem, 2vw, 2rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: calc(16 / 16 * 1rem);
+        }
+
+        .cs-item-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(8 / 16 * 1rem);
+        }
+
+        .cs-item-number {
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: calc(8 / 16 * 1rem);
+        }
+
+        .cs-h3 {
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+        }
+
+        .cs-item-text {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-floater {
+            /* 246px - 582px */
+            width: clamp(15.375rem, 50vw, 36.375rem);
+            height: auto;
+            position: absolute;
+            right: calc(-64 / 16 * 1rem);
+            top: calc(-8 / 16 * 1rem);
+            z-index: -1;
+        }
+
+        .cs-link {
+            color: var(--secondary);
+        }
+
         .cs-select,
         .cs-date {
             /* as the select arrow/date calendar icon are not affected by padding, we can use a transparent border on the select element to pad the arrow as much as we need */
@@ -110,6 +209,12 @@
     #contact-2061 {
         .cs-content {
             max-width: 80%;
+        }
+
+        .cs-wrapper {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: clamp(4rem, 3.2vw, 5rem);
         }
 
         .cs-title {
