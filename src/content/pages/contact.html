@@ -37,41 +37,66 @@ eleventyNavigation:
     <!--                   Contact                    -->
     <!-- ============================================ -->
 
-    <section id="contact-2061">
+    <section id="contact-1388">
         <div class="cs-container">
             <div class="cs-content">
-                <h2 class="cs-title">Now You Know About Us... We Want To Hear From You</h2>
-                <p class="cs-text">We're here to answer your questions, discuss your goals, and explore how we can help your business grow online. Reach out today to start the conversation—let's create something great together!</p>
+                <h2 class="cs-title">Get in Touch</h2>
+                <p class="cs-text">
+                    We're here to answer your questions, discuss your goals, and explore how we can help your business grow online. Reach out using the form for more information or <a href="/book-call" class="cs-link">book a call here.</a>
+                </p>
+                <ul class="cs-ul">
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="/assets/svgs/call.svg" alt="phone icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Phone</span>
+                            <a href="tel:{{client.phoneForTel}}" class="cs-link">{{client.phoneFormatted}}
+                            </a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="/assets/svgs/email.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Email</span>
+                            <a href="mailto:{{client.email}}" class="cs-link">{{client.email}}</a>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-icon-wrapper">
+                            <img aria-hidden="true" src="/assets/svgs/pin.svg" alt="address icon" class="cs-icon" width="40" height="40" decoding="async">
+                        </picture>
+                        <div class="cs-flex-group">
+                            <span class="cs-header">Serving</span>
+                            <span class="cs-link">The US & Canada</span>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <!--Form-->
-            <form class="cs-form" id="cs-form-2061" name="Contact Form" method="post" data-netlify="true">
-                <label class="cs-label cs-split" name="first name">
-                    First Name
-                    <input class="cs-input" required type="text" id="first-name-2061" name="First Name">
+            <form class="cs-form" id="cs-form-1388" name="Contact Form" method="post" data-netlify="true">
+                <h3 class="cs-h3">Get More Information</h3>
+                <label class="cs-label">
+                    Name
+                    <input class="cs-input" required type="text" id="name-1388" name="name" placeholder="Name">
                 </label>
-                <label class="cs-label cs-split" name="last name">
-                    Last Name
-                    <input class="cs-input" required type="text" id="last-name-2061" name="Last Name">
-                </label>
-                <label class="cs-label cs-split" name="email">
+                <label class="cs-label cs-email">
                     Email
-                    <input class="cs-input" required type="email" id="email-2061" name="Email">
+                    <input class="cs-input" required type="email" id="email-1388" name="email" placeholder="Email">
                 </label>
-                <label class="cs-label cs-split" name="phone number">
-                    Phone Number
-                    <input class="cs-input" required type="tel" id="phone-2061" name="Phone Number">
+                <label class="cs-label cs-phone">
+                    Phone
+                    <input class="cs-input" required type="number" id="phone-1388" name="phone" placeholder="Phone">
                 </label>
-                <label class="cs-label cs-message" name="message">
+                <label class="cs-label">
                     Message
-                    <textarea class="cs-input cs-textarea" id="previous-experience-2061" name="Message" placeholder="Write a message..."></textarea>
+                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1388" placeholder="Write message..."></textarea>
                 </label>
-                <div class="cs-wrapper">
-                    <button class="cs-button-solid cs-submit" type="submit">Submit</button>
-                </div>
+                <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
             </form>
         </div>
-        <img class="cs-graphic cs-graphic-left" src="/assets/svgs/contact-drop-left.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
-        <img class="cs-graphic cs-graphic-right" src="/assets/svgs/contact-drop-right.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
     </section>
 
 {% endblock %}

@@ -124,7 +124,7 @@
     letter-spacing: 1.3px;
     padding: 0.5rem;
     color: #FFF;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border-radius: 0.5rem;
     display: flex;
     justify-content: center;
