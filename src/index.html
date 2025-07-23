@@ -70,7 +70,7 @@ eleventyNavigation:
                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | avif %}" type="image/avif">
                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | webp %}" type="image/webp">
                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | jpeg %}" type="image/jpeg">
-                   <img src="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | jpeg %}" alt="flying desktop mockup of Stein Design and Build" width="1069" height="715" loading="eager" decoding="async" aria-hidden="true">
+                   <img src="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | jpeg %}" alt="flying desktop mockup of Stein Design and Build" width="1069" height="715" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
                 </picture>
             </div>
         </div>
@@ -460,7 +460,7 @@ eleventyNavigation:
                             Ideal for growing businesses that want more pages, local SEO, and a stronger foundation for lead generation.
                         </p>
                         <span class="cs-price">
-                            $399
+                            $349
                             <span class="cs-duration">/ month</span>
                         </span>
                     </div>
@@ -484,7 +484,7 @@ eleventyNavigation:
                             Built for businesses that want to scale, publish, and dominate in search with content and custom solutions.
                         </p>
                         <span class="cs-price">
-                            $499
+                            $449
                             <span class="cs-duration">/ month</span>
                         </span>
                     </div>
