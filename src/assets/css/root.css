@@ -1152,9 +1152,6 @@
 }
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #cta-697 {
-    padding-top: 0;
-  }
   #cta-697 .cs-title {
     padding: 2rem 1.5rem 0 1.5rem;
   }

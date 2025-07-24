@@ -1986,129 +1986,279 @@
             }
         }
     }
-}                             
-                                
+}   
+
 /*-- -------------------------- -->
-<---          Reviews           -->
+<---           Reviews          -->
 <--- -------------------------- -*/
+
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* adjust height of float here */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #reviews-355 {
-        padding: var(--sectionPadding);
+	#reviews-2327 {
+		padding: var(--sectionPadding);
+        padding-bottom: 0;
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
 
-        .cs-container {
-            width: 100%;
-            max-width: calc(1440 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
-        }
+		.cs-container {
+			width: 100%;
+			/* changes to 1280px at desktop */
+			max-width: calc(584/16 * 1rem);
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			/* 48px - 64px */
+			gap: clamp(3rem, 6vw, 4rem);
+		}
 
-        .cs-content {
-            /* set text align to left if content needs to be left aligned */
-            text-align: center;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
-            align-items: center;
-        }
+		.cs-content {
+			/* set text align to left if content needs to be left aligned */
+			text-align: left;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
 
-        .cs-card-group {
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            /* 16px - 20px */
-            gap: clamp(1rem, 2.5vw, 1.15rem);
-        }
+		.cs-title {
+			margin: 0;
+		}
 
-        .cs-item {
-            list-style: none;
-            width: 100%;
-            max-width: calc(630 / 16 * 1rem);
-            margin: 0;
-            /* 24px - 32px top & bottom */
-            /* 16px - 40px left & right */
-            padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
-            background-color: #f7f7f7;
-            border-radius: calc(16 / 16 * 1rem);
-            /* prevents padding from adding to height and width */
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
+		.cs-reviews-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: clamp(3rem, 6vw, 4rem);
             position: relative;
+            z-index: 1;
+		}
+
+		.cs-flex {
+            width: auto;
+			display: inline-flex;
+			justify-content: flex-start;
+			gap: calc(16/16 * 1rem);
+            z-index: 1;
+            // position: absolute;
+            left: 0;
+            // bottom: calc(0/16 * 1rem);
+		}
+
+        .cs-button {
+            width: calc(48/16 * 1rem);
+            height: calc(48/16 * 1rem);
+            padding: calc(14/16 * 1rem);
+            background-color: #f7f7f7;
+            border: none;
+            border-radius: calc(8 / 16 * 1rem);
+            transition: background-color .3s;
+            
+            &:hover {
+                cursor: pointer;
+                background-color: var(--primary);
+
+                .cs-button-arrow {
+                    filter: grayscale(1) brightness(1000%);
+                }
+            }
         }
 
-        .cs-item-stars {
-            width: calc(130 / 16 * 1rem);
+        .cs-button-arrow {
+            width: calc(20/16 * 1rem);
             height: auto;
-            margin-bottom: calc(32 / 16 * 1rem);
             display: block;
         }
 
-        .cs-review {
-            /* 14px - 20px */
-            font-size: clamp(0.875rem, 2vw, 1rem);
-            line-height: 1.5em;
-            margin: 0;
-            /* 20px - 40px */
-            margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
-            color: var(--bodyTextColor);
+		.cs-item-stars {
+			line-height: 1.2em;
+			margin: 0 0 calc(8/16 * 1rem);
+		}
+
+		.cs-review {
+			font-size: calc(16/16 * 1rem);
+			font-weight: 400;
+			line-height: 1.5em;
+			margin: 0;
+			color: var(--bodyTextColor);
+		}
+
+		.cs-wrapper {
+            position: relative;
+            z-index: 1;
+			transition: opacity 0.3s;
+		}
+
+		.cs-active {
+			opacity: 1;
+		}
+
+		.cs-hidden {
+			position: absolute;
+			opacity: 0;
+		}
+
+		.cs-flex-group {
+			margin-top: calc(24/16 * 1rem);
+			padding-top: calc(24/16 * 1rem);
+			border-top: 1px solid #E7E7E8;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: calc(16/16 * 1rem);
+		}
+
+        .cs-info {
+            display: flex;
+            flex-direction: column;
         }
 
-        .cs-name {
-            /* 20px - 25px */
-            font-size: clamp(1.25rem, 3vw, 1.5625rem);
+		.cs-name {
+			font-size: calc(16/16 * 1rem);
+			font-weight: 400;
             font-family: "Anton";
             text-transform: uppercase;
-            line-height: 1.2em;
-            font-weight: 400;
+			line-height: 1.2em;
             margin: 0;
-            /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
-            margin-top: auto;
-            color: var(--headerColor);
-            display: block;
+			color: var(--headerColor);
+			display: block;
+		}
+
+		.cs-job {
+			font-size: calc(16/16 * 1rem);
+			font-weight: 400;
+			line-height: 1.5em;
+			color: var(--bodyTextColor);
+			display: block;
+		}
+
+		.cs-image-group {
+			margin-top: calc(48/16 * 1rem);
+			display: flex;
+			gap: calc(8/16 * 1rem);
+		}
+
+		.cs-picture {
+			width: 50%;
+			aspect-ratio: 1;
+			display: block;
+			position: relative;
+			z-index: 1;
+            animation: floatUpDown 4s ease-in-out infinite;
+
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+        
+        .cs-picture1 {
+            display: none;
         }
 
-        .cs-job {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.6vw, 1rem);
-            line-height: 1.5em;
-            margin: 0;
-            color: var(--bodyTextColor);
-            display: block;
+        .cs-picture2 {
+            margin-left: auto;
+            display: none;
+            right: calc(-56/16 * 1rem);
+            animation-delay: 2s;
         }
-    }
+	}
 }
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #reviews-355 {
-        .cs-card-group {
-            flex-direction: row;
-            justify-content: center;
-            align-items: stretch;
-            flex-wrap: wrap;
+	#reviews-2327 {
+		.cs-container {
+			width: 53vw;
+			max-width: calc(846/16 * 1rem);
+		}
+
+		.cs-wrapper {
+			max-width: calc(739/16 * 1rem);
+		}
+
+		.cs-reviews-wrapper {
+			flex-direction: row;
+		}
+
+        .cs-hidden {
+            width: 80%;
         }
 
-        .cs-item {
-            width: clamp(31.5%, 30vw, 32.3%);
-        }
-    }
+		.cs-flex {
+            padding-bottom: calc(110/16 * 1rem);
+			flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            left: auto;
+            bottom: auto;
+            z-index: 10;
+		}
+
+		.cs-h3,
+		.cs-review {
+			max-width: calc(739/16 * 1rem);
+		}
+
+		.cs-review {
+            /* adjust as needed based on the tallets review, changes on desktop */
+			min-height: calc(220/16 * 1rem);
+		}
+
+		.cs-image-group {
+			margin: 0;
+			/* allows the children of the parent container to act as though the parent doesnt exist and floats with all the elements outside the parent */
+			display: contents;
+		}
+
+		.cs-picture {
+			width: 28vw;
+			max-width: calc(320/16 * 1rem);
+			height: 28vw;
+			max-height: calc(320/16 * 1rem);
+			aspect-ratio: initial;
+			position: absolute;
+			z-index: 1;
+		}
+
+		.cs-picture1 {
+            display: block;
+			top: 0;
+			left: calc(-66/16 * 1rem);
+		}
+
+		.cs-picture2 {
+            display: block;
+		    right: calc(-66/16 * 1rem);
+			bottom: 0;
+		}
+	}
 }
 
-/* Tablet - 1024px */
-@media only screen and (min-width: 64rem) {   
-    #reviews-355 {
-        padding-top: calc(50 / 16 * 1rem);
-    }
-}                         
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+	#reviews-2327 {
+		.cs-review {
+            /* chnage based on the height of the tallest review */
+			min-height: calc(100/16 * 1rem);
+		}
+	}
+}                    

@@ -1656,113 +1656,233 @@
   }
 }
 /*-- -------------------------- -->
-<---          Reviews           -->
+<---           Reviews          -->
 <--- -------------------------- -*/
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* adjust height of float here */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #reviews-355 {
+  #reviews-2327 {
     padding: var(--sectionPadding);
+    padding-bottom: 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
   }
-  #reviews-355 .cs-container {
+  #reviews-2327 .cs-container {
     width: 100%;
-    max-width: 90rem;
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
   }
-  #reviews-355 .cs-content {
+  #reviews-2327 .cs-content {
     /* set text align to left if content needs to be left aligned */
-    text-align: center;
+    text-align: left;
     width: 100%;
     display: flex;
     flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-  }
-  #reviews-355 .cs-card-group {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    /* 16px - 20px */
-    gap: clamp(1rem, 2.5vw, 1.15rem);
-  }
-  #reviews-355 .cs-item {
-    list-style: none;
-    width: 100%;
-    max-width: 39.375rem;
-    margin: 0;
-    /* 24px - 32px top & bottom */
-    /* 16px - 40px left & right */
-    padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
-    background-color: #f7f7f7;
-    border-radius: 1rem;
-    /* prevents padding from adding to height and width */
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
     align-items: flex-start;
-    flex-direction: column;
-    position: relative;
   }
-  #reviews-355 .cs-item-stars {
-    width: 8.125rem;
+  #reviews-2327 .cs-title {
+    margin: 0;
+  }
+  #reviews-2327 .cs-reviews-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(3rem, 6vw, 4rem);
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2327 .cs-flex {
+    width: auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    z-index: 1;
+    left: 0;
+  }
+  #reviews-2327 .cs-button {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.875rem;
+    background-color: #f7f7f7;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+  }
+  #reviews-2327 .cs-button:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+  }
+  #reviews-2327 .cs-button:hover .cs-button-arrow {
+    filter: grayscale(1) brightness(1000%);
+  }
+  #reviews-2327 .cs-button-arrow {
+    width: 1.25rem;
     height: auto;
-    margin-bottom: 2rem;
     display: block;
   }
-  #reviews-355 .cs-review {
-    /* 14px - 20px */
-    font-size: clamp(0.875rem, 2vw, 1rem);
+  #reviews-2327 .cs-item-stars {
+    line-height: 1.2em;
+    margin: 0 0 0.5rem;
+  }
+  #reviews-2327 .cs-review {
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.5em;
     margin: 0;
-    /* 20px - 40px */
-    margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
     color: var(--bodyTextColor);
   }
-  #reviews-355 .cs-name {
-    /* 20px - 25px */
-    font-size: clamp(1.25rem, 3vw, 1.5625rem);
+  #reviews-2327 .cs-wrapper {
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s;
+  }
+  #reviews-2327 .cs-active {
+    opacity: 1;
+  }
+  #reviews-2327 .cs-hidden {
+    position: absolute;
+    opacity: 0;
+  }
+  #reviews-2327 .cs-flex-group {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #E7E7E8;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+  #reviews-2327 .cs-info {
+    display: flex;
+    flex-direction: column;
+  }
+  #reviews-2327 .cs-name {
+    font-size: 1rem;
+    font-weight: 400;
     font-family: "Anton";
     text-transform: uppercase;
     line-height: 1.2em;
-    font-weight: 400;
     margin: 0;
-    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
-    margin-top: auto;
     color: var(--headerColor);
     display: block;
   }
-  #reviews-355 .cs-job {
-    /* 14px - 16px */
-    font-size: clamp(0.875rem, 1.6vw, 1rem);
+  #reviews-2327 .cs-job {
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.5em;
-    margin: 0;
     color: var(--bodyTextColor);
     display: block;
+  }
+  #reviews-2327 .cs-image-group {
+    margin-top: 3rem;
+    display: flex;
+    gap: 0.5rem;
+  }
+  #reviews-2327 .cs-picture {
+    width: 50%;
+    aspect-ratio: 1;
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation: floatUpDown 4s ease-in-out infinite;
+  }
+  #reviews-2327 .cs-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews-2327 .cs-picture1 {
+    display: none;
+  }
+  #reviews-2327 .cs-picture2 {
+    margin-left: auto;
+    display: none;
+    right: -3.5rem;
+    animation-delay: 2s;
   }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #reviews-355 .cs-card-group {
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
+  #reviews-2327 .cs-container {
+    width: 53vw;
+    max-width: 52.875rem;
   }
-  #reviews-355 .cs-item {
-    width: clamp(31.5%, 30vw, 32.3%);
+  #reviews-2327 .cs-wrapper {
+    max-width: 46.1875rem;
+  }
+  #reviews-2327 .cs-reviews-wrapper {
+    flex-direction: row;
+  }
+  #reviews-2327 .cs-hidden {
+    width: 80%;
+  }
+  #reviews-2327 .cs-flex {
+    padding-bottom: 6.875rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    left: auto;
+    bottom: auto;
+    z-index: 10;
+  }
+  #reviews-2327 .cs-h3,
+  #reviews-2327 .cs-review {
+    max-width: 46.1875rem;
+  }
+  #reviews-2327 .cs-review {
+    /* adjust as needed based on the tallets review, changes on desktop */
+    min-height: 13.75rem;
+  }
+  #reviews-2327 .cs-image-group {
+    margin: 0;
+    /* allows the children of the parent container to act as though the parent doesnt exist and floats with all the elements outside the parent */
+    display: contents;
+  }
+  #reviews-2327 .cs-picture {
+    width: 28vw;
+    max-width: 20rem;
+    height: 28vw;
+    max-height: 20rem;
+    aspect-ratio: initial;
+    position: absolute;
+    z-index: 1;
+  }
+  #reviews-2327 .cs-picture1 {
+    display: block;
+    top: 0;
+    left: -4.125rem;
+  }
+  #reviews-2327 .cs-picture2 {
+    display: block;
+    right: -4.125rem;
+    bottom: 0;
   }
 }
-/* Tablet - 1024px */
+/* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #reviews-355 {
-    padding-top: 3.125rem;
+  #reviews-2327 .cs-review {
+    /* chnage based on the height of the tallest review */
+    min-height: 6.25rem;
   }
 }
 
