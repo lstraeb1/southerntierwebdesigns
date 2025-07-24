@@ -4,6 +4,156 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  #hero-855 {
+    padding: clamp(11.25rem, 23.82vw, 18.75rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+    padding-bottom: 0;
+    background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
+    /* clips the svg wave from overflowing */
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-855 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+  #hero-855 .cs-content {
+    max-width: 39.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+  }
+  #hero-855 .cs-topper {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  #hero-855 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+    font-weight: 400;
+    line-height: 1.2em;
+    text-align: center;
+    /* 23 characters including spaces wide */
+    max-width: 23ch;
+    margin: 0 0 1rem 0;
+    color: #FFF;
+    position: relative;
+  }
+  #hero-855 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: center;
+    width: 100%;
+    max-width: 33.1875rem;
+    /* 28px - 40px */
+    margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+    color: var(--bodyTextColorWhite);
+  }
+  #hero-855 .cs-button-solid {
+    background-color: #FFFFFF;
+    box-shadow: inset 0 -4px 0 #C6C6C6;
+    color: var(--secondaryDark);
+    transition: box-shadow 0.3s;
+  }
+  #hero-855 .cs-button-solid:hover {
+    box-shadow: none;
+  }
+  #hero-855 .cs-picture {
+    width: 100%;
+    max-width: 37.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  #hero-855 .cs-picture img {
+    height: auto;
+    width: 100%;
+  }
+  #hero-855 .cs-wave {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    z-index: 1;
+    fill: #ffffff;
+  }
+  #hero-855 .cs-wave path {
+    width: 100%;
+    height: auto;
+  }
+  #hero-855 .mobile {
+    bottom: -0.4375rem;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #hero-855 {
+    text-align: left;
+    padding-bottom: 23vw;
+  }
+  #hero-855 .cs-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #hero-855 .cs-content {
+    width: 40vw;
+    /* prevents flex-box from squishing it */
+    flex: none;
+    align-items: flex-start;
+  }
+  #hero-855 .cs-title,
+  #hero-855 .cs-text {
+    text-align: left;
+  }
+  #hero-855 .cs-picture {
+    width: 85vw;
+    max-width: 63.5rem;
+    position: absolute;
+    top: auto;
+    bottom: -16.25rem;
+    right: -9.25rem;
+  }
+  #hero-855 .cs-wave {
+    width: 100%;
+    left: 0;
+    transform: none;
+  }
+}
+/* Large Desktop - 1024px */
+@media only screen and (min-width: 93.75rem) {
+  #hero-855 .cs-picture {
+    right: -19.375rem;
+    bottom: -20.25rem;
+    width: 85vw;
+    max-width: 79.5rem;
+  }
+}
+/*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
   #hero-408 {
     /* 200px - 300px - leaving extra space for the navigation */
     padding: clamp(11.25rem, 23.82vw, 18.75rem) 1rem;
@@ -143,6 +293,7 @@
   }
   #hero-408 .cs-stat-group {
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -155,9 +306,7 @@
   }
   #hero-408 .cs-stat-group .cs-picture img {
     width: 100%;
-    transform: scale(1.5);
     height: auto;
-    object-fit: contain;
     position: absolute;
     right: 100px;
     z-index: -1;
@@ -186,8 +335,8 @@
     width: 100%;
   }
   #hero-408 .cs-stat-group .cs-picture img {
-    width: 85%;
-    transform: scale(1.9);
+    width: 100%;
+    max-width: 48rem;
     height: auto;
     object-fit: cover;
     position: absolute;
@@ -209,20 +358,6 @@
     /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
     padding: 16.5rem;
     padding-bottom: 20vw;
-  }
-}
-/* Desktop Parallax - 1300px */
-@media only screen and (min-width: 81.25rem) {
-  #hero-408 .cs-background {
-    background: url("/assets/images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    /* creates the parallax effect */
-    background-attachment: fixed;
-  }
-  #hero-408 .cs-background img {
-    display: none;
   }
 }
 /* Dark Mode */

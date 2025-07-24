@@ -19,7 +19,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
 
 
     <!-- Script for Netlify Identity -->
@@ -44,10 +44,10 @@ eleventyNavigation:
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                   Hero                       -->
+    <!--                    Hero                      -->
     <!-- ============================================ -->
 
-    <section id="hero-408">
+    <section id="hero-855">
         <div class="cs-container">
             <div class="cs-content">
                 <h1 class="cs-title">Websites That Win You More Business</h1>
@@ -56,34 +56,29 @@ eleventyNavigation:
                 </p>
                 <a href="/book-call" class="cs-button-solid">Get Started</a>
             </div>
-            <div class="cs-stat-group">
-                <picture class="cs-picture">
-                   <!--Mobile Image-->
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 576, height: 384 }) | avif %}" type="image/avif">
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 576, height: 384 }) | jpeg %}" type="image/jpeg">
-                   <!--Tablet Image-->
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 1814, height: 1212 }) | avif %}" type="image/avif">
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 1814, height: 1212 }) | webp %}" type="image/webp">
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 1814, height: 1212 }) | jpeg %}" type="image/jpeg">
-                   <!--Desktop Image-->
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | avif %}" type="image/avif">
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | webp %}" type="image/webp">
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | jpeg %}" type="image/jpeg">
-                   <img src="{% getUrl "/assets/images/flying-desktop-mockup-3.png" | resize({ width: 2138, height: 1430 }) | jpeg %}" alt="flying desktop mockup of Stein Design and Build" width="1069" height="715" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
-                </picture>
-            </div>
+            <!--Hero Image-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 576, height: 384 }) | avif %}" type="image/avif">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 576, height: 384 }) | jpeg %}" type="image/jpeg">
+                <!--Tablet Image-->
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 1814, height: 1212 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 1814, height: 1212 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 1814, height: 1212 }) | jpeg %}" type="image/jpeg">
+                <!--Desktop Image-->
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 1872, height: 986 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 1872, height: 986 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 1872, height: 986 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/desktop-mockup-2.png" | resize({ width: 1872, height: 986 }) | jpeg %}" alt="flying desktop mockup of Stein Design and Build" width="936" height="493" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
+            </picture>
         </div>
-        <div class="custom-shape-divider-bottom-1730738793">
-            <svg data-name="Layer 1" viewBox="0 0 1920 647" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="shape-fill" d="M1920 2.8262C1822.95 -11.8444 1741.41 62.2423 1650.26 211.883C1536.33 398.933 1449.18 337.417 1236.89 464.951C1067.07 566.979 858.094 507.463 774.836 464.951C731.34 435.777 602.866 394.932 436.934 464.951C229.519 552.475 -3.40345 349.046 -4.86412 179C-6.03266 42.9632 0.843634 355.421 -3.70067 646H949.629H1920V2.8262Z"/>
-            </svg>
-        </div>
-        <!-- <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="/assets/images/hero-bg-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/hero-bg.jpg">
-            <img decoding="async" src="/assets/images/hero-bg.jpg" loading="eager" alt="background" width="1920" height="975" aria-hidden="true">
-        </picture> -->
+        <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+        <svg class="cs-wave mobile" data-name="Layer 1" viewBox="0 0 1920 647" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="900" width="1920">
+            <g clip-path="url(#a)">
+                <path d="M1920 2.8262C1822.95 -11.8444 1741.41 62.2423 1650.26 211.883C1536.33 398.933 1449.18 337.417 1236.89 464.951C1067.07 566.979 858.094 507.463 774.836 464.951C731.34 435.777 602.866 394.932 436.934 464.951C229.519 552.475 -3.40345 349.046 -4.86412 179C-6.03266 42.9632 0.843634 355.421 -3.70067 646H949.629H1920V2.8262Z"/>
+            </g>
+        </svg>
     </section>
 
     <!-- ============================================ -->
