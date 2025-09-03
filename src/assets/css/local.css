@@ -82,6 +82,9 @@
     justify-content: center;
     margin-right: 16px;
   }
+  #reviews-1455 .cs-item:last-child {
+    margin-right: 0;
+  }
   #reviews-1455 .cs-quote {
     /* 48px - 72px */
     width: clamp(3rem, 6vw, 4.5rem);
