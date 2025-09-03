@@ -42,6 +42,9 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-padding-left: 106px;
+    padding-left: 26px;
   }
   #reviews-1455 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -60,9 +63,6 @@
     will-change: transform;
     padding: 0;
     animation: none;
-  }
-  #reviews-1455 .cs-card-group:first-child {
-    margin-left: 100px;
   }
   #reviews-1455 .cs-card-group:nth-of-type(2) {
     display: none;

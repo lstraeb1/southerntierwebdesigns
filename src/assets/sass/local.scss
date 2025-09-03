@@ -56,8 +56,9 @@
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             -webkit-overflow-scrolling: touch;
-            // scrollbar-width: none;
-
+            scrollbar-width: none;
+            scroll-padding-left: 106px;   // tweak value to taste
+            padding-left: 26px;          // ensures the actual content starts offset
         }
 
         .cs-content {
@@ -81,9 +82,9 @@
             padding: 0;
             animation: none;
 
-            &:first-child {
-                margin-left: 100px;
-            }
+            // &:first-child {
+            //     margin-left: 100px;
+            // }
 
             &:nth-of-type(2) {
                 display: none;
