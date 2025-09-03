@@ -42,9 +42,6 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding-inline: 16px;
-    scroll-padding-inline: 16px;
-    overscroll-behavior-x: contain;
   }
   #reviews-1455 .cs-content {
     /* set text align to left if content needs to be left aligned */
@@ -87,6 +84,8 @@
     flex-direction: column;
     justify-content: center;
     margin-right: 16px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
   }
   #reviews-1455 .cs-quote {
     /* 48px - 72px */
