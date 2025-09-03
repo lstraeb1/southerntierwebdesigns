@@ -55,7 +55,6 @@
             // gap: clamp(1rem, 2.5vw, 1.25rem);
             overflow-x: auto;
             scroll-snap-type: x mandatory;
-            scroll-snap-align: start;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
             scroll-padding-left: 106px;   // tweak value to taste
@@ -111,7 +110,7 @@
             flex-direction: column;
             justify-content: center;
             margin-right: 16px;
-            scroll-snap-align: start;
+            scroll-snap-align: center;
             scroll-snap-stop: always;
 
             // &:last-child {
