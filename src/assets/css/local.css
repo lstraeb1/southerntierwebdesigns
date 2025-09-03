@@ -60,9 +60,13 @@
     flex-shrink: 0; /* groups must not shrink */
     will-change: transform;
     padding: 0;
+    animation: none;
   }
   #reviews-1455 .cs-card-group:first-child {
     margin-left: 30px;
+  }
+  #reviews-1455 .cs-card-group:nth-of-type(2) {
+    display: none;
   }
   #reviews-1455 #reviews-1455 .marquee__group:nth-of-type(2) {
     animation-name: reviews-scroll-alt;
@@ -81,9 +85,6 @@
     flex-direction: column;
     justify-content: center;
     margin-right: 16px;
-  }
-  #reviews-1455 .cs-item:last-child {
-    margin-right: 0;
   }
   #reviews-1455 .cs-quote {
     /* 48px - 72px */
@@ -199,8 +200,8 @@
     animation: reviews-scroll 18s linear infinite;
     padding: 0;
   }
-  #reviews-1455 .cs-card-group:first-child {
-    margin-left: 0;
+  #reviews-1455 .cs-card-group:nth-of-type(2) {
+    display: flex;
   }
   #reviews-1455 #reviews-1455 .marquee__group:nth-of-type(2) {
     animation-name: reviews-scroll-alt;

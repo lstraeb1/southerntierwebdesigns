@@ -78,9 +78,14 @@
             will-change: transform;
             // animation: reviews-scroll 18s linear infinite;
             padding: 0;
+            animation: none;
 
             &:first-child {
                 margin-left: 30px;
+            }
+
+            &:nth-of-type(2) {
+                display: none;
             }
         }
 
@@ -103,9 +108,9 @@
             justify-content: center;
             margin-right: 16px;
 
-            &:last-child {
-                margin-right: 0;
-            }
+            // &:last-child {
+            //     margin-right: 0;
+            // }
         }
 
         .cs-quote {
@@ -247,8 +252,12 @@
             animation: reviews-scroll 18s linear infinite;
             padding: 0;
 
-            &:first-child {
-                margin-left: 0;
+            // &:first-child {
+            //     margin-left: 0;
+            // }
+
+            &:nth-of-type(2) {
+                display: flex;
             }
         }
         
