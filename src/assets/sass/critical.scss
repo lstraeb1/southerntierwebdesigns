@@ -7,13 +7,29 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #hero-855 {
-        padding: clamp(11.25rem, 23.82vw, 18.75rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
-        padding-bottom: 0;
-        background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
+        padding: clamp(9.25rem, 23.82vw, 10.5rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
         /* clips the svg wave from overflowing */
         overflow: hidden;
         position: relative;
         z-index: 1;
+
+        &::before {
+            content: "";
+            width: 95%;
+            height: 100%;
+            /* centered version */
+            background: radial-gradient(circle 620px at 50% 30%, #FFFFFF 65%, #EBF8FF 78%, #60AAFF 100%);
+            opacity: 1;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            top: 0;
+            z-index: 1;
+            /* prevents the cursor from interacting with it */
+            pointer-events: none;
+            border-radius: 0 0 30px 30px;
+        }
 
         .cs-container {
             width: 100%;
@@ -41,13 +57,20 @@
         .cs-topper {
             font-size: calc(16/16 * 1rem);
             line-height: 1.2em;
-            text-transform: uppercase;
+            text-transform: none;
             text-align: inherit;
             letter-spacing: 0.1em;
-            font-weight: 700;
-            color: var(--primary);
+            font-weight: 400;
+            color: #1a1a1a;
             margin-bottom: calc(4/16 * 1rem);
+            border-radius: calc(30 / 16 * 1rem);
             display: block;
+            border: 1px solid #CFCFCF;
+
+            &::before {
+                background: none;
+                box-shadow: 4px 4px 8px rgba(26, 26, 26, 0.3);
+            }
         }
 
         .cs-title {
@@ -59,7 +82,7 @@
             /* 23 characters including spaces wide */
             max-width: 23ch;
             margin: 0 0 calc(16/16 * 1rem) 0;
-            color: #FFF;
+            color: #1a1a1a;
             position: relative;
         }
 
@@ -72,18 +95,93 @@
             max-width: calc(531/16 * 1rem);
             /* 28px - 40px */
             margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: calc(12 / 16 * 1rem);
         }
 
         .cs-button-solid {
-            background-color: #FFFFFF;
-            box-shadow: inset 0 -4px 0 #C6C6C6;
-            color: var(--secondaryDark);
-            transition: box-shadow 0.3s;
-    
-            &:hover {
-                box-shadow: none;
+            min-width: calc(176 / 16 * 1rem);
+        }
+
+        .cs-button-transparent {
+            font-family: "Cabin";
+            font-size: calc(16/16 * 1rem);
+            font-weight: 700;
+            /* 50px - 60px */
+            line-height: clamp(3.75rem, 5.25vw, 4.375rem);
+            text-align: center;
+            text-decoration: none;
+            min-width: calc(176/16 * 1rem);
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            border-radius: calc(40 / 16 * 1rem);
+            border: 1px solid #B8B8B8;
+            padding: 0 calc(24 / 16 * 1rem) 0 0;
+            background: none;
+            // box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
+            color: #1a1a1a;
+            display: inline-flex;
+            align-items: stretch;
+            justify-content: space-between;
+            gap: calc(24 / 16 * 1rem);
+            z-index: 1;
+            transition: 0.2s ease-in;
+
+            .button-text {
+                transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
             }
+
+            .cs-wrapper {
+                width: calc(44 / 16 * 1rem);
+                height: auto;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                z-index: 1;
+                position: relative;
+                transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
+
+                // &:before {
+                //     content: "";
+                //     width: 100%;
+                //     height: 100%;
+                //     opacity: 1;
+                //     position: absolute;
+                //     display: block;
+                //     bottom: 0;
+                //     right: 0;
+                //     transition: width 0.3s;
+                //     z-index: -1;
+                // }
+                svg {
+                    border-radius: 30px;
+                    box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
+                }
+            }
+
+            &:hover {
+                // box-shadow: none;
+                transform: scale(0.95);
+
+                .cs-wrapper { 
+                    transform: translateX(10px);
+                }
+
+                .button-text {
+                    transform: translateX(-10px);
+                }
+            }
+        }
+
+        #list-1405 {
+            display: none;
         }
 
         .cs-picture {
@@ -125,7 +223,26 @@
 @media only screen and (min-width: 64rem) {
     #hero-855 {
         text-align: left;
-        padding-bottom: 23vw;
+        padding-left: 3rem;
+        padding-right: 3rem;
+
+        &::before {
+            content: "";
+            width: 95%;
+            height: 100%;
+            /* centered version */
+            background: radial-gradient(circle 2200px at 50% -150%, #FFFFFF 65%, #EBF8FF 78%, #60AAFF 100%);
+            opacity: 1;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            top: 0;
+            z-index: 1;
+            /* prevents the cursor from interacting with it */
+            pointer-events: none;
+            border-radius: 0 0 30px 30px;
+        }
         
         .cs-container {
             flex-direction: row;
@@ -144,13 +261,49 @@
             text-align: left;
         }
 
+        .cs-button-solid,
+        .cs-button-transparent {
+            min-width: calc(186 / 16 * 1rem);
+        }
+
+        #list-1405 {
+            width: 100%;
+            margin: calc(24 / 16 * 1rem) 0 0 0;
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: calc(16 / 16 * 1rem);
+
+            .cs-li {
+                font-size: calc(13 / 16 * 1rem);
+                list-style: none;
+                line-height: 1.5em;
+                // width: 100%;
+                color: var(--bodyTextColor);
+                display: flex;
+                justify-content: flex-start;
+                /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+                align-items: flex-start;
+                gap: calc(8 / 16 * 1rem);
+            }
+
+            .cs-icon {
+                width: calc(20 / 16 * 1rem);
+                height: auto;
+                /* adds extra space between the icon and top of parent so it's more centered */
+                margin-top: 1px;
+                display: block;
+            }
+        }
+
         .cs-picture {
-            width: 85vw;
-            max-width: 63.5rem;
+            width: 90vw;
+            max-width: 88.5rem;
             position: absolute;
             top: auto;
-            bottom: -16.25rem;
-            right: -9.25rem;
+            bottom: -10.25rem;
+            right: -16.25rem;
         }
 
         .cs-wave {
@@ -164,299 +317,11 @@
 /* Large Desktop - 1024px */
 @media only screen and (min-width: 93.75rem) {
     #hero-855 {
+        padding-left: 1rem;
+        padding-right: 1rem;
         .cs-picture {
-            right: -19.375rem;
-            bottom: -20.25rem;
-            width: 85vw;
-            max-width: 79.5rem;
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---            Hero            -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #hero-408 {
-        /* 200px - 300px - leaving extra space for the navigation */
-        padding: clamp(11.25rem, 23.82vw, 18.75rem) calc(16/16 * 1rem);
-        padding-bottom: 0;
-        background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
-        /* prevents the topper line from causing an overflow */
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-
-        .cs-container {
-            width: 100%;
-            /* changes to 100% at tablet */
-            max-width: calc(650 / 16 * 1rem);
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            /* 36px - 100px */
-            gap: clamp(2.25rem, 10vw, 6.25rem);
-        }
-
-        .cs-content {
-            max-width: calc(630 / 16 * 1rem);
-            // padding-right: calc(16 / 16 * 1rem);
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            flex-wrap: wrap;
-            z-index: 1000;
-        }
-
-        .cs-title {
-            /* 49px - 84px */
-            font-size: clamp(2.4375rem, 5vw, 3.8125rem);
-            max-width: 100%;
-            font-family: "Anton";
-        }
-
-        .cs-title,
-        .cs-text {
-            text-align: left;
-            color: var(--bodyTextColorWhite);
-        }
-
-        .cs-text {
-            font-size: clamp(1rem, 1.5vw, 1.25rem);
-            margin-bottom: calc(32/16 * 1rem);
-            font-weight: normal;
-            font-family: "Lato";
-        }
-
-        .cs-stat-group {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            flex-wrap: nowrap;
-            position: relative;
-            z-index: 1;
-
-            .cs-picture {
-                width: 100%;
-
-                img {
-                    width: 100%;
-                    height: auto;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .cs-button-solid {
-            background-color: #FFFFFF;
-            box-shadow: inset 0 -4px 0 #C6C6C6;
-            color: var(--secondaryDark);
-            transition: box-shadow 0.3s;
-    
-            &:hover {
-                box-shadow: none;
-            }
-        }
-
-        .custom-shape-divider-bottom-1730738793 {
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100%;
-            overflow: hidden;
-            line-height: 0;
-        }
-        
-        .custom-shape-divider-bottom-1730738793 svg {
-            position: relative;
-            display: block;
-            width: calc(100% + 1.3px);
-            height: 40vw;
-        }
-        
-        .custom-shape-divider-bottom-1730738793 .shape-fill {
-            fill: #FFFFFF;
-        }
-
-        .cs-background {
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            z-index: -1;
-
-            img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            &:before {
-                z-index: 1;
-                position: absolute;
-                top: 0;
-                left: 0;
-                /* Black Color Overlay */
-                content: "";
-                opacity: 0.7;
-                display: block;
-                background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 46%);
-                height: 100%;
-                width: 100%;
-                /* prevents the cursor from interacting with it */
-                pointer-events: none;
-            }
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #hero-408 {
-        padding: clamp(18rem, 26vw, 23.5rem) calc(16/16 * 1rem);
-        padding-right: 0;
-        .cs-container {
-            max-width: 100%;
-            flex-direction: row;
-            justify-content: flex-end;
-        }
-
-        .cs-content {
-            width: 100%;
-            padding: 0;
-        }
-
-        .cs-stat-group {
-            width: 100%;
-            height: 100%;
-            // min-height: 600px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            flex-wrap: nowrap;
-            position: relative;
-            z-index: 1;
-
-            .cs-picture {
-                width: 100%;
-
-                img {
-                    width: 100%;
-                    // transform: scale(1.5);
-                    height: auto;
-                    position: absolute;
-                    right: 100px;
-                    z-index: -1;
-                }
-            }
-        }
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #hero-408 {
-        /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-        padding-bottom: 20vw;
-        padding-top: clamp(6.5rem, 19.95vw, 12.75em);
-
-        .cs-content {
-            width: 100%;
-        }
-
-        .cs-stat-group {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            flex-wrap: nowrap;
-            position: relative;
-            z-index: 1;
-
-            .cs-picture {
-                width: 100%;
-
-                img {
-                    width: 100%;
-                    max-width: calc(768 / 16 * 1rem);
-                    // transform: scale(1.9);
-                    height: auto;
-                    object-fit: cover;
-                    position: absolute;
-                    right: 150px;
-                    bottom: -300px;
-                    z-index: -1;
-                }
-            }
-        }
-
-        .cs-text {
-            width: 80%;
-        }
-
-        .cs-title {
-            max-width: 100%;
-            font-family: "Anton";
-        }
-    }
-}
-
-/* Large Desktop - 1920px */
-@media only screen and (min-width: 84rem) {
-    #hero-408 {
-        /* this ties the padding bottom value to the size of the screen width. The wider the image gets the taller it gets, meaning it will get closer and closer to the content. This makes the padding bottom value grow with the screen size so it accounts for the growing height of the svg graphic getting taller */
-        padding: calc(264/16 * 1rem);
-        padding-bottom: 20vw;
-    }
-}
-
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #hero-408 {
-            .cs-title,
-            .cs-text,
-            .cs-header,
-            .cs-button-transparent {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .alt-dark-title {
-                color: var(--primary);
-            }
-
-            .cs-background {
-                &:before {
-                    /* background color overlay */
-                    content: "";
-                    position: absolute;
-                    display: block;
-                    height: 100%;
-                    width: 100%;
-                    background: #000000;
-                    opacity: 0.9;
-                    top: 0;
-                    left: 0;
-                    z-index: 1;
-                }
-            }
-
-            .cs-logo {
-                filter: grayscale(1) brightness(400%);
-            }
-
-            .custom-shape-divider-bottom-1730738793 .shape-fill {
-                fill: var(--dark);
-            }
+            right: -20.375rem;
+            bottom: -16rem;
         }
     }
 }

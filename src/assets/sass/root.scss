@@ -28,30 +28,55 @@
         --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
     }
 
-    // Text styles - can be replaced using CodeStitch's "Content Flair" Stitches
     .cs-topper {
-        display: block;
-        margin-bottom: 0.25rem;
-        text-transform: uppercase;
-        letter-spacing: 0.1em;
         font-size: var(--topperFontSize);
-        line-height: 1.2em;
         font-weight: 700;
-        color: var(--primary);
+        line-height: 1.2em;
         text-align: inherit;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        max-width: fit-content;
+        margin-bottom: calc(4/16 * 1rem);
+        padding: calc(4/16 * 1rem) calc(12/16 * 1rem);
+        color: var(--primary);
+        display: block;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background-color: var(--secondary);
+            opacity: 0.1;
+            border-radius: calc(30/16 * 1rem);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
     }
+                                    
 
     .cs-title {
         position: relative;
-        text-transform: uppercase;
         margin: 0 0 1rem 0;
         max-width: 43.75rem;
         font-size: var(--headerFontSize);
-        font-family: "Anton";
+        font-family: "Cabin";
         line-height: 1.2em;
         font-weight: 400;
         color: #000;
         text-align: inherit;
+    }
+
+    .cs-color {
+        background: linear-gradient(90deg, #119CE2 39%, #004C92 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text; /* for future compatibility */
+        color: transparent;    /* fallback */
     }
 
     .alt-title {
@@ -74,31 +99,67 @@
     }
 
     .cs-button-solid {
-        font-family: "Anton";
+        font-family: "Cabin";
         font-size: calc(16/16 * 1rem);
-        letter-spacing: 2px;
-        font-weight: 400;
+        font-weight: 700;
         /* 50px - 60px */
-        line-height: clamp(3.125rem, 5.25vw, 3.75rem);
+        line-height: clamp(3.75rem, 5vw, 4.375rem);
         text-align: center;
-        text-transform: uppercase;
         text-decoration: none;
         min-width: calc(176/16 * 1rem);
-        margin: 0;
         /* prevents padding from adding to the width */
         box-sizing: border-box;
-        border-radius: calc(10 / 16 * 1rem);
-        padding: 0;
-        background-color: var(--primary);
-        box-shadow: inset 0 -4px 0 var(--secondary);
-        color: #1a1a1a;
-        display: inline-block;
-        position: relative;
+        border-radius: calc(40 / 16 * 1rem);
+        padding: 0 calc(24 / 16 * 1rem) 0 0;
+        background: linear-gradient(#3BB9F9 0%, #119CE2 50%, #3BB9F9 100%);
+        box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
+        color: #ffffff;
+        display: inline-flex;
+        align-items: stretch;
+        justify-content: space-between;
+        gap: calc(24 / 16 * 1rem);
         z-index: 1;
-        transition: box-shadow 0.3s;
+        transition: 0.2s ease-in;
+
+        .button-text {
+            transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
+        }
+
+        .cs-wrapper {
+            width: calc(44 / 16 * 1rem);
+            height: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+            transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
+
+            // &:before {
+            //     content: "";
+            //     width: 100%;
+            //     height: 100%;
+            //     opacity: 1;
+            //     position: absolute;
+            //     display: block;
+            //     bottom: 0;
+            //     right: 0;
+            //     transition: width 0.3s;
+            //     z-index: -1;
+            // }
+        }
 
         &:hover {
-            box-shadow: none;
+            // box-shadow: none;
+            transform: scale(0.95);
+
+            .cs-wrapper { 
+                transform: translateX(10px);
+            }
+
+            .button-text {
+                transform: translateX(-10px);
+            }
         }
     }
 
@@ -216,6 +277,24 @@
         font-weight: 700;
         src: url('/assets/fonts/lato-v24-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
     }
+
+    /* cabin-regular - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Cabin';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/assets/fonts/cabin-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
+
+    /* cabin-700 - latin */
+    @font-face {
+        font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+        font-family: 'Cabin';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/assets/fonts/cabin-v34-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    }
 }
 
 /* Reset Margins */
@@ -329,12 +408,13 @@
 
         &.scroll {
             #cs-navigation {
-                width: 100%;
-                max-width: 100%;
-                top: 0;
+                // width: 100%;
+                // max-width: 100%;
+                // top: 0;
+                border-color: #CFCFCF;
 
-                &:before {
-                    border-radius: 0;
+                &::before {
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
                 }
 
                 .cs-ul-wrapper {
@@ -353,12 +433,13 @@
         padding: clamp(0.75rem, 2vw, 1.5rem);
         /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
+        border: 1px solid rgba(17, 156, 226, 0); /* fully transparent */
         position: fixed;
-        top: calc(20 / 16 * 1rem);
+        top: calc(10 / 16 * 1rem);
         left: 50%;
         z-index: 10000;
         transform: translateX(-50%);
-        transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+        transition: top 0.3s, width 0.3s, max-width 0.3s, border-color 0.3s;
 
         &:before {
             /* background color */
@@ -366,17 +447,17 @@
             width: 100%;
             height: 100%;
             background: #fff;
-            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            box-shadow: rgba(149, 157, 165, 0) 0px 8px 24px;
             opacity: 1;
             /* 12px - 24px */
             border-radius: clamp(0.75rem, 2vw, 1.5rem);
-            border: 1px solid #dadada;
+            // border: 1px solid #dadada;
             display: block;
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            transition: transform 0.2s, border-radius 0.3s ease-in-out;
+            transition: transform 0.2s, border-radius 0.3s ease-in-out, box-shadow 0.3s;
         }
 
         &.cs-active {
@@ -391,6 +472,7 @@
             .cs-ul-wrapper {
                 transform: scaleY(1);
                 transition-delay: 0.15s;
+                box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
             }
 
             .cs-li {
@@ -409,7 +491,7 @@
 
         .cs-logo {
             width: auto;
-            max-width: calc(120 / 16 * 1rem);
+            max-width: calc(90 / 16 * 1rem);
             height: 100%;
             margin: 0 auto 0 0;
             /* prevents padding from affecting height and width */
@@ -429,12 +511,12 @@
         }
 
         .cs-toggle {
-            width: calc(56 / 16 * 1rem);
-            height: calc(56 / 16 * 1rem);
+            width: calc(44 / 16 * 1rem);
+            height: calc(44 / 16 * 1rem);
             margin: 0 0 0 auto;
             background-color: var(--primary);
-            border: none;
-            border-radius: calc(16 / 16 * 1rem);
+            border: 1px solid #CFCFCF;
+            border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -497,15 +579,15 @@
 
         .cs-box {
             /* 24px - 28px */
-            width: clamp(1.5rem, 2vw, 1.75rem);
-            height: calc(16 / 16 * 1rem);
+            width: clamp(1.25rem, 1.75vw, 1.5rem);
+            height: calc(14 / 16 * 1rem);
             position: relative;
         }
 
         .cs-line {
             width: 100%;
             height: 2px;
-            background-color: #fafbfc;
+            background-color: #FFF;
             border-radius: 2px;
             position: absolute;
             left: 50%;
@@ -621,9 +703,8 @@
         .cs-li-link {
             /* 16px - 24px */
             font-size: clamp(1rem, 2.5vw, 1.5rem);
-            font-family: "Anton";
-            font-weight: 400;
-            text-transform: uppercase;
+            font-family: "Cabin";
+            font-weight: 700;
             line-height: 1.2em;
             text-decoration: none;
             margin: 0;
@@ -856,34 +937,32 @@
 @media only screen and (min-width: 64rem) {
     body.scroll {
         #cs-navigation {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 0;
-            top: 0;
+            border-color: #CFCFCF;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         }
     }
 
     #cs-navigation {
-        width: 94%;
-        max-width: calc(1440 / 16 * 1rem);
+        width: 98%;
+        max-width: calc(1400 / 16 * 1rem);
         height: calc(96 / 16 * 1rem);
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
         /* 12px - 24px */
-        padding: clamp(0.75rem, 2vw, 1.5rem) 0;
-        background-color: #fff;
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        padding: clamp(0.25rem, 2vw, 1.5rem) 0;
+        background-color: #FFF;
         /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
-        border: 1px solid #dadada;
+        border: 1px solid rgba(17, 156, 226, 0); /* fully transparent */
+        box-shadow: rgba(149, 157, 165, 0) 0px 8px 24px;
         display: flex;
         align-items: center;
         position: fixed;
-        top: calc(32 / 16 * 1rem);
+        top: 10px;
         left: 50%;
         z-index: 10000;
         transform: translateX(-50%);
-        transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+        transition: top 0.3s, border-color 0.3s, width 0.3s, max-width 0.3s, box-shadow 0.3s;
 
         .cs-container {
             width: 100%;
@@ -891,7 +970,7 @@
             margin: auto;
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
-            padding: 0 calc(24 / 16 * 1rem);
+            padding: 0 calc(48 / 16 * 1rem);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -903,9 +982,9 @@
         }
 
         .cs-logo {
-            width: 18.4%;
+            width: 14.4%;
             max-width: calc(350 / 16 * 1rem);
-            height: calc(52 / 16 * 1rem);
+            height: calc(42 / 16 * 1rem);
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
@@ -1023,9 +1102,8 @@
 
         .cs-li-link {
             font-size: calc(16 / 16 * 1rem);
-            font-family: "Anton";
-            font-weight: 400;
-            text-transform: uppercase;
+            font-family: "Cabin";
+            font-weight: 700;
             line-height: 1.5em;
             text-decoration: none;
             margin: 0;
@@ -1048,6 +1126,7 @@
             font-weight: 400;
             /* 46px - 56px */
             line-height: calc(54 / 16 * 1rem);
+            margin: 0;
         }
     }
 }
@@ -1097,8 +1176,7 @@
             /* 39px - 61px */
             font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
             font-weight: 400;
-            font-family: "Anton";
-            text-transform: uppercase;
+            font-family: "Cabin";
             line-height: 1.2em;
             text-align: inherit;
             margin: 0;
@@ -1423,9 +1501,8 @@
 
         .cs-header {
             font-size: calc(25/16 * 1rem);
-            font-family: "Anton";
+            font-family: "Cabin";
             font-weight: 400;
-            text-transform: uppercase;
             line-height: 1.5em;
             margin: 0 0 calc(16/16 * 1rem) 0;
             color: var(--bodyTextColorWhite);
@@ -1434,9 +1511,8 @@
         }
 
         .cs-topper {
-            font-family: "Anton";
-            font-weight: 400;
-            text-transform: uppercase;
+            font-family: "Cabin";
+            font-weight: 700;
         }
 
         .cs-logo {

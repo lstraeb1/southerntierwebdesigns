@@ -23,27 +23,50 @@
     --sectionPadding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
   }
   .cs-topper {
-    display: block;
-    margin-bottom: 0.25rem;
+    font-size: var(--topperFontSize);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: inherit;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    font-weight: 700;
+    max-width: fit-content;
+    margin-bottom: 0.25rem;
+    padding: 0.25rem 0.75rem;
     color: var(--primary);
-    text-align: inherit;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .cs-topper:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+    opacity: 0.1;
+    border-radius: 1.875rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
   .cs-title {
     position: relative;
-    text-transform: uppercase;
     margin: 0 0 1rem 0;
     max-width: 43.75rem;
     font-size: var(--headerFontSize);
-    font-family: "Anton";
+    font-family: "Cabin";
     line-height: 1.2em;
     font-weight: 400;
     color: #000;
     text-align: inherit;
+  }
+  .cs-color {
+    background: linear-gradient(90deg, #119CE2 39%, #004C92 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for future compatibility */
+    color: transparent; /* fallback */
   }
   .alt-title {
     color: var(--primary);
@@ -62,31 +85,49 @@
     font-weight: 400;
   }
   .cs-button-solid {
-    font-family: "Anton";
+    font-family: "Cabin";
     font-size: 1rem;
-    letter-spacing: 2px;
-    font-weight: 400;
+    font-weight: 700;
     /* 50px - 60px */
-    line-height: clamp(3.125rem, 5.25vw, 3.75rem);
+    line-height: clamp(3.75rem, 5vw, 4.375rem);
     text-align: center;
-    text-transform: uppercase;
     text-decoration: none;
     min-width: 11rem;
-    margin: 0;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
-    border-radius: 0.625rem;
-    padding: 0;
-    background-color: var(--primary);
-    box-shadow: inset 0 -4px 0 var(--secondary);
-    color: #1a1a1a;
-    display: inline-block;
-    position: relative;
+    border-radius: 2.5rem;
+    padding: 0 1.5rem 0 0;
+    background: linear-gradient(#3BB9F9 0%, #119CE2 50%, #3BB9F9 100%);
+    box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1.5rem;
     z-index: 1;
-    transition: box-shadow 0.3s;
+    transition: 0.2s ease-in;
+  }
+  .cs-button-solid .button-text {
+    transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
+  }
+  .cs-button-solid .cs-wrapper {
+    width: 2.75rem;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
   }
   .cs-button-solid:hover {
-    box-shadow: none;
+    transform: scale(0.95);
+  }
+  .cs-button-solid:hover .cs-wrapper {
+    transform: translateX(10px);
+  }
+  .cs-button-solid:hover .button-text {
+    transform: translateX(-10px);
   }
   .cs-hide-on-mobile {
     display: none;
@@ -184,6 +225,22 @@
     font-weight: 700;
     src: url("/assets/fonts/lato-v24-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+  /* cabin-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Cabin";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/assets/fonts/cabin-v34-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* cabin-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Cabin";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/assets/fonts/cabin-v34-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 }
 /* Reset Margins */
 @media only screen and (min-width: 1024px) {
@@ -279,12 +336,10 @@
     overflow: hidden;
   }
   body.scroll #cs-navigation {
-    width: 100%;
-    max-width: 100%;
-    top: 0;
+    border-color: #CFCFCF;
   }
-  body.scroll #cs-navigation:before {
-    border-radius: 0;
+  body.scroll #cs-navigation::before {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   body.scroll #cs-navigation .cs-ul-wrapper {
     top: 100%;
@@ -298,12 +353,13 @@
     padding: clamp(0.75rem, 2vw, 1.5rem);
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
+    border: 1px solid rgba(17, 156, 226, 0); /* fully transparent */
     position: fixed;
-    top: 1.25rem;
+    top: 0.625rem;
     left: 50%;
     z-index: 10000;
     transform: translateX(-50%);
-    transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+    transition: top 0.3s, width 0.3s, max-width 0.3s, border-color 0.3s;
   }
   #cs-navigation:before {
     /* background color */
@@ -311,17 +367,16 @@
     width: 100%;
     height: 100%;
     background: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0) 0px 8px 24px;
     opacity: 1;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
-    border: 1px solid #dadada;
     display: block;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    transition: transform 0.2s, border-radius 0.3s ease-in-out;
+    transition: transform 0.2s, border-radius 0.3s ease-in-out, box-shadow 0.3s;
   }
   #cs-navigation.cs-active:before {
     transform: translateX(-50%) scale(1.03);
@@ -332,6 +387,7 @@
   #cs-navigation.cs-active .cs-ul-wrapper {
     transform: scaleY(1);
     transition-delay: 0.15s;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   #cs-navigation.cs-active .cs-li {
     opacity: 1;
@@ -346,7 +402,7 @@
   }
   #cs-navigation .cs-logo {
     width: auto;
-    max-width: 7.5rem;
+    max-width: 5.625rem;
     height: 100%;
     margin: 0 auto 0 0;
     /* prevents padding from affecting height and width */
@@ -364,12 +420,12 @@
     object-fit: contain;
   }
   #cs-navigation .cs-toggle {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 2.75rem;
+    height: 2.75rem;
     margin: 0 0 0 auto;
     background-color: var(--primary);
-    border: none;
-    border-radius: 1rem;
+    border: 1px solid #CFCFCF;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -421,14 +477,14 @@
   }
   #cs-navigation .cs-box {
     /* 24px - 28px */
-    width: clamp(1.5rem, 2vw, 1.75rem);
-    height: 1rem;
+    width: clamp(1.25rem, 1.75vw, 1.5rem);
+    height: 0.875rem;
     position: relative;
   }
   #cs-navigation .cs-line {
     width: 100%;
     height: 2px;
-    background-color: #fafbfc;
+    background-color: #FFF;
     border-radius: 2px;
     position: absolute;
     left: 50%;
@@ -536,9 +592,8 @@
   #cs-navigation .cs-li-link {
     /* 16px - 24px */
     font-size: clamp(1rem, 2.5vw, 1.5rem);
-    font-family: "Anton";
-    font-weight: 400;
-    text-transform: uppercase;
+    font-family: "Cabin";
+    font-weight: 700;
     line-height: 1.2em;
     text-decoration: none;
     margin: 0;
@@ -730,32 +785,30 @@
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   body.scroll #cs-navigation {
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    top: 0;
+    border-color: #CFCFCF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   #cs-navigation {
-    width: 94%;
-    max-width: 90rem;
+    width: 98%;
+    max-width: 87.5rem;
     height: 6rem;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     /* 12px - 24px */
-    padding: clamp(0.75rem, 2vw, 1.5rem) 0;
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: clamp(0.25rem, 2vw, 1.5rem) 0;
+    background-color: #FFF;
     /* 12px - 24px */
     border-radius: clamp(0.75rem, 2vw, 1.5rem);
-    border: 1px solid #dadada;
+    border: 1px solid rgba(17, 156, 226, 0); /* fully transparent */
+    box-shadow: rgba(149, 157, 165, 0) 0px 8px 24px;
     display: flex;
     align-items: center;
     position: fixed;
-    top: 2rem;
+    top: 10px;
     left: 50%;
     z-index: 10000;
     transform: translateX(-50%);
-    transition: top 0.3s, border-radius 0.3s, width 0.3s, max-width 0.3s;
+    transition: top 0.3s, border-color 0.3s, width 0.3s, max-width 0.3s, box-shadow 0.3s;
   }
   #cs-navigation .cs-container {
     width: 100%;
@@ -763,7 +816,7 @@
     margin: auto;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    padding: 0 1.5rem;
+    padding: 0 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -773,9 +826,9 @@
     display: none;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
+    width: 14.4%;
     max-width: 21.875rem;
-    height: 3.25rem;
+    height: 2.625rem;
     /* margin-right auto pushes everything away from it to the right */
     margin: 0 auto 0 0;
     padding: 0;
@@ -880,9 +933,8 @@
   }
   #cs-navigation .cs-li-link {
     font-size: 1rem;
-    font-family: "Anton";
-    font-weight: 400;
-    text-transform: uppercase;
+    font-family: "Cabin";
+    font-weight: 700;
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
@@ -902,6 +954,7 @@
     font-weight: 400;
     /* 46px - 56px */
     line-height: 3.375rem;
+    margin: 0;
   }
 }
 /* Large Desktop - 1300px */
@@ -944,8 +997,7 @@
     /* 39px - 61px */
     font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
     font-weight: 400;
-    font-family: "Anton";
-    text-transform: uppercase;
+    font-family: "Cabin";
     line-height: 1.2em;
     text-align: inherit;
     margin: 0;
@@ -1219,9 +1271,8 @@
   }
   #cs-footer-1761 .cs-header {
     font-size: 1.5625rem;
-    font-family: "Anton";
+    font-family: "Cabin";
     font-weight: 400;
-    text-transform: uppercase;
     line-height: 1.5em;
     margin: 0 0 1rem 0;
     color: var(--bodyTextColorWhite);
@@ -1229,9 +1280,8 @@
     position: relative;
   }
   #cs-footer-1761 .cs-topper {
-    font-family: "Anton";
-    font-weight: 400;
-    text-transform: uppercase;
+    font-family: "Cabin";
+    font-weight: 700;
   }
   #cs-footer-1761 .cs-logo {
     width: 13.5625rem;

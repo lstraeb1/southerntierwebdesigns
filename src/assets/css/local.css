@@ -1,3 +1,233 @@
+@charset "UTF-8";
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-1455 {
+    padding: var(--sectionPadding);
+    position: relative;
+  }
+  #reviews-1455::before {
+    content: "";
+    width: 20%;
+    height: 100%;
+    /* left → right */
+    background: linear-gradient(90deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  #reviews-1455::after {
+    content: "";
+    width: 20%;
+    height: 100%;
+    /* left → right */
+    background: linear-gradient(270deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+  }
+  #reviews-1455 .cs-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    /* if your site centers .cs-container, let’s avoid horizontal centering artifacts */
+    display: flex;
+    flex-direction: row; /* two groups sit side-by-side */
+    align-items: stretch;
+    /* 16px - 20px */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  #reviews-1455 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-1455 .cs-card-group {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-shrink: 0; /* groups must not shrink */
+    will-change: transform;
+    padding: 0;
+  }
+  #reviews-1455 .cs-card-group:first-child {
+    margin-left: 30px;
+  }
+  #reviews-1455 #reviews-1455 .marquee__group:nth-of-type(2) {
+    animation-name: reviews-scroll-alt;
+  }
+  #reviews-1455 .cs-item {
+    list-style: none;
+    flex: 0 0 260px; /* 100% of the .reviews-viewport width */
+    max-width: none;
+    box-sizing: border-box;
+    /* keep your existing styling */
+    padding: clamp(1.25rem, 3.15vw, 2.5rem);
+    background-color: #FFF;
+    border: 1px solid #1a1a1a;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 16px;
+  }
+  #reviews-1455 .cs-quote {
+    /* 48px - 72px */
+    width: clamp(3rem, 6vw, 4.5rem);
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  #reviews-1455 .cs-review {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    /* 20px - 40px */
+    margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+    color: var(--bodyTextColor);
+  }
+  #reviews-1455 .cs-flex-group {
+    /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #reviews-1455 .cs-profile {
+    width: 3.125rem;
+    height: auto;
+    border-radius: 50%;
+    /* clips image corners to make circle */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  #reviews-1455 .cs-profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes the image behave like a background image */
+    object-fit: cover;
+  }
+  #reviews-1455 .cs-name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.3vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
+    color: var(--headerColor);
+    display: block;
+  }
+  #reviews-1455 .cs-job {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1rem);
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-1455::before {
+    content: "";
+    width: 10%;
+    height: 100%;
+    /* left → right */
+    background: linear-gradient(90deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+  #reviews-1455::after {
+    content: "";
+    width: 10%;
+    height: 100%;
+    /* left → right */
+    background: linear-gradient(270deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+  }
+  #reviews-1455 .cs-card-group {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+@media only screen and (min-width: 64rem) {
+  #reviews-1455 {
+    /* Keyframes for continuous right→left motion */
+  }
+  #reviews-1455 .cs-item {
+    list-style: none;
+    flex: 0 0 520px;
+  }
+  #reviews-1455 .cs-container {
+    overflow-x: none;
+    scroll-snap-type: none;
+    -webkit-overflow-scrolling: none;
+  }
+  #reviews-1455 .cs-card-group {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-shrink: 0; /* groups must not shrink */
+    will-change: transform;
+    animation: reviews-scroll 18s linear infinite;
+    padding: 0;
+  }
+  #reviews-1455 .cs-card-group:first-child {
+    margin-left: 0;
+  }
+  #reviews-1455 #reviews-1455 .marquee__group:nth-of-type(2) {
+    animation-name: reviews-scroll-alt;
+  }
+  @keyframes reviews-scroll {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    } /* move by one full group width */
+  }
+  @keyframes reviews-scroll-alt {
+    from {
+      transform: translateX(100%);
+    } /* start one group-width to the right */
+    to {
+      transform: translateX(0%);
+    }
+  }
+}
+#reviews-1455 .cs-container:hover .marquee__group {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #reviews-1455 .marquee__group {
+    animation: none;
+  }
+}
 /*-- -------------------------- -->
 <---          Services          -->
 <--- -------------------------- -*/
