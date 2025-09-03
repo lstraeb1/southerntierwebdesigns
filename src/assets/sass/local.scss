@@ -54,7 +54,7 @@
             /* 16px - 20px */
             // gap: clamp(1rem, 2.5vw, 1.25rem);
             overflow-x: auto;
-            scroll-snap-type: none;
+            scroll-snap-type: x proximity;
             -webkit-overflow-scrolling: touch;
             scrollbar-width: none;
             scroll-padding-left: 106px;   // tweak value to taste
