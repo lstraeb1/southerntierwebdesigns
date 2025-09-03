@@ -43,9 +43,8 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    scroll-padding-left: 106px;
-    padding-left: 26px;
-    padding-right: 56px;
+    scroll-padding-inline: calc(50% + 16px);
+    padding-inline: 16px;
   }
   #reviews-1455 .cs-content {
     /* set text align to left if content needs to be left aligned */
