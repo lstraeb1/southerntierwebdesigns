@@ -19,7 +19,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
 
 
     <!-- Script for Netlify Identity -->
@@ -50,11 +50,24 @@ eleventyNavigation:
     <section id="hero-855">
         <div class="cs-container">
             <div class="cs-content">
-                <span class="cs-topper">Websites Done Differently</span>
-                <h1 class="cs-title">Websites That Win You <span class="cs-color">More Business</span></h1>
+                <h1 class="cs-title">Help Local Customers Find & <span class="cs-color">Choose You</span></span></h1>
                 <p class="cs-text">
-                    Your outdated website is costing your local business big time. We create and manage conversion-optimized sites that generate more leads and drive more revenue.
+                    We build and manage high-converting websites and Google Business Profiles that turn searchers into paying customers.
                 </p>
+                <ul id="list-1405" class="cs-ul">
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="eager" decoding="async" src="/assets/svgs/checked-fs.svg" alt="checkmark" width="20" height="20">
+                        Website Management
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="eager" decoding="async" src="/assets/svgs/checked-fs.svg" alt="checkmark" width="20" height="20">
+                        Unlimited Edits 
+                    </li>
+                    <li class="cs-li">
+                        <img class="cs-icon" aria-hidden="true" loading="eager" decoding="async" src="/assets/svgs/checked-fs.svg" alt="checkmark" width="20" height="20">
+                        24/7 Support
+                    </li>
+                </ul>  
                 <div class="cs-button-group">
                     <a href="/book-call" class="cs-button-solid">
                         <!--SVG Arrow-->
@@ -66,8 +79,7 @@ eleventyNavigation:
                         </div>
                         <span class="button-text">Book A Call</span>
                     </a>
-                    <a href="/book-call" class="cs-button-transparent">
-                        <!--SVG Arrow-->
+                    <!-- <a href="/book-call" class="cs-button-transparent">
                         <div class="cs-wrapper">
                             <svg width="34" height="34" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="14" cy="14" r="14" fill="white"/>
@@ -75,39 +87,23 @@ eleventyNavigation:
                             </svg>
                         </div>
                         <span class="button-text">See Our Work</span>
-                    </a>
-                </div>
-                <ul id="list-1405" class="cs-ul">
-                    <li class="cs-li">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/checked-fs.svg" alt="checkmark" width="20" height="20">
-                        Website Management
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/checked-fs.svg" alt="checkmark" width="20" height="20">
-                        Unlimited Edits 
-                    </li>
-                    <li class="cs-li">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/checked-fs.svg" alt="checkmark" width="20" height="20">
-                        24/7 Support
-                    </li>
-                </ul>                          
+                    </a> -->
+                </div>                        
             </div>
-            <!--Hero Image-->
-            <picture class="cs-picture">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 576, height: 384 }) | avif %}" type="image/avif">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 576, height: 384 }) | webp %}" type="image/webp">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 576, height: 384 }) | jpeg %}" type="image/jpeg">
-                <!--Tablet Image-->
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 1814, height: 1212 }) | avif %}" type="image/avif">
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 1814, height: 1212 }) | webp %}" type="image/webp">
-                <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 1814, height: 1212 }) | jpeg %}" type="image/jpeg">
-                <!--Desktop Image-->
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 1872, height: 986 }) | avif %}" type="image/avif">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 1872, height: 986 }) | webp %}" type="image/webp">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 1872, height: 986 }) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/hero-laptop.png" | resize({ width: 1872, height: 986 }) | jpeg %}" alt="mockup of Fast Freddy's Auto Detailing" width="936" height="493" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
-            </picture>
+            <div class="cs-picture-group">
+                <!--Hero Image-->
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 720, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 720, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <!--Desktop Image-->
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | jpeg %}" alt="mockup of Fast Freddy's Auto Detailing" width="390" height="425" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
+                </picture>
+            </div>
         </div>
         <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
         <!-- <svg class="cs-wave mobile" data-name="Layer 1" viewBox="0 0 1920 647" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="900" width="1920">

@@ -27,7 +27,6 @@
     font-weight: 700;
     line-height: 1.2em;
     text-align: inherit;
-    text-transform: uppercase;
     letter-spacing: 0.1em;
     max-width: fit-content;
     margin-bottom: 0.25rem;
@@ -36,19 +35,24 @@
     display: block;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
   }
   .cs-topper:before {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: var(--secondary);
-    opacity: 0.1;
+    background-color: #E8F6FD;
+    opacity: 1;
     border-radius: 1.875rem;
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
+  }
+  .cs-topper .cs-icon {
+    margin-right: 0.25rem;
   }
   .cs-title {
     position: relative;
@@ -424,6 +428,7 @@
     height: 2.75rem;
     margin: 0 0 0 auto;
     background-color: var(--primary);
+    border: none;
     border-radius: 50%;
     display: flex;
     justify-content: center;
