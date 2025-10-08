@@ -5,6 +5,7 @@
 @media only screen and (min-width: 0rem) {
   #contact-2061 {
     padding: var(--sectionPadding);
+    padding-top: clamp(8.25rem, 23.82vw, 10.5rem);
     overflow: hidden;
     position: relative;
   }
@@ -73,7 +74,7 @@
     min-height: 50.75rem;
     margin: 0 auto;
     margin-top: 4rem;
-    padding: 1rem 0;
+    padding: 1rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     display: flex;
     justify-content: center;
@@ -180,6 +181,9 @@
     display: none;
     position: absolute;
   }
+  #contact-2061 .tidycal-embed {
+    border-radius: 1rem;
+  }
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
@@ -192,7 +196,7 @@
     gap: clamp(4rem, 3.2vw, 5rem);
   }
   #contact-2061 .cs-title {
-    max-width: 34.375rem;
+    max-width: 40.625rem;
   }
   #contact-2061 .cs-split {
     grid-column: span 6;

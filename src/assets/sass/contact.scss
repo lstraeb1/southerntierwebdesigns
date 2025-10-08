@@ -6,6 +6,7 @@
 @media only screen and (min-width: 0rem) {
     #contact-2061 {
         padding: var(--sectionPadding);
+        padding-top: clamp(8.25rem, 23.82vw, 10.5rem);
         overflow: hidden;
         position: relative;
 
@@ -80,7 +81,7 @@
             min-height: calc(812 / 16 * 1rem);
             margin: 0 auto;    
             margin-top: calc(64 / 16 * 1rem);      
-            padding: calc(16 / 16 * 1rem) 0; 
+            padding: calc(16 / 16 * 1rem); 
             box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); 
             display: flex;
             justify-content: center;
@@ -203,6 +204,10 @@
             display: none;
             position: absolute;
         }
+
+        .tidycal-embed {
+            border-radius: calc(16 / 16 * 1rem);
+        }
     }
 }
 
@@ -220,7 +225,7 @@
         }
 
         .cs-title {
-            max-width: calc(550 / 16 * 1rem);
+            max-width: calc(650 / 16 * 1rem);
         }
 
         .cs-split {
