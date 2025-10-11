@@ -497,7 +497,7 @@
 
         .cs-logo {
             width: auto;
-            max-width: calc(90 / 16 * 1rem);
+            max-width: calc(140 / 16 * 1rem);
             height: 100%;
             margin: 0 auto 0 0;
             /* prevents padding from affecting height and width */
@@ -951,11 +951,11 @@
     #cs-navigation {
         width: 98%;
         max-width: calc(1400 / 16 * 1rem);
-        height: calc(96 / 16 * 1rem);
+        height: auto;
         /* prevents padding from affecting height and width */
         box-sizing: border-box;
         /* 12px - 24px */
-        padding: clamp(0.25rem, 2vw, 1.5rem) 0;
+        padding: clamp(0.25rem, 1vw, 0.75rem) 0;
         background-color: #FFF;
         /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
@@ -977,6 +977,7 @@
             /* prevents padding from affecting height and width */
             box-sizing: border-box;
             padding: 0 calc(48 / 16 * 1rem);
+            padding-left: calc(30 / 16 * 1rem);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -988,9 +989,9 @@
         }
 
         .cs-logo {
-            width: 14.4%;
+            width: 19.4%;
             max-width: calc(350 / 16 * 1rem);
-            height: calc(42 / 16 * 1rem);
+            height: calc(62 / 16 * 1rem);
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
@@ -1346,7 +1347,7 @@
 
             &::before {
                 content: '';
-                background-color: var(--primary);
+                background: linear-gradient(135deg, #119CE2 39%, #004C92 100%);
                 height: auto;
                 // background-blend-mode: hard-light;
                 // opacity: .54;

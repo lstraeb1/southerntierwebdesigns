@@ -120,11 +120,11 @@
 <--- -------------------------- -*/
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #faq-2389 {
+  #services {
     padding: var(--sectionPadding);
     position: relative;
   }
-  #faq-2389 .cs-container {
+  #services .cs-container {
     width: 100%;
     /* changes to 1280px at desktop */
     max-width: 36.5rem;
@@ -136,7 +136,7 @@
     /* 40px - 48px */
     gap: clamp(2.5rem, 5vw, 3rem);
   }
-  #faq-2389 .cs-content {
+  #services .cs-content {
     /* set text align to left if content needs to be left aligned */
     text-align: left;
     width: 100%;
@@ -146,12 +146,12 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  #faq-2389 .cs-title {
+  #services .cs-title {
     /* 20 characters wide including spaces */
     max-width: 20ch;
     margin: 0 auto 1rem 0;
   }
-  #faq-2389 .cs-faq-group {
+  #services .cs-faq-group {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -160,28 +160,28 @@
     align-items: center;
     flex-direction: column;
   }
-  #faq-2389 .cs-faq-item {
+  #services .cs-faq-item {
     list-style: none;
     width: 100%;
     border-bottom: 1px solid #E8EBEF;
     transition: border-bottom 0.3s;
   }
-  #faq-2389 .cs-faq-item.active {
+  #services .cs-faq-item.active {
     border-bottom: 1px solid var(--primary);
   }
-  #faq-2389 .cs-faq-item.active .cs-button .cs-indicator:before {
+  #services .cs-faq-item.active .cs-button .cs-indicator:before {
     transform: translate(-50%, -50%) rotate(360deg);
   }
-  #faq-2389 .cs-faq-item.active .cs-button .cs-indicator:after {
+  #services .cs-faq-item.active .cs-button .cs-indicator:after {
     transform: translate(-50%, -50%) rotate(0deg);
   }
-  #faq-2389 .cs-faq-item.active .cs-item-p {
+  #services .cs-faq-item.active .cs-item-p {
     height: auto;
     /* 20px - 24px bottom */
     padding: 0 0 clamp(1rem, 2vw, 1.5rem) 0;
     opacity: 1;
   }
-  #faq-2389 .cs-button {
+  #services .cs-button {
     font-size: 1.25rem;
     line-height: 1.2em;
     text-align: left;
@@ -198,16 +198,16 @@
     position: relative;
     transition: background-color 0.3s, color 0.3s;
   }
-  #faq-2389 .cs-button:hover {
+  #services .cs-button:hover {
     cursor: pointer;
   }
-  #faq-2389 .cs-button .cs-indicator {
+  #services .cs-button .cs-indicator {
     width: 1.5rem;
     height: 1.5rem;
     position: relative;
     z-index: 1;
   }
-  #faq-2389 .cs-button .cs-indicator:before {
+  #services .cs-button .cs-indicator:before {
     /* left line */
     content: "";
     width: 0.75rem;
@@ -222,7 +222,7 @@
     transform: translate(-50%, -50%);
     transition: transform 0.5s;
   }
-  #faq-2389 .cs-button .cs-indicator:after {
+  #services .cs-button .cs-indicator:after {
     /* right line */
     content: "";
     width: 0.75rem;
@@ -237,11 +237,11 @@
     transform: translate(-50%, -50%) rotate(90deg);
     transition: transform 0.5s;
   }
-  #faq-2389 .cs-button-text {
+  #services .cs-button-text {
     width: 90%;
     display: block;
   }
-  #faq-2389 .cs-item-p {
+  #services .cs-item-p {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     line-height: 1.5em;
@@ -256,7 +256,7 @@
     overflow: hidden;
     transition: opacity 0.3s, padding-bottom 0.3s;
   }
-  #faq-2389 .cs-image-group {
+  #services .cs-image-group {
     text-align: center;
     padding: 16px 0;
     overflow: hidden;
@@ -273,12 +273,12 @@
     z-index: 1;
     background: linear-gradient(135deg, #119CE2 39%, #004C92 100%);
   }
-  #faq-2389 .cs-picture {
+  #services .cs-picture {
     width: 90%;
     border-radius: 0.75rem;
     box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15);
   }
-  #faq-2389 .cs-graphic {
+  #services .cs-graphic {
     width: 30%;
     height: auto;
     position: absolute;
@@ -287,21 +287,21 @@
     z-index: 4;
     box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15);
   }
-  #faq-2389 .cs-subscribe {
+  #services .cs-subscribe {
     /* 32px - 64px top & bottom */
     /* 16px - 48px */
     padding: clamp(2rem, 7vw, 4rem) clamp(1rem, 3.5vw, 3rem);
     padding-bottom: 0;
     box-sizing: border-box;
   }
-  #faq-2389 .cs-form {
+  #services .cs-form {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     position: relative;
     z-index: 1;
   }
-  #faq-2389 .cs-h3 {
+  #services .cs-h3 {
     /* 25px - 31px */
     font-size: clamp(1.5625rem, 3vw, 1.9375rem);
     line-height: 1.2em;
@@ -309,10 +309,10 @@
     margin: 0 0 1rem;
     color: var(--headerColor);
   }
-  #faq-2389 .cs-text {
+  #services .cs-text {
     margin-bottom: 2rem;
   }
-  #faq-2389 .cs-input {
+  #services .cs-input {
     font-size: 1rem;
     width: 100%;
     /* 46px - 56px */
@@ -329,22 +329,22 @@
     position: relative;
     z-index: 1;
   }
-  #faq-2389 .cs-input::placeholder {
+  #services .cs-input::placeholder {
     color: #767676;
   }
-  #faq-2389 .cs-button-solid {
+  #services .cs-button-solid {
     margin-top: 2rem;
   }
-  #faq-2389 .cs-submit {
+  #services .cs-submit {
     line-height: 2.875rem;
     width: 100%;
     border: none;
   }
-  #faq-2389 img {
+  #services img {
     width: 100%;
     height: auto;
   }
-  #faq-2389 .cs-blur {
+  #services .cs-blur {
     width: 120%;
     max-width: 33.9375rem;
     height: auto;
@@ -360,11 +360,11 @@
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-  #faq-2389 .cs-input {
+  #services .cs-input {
     width: 100%;
     padding-right: 10.625rem;
   }
-  #faq-2389 .cs-submit {
+  #services .cs-submit {
     width: auto;
     position: absolute;
     top: 50%;
@@ -374,21 +374,21 @@
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #faq-2389 {
+  #services {
     padding-top: 3.125rem;
   }
-  #faq-2389 .cs-container {
+  #services .cs-container {
     max-width: 80rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 4rem;
   }
-  #faq-2389 .cs-content {
+  #services .cs-content {
     width: 55%;
     padding: 0;
   }
-  #faq-2389 .cs-image-group {
+  #services .cs-image-group {
     text-align: left;
     width: 45vw;
     max-width: 32.6875rem;
@@ -396,7 +396,7 @@
     flex: none;
     order: -1;
   }
-  #faq-2389 .cs-graphic {
+  #services .cs-graphic {
     width: 30%;
     height: auto;
     position: absolute;
