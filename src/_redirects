@@ -1,17 +1,18 @@
-# Redirect all traffic from old domain to new domain
-/* https://leadwellgrowth.com/:splat 301!
+# Redirect ONLY the Southern Tier domains to the new domain
+https://southerntierwebdesigns.com/*      https://leadwellgrowth.com/:splat   301!
+https://www.southerntierwebdesigns.com/*  https://leadwellgrowth.com/:splat   301!
 
-# Sitemap
-/sitemap.xml https://leadwellgrowth.com/sitemap.xml 301!
+# (optional) old sitemap → new sitemap
+https://southerntierwebdesigns.com/sitemap.xml  https://leadwellgrowth.com/sitemap.xml  301!
 
-# Old pages
-/blog https://leadwellgrowth.com/ 301!
-/blog/core-web-vitals-impact https://leadwellgrowth.com/ 301!
-/blog/diy-websites https://leadwellgrowth.com/ 301!
+# Specific old pages → useful targets on the new site
+/about           https://leadwellgrowth.com/           301!
+/contact         https://leadwellgrowth.com/book-call  301!
+/web-design      https://leadwellgrowth.com/           301!
+/pricing         https://leadwellgrowth.com/           301!
+/faq             https://leadwellgrowth.com/           301!
+/seo-services    https://leadwellgrowth.com/           301!
+/blog            https://leadwellgrowth.com/           301!
+/blog/core-web-vitals-impact  https://leadwellgrowth.com/ 301!
+/blog/diy-websites            https://leadwellgrowth.com/ 301!
 /blog/why-businesses-need-website https://leadwellgrowth.com/ 301!
-/about https://leadwellgrowth.com/ 301!
-/contact https://leadwellgrowth.com/book-call 301!
-/web-design https://leadwellgrowth.com/ 301!
-/pricing https://leadwellgrowth.com/ 301!
-/faq https://leadwellgrowth.com/ 301!
-/seo-services https://leadwellgrowth.com/ 301!
