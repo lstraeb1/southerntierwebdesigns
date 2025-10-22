@@ -1,8 +1,21 @@
-https://www.southerntierwebdesigns.com/* https://southerntierwebdesigns.com/:splat 301!
-https://www.southerntierwebdesigns.com/sitemap.xml → https://southerntierwebdesigns.com/sitemap.xml
-/blog                               /about
-/blog/core-web-vitals-impact        /
-/blog/diy-websites                  /
-/blog/why-businesses-need-website   /
+# Redirect everything from Southern Tier Web Designs to Leadwell Growth
+
+# Entire site (catch-all)
+https://www.southerntierwebdesigns.com/* https://leadwellgrowth.com/:splat 301!
+
+# Sitemap
+https://www.southerntierwebdesigns.com/sitemap.xml https://leadwellgrowth.com/sitemap.xml 301!
+
+# Specific old pages (blogs, about) redirect to homepage since they no longer exist
+/blog https://leadwellgrowth.com/ 301!
+/blog/core-web-vitals-impact https://leadwellgrowth.com/ 301!
+/blog/diy-websites https://leadwellgrowth.com/ 301!
+/blog/why-businesses-need-website https://leadwellgrowth.com/ 301!
+/about https://leadwellgrowth.com/ 301!
+
+# New structure
+/ https://leadwellgrowth.com/ 301!
+/book-call https://leadwellgrowth.com/book-call 301!
+
 
 
