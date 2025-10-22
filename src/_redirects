@@ -1,8 +1,8 @@
-https://www.southerntierwebdesigns.com/* https://southerntierwebdesigns.com/:splat 301!
-https://www.southerntierwebdesigns.com/sitemap.xml → https://southerntierwebdesigns.com/sitemap.xml
-/blog                               /about
+https://www.southerntierwebdesigns.com/* https://leadwellgrowth.com/:splat 301!
+
+https://www.southerntierwebdesigns.com/sitemap.xml https://leadwellgrowth.com/sitemap.xml 301!
+/blog                               /
 /blog/core-web-vitals-impact        /
 /blog/diy-websites                  /
 /blog/why-businesses-need-website   /
-
 
