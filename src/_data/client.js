@@ -1,5 +1,5 @@
 module.exports = {
-    "name": "Southern Tier Web Designs",
+    "name": "Leadwell Growth",
     "email": "liam@southerntierwebdesigns.com",
     "phoneForTel": "845-754-6086",
     "phoneFormatted": "(845) 754-6086",
@@ -15,5 +15,5 @@ module.exports = {
         "instagram": "-",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://southerntierwebdesigns.com"
+    "domain": "https://leadwellgrowth.com"
 };
