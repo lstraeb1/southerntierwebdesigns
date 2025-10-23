@@ -1,18 +1,2 @@
-# Redirect all traffic from Southern Tier domains to Leadwell Growth
-/*    https://leadwellgrowth.com/:splat   301!   Host:southerntierwebdesigns.com
-/*    https://leadwellgrowth.com/:splat   301!   Host:www.southerntierwebdesigns.com
-
-# (optional) old sitemap → new sitemap
-/sitemap.xml   https://leadwellgrowth.com/sitemap.xml   301!   Host:southerntierwebdesigns.com
-
-# Specific old pages → useful targets on the new site
-/about           https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
-/contact         https://leadwellgrowth.com/book-call  301!   Host:southerntierwebdesigns.com
-/web-design      https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
-/pricing         https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
-/faq             https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
-/seo-services    https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
-/blog            https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
-/blog/core-web-vitals-impact  https://leadwellgrowth.com/ 301!   Host:southerntierwebdesigns.com
-/blog/diy-websites            https://leadwellgrowth.com/ 301!   Host:southerntierwebdesigns.com
-/blog/why-businesses-need-website https://leadwellgrowth.com/ 301!   Host:southerntierwebdesigns.com
+https://cnytreeservices.com/*                  https://cnytreeservice.com/:splat 301!
+https://www.cnytreeservices.com/*              https://cnytreeservice.com/:splat  301!
