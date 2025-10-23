@@ -1,18 +1,18 @@
-# Redirect ONLY the Southern Tier domains to the new domain
-https://southerntierwebdesigns.com/*      https://leadwellgrowth.com/:splat   301!
-https://www.southerntierwebdesigns.com/*  https://leadwellgrowth.com/:splat   301!
+# Redirect all traffic from Southern Tier domains to Leadwell Growth
+/*    https://leadwellgrowth.com/:splat   301!   Host:southerntierwebdesigns.com
+/*    https://leadwellgrowth.com/:splat   301!   Host:www.southerntierwebdesigns.com
 
 # (optional) old sitemap → new sitemap
-https://southerntierwebdesigns.com/sitemap.xml  https://leadwellgrowth.com/sitemap.xml  301!
+/sitemap.xml   https://leadwellgrowth.com/sitemap.xml   301!   Host:southerntierwebdesigns.com
 
 # Specific old pages → useful targets on the new site
-/about           https://leadwellgrowth.com/           301!
-/contact         https://leadwellgrowth.com/book-call  301!
-/web-design      https://leadwellgrowth.com/           301!
-/pricing         https://leadwellgrowth.com/           301!
-/faq             https://leadwellgrowth.com/           301!
-/seo-services    https://leadwellgrowth.com/           301!
-/blog            https://leadwellgrowth.com/           301!
-/blog/core-web-vitals-impact  https://leadwellgrowth.com/ 301!
-/blog/diy-websites            https://leadwellgrowth.com/ 301!
-/blog/why-businesses-need-website https://leadwellgrowth.com/ 301!
+/about           https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
+/contact         https://leadwellgrowth.com/book-call  301!   Host:southerntierwebdesigns.com
+/web-design      https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
+/pricing         https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
+/faq             https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
+/seo-services    https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
+/blog            https://leadwellgrowth.com/           301!   Host:southerntierwebdesigns.com
+/blog/core-web-vitals-impact  https://leadwellgrowth.com/ 301!   Host:southerntierwebdesigns.com
+/blog/diy-websites            https://leadwellgrowth.com/ 301!   Host:southerntierwebdesigns.com
+/blog/why-businesses-need-website https://leadwellgrowth.com/ 301!   Host:southerntierwebdesigns.com

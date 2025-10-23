@@ -5,7 +5,7 @@
 @media only screen and (min-width: 0rem) {
   #pricing-2063 {
     padding: var(--sectionPadding);
-    padding-top: 3.75rem;
+    padding-top: clamp(8.25rem, 23.82vw, 10.5rem);
     /* clips svg graphic from overflowing the section */
     overflow: hidden;
     position: relative;
@@ -168,8 +168,8 @@
     margin-top: 1px;
     display: block;
   }
-  #pricing-2063 .button-solid {
-    width: 100%;
+  #pricing-2063 .cs-button-solid {
+    width: 60%;
   }
   #pricing-2063 .cs-button-transparent {
     font-size: 1rem;
@@ -330,4 +330,4 @@
   }
 }
 
-/*# sourceMappingURL=pricing.css.map */
+/*# sourceMappingURL=plans.css.map */
