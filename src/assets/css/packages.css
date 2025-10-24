@@ -62,6 +62,9 @@
     grid-column: span 12;
     z-index: 1;
   }
+  #pricing-2063 .cs-item:nth-of-type(2) {
+    border: 2px solid var(--primary);
+  }
   #pricing-2063 .cs-package {
     margin: 0 0 2rem;
     padding: 0 0 1.5rem;
@@ -81,8 +84,8 @@
   }
   #pricing-2063 .cs-name {
     font-size: 1.25rem;
-    font-family: "Anton";
-    font-weight: 400;
+    font-family: "Cabin";
+    font-weight: 700;
     line-height: 1.2em;
     margin: 0 0 0.25rem;
     color: var(--secondary);
@@ -99,8 +102,8 @@
   #pricing-2063 .cs-price {
     /* 39px - 49px */
     font-size: clamp(2.4375rem, 5vw, 3.0625rem);
-    font-family: "Anton";
-    font-weight: 400;
+    font-family: "Cabin";
+    font-weight: 700;
     line-height: 1.2em;
     display: flex;
     justify-content: flex-start;
@@ -329,5 +332,222 @@
     align-items: center;
   }
 }
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-2248 {
+    /* Centers the button */
+    text-align: center;
+    padding: var(--sectionPadding);
+  }
+  #reviews-2248 .cs-container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-2248 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-2248 .cs-title {
+    margin-bottom: 0;
+  }
+  #reviews-2248 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #reviews-2248 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #reviews-2248 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #reviews-2248 .cs-button-solid {
+    /* places it at the bottom of the container in the 3rd position */
+    order: 3;
+  }
+  #reviews-2248 .cs-card-group {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    row-gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #reviews-2248 .cs-item {
+    text-align: left;
+    list-style: none;
+    /* 32px - 40px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(2rem, 5vw, 2.5rem) clamp(1rem, 4vw, 2rem);
+    border: 2px solid #E0E0E0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 50px;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    grid-column: span 12;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2248 .cs-item:before {
+    /* background color */
+    content: "";
+    width: 96%;
+    height: 96%;
+    background-color: #F7F7F7;
+    border-radius: 0.625rem;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: -1;
+  }
+  #reviews-2248 .cs-wrapper {
+    height: auto;
+    width: auto;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2248 .cs-wrapper:before {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background: var(--primary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: calc(100% + 1rem);
+    transform: translateY(-50%);
+  }
+  #reviews-2248 .cs-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* 8px - 16px */
+    gap: clamp(0.8rem, 2vw, 1rem);
+  }
+  #reviews-2248 .cs-picture {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    display: block;
+    flex: none;
+    position: relative;
+    z-index: 1;
+  }
+  #reviews-2248 .cs-picture img {
+    border-radius: 50%;
+  }
+  #reviews-2248 .cs-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #reviews-2248 .cs-quote {
+    width: 1.25rem;
+    height: auto;
+    margin-top: -0.5rem;
+    display: block;
+  }
+  #reviews-2248 .cs-item-text {
+    font-size: 1rem;
+    text-align: inherit;
+    line-height: 1.5em;
+    /* 32px - 40px */
+    margin: 0 0 clamp(2rem, 4vw, 2.5rem);
+    color: var(--bodyTextColor);
+  }
+  #reviews-2248 .cs-name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #reviews-2248 .cs-desc {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-weight: 400;
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-2248 .cs-container {
+    max-width: 80rem;
+  }
+  #reviews-2248 .cs-content {
+    display: flex;
+  }
+  #reviews-2248 .cs-card-group {
+    flex-direction: row;
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #reviews-2248 .cs-item {
+    grid-column: span 4;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #reviews-2248 {
+    padding-top: 3.125rem;
+  }
+}
 
-/*# sourceMappingURL=plans.css.map */
+/*# sourceMappingURL=packages.css.map */

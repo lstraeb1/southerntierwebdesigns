@@ -106,9 +106,9 @@
     .cs-button-solid {
         font-family: "Cabin";
         font-size: calc(16/16 * 1rem);
-        font-weight: 700;
+        font-weight: 400;
         /* 50px - 60px */
-        line-height: clamp(3.75rem, 5vw, 4.375rem);
+        line-height: calc(60 / 16 * 1rem);
         text-align: center;
         text-decoration: none;
         min-width: calc(176/16 * 1rem);
@@ -437,7 +437,7 @@
         box-sizing: border-box;
         /* 12px - 24px */
         padding: clamp(0.75rem, 2vw, 1.5rem);
-        padding-left: clamp(0.25rem, 1vw, 0.5rem);
+        padding-left: clamp(0.75rem, 1.5vw, 1rem);
         /* 12px - 24px */
         border-radius: clamp(0.75rem, 2vw, 1.5rem);
         border: 1px solid rgba(17, 156, 226, 0); /* fully transparent */
@@ -498,7 +498,7 @@
 
         .cs-logo {
             width: auto;
-            max-width: calc(140 / 16 * 1rem);
+            max-width: calc(120 / 16 * 1rem);
             height: 100%;
             margin: 0 auto 0 0;
             /* prevents padding from affecting height and width */
@@ -992,7 +992,7 @@
         .cs-logo {
             width: 19.4%;
             max-width: calc(350 / 16 * 1rem);
-            height: calc(62 / 16 * 1rem);
+            height: calc(52 / 16 * 1rem);
             /* margin-right auto pushes everything away from it to the right */
             margin: 0 auto 0 0;
             padding: 0;
