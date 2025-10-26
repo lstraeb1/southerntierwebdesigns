@@ -6,7 +6,7 @@ https://www.southerntierwebdesigns.com/*              https://leadwellgrowth.com
 /pricing                                              /packages             301!
 /faq                                                  /                     301!
 /seo-services                                         /                     301!
-/content/pages/*                                      /                     410
+/content/pages/*                                      /:splat               301!
 
 <!-- /content/pages/about                                  /                     301!
 /content/pages/blog                                   /                     301!
