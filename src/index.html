@@ -113,6 +113,24 @@ eleventyNavigation:
         </svg> -->
     </section>
 
+    <div id="cs-modal-1605" style="z-index: -10">
+        <div class="cs-wrapper">
+            <img class="cs-icon" loading="eager" decoding="async" src="/assets/svgs/Leadwell-logo-1.svg" alt="clothing" width="64" height="64">
+            <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="clothing" width="24" height="24" aria-hidden="true">
+            </button>
+            <div class="cs-content">
+                <span class="cs-header">
+                    Southern Tier Web Designs Is Now <span class="cs-color">Leadwell Growth!</span>
+                </span>
+                <p class="cs-text">
+                    Same people, different name, more services...
+                </p>
+                <!--If you remove the form because you don't want it, make sure you remove "CSsubmitButton.addEventListener('click', handleClose);" in the JS code. It is adding an event listener on the submit button, if you remove the submit button JS freaks out that its trying to add an event listener to something that isn't there and won't work -->
+            </div>
+        </div>
+    </div>
+
     <!-- ============================================ -->
     <!--                   Services                   -->
     <!-- ============================================ -->
@@ -309,6 +327,49 @@ eleventyNavigation:
 
     {% include 'components/cta.html' %}
     <script src="/assets/js/services.js" defer></script>
+
+    <script>
+        // your local storage reset for local testing. uncomment this command so you can still access you pop up after clicking the close or submit button.
+        localStorage.setItem('modalClosed', 'false');
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Variables
+            var CSmodal = document.getElementById("cs-modal-1605");
+        var CScloseButton = document.getElementById("cs-close-1605");
+        var CSsubmitButton = document.getElementById("cs-submit-1605");
+
+            // Check localStorage to see if the modal has been closed before
+            if (localStorage.getItem('modalClosed') !== 'true') {
+                // Show the modal after 5 seconds
+                setTimeout(function () {
+                    CSmodal.classList.add('cs-loaded');
+                    CSmodal.style.zIndex = 12000; // Set z-index to 12000 to make it visible
+                }, 0);
+            } else {
+                // If modal is marked as closed, make sure it's hidden
+                CSmodal.classList.add('cs-closed');
+                CSmodal.classList.remove('cs-loaded');
+                CSmodal.style.zIndex = -10000; // Set z-index to -1000 to keep it hidden
+            }
+
+            // Close button event listener
+            CScloseButton.addEventListener('click', function () {
+                // Add 'cs-closed' class and remove 'cs-loaded' class
+                CSmodal.classList.add('cs-closed');
+                CSmodal.classList.remove('cs-loaded');
+                CSmodal.style.zIndex = -1000; // Set z-index to -1000 to hide the modal
+
+                // Store the closed state in localStorage
+                localStorage.setItem('modalClosed', 'true');
+            });
+
+            // Optional: Add event listener for the submit button if you want any functionality
+            CSsubmitButton.addEventListener('click', function () {
+                // Your submit button logic here (e.g., form submission)
+            });
+
+        });
+    </script>
     
     <!-- <script>
         document.addEventListener("DOMContentLoaded", () => {
