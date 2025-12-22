@@ -19,7 +19,7 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
 
 
     <!-- Script for Netlify Identity -->
@@ -94,14 +94,14 @@ eleventyNavigation:
                 <!--Hero Image-->
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 720, height: 800 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 720, height: 800 }) | jpeg %}" type="image/jpeg">
+                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 720, height: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
+                    <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 720, height: 800 }) | jpeg %}" type="image/jpeg">
                     <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/hero-img-map.jpg" | resize({ width: 780, height: 850 }) | jpeg %}" alt="local SEO for service businesses" width="390" height="425" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 780, height: 850 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 780, height: 850 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 780, height: 850 }) | jpeg %}" type="image/jpeg">
+                    <img src="{% getUrl "/assets/images/local-map-ranking.jpg" | resize({ width: 780, height: 850 }) | jpeg %}" alt="local SEO for service businesses" width="390" height="425" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
                 </picture>
             </div>
         </div>
@@ -335,8 +335,8 @@ eleventyNavigation:
         document.addEventListener('DOMContentLoaded', function () {
             // Variables
             var CSmodal = document.getElementById("cs-modal-1605");
-        var CScloseButton = document.getElementById("cs-close-1605");
-        var CSsubmitButton = document.getElementById("cs-submit-1605");
+            var CScloseButton = document.getElementById("cs-close-1605");
+            var CSsubmitButton = document.getElementById("cs-submit-1605");
 
             // Check localStorage to see if the modal has been closed before
             if (localStorage.getItem('modalClosed') !== 'true') {
