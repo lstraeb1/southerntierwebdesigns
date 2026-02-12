@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="none">
+  <defs>
+    <!-- Blue gradient for strokes -->
+    <linearGradient id="blueStroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1D4ED8" stop-opacity="0.22"></stop>
+      <stop offset="0.5" stop-color="#3B82F6" stop-opacity="0.18"></stop>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0.14"></stop>
+    </linearGradient>
+
+    <!-- Soft glow -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.5" result="b"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="b"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- faint background wash (optional, remove if you want pure white) -->
+  <rect width="1600" height="900" fill="#FFFFFF"></rect>
+
+  <!-- Top-left sweeping lines -->
+  <g fill="none" stroke="url(#blueStroke)" stroke-width="2" filter="url(#softGlow)">
+    <path d="M-120,220 C180,40 520,40 860,180" opacity="0.55"></path>
+    <path d="M-120,300 C220,80 560,90 940,230" opacity="0.40"></path>
+    <path d="M-120,390 C250,150 640,160 1020,300" opacity="0.30"></path>
+  </g>
+
+  <!-- Bottom-left arcs -->
+  <g fill="none" stroke="url(#blueStroke)" stroke-width="2" filter="url(#softGlow)">
+    <path d="M-140,860 C180,620 460,600 760,720" opacity="0.35"></path>
+    <path d="M-140,940 C220,700 520,680 840,810" opacity="0.25"></path>
+  </g>
+
+  <!-- Right-side “circuit” curves -->
+  <g fill="none" stroke="url(#blueStroke)" stroke-width="2" stroke-linecap="round" filter="url(#softGlow)">
+    <path d="M1320,-40 C1500,120 1520,260 1400,420 C1270,600 1320,740 1540,920" opacity="0.35"></path>
+    <path d="M1440,-60 C1580,100 1600,270 1500,430 C1380,610 1440,760 1600,920" opacity="0.22"></path>
+  </g>
+
+  <!-- Subtle dotted accents -->
+  <g fill="#3B82F6" opacity="0.10">
+    <circle cx="260" cy="170" r="4"></circle>
+    <circle cx="305" cy="205" r="3"></circle>
+    <circle cx="350" cy="240" r="2.5"></circle>
+    <circle cx="1280" cy="260" r="3.5"></circle>
+    <circle cx="1340" cy="320" r="2.5"></circle>
+    <circle cx="1405" cy="380" r="2"></circle>
+  </g>
+</svg>

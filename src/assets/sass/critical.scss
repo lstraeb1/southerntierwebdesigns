@@ -12,14 +12,15 @@
         overflow: hidden;
         position: relative;
         z-index: 1;
+        background-image: url("/assets/svgs/download.svg");
 
         &::before {
             content: "";
             width: 95%;
             height: 100%;
             /* centered version */
-            background: radial-gradient(circle 620px at 50% 30%, #FFFFFF 65%, #EBF8FF 78%, #2471c9 100%);
-            opacity: 1;
+            background: radial-gradient(circle 620px at 50% 30%, #FFFFFF 65%, #EBF8FF 78%, #0077ff 100%);
+            opacity: 0.5;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -39,13 +40,14 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            gap: calc(48/16 * 1rem);
+            gap: calc(24/16 * 1rem);
             position: relative;
             z-index: 2;
         }
 
         .cs-content {
             max-width: calc(630/16 * 1rem);
+            gap: 16px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -74,27 +76,26 @@
         // }
 
         .cs-title {
-            /* 39px - 61px */
-            font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+            /* 39px - 49px */
+            font-size: clamp(2.7375rem, 5vw, 3.5625rem);
             font-weight: 400;
-            line-height: 1.2em;
+            line-height: 1em;
             text-align: center;
             /* 23 characters including spaces wide */
             max-width: 23ch;
-            margin: 0 0 calc(16/16 * 1rem) 0;
             color: #1a1a1a;
             position: relative;
         }
 
         .cs-text {
             /* 16px - 20px */
-            font-size: clamp(1rem, 1.5vw, 1.25rem);
+            font-size: 1rem;
             line-height: 1.5em;
             text-align: center;
             width: 100%;
-            max-width: calc(531/16 * 1rem);
+            max-width: calc(345/16 * 1rem);
             /* 28px - 40px */
-            margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+            margin: 0 0 16px 0;
             color: var(--bodyTextColor);
         }
 
@@ -181,58 +182,46 @@
         }
 
         #list-1405 {
-            display: none;
-        }
-
-        .cs-picture-group {
-            width: 100%;
-            height: 320px;
-            max-width: clamp(20rem, 41.67vw, 25rem);
+            // margin: calc(24 / 16 * 1rem) 0 0 0;
+            padding: 0;
             display: flex;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            position: relative;
-            z-index: 2;
-            border-radius: calc(16 / 16 * 1rem);
-            // background-color: #F7F7F7;
-            border: 1px solid #E0E0E0;
-            box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15);
-            opacity: 0;
-            transform: translateY(20px); /* optional slight upward motion */
-            animation: fadeIn 1s ease-out forwards;
+            gap: calc(8 / 16 * 1rem);
+            margin-bottom: calc(16 / 16 * 1rem);
 
-            &::after {
-                content: "";
-                background-color: #F7F7F7;
-                width: 96%;
-                height: 96%;
-                position: absolute;
-                border-radius: calc(12 / 16 * 1rem);
-                pointer-events: none;
-                left: 50%;
-                top: 50%;
-                transform: translateX(-50%) translateY(-50%);
-                z-index: 1;
+            .cs-li {
+                font-size: calc(13 / 16 * 1rem);
+                padding: 0.25rem;
+                border-radius: calc(100 / 16 * 1rem);
+                list-style: none;
+                line-height: 1.5em;
+                // width: 100%;
+                color: var(--bodyTextColor);
+                display: flex;
+                /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+                align-items: center;
+                gap: calc(4 / 16 * 1rem);
+                text-wrap: nowrap;
+                background-color: #ffffff;
+                border: 1px solid #e8e8e8;
+                box-shadow: 4px 4px 12px rgba(113, 113, 113, 0.1);
             }
 
-            &::before {
-                content: "";
-                background-color: #FFF;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                border-radius: calc(16 / 16 * 1rem);
-                pointer-events: none;
-                z-index: -1;
+            .cs-icon {
+                width: calc(20 / 16 * 1rem);
+                height: auto;
+                /* adds extra space between the icon and top of parent so it's more centered */
+                margin-top: 1px;
+                display: block;
             }
         }
 
         .cs-picture {
-            height: 300px;
-            width: 270px;
-            // background-color: blue; /* optional */
+            width: 95%;
+            max-width: calc(850 / 16 * 1rem);
+            aspect-ratio: 1.75 / 1;
             border-radius: 1rem;
             display: flex;
             justify-content: center;
@@ -241,6 +230,9 @@
             overflow: hidden;
             border-radius: calc(10 / 16 * 1rem);
             z-index: 100;
+            padding: 0.5rem;
+            background-color: #FFF;
+            border: 1px solid #e8e8e8;
 
             img {
                 // position: absolute;
@@ -249,6 +241,7 @@
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
+                border-radius: calc(6 / 16 * 1rem);
             }
         }
 
@@ -291,14 +284,15 @@
         text-align: left;
         padding-left: 3rem;
         padding-right: 3rem;
+        background-image: url("/assets/svgs/download.svg");
 
         &::before {
             content: "";
             width: 95%;
-            height: 100%;
+            height: 60%;
             /* centered version */
-            background: radial-gradient(circle 1900px at 50% -150%, #FFFFFF 65%, #EBF8FF 78%, #60AAFF 100%);
-            opacity: 1;
+            background: radial-gradient(circle 1800px at 50% -150%, #FFFFFF 65%, #EBF8FF 78%, #0077ff 100%);
+            opacity: 0.5;
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -308,27 +302,32 @@
             /* prevents the cursor from interacting with it */
             pointer-events: none;
             border-radius: 0 0 30px 30px;
+            // background-image: url("/assets/images/hero-shapes.jpg");
         }
         
         .cs-container {
-            flex-direction: row;
-            justify-content: space-between;
+            // flex-direction: row;
+            justify-content: center;
         }
 
         .cs-content {
-            width: 50vw;
-            /* prevents flex-box from squishing it */
-            flex: none;
-            align-items: flex-start;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cs-title {
+            max-width: 30ch;
         }
 
         .cs-text {
             margin: 0 0 calc(16 / 16 * 1rem) 0;
+            max-width: none;
         }
 
         .cs-title,
         .cs-text {
-            text-align: left;
+            text-align: center;
         }
 
         .cs-button-solid,
@@ -342,7 +341,8 @@
             padding: 0;
             display: flex;
             flex-direction: row;
-            align-items: flex-start;
+            justify-content: center;
+            align-items: center;
             gap: calc(16 / 16 * 1rem);
             margin-bottom: calc(32 / 16 * 1rem);
 
@@ -353,7 +353,6 @@
                 // width: 100%;
                 color: var(--bodyTextColor);
                 display: flex;
-                justify-content: flex-start;
                 /* push icon top the top so if the list item goes to two lines the icon stays at the top */
                 align-items: flex-start;
                 gap: calc(8 / 16 * 1rem);
@@ -369,26 +368,24 @@
         }
 
         .cs-picture-group {
-            position: absolute;
-            right: 2rem;
-            width: 40vw;
+            width: 100%;
             height: 420px;
-            max-width: 700px;
+            max-width: 868px;
             display: flex;
             justify-content: center;
             align-items: center;
             position: relative;
             z-index: 2;
             border-radius: calc(16 / 16 * 1rem);
+            padding: 0.5rem;
             background-color: #F7F7F7;
             border: 1px solid #E0E0E0;
             box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15);
-            // padding: calc(16 / 16 * 1rem) calc(8 / 16 * 1rem);
         }
 
         .cs-picture {
-            height: 390px;
-            width: 360px;
+            height: 100%;
+            width: 100%;
             // background-color: blue; /* optional */
             border-radius: 1rem;
             display: flex;
