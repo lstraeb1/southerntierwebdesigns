@@ -1,16 +1,30 @@
-https://southerntierwebdesigns.com/*                  https://leadwellgrowth.com/:splat 301!
-https://www.southerntierwebdesigns.com/*              https://leadwellgrowth.com/:splat  301!
-/about                                                /                     301!
-/contact                                              /book-call            301!
-/web-design                                           /                     301!
-/pricing                                              /packages             301!
-/faq                                                  /                     301!
-/seo-services                                         /                     301!
-/content/pages/*                                      /:splat               301!
+# Old domain: one-hop remaps (put FIRST)
 
-<!-- /content/pages/about                                  /                     301!
-/content/pages/blog                                   /                     301!
-/content/pages/faq                                    /                     301!
-/content/pages/contact                                /book-call            301!
-/content/pages/web-design                             /                     301!
-/content/pages/seo-services                           /                     301! -->
+https://southerntierwebdesigns.com/pricing        https://leadwellgrowth.com/packages   301!
+https://southerntierwebdesigns.com/pricing/       https://leadwellgrowth.com/packages   301!
+
+https://southerntierwebdesigns.com/contact        https://leadwellgrowth.com/book-call  301!
+https://southerntierwebdesigns.com/contact/       https://leadwellgrowth.com/book-call  301!
+
+https://southerntierwebdesigns.com/about          https://leadwellgrowth.com/           301!
+https://southerntierwebdesigns.com/about/         https://leadwellgrowth.com/           301!
+
+# www versions
+https://www.southerntierwebdesigns.com/pricing    https://leadwellgrowth.com/packages   301!
+https://www.southerntierwebdesigns.com/pricing/   https://leadwellgrowth.com/packages   301!
+
+https://www.southerntierwebdesigns.com/contact    https://leadwellgrowth.com/book-call  301!
+https://www.southerntierwebdesigns.com/contact/   https://leadwellgrowth.com/book-call  301!
+
+https://www.southerntierwebdesigns.com/about      https://leadwellgrowth.com/           301!
+https://www.southerntierwebdesigns.com/about/     https://leadwellgrowth.com/           301!
+
+
+# Old domain catch-all LAST
+https://southerntierwebdesigns.com/*              https://leadwellgrowth.com/:splat     301!
+https://www.southerntierwebdesigns.com/*          https://leadwellgrowth.com/:splat     301!
+
+
+# New domain internal cleanups
+/pricing    /packages    301!
+/contact    /book-call   301!

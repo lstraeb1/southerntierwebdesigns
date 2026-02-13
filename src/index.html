@@ -19,29 +19,11 @@ eleventyNavigation:
     <link rel="stylesheet" href="/assets/css/critical.css"/>
     
     <!-- Preloads -->
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
 
-    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
     <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
     {% include "components/home-schema.html" %}
 
-    <!-- Script for Netlify Identity -->
-    <!-- <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script> -->
 {% endblock %}
 
 {% block body %}
@@ -75,14 +57,14 @@ eleventyNavigation:
             <!--Hero Image-->
             <picture class="cs-picture">
                 <!--Mobile Image-->
-                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 720, height: 800 }) | avif %}" type="image/avif">
-                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
-                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 720, height: 800 }) | jpeg %}" type="image/jpeg">
+                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 720, height: 800 }) | avif %}" type="image/avif">
+                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
+                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 720, height: 800 }) | jpeg %}" type="image/jpeg">
                 <!--Desktop Image-->
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 780, height: 850 }) | avif %}" type="image/avif">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 780, height: 850 }) | webp %}" type="image/webp">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 780, height: 850 }) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/IMG_0699.jpeg" | resize({ width: 780, height: 850 }) | jpeg %}" alt="local SEO for service businesses" width="390" height="425" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | avif %}" type="image/avif">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | webp %}" type="image/webp">
+                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | jpeg %}" type="image/jpeg">
+                <img src="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | jpeg %}" alt="local SEO for service businesses" width="390" height="425" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
             </picture>
             <a href="/book-call" class="cs-button-solid">
                 <!--SVG Arrow-->
@@ -95,12 +77,6 @@ eleventyNavigation:
                 <span class="button-text">Book A Call</span>
             </a>
         </div>
-        <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
-        <!-- <svg class="cs-wave mobile" data-name="Layer 1" viewBox="0 0 1920 647" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" height="900" width="1920">
-            <g clip-path="url(#a)">
-                <path d="M1920 2.8262C1822.95 -11.8444 1741.41 62.2423 1650.26 211.883C1536.33 398.933 1449.18 337.417 1236.89 464.951C1067.07 566.979 858.094 507.463 774.836 464.951C731.34 435.777 602.866 394.932 436.934 464.951C229.519 552.475 -3.40345 349.046 -4.86412 179C-6.03266 42.9632 0.843634 355.421 -3.70067 646H949.629H1920V2.8262Z"/>
-            </g>
-        </svg> -->
     </section>
 
     <!-- ============================================ -->
@@ -262,7 +238,7 @@ eleventyNavigation:
             <ul class="cs-card-group">
                 <li class="cs-item">
                     <p class="cs-item-text">
-                        I am very pleased with how Liam updated our website. I am in a very competitive field and thanks to Southern tier we have an advantage. Liam listened to my concerns and direction and delivered a perfectly creative example of what a web page should be. It's the perfect balance of information with eye catching design. Thanks for all that you do to keep the phones ringing and ringing for us.
+                        I am very pleased with how Liam updated our website. I am in a very competitive field and thanks to Leadwell Growth we have an advantage. Liam listened to my concerns and direction and delivered a perfectly creative example of what a web page should be. It's the perfect balance of information with eye catching design. Thanks for all that you do to keep the phones ringing and ringing for us.
                     </p>
                     <div class="cs-info">
                         <div class="cs-image-group">

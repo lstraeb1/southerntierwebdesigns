@@ -27,15 +27,42 @@
                             Home
                         </a>
                     </li>
-                    <li class="cs-li">
-                        <a href="/#services" class="cs-li-link {% if page.url == '/#services/' %} cs-active {% endif %}">
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link {% if page.url == '/seo/' or page.url == '/web-design/' %} cs-active {% endif %}">
                             Services
-                        </a>
+                            <img class="cs-drop-icon" src="/assets/svgs/down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <img src="/assets/svgs/seo-nav.svg" alt="SEO services" height="24" width="24">
+                                <a href="/seo" class="cs-li-link cs-drop-link">SEO</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <img src="/assets/svgs/macbook.svg" alt="website design services" height="24" width="24">
+                                <a href="/web-design" class="cs-li-link cs-drop-link">Website Design</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="cs-li">
-                        <a href="/book-call" class="cs-li-link {% if page.url == '/book-call/' %} cs-active {% endif %}">
-                            Contact
+                        <a href="/about" class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}">
+                            About
                         </a>
+                    </li>
+                    <li class="cs-li cs-dropdown" tabindex="0">
+                        <span class="cs-li-link {% if page.url == '/testimonials/' or page.url == '/website-portfolio/' %} cs-active {% endif %}">
+                            Results
+                            <img class="cs-drop-icon" src="/assets/svgs/down.svg" alt="dropdown icon" width="15" height="15" decoding="async" aria-hidden="true">
+                        </span>
+                        <ul class="cs-drop-ul">
+                            <li class="cs-drop-li">
+                                <img src="/assets/svgs/rating.svg" alt="SEO services" height="24" width="24">
+                                <a href="/testimonials" class="cs-li-link cs-drop-link">Testimonials</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <img src="/assets/svgs/macbook.svg" alt="website design services" height="24" width="24">
+                                <a href="/website-portfolio" class="cs-li-link cs-drop-link">Website Portfolio</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
