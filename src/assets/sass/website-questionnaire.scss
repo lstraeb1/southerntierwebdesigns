@@ -6,10 +6,10 @@
 @media only screen and (min-width: 0rem) {
     #contact-2061 {
         padding: var(--sectionPadding);
-        padding-top: clamp(11.25rem, 23.82vw, 18.75rem);
+        padding-top: calc(180 / 16 * 1rem);
         overflow: hidden;
         position: relative;
-        background: linear-gradient(52deg, var(--primary) 0%, var(--secondary) 66%);
+        background: #FFF;
 
         .cs-container {
             width: 100%;
@@ -21,6 +21,8 @@
             gap: calc(40/16 * 1rem);
             border-radius: calc(16 / 16 * 1rem);
             background-color: #FFF;
+            border: 1px solid #e8e8e8;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 50px;
             padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem);
         }
 
