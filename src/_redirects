@@ -1,30 +1,68 @@
-# Old domain: one-hop remaps (put FIRST)
+# ---------------------------------------------
+# OLD DOMAIN -> NEW DOMAIN (one-hop remaps FIRST)
+# ---------------------------------------------
 
-https://southerntierwebdesigns.com/pricing        https://leadwellgrowth.com/packages   301!
-https://southerntierwebdesigns.com/pricing/       https://leadwellgrowth.com/packages   301!
+# Pricing / Packages (no longer exists) -> send to SEO service page (or home)
+https://southerntierwebdesigns.com/pricing            https://leadwellgrowth.com/seo/            301!
+https://southerntierwebdesigns.com/pricing/           https://leadwellgrowth.com/seo/            301!
+https://southerntierwebdesigns.com/packages           https://leadwellgrowth.com/seo/            301!
+https://southerntierwebdesigns.com/packages/          https://leadwellgrowth.com/seo/            301!
 
-https://southerntierwebdesigns.com/contact        https://leadwellgrowth.com/book-call  301!
-https://southerntierwebdesigns.com/contact/       https://leadwellgrowth.com/book-call  301!
+https://www.southerntierwebdesigns.com/pricing        https://leadwellgrowth.com/seo/            301!
+https://www.southerntierwebdesigns.com/pricing/       https://leadwellgrowth.com/seo/            301!
+https://www.southerntierwebdesigns.com/packages       https://leadwellgrowth.com/seo/            301!
+https://www.southerntierwebdesigns.com/packages/      https://leadwellgrowth.com/seo/            301!
 
-https://southerntierwebdesigns.com/about          https://leadwellgrowth.com/           301!
-https://southerntierwebdesigns.com/about/         https://leadwellgrowth.com/           301!
+# Contact -> Book a call
+https://southerntierwebdesigns.com/contact            https://leadwellgrowth.com/book-call/      301!
+https://southerntierwebdesigns.com/contact/           https://leadwellgrowth.com/book-call/      301!
+https://www.southerntierwebdesigns.com/contact        https://leadwellgrowth.com/book-call/      301!
+https://www.southerntierwebdesigns.com/contact/       https://leadwellgrowth.com/book-call/      301!
 
-# www versions
-https://www.southerntierwebdesigns.com/pricing    https://leadwellgrowth.com/packages   301!
-https://www.southerntierwebdesigns.com/pricing/   https://leadwellgrowth.com/packages   301!
+# Blog (no longer exists) -> Home (or About). Home is safest.
+https://southerntierwebdesigns.com/blog               https://leadwellgrowth.com/                 301!
+https://southerntierwebdesigns.com/blog/              https://leadwellgrowth.com/                 301!
+https://www.southerntierwebdesigns.com/blog           https://leadwellgrowth.com/                 301!
+https://www.southerntierwebdesigns.com/blog/          https://leadwellgrowth.com/                 301!
 
-https://www.southerntierwebdesigns.com/contact    https://leadwellgrowth.com/book-call  301!
-https://www.southerntierwebdesigns.com/contact/   https://leadwellgrowth.com/book-call  301!
+# FAQ (no longer exists) -> SEO page (since the SEO page now has FAQs)
+https://southerntierwebdesigns.com/faq                https://leadwellgrowth.com/seo/             301!
+https://southerntierwebdesigns.com/faq/               https://leadwellgrowth.com/seo/             301!
+https://www.southerntierwebdesigns.com/faq            https://leadwellgrowth.com/seo/             301!
+https://www.southerntierwebdesigns.com/faq/           https://leadwellgrowth.com/seo/             301!
 
-https://www.southerntierwebdesigns.com/about      https://leadwellgrowth.com/           301!
-https://www.southerntierwebdesigns.com/about/     https://leadwellgrowth.com/           301!
+# About still exists -> About
+https://southerntierwebdesigns.com/about              https://leadwellgrowth.com/about/           301!
+https://southerntierwebdesigns.com/about/             https://leadwellgrowth.com/about/           301!
+https://www.southerntierwebdesigns.com/about          https://leadwellgrowth.com/about/           301!
+https://www.southerntierwebdesigns.com/about/         https://leadwellgrowth.com/about/           301!
+
+# Web design service page (old slug) -> new slug
+https://southerntierwebdesigns.com/web-design         https://leadwellgrowth.com/web-design/      301!
+https://southerntierwebdesigns.com/web-design/        https://leadwellgrowth.com/web-design/      301!
+https://www.southerntierwebdesigns.com/web-design     https://leadwellgrowth.com/web-design/      301!
+https://www.southerntierwebdesigns.com/web-design/    https://leadwellgrowth.com/web-design/      301!
+
+# If you had old SEO services slug
+https://southerntierwebdesigns.com/seo-services       https://leadwellgrowth.com/seo/             301!
+https://southerntierwebdesigns.com/seo-services/      https://leadwellgrowth.com/seo/             301!
+https://www.southerntierwebdesigns.com/seo-services   https://leadwellgrowth.com/seo/             301!
+https://www.southerntierwebdesigns.com/seo-services/  https://leadwellgrowth.com/seo/             301!
 
 
-# Old domain catch-all LAST
-https://southerntierwebdesigns.com/*              https://leadwellgrowth.com/:splat     301!
-https://www.southerntierwebdesigns.com/*          https://leadwellgrowth.com/:splat     301!
+# ---------------------------------------------
+# OLD DOMAIN catch-all LAST
+# ---------------------------------------------
+https://southerntierwebdesigns.com/*                  https://leadwellgrowth.com/:splat           301!
+https://www.southerntierwebdesigns.com/*              https://leadwellgrowth.com/:splat           301!
 
 
-# New domain internal cleanups
-/pricing    /packages    301!
-/contact    /book-call   301!
+# ---------------------------------------------
+# NEW DOMAIN internal cleanups (optional)
+# ---------------------------------------------
+/contact        /book-call/           301!
+/pricing        /seo/                 301!
+/packages       /seo/                 301!
+/faq            /seo/                 301!
+/blog           /                     301!
+
