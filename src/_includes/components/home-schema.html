@@ -1,21 +1,24 @@
-<!-- WebSite schema (helps Google choose the site name) -->
-<script type="application/ld+json">
-{
+{% set schema = {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://leadwellgrowth.com/#website",
-  "url": "https://leadwellgrowth.com/",
-  "name": "Leadwell Growth",
-}
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": client.domain ~ "/#website",
+      "url": client.domain ~ "/",
+      "name": client.name
+    },
+    {
+      "@type": "Organization",
+      "@id": client.domain ~ "/#organization",
+      "name": client.name,
+      "url": client.domain ~ "/",
+      "email": client.email,
+      "telephone": client.phoneForTel
+    }
+  ]
+} %}
+
+<script type="application/ld+json">
+{{ schema | dump | safe }}
 </script>
 
-<!-- LocalBusiness schema (entity/business details) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://leadwellgrowth.com/#localbusiness",
-  "name": "Leadwell Growth",
-  "url": "https://leadwellgrowth.com/"
-}
-</script>
