@@ -1752,6 +1752,17 @@
             }
         }
 
+        .cs-linkedin {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+            img {
+                width: auto;
+                height: 28px;
+            }
+        }
+
         .cs-social-link {
             /* 32px - 40px */
             width: clamp(2rem, 4vw, 2.5rem);

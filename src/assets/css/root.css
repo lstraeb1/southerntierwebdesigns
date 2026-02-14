@@ -1468,6 +1468,16 @@
     width: auto;
     height: 52px;
   }
+  #cs-footer-487 .cs-linkedin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1rem;
+  }
+  #cs-footer-487 .cs-linkedin img {
+    width: auto;
+    height: 28px;
+  }
   #cs-footer-487 .cs-social-link {
     /* 32px - 40px */
     width: clamp(2rem, 4vw, 2.5rem);
