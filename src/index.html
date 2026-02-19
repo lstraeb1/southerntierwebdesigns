@@ -54,15 +54,24 @@ eleventyNavigation:
                 </ul>                         
             </div>
             <!--Hero Image-->
-            <!-- <picture class="cs-picture">
-                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 720, height: 800 }) | avif %}" type="image/avif">
-                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 720, height: 800 }) | webp %}" type="image/webp">
-                <source media="(max-width: 1023px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 720, height: 800 }) | jpeg %}" type="image/jpeg">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | avif %}" type="image/avif">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | webp %}" type="image/webp">
-                <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | jpeg %}" type="image/jpeg">
-                <img src="{% getUrl "/assets/images/IMG_0704.jpeg" | resize({ width: 780, height: 850 }) | jpeg %}" alt="local SEO for service businesses" width="390" height="425" loading="eager" decoding="async" aria-hidden="true" fetchpriority="high">
-            </picture> -->
+            <div class="cs-picture">
+                <script src="https://fast.wistia.com/player.js" async></script>
+                <script src="https://fast.wistia.com/embed/2y71cbb8bk.js" async type="module"></script>
+
+                <style>
+                wistia-player[media-id="2y71cbb8bk"] {
+                    display: block;
+                    border-radius: 6px;
+                    overflow: hidden;
+                }
+                </style>
+
+                <wistia-player 
+                media-id="2y71cbb8bk" 
+                aspect="1.7777777777777777">
+                </wistia-player>
+
+            </div>
             <a href="/book-call" class="cs-button-solid">
                 <!--SVG Arrow-->
                 <div class="cs-wrapper">
