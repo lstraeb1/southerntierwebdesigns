@@ -1,0 +1,592 @@
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #contact-2061 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(944/16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: calc(40/16 * 1rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            max-width: calc(440 / 16 * 1rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-text {
+            max-width: none;
+        }
+
+        .cs-form {
+            width: 100%;
+            /* 464px - 846px */
+            max-width: clamp(29rem, 59vw, 52.875rem);
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: calc(12/16 * 1rem);
+        }
+
+        .cs-label {
+            font-size: calc(16/16 * 1rem);
+            font-family: "Anton";
+            font-weight: 400;
+            text-transform: uppercase;
+            line-height: 1.5em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            grid-column: span 12;
+            gap: calc(8/16 * 1rem);
+        }
+
+        .cs-input {
+            font-family: "Lato";
+            font-size: calc(16/16 * 1rem);
+            width: 100%;
+            height: calc(56/16 * 1rem);
+            /* prevents padding and border from affecting height and width */
+            box-sizing: border-box;
+            padding-left: calc(24/16 * 1rem);
+            background-color: #f7f7f7;
+            color: var(--bodyTextColor);
+            border: none;
+            border-radius: calc(8/16 * 1rem);
+        }
+
+        .cs-background {
+            background: linear-gradient(146deg, var(--primary) 0%, var(--secondary) 66%);
+            border-radius: 12px;     
+            max-width: 1300px;   
+            min-width: 320px; 
+            min-height: calc(812 / 16 * 1rem);
+            margin: 0 auto;    
+            margin-top: calc(64 / 16 * 1rem);      
+            padding: calc(16 / 16 * 1rem) 0; 
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendly-inline-widget {
+            width: 90%;
+            border-radius: calc(8 / 16 * 1rem);
+            min-height: calc(768 / 16 * 1rem);
+        }
+
+        .cs-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* 16px - 32px */
+            gap: clamp(1rem, 3.2vw, 2rem);
+        }
+
+        .cs-card-group {
+            // width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            /* 16px - 32px */
+            gap: clamp(1rem, 2vw, 2rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            /* prevents padding from affecting height and width */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: calc(16 / 16 * 1rem);
+        }
+
+        .cs-item-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(8 / 16 * 1rem);
+        }
+
+        .cs-item-number {
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--primary);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: calc(8 / 16 * 1rem);
+        }
+
+        .cs-h3 {
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0;
+            color: var(--headerColor);
+        }
+
+        .cs-item-text {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-floater {
+            /* 246px - 582px */
+            width: clamp(15.375rem, 50vw, 36.375rem);
+            height: auto;
+            position: absolute;
+            right: calc(-64 / 16 * 1rem);
+            top: calc(-8 / 16 * 1rem);
+            z-index: -1;
+        }
+
+        .cs-link {
+            color: var(--secondary);
+        }
+
+        .cs-select,
+        .cs-date {
+            /* as the select arrow/date calendar icon are not affected by padding, we can use a transparent border on the select element to pad the arrow as much as we need */
+            border-right: calc(24/16 * 1rem) solid rgba(0, 0, 0, 0);
+        }
+
+        .cs-textarea {
+            height: calc(120/16 * 1rem);
+            margin-bottom: calc(32/16 * 1rem);
+            padding-top: calc(16/16 * 1rem);
+        }
+
+        .cs-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            grid-column: span 12;
+        }
+
+        .cs-submit {
+            border: none;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .cs-graphic {
+            display: none;
+            position: absolute;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #contact-2061 {
+        .cs-content {
+            max-width: 80%;
+        }
+
+        .cs-wrapper {
+            flex-direction: row;
+            align-items: flex-start;
+            gap: clamp(4rem, 3.2vw, 5rem);
+        }
+
+        .cs-title {
+            max-width: calc(550 / 16 * 1rem);
+        }
+
+        .cs-split {
+            grid-column: span 6;
+        }
+
+        .cs-graphic {
+            display: block;
+        }
+
+        .cs-graphic-left {
+            width: calc(528/16 * 1rem);
+            height: auto;
+            bottom: calc(-107/16 * 1rem);
+            left: calc(-393/16 * 1rem);
+        }
+
+        .cs-graphic-right {
+            width: calc(483/16 * 1rem);
+            height: auto;
+            top: calc(-34/16 * 1rem);
+            right: calc(-316/16 * 1rem);
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #contact-2061 {
+        padding-bottom: 100px;
+        .cs-graphic-left {
+            right: calc(-323/16 * 1rem);
+            bottom: calc(52/16 * 1rem);
+        }
+
+        .cs-graphic-right {
+            right: calc(-290/16 * 1rem);
+        }
+    }
+}
+
+/* Large Desktop - 1920px */
+@media only screen and (min-width: 120rem) {
+    #contact-2061 {
+        .cs-graphic-left {
+            margin-right: calc(760/16 * 1rem);
+            right: 50%;
+            // bottom: 0;
+            left: initial;
+        }
+
+        .cs-graphic-right {
+            margin-left: calc(775/16 * 1rem);
+            right: initial;
+            left: 50%;
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #contact-2061 {
+            .cs-title,
+            .cs-text,
+            .cs-label,
+            .cs-input {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-input {
+                background-color: var(--medium);
+                opacity: 0.8;
+
+                &::placeholder {
+                    color: var(--bodyTextColorWhite);
+                }
+            }
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #cs-footer-1761 {
+        padding-right: 4rem;
+        padding-top: 10rem;
+        .cs-container {
+            justify-content: space-between;
+        }
+
+        .cs-logo-group {
+            width: fit-content;
+            margin: 0;
+            margin-right: clamp(1.25rem, 5vw, 2.5rem);
+        }
+
+        .cs-ul-wrapper {
+            margin: 0;
+        }
+
+        .cs-bottom {
+            /* 60px - 80px */
+            margin-top: clamp(3.75rem, 6vw, 5rem);
+        }
+
+        .cs-shape-divider {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+
+            svg {
+                position: relative;
+                display: block;
+                width: calc(100% + 1.3px);
+                height: 169px;
+            }
+
+            .shape-fill {
+                transition: fill 0.3s;
+            }
+        }
+    }
+}
+                                
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #contact-1388 {
+        padding: var(--sectionPadding);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: calc(584 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-direction: column;
+            column-gap: auto;
+            /* 48px - 64px */
+            gap: clamp(2rem, 3vw, 3rem);
+            position: relative;
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            max-width: 23ch;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+
+            .cs-link {
+                color: var(--secondary);
+                text-decoration: underline;
+                display: inline;
+            }
+        }
+
+        .cs-ul {
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: calc(24 / 16 * 1rem);
+            position: relative;
+        }
+
+        .cs-li {
+            list-style: none;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: calc(20 / 16 * 1rem);
+
+            &:hover {
+                .cs-icon-wrapper {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .cs-header {
+            font-size: calc(20 / 16 * 1rem);
+            font-weight: 700;
+            line-height: 1.2em;
+            margin-bottom: calc(12 / 16 * 1rem);
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-link {
+            font-size: calc(16 / 16 * 1rem);
+            line-height: 1.5em;
+            text-decoration: none;
+            color: #767676;
+            display: block;
+            position: relative;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .cs-icon-wrapper {
+            width: calc(60 / 16 * 1rem);
+            height: calc(60 / 16 * 1rem);
+            margin: 0;
+            border-radius: 50%;
+            border: 1px solid #bababa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+            transition: transform 0.3s;
+        }
+
+        .cs-icon {
+            width: calc(24 / 16 * 1rem);
+            height: auto;
+            display: block;
+        }
+
+        .cs-form {
+            width: 100%;
+            max-width: calc(630 / 16 * 1rem);
+            /* 24px - 48px top and bottom */
+            /* 16px - 48px left and right */
+            padding: clamp(1.5rem, 5.18vw, 3rem) clamp(1rem, 4vw, 3rem);
+            /* prevents flexbox from affecting height and width */
+            box-sizing: border-box;
+            background-color: #F7F7F7;
+            border-radius: calc(16 / 16 * 1rem);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: calc(12 / 16 * 1rem);
+        }
+
+        .cs-h3 {
+            /* 20px - 39px */
+            font-size: clamp(1.25rem, 3vw, 2.4375rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            margin: 0 0 calc(4 / 16 * 1rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-label {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            width: 100%;
+            color: var(--headerColor);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: calc(4 / 16 * 1rem);
+        }
+
+        .cs-input {
+            font-size: calc(16 / 16 * 1rem);
+            width: 100%;
+            height: calc(56 / 16 * 1rem);
+            padding: 0;
+            padding-left: calc(24 / 16 * 1rem);
+            color: var(--headerColor);
+            background-color: #fff;
+            border-radius: calc(8 / 16 * 1rem);
+            border: none;
+            /* prevents padding from adding to height and width */
+            box-sizing: border-box;
+            &::placeholder {
+                color: #7d799c;
+                opacity: 0.6;
+            }
+        }
+
+        .cs-textarea {
+            min-height: calc(120 / 16 * 1rem);
+            padding-top: calc(24 / 16 * 1rem);
+            margin-bottom: calc(12 / 16 * 1rem);
+            font-family: inherit;
+        }
+
+        .cs-submit {
+            width: 100%;
+            min-width: calc(200 / 16 * 1rem);
+            border: none;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #contact-1388 {
+        .cs-container {
+            max-width: calc(1280 / 16 * 1rem);
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .cs-content {
+            width: 47%;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-submit {
+            width: auto;
+        }
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #contact-1388 {
+        .cs-form {
+            width: 46%;
+            max-width: calc(578 / 16 * 1rem);
+        }
+
+        .cs-submit {
+            width: auto;
+        }
+    }
+}
+
+/* Large Desktop - 1500px */
+@media only screen and (min-width: 93.75rem) {
+    #contact-1388 {
+        .cs-graphic {
+            display: block;
+        }
+    }
+}

@@ -5,10 +5,10 @@
 @media only screen and (min-width: 0rem) {
   #contact-2061 {
     padding: var(--sectionPadding);
-    padding-top: 11.25rem;
+    padding-top: clamp(11.25rem, 23.82vw, 18.75rem);
     overflow: hidden;
     position: relative;
-    background: #FFF;
+    background: linear-gradient(52deg, var(--primary) 0%, var(--secondary) 66%);
   }
   #contact-2061 .cs-container {
     width: 100%;
@@ -20,8 +20,6 @@
     gap: 2.5rem;
     border-radius: 1rem;
     background-color: #FFF;
-    border: 1px solid #e8e8e8;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 50px;
     padding: clamp(2rem, 5vw, 3rem) clamp(1rem, 4vw, 3rem);
   }
   #contact-2061 .cs-content {
@@ -46,7 +44,7 @@
   }
   #contact-2061 .cs-label {
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.5em;
     width: 100%;
     display: flex;
@@ -55,7 +53,7 @@
     align-items: flex-start;
     grid-column: span 12;
     gap: 0.5rem;
-    font-family: "Cabin";
+    font-family: "Anton";
   }
   #contact-2061 .cs-input {
     font-family: "Lato";
@@ -89,29 +87,6 @@
     display: flex;
     justify-content: flex-start;
     grid-column: span 12;
-  }
-  #contact-2061 .cs-button-solid {
-    font-family: "Cabin";
-    font-size: 1rem;
-    font-weight: 400;
-    /* 50px - 60px */
-    line-height: 3.75rem;
-    text-align: center;
-    text-decoration: none;
-    min-width: 11rem;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    border-radius: 2.5rem;
-    padding: 0 1.5rem;
-    background: linear-gradient(#3BB9F9 0%, #119CE2 50%, #3BB9F9 100%);
-    box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    z-index: 1;
-    transition: 0.2s ease-in;
   }
   #contact-2061 .cs-submit {
     border: none;
