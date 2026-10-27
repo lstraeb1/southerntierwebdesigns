@@ -121,98 +121,35 @@ eleventyNavigation:
     <!--                   Reviews                    -->
     <!-- ============================================ -->
 
-    <section id="reviews-1455">
+    {#- ~9s per review keeps the marquee at roughly 60px/s regardless of how many reviews there are #}
+    <section id="reviews-1455" style="--marquee-duration: {{ reviews.length * 9 }}s">
         <div class="cs-container">
-            <ul class="cs-card-group marquee__group">
+            {#- The marquee needs 3 identical groups so the loop never shows a gap on wide screens. Copies 2 and 3 are hidden from screen readers. -#}
+            {%- for copy in range(0, 3) %}
+            <ul class="cs-card-group marquee__group"{% if not loop.first %} aria-hidden="true"{% endif %}>
+                {%- for review in reviews %}
                 <li class="cs-item">
                     <p class="cs-review">
-                        It’s easy to get overwhelmed by the sheer volume of feedback. With so many more customers and so many ways to connect with their feedback, it’s hard to know to where to start.
+                        {{ review.review }}
                     </p>
                     <div class="cs-flex-group">
                         <picture class="cs-picture">
-                            <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/masonjames.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
+                            {#- Falls back to the Google icon for reviewers without a headshot #}
+                            <img class="cs-profile{% if not review.photo %} cs-profile-google{% endif %}" src="{{ review.photo or '/assets/svgs/search.svg' }}" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
                         </picture>
                         <span class="cs-name">
-                            A
-                            <span class="cs-job">Senior Gardener Farmer</span>
+                            {{ review.name }}
+                            <span class="cs-job">{{ review.job }}</span>
                         </span>
                     </div>
                 </li>
-                <li class="cs-item">
-                    <p class="cs-review">
-                    When you think about collecting customer feedback, it’s easy to get overwhelmed by the sheer volume of it. With so many more customers and so many ways to connect with their feedback, it’s hard to know to where to start.
-                    </p>
-                    <div class="cs-flex-group">
-                        <picture class="cs-picture">
-                            <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/georgethomas.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                        </picture>
-                        <span class="cs-name">
-                            B
-                            <span class="cs-job">Founder of Yokoloko</span>
-                        </span>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <p class="cs-review">
-                        It’s easy to get overwhelmed by the sheer volume of it. With so many more customers and so many ways to connect with their feedback, it’s hard to know to where to start.
-                    </p>
-                    <div class="cs-flex-group">
-                        <picture class="cs-picture">
-                            <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/masonjames.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                        </picture>
-                        <span class="cs-name">
-                            C
-                            <span class="cs-job">Senior Gardener Farmer</span>
-                        </span>
-                    </div>
-                </li>
+                {%- endfor %}
             </ul>
-
-            <ul class="cs-card-group marquee__group">
-                <li class="cs-item">
-                    <p class="cs-review">
-                        It’s easy to get overwhelmed by the sheer volume of feedback. With so many more customers and so many ways to connect with their feedback, it’s hard to know to where to start.
-                    </p>
-                    <div class="cs-flex-group">
-                        <picture class="cs-picture">
-                            <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/masonjames.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                        </picture>
-                        <span class="cs-name">
-                            A
-                            <span class="cs-job">Senior Gardener Farmer</span>
-                        </span>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <p class="cs-review">
-                    When you think about collecting customer feedback, it’s easy to get overwhelmed by the sheer volume of it. With so many more customers and so many ways to connect with their feedback, it’s hard to know to where to start.
-                    </p>
-                    <div class="cs-flex-group">
-                        <picture class="cs-picture">
-                            <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/georgethomas.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                        </picture>
-                        <span class="cs-name">
-                            B
-                            <span class="cs-job">Founder of Yokoloko</span>
-                        </span>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <p class="cs-review">
-                        It’s easy to get overwhelmed by the sheer volume of it. With so many more customers and so many ways to connect with their feedback, it’s hard to know to where to start.
-                    </p>
-                    <div class="cs-flex-group">
-                        <picture class="cs-picture">
-                            <img class="cs-profile" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/masonjames.jpg" decoding="async" alt="profile" width="50" height="50" aria-hidden="true" loading="lazy">
-                        </picture>
-                        <span class="cs-name">
-                            C
-                            <span class="cs-job">Senior Gardener Farmer</span>
-                        </span>
-                    </div>
-                </li>
-            </ul>
+            {%- endfor %}
         </div>
+        <button class="cs-marquee-toggle" type="button" aria-pressed="false" aria-label="Pause reviews">
+            <span class="cs-marquee-icon" aria-hidden="true"></span>
+        </button>
     </section>
 
     <!-- ============================================ -->
@@ -234,7 +171,7 @@ eleventyNavigation:
                     </picture>
                     <!-- Text Grouped For Flexbox-->
                     <div class="cs-flex">
-                        <h3 class="cs-h3">Web Design & Development</h3>
+                        <h3 class="cs-h3">Design & Development</h3>
                         <p class="cs-item-text">
                             Conversion focused, speed-optimized websites that rank well and drive results for your business.
                         </p>
@@ -396,7 +333,7 @@ eleventyNavigation:
                             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-greenacres-mockup.jpeg" | resize({ width: 814, height: 840 }) | avif %}" type="image/avif">
                             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-greenacres-mockup.jpeg" | resize({ width: 814, height: 840 }) | webp %}" type="image/webp">
                             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-greenacres-mockup.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" type="image/jpeg">
-                            <img src="{% getUrl "/assets/images/portfolio-greenacres-mockup.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" alt="Conroy Collective Marketing Agency portfolio website" width="407" height="420" loading="lazy" decoding="async" aria-hidden="true">
+                            <img src="{% getUrl "/assets/images/portfolio-greenacres-mockup.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" alt="Green Acres Landscaping portfolio website" width="407" height="420" loading="lazy" decoding="async" aria-hidden="true">
                          </picture>
                         <div class="cs-item-text">
                             <div class="cs-flex">
@@ -440,26 +377,26 @@ eleventyNavigation:
                 </li>
                 <!-- Card 3 -->
                 <li class="cs-item">
-                    <a href="https://www.conroycollectivefl.com/" class="cs-link" target="_blank">
+                    <a href="https://towlescpas.com/" class="cs-link" target="_blank">
                         <picture class="cs-picture">
                            <!--Mobile Image-->
-                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 576, height: 688 }) | avif %}" type="image/avif">
-                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 576, height: 688 }) | webp %}" type="image/webp">
-                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 576, height: 688 }) | jpeg %}" type="image/jpeg">
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 576, height: 688 }) | avif %}" type="image/avif">
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 576, height: 688 }) | webp %}" type="image/webp">
+                           <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 576, height: 688 }) | jpeg %}" type="image/jpeg">
                            <!--Tablet Image-->
-                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 634, height: 688 }) | avif %}" type="image/avif">
-                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 634, height: 688 }) | webp %}" type="image/webp">
-                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 634, height: 688 }) | jpeg %}" type="image/jpeg">
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 634, height: 688 }) | avif %}" type="image/avif">
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 634, height: 688 }) | webp %}" type="image/webp">
+                           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 634, height: 688 }) | jpeg %}" type="image/jpeg">
                            <!--Desktop Image-->
-                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | avif %}" type="image/avif">
-                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | webp %}" type="image/webp">
-                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" type="image/jpeg">
-                           <img src="{% getUrl "/assets/images/portfolio-conroycollective-mockup1.jpeg" | resize({ width: 814, height: 840 }) | jpeg %}" alt="SUB-G BJJ portfolio website" width="407" height="420" loading="lazy" decoding="async" aria-hidden="true">
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 814, height: 840 }) | avif %}" type="image/avif">
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 814, height: 840 }) | webp %}" type="image/webp">
+                           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 814, height: 840 }) | jpeg %}" type="image/jpeg">
+                           <img src="{% getUrl "/assets/images/portfolio-towles-mockup.jpg" | resize({ width: 814, height: 840 }) | jpeg %}" alt="Kyle J. Towles, CPA portfolio website" width="407" height="420" loading="lazy" decoding="async" aria-hidden="true">
                         </picture>
                         <div class="cs-item-text">
                             <div class="cs-flex">
-                                <h3 class="cs-h3">Conroy Collective</h3>
-                                <span class="cs-desc">A brand development agency in Gainesville, FA</span>
+                                <h3 class="cs-h3">Kyle J. Towles, CPA</h3>
+                                <span class="cs-desc">A Certified Public Accountant in Columbia, SC</span>
                             </div>
                             <picture class="cs-icon-wrapper">
                                 <img class="cs-icon" decoding="async" src="/assets/svgs/portfolio-arrow.svg" alt="arrow" width="413" height="374" aria-hidden="true">
@@ -492,18 +429,18 @@ eleventyNavigation:
             <div class="cs-image-group">
                 <picture class="cs-background">
                    <!--Mobile Image-->
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 560, height: 1040 }) | avif %}" type="image/avif">
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 560, height: 1040 }) | webp %}" type="image/webp">
-                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 560, height: 1040 }) | jpeg %}" type="image/jpeg">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 560, height: 1040 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 560, height: 1040 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 560, height: 1040 }) | jpeg %}" type="image/jpeg">
                    <!--Tablet Image-->
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1100, height: 1040 }) | avif %}" type="image/avif">
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1100, height: 1040 }) | webp %}" type="image/webp">
-                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1100, height: 1040 }) | jpeg %}" type="image/jpeg">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 1100, height: 1040 }) | avif %}" type="image/avif">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 1100, height: 1040 }) | webp %}" type="image/webp">
+                   <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 1100, height: 1040 }) | jpeg %}" type="image/jpeg">
                    <!--Desktop Image-->
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | avif %}" type="image/avif">
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | webp %}" type="image/webp">
-                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" type="image/jpeg">
-                   <img src="{% getUrl "/assets/images/home-headshot-1.jpg" | resize({ width: 1172, height: 1610 }) | jpeg %}" alt="Liam Straebler" width="586" height="805" loading="lazy" decoding="async" aria-hidden="true">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 1172, height: 1610 }) | avif %}" type="image/avif">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 1172, height: 1610 }) | webp %}" type="image/webp">
+                   <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 1172, height: 1610 }) | jpeg %}" type="image/jpeg">
+                   <img src="{% getUrl "/assets/images/home-headshot-2.jpeg" | resize({ width: 1172, height: 1610 }) | jpeg %}" alt="Liam Straebler" width="586" height="805" loading="lazy" decoding="async" aria-hidden="true">
                 </picture>
                 <div class="cs-box">
                     <div class="text">
@@ -512,7 +449,7 @@ eleventyNavigation:
                             Owner/Developer
                         </span>
                     </div>
-                    <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/logo-NT-white2.svg" alt="logo" width="60" height="60">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="/assets/svgs/logo-NT-colored2.svg" alt="logo" width="60" height="60">
                 </div>
             </div>
             <div class="cs-content">
@@ -589,7 +526,7 @@ eleventyNavigation:
                             A streamlined website package for small businesses that need a fast, professional online presence.
                         </p>
                         <span class="cs-price">
-                            $199
+                            $97
                             <span class="cs-duration">/ month</span>
                         </span>
                     </div>
@@ -599,8 +536,9 @@ eleventyNavigation:
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Unlimited edits (24-48 hour turnaround)</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Direct communication with your developer</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Basic SEO setup (meta tags, indexing)</li>
+                        <li class="cs-li cs-disabled"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Review Generation</li>
                         <li class="cs-li cs-disabled"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Blog setup or SEO content</li>
-                        <li class="cs-li cs-disabled"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Performance reports</li>
+                        <li class="cs-li cs-disabled"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Monthly content or integrations</li>
                     </ul>
                     <a href="/book-call" class="cs-button-solid">
                         <!--SVG Arrow-->
@@ -625,17 +563,17 @@ eleventyNavigation:
                             Ideal for growing businesses that want more pages, local SEO, and a stronger foundation for lead generation.
                         </p>
                         <span class="cs-price">
-                            $399
+                            $175
                             <span class="cs-duration">/ month</span>
                         </span>
                     </div>
                     <ul class="cs-ul">
-                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> 4-10 custom pages</li>
+                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> 5 custom pages</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Local SEO optimization (headings, keywords, structure)</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Blog setup included</li>
-                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Monthly performance reports</li>
-                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Edit turnaround within 12-24 hours</li>
+                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Edit turnaround within 24-48 hours</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> 2-year full website redesign included</li>
+                        <li class="cs-li cs-disabled"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Review Generation</li>
                         <li class="cs-li cs-disabled"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Monthly content or integrations</li>
                     </ul>
                     <a href="/book-call" class="cs-button-solid">
@@ -658,17 +596,17 @@ eleventyNavigation:
                             Built for businesses that want to scale, publish, and dominate in search with content and custom solutions.
                         </p>
                         <span class="cs-price">
-                            $499
+                            $297
                             <span class="cs-duration">/ month</span>
                         </span>
                     </div>
                     <ul class="cs-ul">
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> 10+ custom pages</li>
-                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Monthly blog content written and published</li>
-                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Ongoing SEO improvements and keyword tuning</li>
+                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Ongoing SEO improvements & keyword tuning</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Custom integrations (booking, chat, CRM tools)</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Monthly performance reports</li>
-                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Edit turnaround in under 12 hours</li>
+                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Review generation</li>
+                        <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> Edit turnaround within 24-48 hours</li>
                         <li class="cs-li"><img class="cs-icon" src="/assets/svgs/checked-fs.svg" alt="checkmark"> 2-year full website redesign included</li>
                     </ul>
                     <a href="/book-call" class="cs-button-solid">
@@ -686,169 +624,19 @@ eleventyNavigation:
         </div>
     </section>
 
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <!-- Change the min-hight on the cs-review on tablet and desktop to be the same height as the tallest review for a seamless transition -->
-            
-    <section id="reviews-2327">
-        <div class="cs-container">
-            <div class="cs-content">
-                <h2 class="cs-title">Expert Web Design Trusted By Businesses Like Yours</h2>
-            </div>
-            <div class="cs-reviews-wrapper">
-                <div class="cs-wrapper cs-active">
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/yellow-stars.svg" alt="stars" width="130" height="19">
-                    <p class="cs-review">
-                        Liam listened to my concerns and direction and delivered a perfectly creative example of what a web page should be. It's the perfect balance of information with eye catching design. Thanks for all that you do to keep the phones ringing and ringing for us.
-                    </p>
-                    <div class="cs-flex-group">
-                        <div class="cs-info">
-                            <span class="cs-name"> Frank Foster </span>
-                            <span class="cs-job">Green Acres Landscaping</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs-wrapper cs-hidden">
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/yellow-stars.svg" alt="stars" width="130" height="19">
-                    <p class="cs-review">
-                        Southern Tier Web Design is so efficient and helpful throughout the whole process of website development. I worked with Liam Straebler who was very responsive affordable and helpful in every aspect. We were able to collaborate beautifully creating my dream website!
-                    </p>
-                    <div class="cs-flex-group">
-                        <div class="cs-info">
-                            <span class="cs-name"> Alexa Conroy </span>
-                            <span class="cs-job">Conroy Collective</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs-wrapper cs-hidden">
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/yellow-stars.svg" alt="stars" width="130" height="19">
-                    <p class="cs-review">
-                        This young man does exceptional work. I talked to him several times for months prior to using his service, and each time I spoke with him you could hear more and more confidence in his voice. I pulled the trigger and finally had him design a website for me, and I could not be any happier. Within 24 hours several new customers have contacted me through the website just as designed and I've heard nothing but great reviews from everyone that has checked it out. I can't say how thankful I am that I chose Liam. His work is legit and he takes great pride in his website designs.
-                    </p>
-                    <div class="cs-flex-group">
-                        <div class="cs-info">
-                            <span class="cs-name"> Fred Wieland </span>
-                            <span class="cs-job">Fast Freddy's Auto Detailing</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs-wrapper cs-hidden">
-                    <img class="cs-item-stars" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/yellow-stars.svg" alt="stars" width="130" height="19">
-                    <p class="cs-review">
-                        I had a great experience having Liam build my company's website and will be doing more work with him in the future. I highly recommend him to anyone looking to put a website together for their business!
-                    </p>
-                    <div class="cs-flex-group">
-                        <div class="cs-info">
-                            <span class="cs-name"> Andrew Stein </span>
-                            <span class="cs-job">Stein Design & Build</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cs-flex">
-                    <button class="cs-button" aria-label="previous review">
-                        <img class="cs-button-arrow" src="/assets/svgs/black-arrowleft.svg" decoding="async" alt="arrow" width="20" height="20" aria-hidden="true" />
-                    </button>
-                    <button class="cs-button" aria-label="next review">
-                        <img class="cs-button-arrow" src="/assets/svgs/black-arrowright.svg" decoding="async" alt="arrow" width="20" height="20" aria-hidden="true" />
-                    </button>
-                </div>
-            </div>
-        </div>
-        <picture class="cs-picture cs-picture1">
-           <!--Tablet Image-->
-           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-2.png" | resize({ width: 574, height: 574 }) | avif %}" type="image/avif">
-           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-2.png" | resize({ width: 574, height: 574 }) | webp %}" type="image/webp">
-           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-2.png" | resize({ width: 574, height: 574 }) | jpeg %}" type="image/jpeg">
-           <!--Desktop Image-->
-           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-2.png" | resize({ width: 640, height: 640 }) | avif %}" type="image/avif">
-           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-2.png" | resize({ width: 640, height: 640 }) | webp %}" type="image/webp">
-           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-2.png" | resize({ width: 640, height: 640 }) | jpeg %}" type="image/jpeg">
-           <img src="{% getUrl "/assets/images/reviews-phones-2.png" | resize({ width: 640, height: 640 }) | jpeg %}" alt="phones displaying websites" width="320" height="320" loading="lazy" decoding="async" aria-hidden="true">
-        </picture>
-        <picture class="cs-picture cs-picture2">
-           <!--Tablet Image-->
-           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-1.png" | resize({ width: 574, height: 574 }) | avif %}" type="image/avif">
-           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-1.png" | resize({ width: 574, height: 574 }) | webp %}" type="image/webp">
-           <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-1.png" | resize({ width: 574, height: 574 }) | jpeg %}" type="image/jpeg">
-           <!--Desktop Image-->
-           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-1.png" | resize({ width: 640, height: 640 }) | avif %}" type="image/avif">
-           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-1.png" | resize({ width: 640, height: 640 }) | webp %}" type="image/webp">
-           <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/reviews-phones-1.png" | resize({ width: 640, height: 640 }) | jpeg %}" type="image/jpeg">
-           <img src="{% getUrl "/assets/images/reviews-phones-1.png" | resize({ width: 640, height: 640 }) | jpeg %}" alt="phones displaying websites" width="320" height="320" loading="lazy" decoding="async" aria-hidden="true">
-        </picture>
-    </section>
-
     {% include 'components/cta.html' %}
 
     <script>
+        // Pause/play control for the reviews marquee (WCAG 2.2.2 - moving content must be pausable)
         document.addEventListener("DOMContentLoaded", () => {
-            // Get all review wrapper elements
-            const reviewWrappers = document.querySelectorAll("#reviews-2327 .cs-wrapper");
+            const marquee = document.querySelector("#reviews-1455");
+            const toggle = marquee.querySelector(".cs-marquee-toggle");
 
-            // Get navigation buttons (existing ones in your HTML)
-            const prevButton = document.querySelector("#reviews-2327 .cs-flex .cs-button:first-child");
-            const nextButton = document.querySelector("#reviews-2327 .cs-flex .cs-button:last-child");
-
-            // Initialize the current review index
-            let currentReviewIndex = 0;
-
-            // Function to show a specific review
-            const showReview = (index) => {
-                // Hide all reviews
-                reviewWrappers.forEach((wrapper) => {
-                    wrapper.classList.add("cs-hidden");
-                    wrapper.classList.remove("cs-active");
-                });
-
-                // Show the specified review
-                reviewWrappers[index].classList.remove("cs-hidden");
-                reviewWrappers[index].classList.add("cs-active");
-
-                // Update current index
-                currentReviewIndex = index;
-            };
-
-            // Next button click event
-            if (nextButton) {
-                nextButton.addEventListener("click", () => {
-                    let nextIndex = currentReviewIndex + 1;
-
-                    // Loop back to the first review if at the end
-                    if (nextIndex >= reviewWrappers.length) {
-                        nextIndex = 0;
-                    }
-
-                    showReview(nextIndex);
-                });
-            }
-
-            // Previous button click event
-            if (prevButton) {
-                prevButton.addEventListener("click", () => {
-                    let prevIndex = currentReviewIndex - 1;
-
-                    // Loop to the last review if at the beginning
-                    if (prevIndex < 0) {
-                        prevIndex = reviewWrappers.length - 1;
-                    }
-
-                    showReview(prevIndex);
-                });
-            }
-
-            // Initialize by showing the first review and hiding others
-            reviewWrappers.forEach((wrapper, index) => {
-                if (index === 0) {
-                    wrapper.classList.add("cs-active");
-                    wrapper.classList.remove("cs-hidden");
-                } else {
-                    wrapper.classList.add("cs-hidden");
-                    wrapper.classList.remove("cs-active");
-                }
+            toggle.addEventListener("click", () => {
+                const paused = marquee.classList.toggle("cs-paused");
+                toggle.setAttribute("aria-pressed", paused);
+                toggle.setAttribute("aria-label", paused ? "Play reviews" : "Pause reviews");
             });
         });
-                                        
     </script>
 {% endblock %}

@@ -191,10 +191,9 @@
   #content-page-1402 h4,
   #content-page-1402 h5,
   #content-page-1402 h6 {
-    font-weight: 400;
-    font-family: "Anton";
+    font-weight: 600;
+    font-family: "Cabin";
     text-align: inherit;
-    text-transform: uppercase;
     margin: 0 0 1rem 0;
     color: var(--headerColor);
   }

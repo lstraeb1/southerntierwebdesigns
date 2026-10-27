@@ -201,7 +201,7 @@
     height: auto;
   }
   #gallery-1752 .cs-h2 {
-    font-family: "Anton";
+    font-family: "Cabin";
     font-size: clamp(2rem, 3vw, 2.125rem);
   }
   #gallery-1752 .cs-h2, #gallery-1752 .cs-h3 {
@@ -347,7 +347,7 @@
   }
   #sbs-1308 .cs-number {
     font-size: 1.5625rem;
-    font-family: "Anton";
+    font-family: "Cabin";
     line-height: 1.2em;
     font-weight: 400;
     text-align: left;

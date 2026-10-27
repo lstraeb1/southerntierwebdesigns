@@ -201,14 +201,6 @@
     left: 0;
     opacity: 0;
   }
-  /* anton-regular - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: "Anton";
-    font-style: normal;
-    font-weight: 400;
-    src: url("/assets/fonts/anton-v25-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
   /* lato-regular - latin */
   @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -1128,13 +1120,49 @@
     padding: 2rem 1.5rem 0 1.5rem;
   }
   #cta-697 .cs-button-solid {
-    background-color: #FFFFFF;
-    box-shadow: inset 0 -4px 0 #C6C6C6;
-    color: var(--secondaryDark);
-    transition: box-shadow 0.3s;
+    font-family: "Cabin";
+    font-size: 1rem;
+    font-weight: 700;
+    /* 50px - 60px */
+    line-height: clamp(3.75rem, 5vw, 4.375rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 11rem;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    border-radius: 2.5rem;
+    padding: 0 1.5rem 0 0;
+    background: linear-gradient(#3BB9F9 0%, #119CE2 50%, #3BB9F9 100%);
+    box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 1.5rem;
+    z-index: 1;
+    transition: 0.2s ease-in;
+  }
+  #cta-697 .cs-button-solid .button-text {
+    transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
+  }
+  #cta-697 .cs-button-solid .cs-wrapper {
+    width: 2.75rem;
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
   }
   #cta-697 .cs-button-solid:hover {
-    box-shadow: none;
+    transform: scale(0.95);
+  }
+  #cta-697 .cs-button-solid:hover .cs-wrapper {
+    transform: translateX(10px);
+  }
+  #cta-697 .cs-button-solid:hover .button-text {
+    transform: translateX(-10px);
   }
   #cta-697 .laptop {
     width: 100%;
@@ -1241,15 +1269,6 @@
     /* 20px - 40px */
     margin: 0 0 clamp(1.25rem, 5vw, 2.5rem);
     position: relative;
-  }
-  #cs-footer-1761 .cs-button-solid {
-    background-color: #FFFFFF;
-    box-shadow: inset 0 -4px 0 #C6C6C6;
-    color: var(--secondaryDark);
-    transition: box-shadow 0.3s;
-  }
-  #cs-footer-1761 .cs-button-solid:hover {
-    box-shadow: none;
   }
   #cs-footer-1761 .cs-title {
     /* 31px - 39px */

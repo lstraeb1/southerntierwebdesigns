@@ -163,7 +163,7 @@
   }
   .recent-articles .blog-h1 {
     text-transform: uppercase;
-    font-family: "Anton";
+    font-family: "Cabin";
     margin: 1rem 0;
     font-size: clamp(20px, 5vw, 32px);
     line-height: 1.4em;
@@ -295,7 +295,7 @@
     margin-bottom: 1.875rem;
     font-size: 1.25em;
     font-weight: bold;
-    font-family: "Anton";
+    font-family: "Cabin";
     font-weight: 400;
     color: var(--headerColor);
     text-align: center;
@@ -354,7 +354,7 @@
     line-height: 1.5em;
     font-weight: 400;
     color: #000;
-    font-family: "Anton";
+    font-family: "Cabin";
   }
   .blog-sidebar .feature-date {
     display: block;
@@ -454,7 +454,7 @@
     font-size: clamp(20px, 5vw, 39px);
     line-height: 1.4em;
     font-weight: 400;
-    font-family: "Anton";
+    font-family: "Cabin";
     text-transform: uppercase;
     color: #000;
   }
@@ -476,7 +476,7 @@
     line-height: 1.5em;
     font-weight: 400;
     color: #000;
-    font-family: "Anton";
+    font-family: "Cabin";
   }
   .blog-article #blog-content h3 {
     text-transform: uppercase;
@@ -484,7 +484,7 @@
     font-size: 1.5rem;
     line-height: 1.5em;
     font-weight: 400;
-    font-family: "Anton";
+    font-family: "Cabin";
     color: #000;
   }
   .blog-article #blog-content h4,

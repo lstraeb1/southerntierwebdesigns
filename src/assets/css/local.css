@@ -10,7 +10,7 @@
   }
   #reviews-1455::before {
     content: "";
-    width: 20%;
+    width: 0%;
     height: 100%;
     /* left → right */
     background: linear-gradient(90deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
@@ -21,7 +21,7 @@
   }
   #reviews-1455::after {
     content: "";
-    width: 20%;
+    width: 0%;
     height: 100%;
     /* left → right */
     background: linear-gradient(270deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
@@ -63,12 +63,10 @@
     will-change: transform;
     padding: 0;
     animation: none;
+    /* duplicate groups only run in the desktop marquee */
   }
-  #reviews-1455 .cs-card-group:nth-of-type(2) {
+  #reviews-1455 .cs-card-group:not(:first-child) {
     display: none;
-  }
-  #reviews-1455 #reviews-1455 .marquee__group:nth-of-type(2) {
-    animation-name: reviews-scroll-alt;
   }
   #reviews-1455 .cs-item {
     list-style: none;
@@ -113,11 +111,19 @@
   #reviews-1455 .cs-profile {
     width: 3.125rem;
     height: auto;
+    /* keeps non-square headshots round */
+    aspect-ratio: 1;
+    object-fit: cover;
     border-radius: 50%;
+    /* Google icon fallback gets an outline so it reads as an avatar on the white card */
     /* clips image corners to make circle */
     overflow: hidden;
     position: relative;
     display: block;
+  }
+  #reviews-1455 .cs-profile.cs-profile-google {
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
   }
   #reviews-1455 .cs-profile img {
     position: absolute;
@@ -153,7 +159,7 @@
 @media only screen and (min-width: 48rem) {
   #reviews-1455::before {
     content: "";
-    width: 10%;
+    width: 5%;
     height: 100%;
     /* left → right */
     background: linear-gradient(90deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
@@ -164,7 +170,7 @@
   }
   #reviews-1455::after {
     content: "";
-    width: 10%;
+    width: 5%;
     height: 100%;
     /* left → right */
     background: linear-gradient(270deg, rgb(255, 255, 255) 35%, rgba(255, 255, 255, 0.5) 65%, rgba(255, 255, 255, 0) 100%);
@@ -188,7 +194,7 @@
     flex: 0 0 520px;
   }
   #reviews-1455 .cs-container {
-    overflow-x: none;
+    overflow-x: hidden;
     scroll-snap-type: none;
     -webkit-overflow-scrolling: none;
   }
@@ -198,14 +204,12 @@
     align-items: stretch;
     flex-shrink: 0; /* groups must not shrink */
     will-change: transform;
-    animation: reviews-scroll 18s linear infinite;
+    /* duration is set per review in index.html so the speed stays the same as reviews are added */
+    animation: reviews-scroll var(--marquee-duration, 36s) linear infinite;
     padding: 0;
   }
-  #reviews-1455 .cs-card-group:nth-of-type(2) {
+  #reviews-1455 .cs-card-group:not(:first-child) {
     display: flex;
-  }
-  #reviews-1455 #reviews-1455 .marquee__group:nth-of-type(2) {
-    animation-name: reviews-scroll-alt;
   }
   @keyframes reviews-scroll {
     from {
@@ -215,19 +219,81 @@
       transform: translateX(-100%);
     } /* move by one full group width */
   }
-  @keyframes reviews-scroll-alt {
-    from {
-      transform: translateX(100%);
-    } /* start one group-width to the right */
-    to {
-      transform: translateX(0%);
-    }
-  }
 }
-#reviews-1455 .cs-container:hover .marquee__group {
+#reviews-1455 .cs-container:hover .marquee__group,
+#reviews-1455.cs-paused .marquee__group {
   animation-play-state: paused;
 }
 
+#reviews-1455 .cs-marquee-toggle {
+  /* only shown on desktop, where the marquee actually moves */
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 1px solid #1a1a1a;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  /* sits above the fade gradients */
+  z-index: 2;
+  right: 1rem;
+  bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  /* pause icon: two bars */
+  /* play icon: triangle */
+}
+#reviews-1455 .cs-marquee-toggle:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+#reviews-1455 .cs-marquee-toggle:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+#reviews-1455 .cs-marquee-toggle .cs-marquee-icon {
+  width: 0.75rem;
+  height: 0.875rem;
+  border-left: 4px solid #1a1a1a;
+  border-right: 4px solid #1a1a1a;
+  box-sizing: border-box;
+}
+#reviews-1455 .cs-marquee-toggle[aria-pressed=true] .cs-marquee-icon {
+  width: 0;
+  height: 0;
+  border-right: 0;
+  border-top: 0.4375rem solid transparent;
+  border-bottom: 0.4375rem solid transparent;
+  border-left: 0.75rem solid #1a1a1a;
+  margin-left: 0.25rem;
+}
+
+@media only screen and (min-width: 64rem) and (prefers-reduced-motion: no-preference) {
+  #reviews-1455 .cs-marquee-toggle {
+    display: flex;
+  }
+}
+/* Reduced motion on desktop: no marquee, so drop the copies, wrap the cards and remove the edge fades */
+@media only screen and (min-width: 64rem) and (prefers-reduced-motion: reduce) {
+  #reviews-1455::before, #reviews-1455::after {
+    display: none;
+  }
+  #reviews-1455 .cs-container {
+    justify-content: center;
+  }
+  #reviews-1455 .cs-card-group {
+    animation: none;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    justify-content: center;
+    row-gap: 16px;
+  }
+  #reviews-1455 .cs-card-group:not(:first-child) {
+    display: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   #reviews-1455 .marquee__group {
     animation: none;
@@ -351,9 +417,8 @@
   #services-470 .cs-h3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2.5vw, 1.35rem);
-    font-family: "Anton";
-    font-weight: 400;
-    text-transform: uppercase;
+    font-family: "Cabin";
+    font-weight: 600;
     line-height: 1.5em;
     margin: 0;
     /* 8px - 16px */
@@ -968,7 +1033,7 @@
     padding: 1.25rem;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
-    background-color: var(--secondary);
+    background-color: #FFF;
     /* 48px - 80px */
     border-radius: 1rem;
     display: flex;
@@ -982,8 +1047,8 @@
     bottom: clamp(0.75rem, 1.9vw, 1.5rem);
   }
   #sbsr-1444 .cs-box .cs-h3 {
-    font-family: "Anton";
-    color: var(--bodyTextColorWhite);
+    font-family: "Cabin";
+    color: var(--headerColor);
     text-transform: uppercase;
     font-weight: 400;
     margin-bottom: 0;
@@ -1000,7 +1065,7 @@
     font-weight: 400;
     width: 100%;
     margin: 0;
-    color: var(--bodyTextColorWhite);
+    color: var(--bodyTextColor);
   }
 }
 /* Small Desktop - 1024px */
@@ -1323,7 +1388,7 @@
   }
   #pricing-2063 .cs-name {
     font-size: 1.25rem;
-    font-family: "Anton";
+    font-family: "Cabin";
     font-weight: 400;
     line-height: 1.2em;
     margin: 0 0 0.25rem;
@@ -1341,7 +1406,7 @@
   #pricing-2063 .cs-price {
     /* 39px - 49px */
     font-size: clamp(2.4375rem, 5vw, 3.0625rem);
-    font-family: "Anton";
+    font-family: "Cabin";
     font-weight: 400;
     line-height: 1.2em;
     display: flex;
@@ -2011,7 +2076,7 @@
   #reviews-2327 .cs-name {
     font-size: 1rem;
     font-weight: 400;
-    font-family: "Anton";
+    font-family: "Cabin";
     text-transform: uppercase;
     line-height: 1.2em;
     margin: 0;

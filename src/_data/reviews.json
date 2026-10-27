@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Frank Foster",
+        "photo": "/assets/images/review-frank.png",
+        "job": "Green Acres Landscaping",
+        "review": "Liam listened to my concerns and direction and delivered a perfectly creative example of what a web page should be. It's the perfect balance of information with eye catching design. Thanks for all that you do to keep the phones ringing and ringing for us."
+    },
+    {
+        "name": "Fred Wieland",
+        "photo": "/assets/images/review-fred.png",
+        "job": "Fast Freddy's Auto Detailing",
+        "review": "This young man does exceptional work. I pulled the trigger and finally had him design a website for me, and I could not be any happier. Within 24 hours several new customers have contacted me through the website. I can't say how thankful I am that I chose Liam. His work is legit and he takes great pride in his website designs."
+    },
+    {
+        "name": "Alexa Conroy",
+        "job": "Conroy Collective",
+        "review": "Southern Tier Web Design is so efficient and helpful throughout the whole process of website development. I worked with Liam Straebler who was very responsive affordable and helpful in every aspect. We were able to collaborate beautifully creating my dream website!"
+    },
+    {
+        "name": "Andrew Stein",
+        "job": "Stein Design & Build",
+        "review": "I had a great experience having Liam build my company's website and will be doing more work with him in the future. I highly recommend him to anyone looking to put a website together for their business!"
+    }
+]
