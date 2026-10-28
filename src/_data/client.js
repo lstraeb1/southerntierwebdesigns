@@ -4,10 +4,10 @@ module.exports = {
     "phoneForTel": "845-754-6086",
     "phoneFormatted": "(845) 754-6086",
     "address": {
-        "lineOne": "238 West Main St.",
-        "city": "Port Jervis",
+        "lineOne": "40 Murray St.",
+        "city": "Binghamton",
         "state": "NY",
-        "zip": "12771",
+        "zip": "13905",
         "mapLink": ""
     },
     "socials": {

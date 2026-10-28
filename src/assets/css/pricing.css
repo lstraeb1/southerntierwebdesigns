@@ -169,6 +169,10 @@
     margin-top: 1px;
     display: block;
   }
+  #pricing-2063 .cs-popular {
+    /* shows the most popular plan first when the cards are stacked on mobile */
+    order: -1;
+  }
   #pricing-2063 .cs-popular .cs-button-transparent {
     background-color: var(--primary);
     color: #fff;
@@ -232,6 +236,10 @@
   #pricing-2063 .cs-card-group {
     grid-template-columns: repeat(12, 1fr);
     row-gap: 1.25rem;
+  }
+  #pricing-2063 .cs-popular {
+    /* cards sit side by side from here, so return it to the middle */
+    order: 0;
   }
   #pricing-2063 .cs-item {
     grid-column: span 4;

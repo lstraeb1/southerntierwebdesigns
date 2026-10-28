@@ -1005,23 +1005,6 @@
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #gallery-1374 {
-            .cs-title,
-            .cs-text,
-            .cs-h3 {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-text {
-                opacity: 0.8;
-            }
-        }
-    }
-}
-
 /*-- -------------------------- -->
 <---         About Us           -->
 <--- -------------------------- -*/
@@ -1435,6 +1418,8 @@
         }
 
         .cs-popular {
+            /* shows the most popular plan first when the cards are stacked on mobile */
+            order: -1;
             .cs-button-transparent {
                 background-color: var(--primary);
                 color: #fff;
@@ -1513,6 +1498,11 @@
         .cs-card-group {
             grid-template-columns: repeat(12, 1fr);
             row-gap: calc(20/16 * 1rem);
+        }
+
+        .cs-popular {
+            /* cards sit side by side from here, so return it to the middle */
+            order: 0;
         }
 
         .cs-item {

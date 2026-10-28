@@ -10,14 +10,18 @@
         <meta name="description" content="{{ description }}">
         <meta name="keywords" content="">
         <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
+        {% if noindex %}
+        <!-- Set noindex: true in a page's front matter to keep it out of search results -->
+        <meta name="robots" content="noindex, nofollow">
+        {% endif %}
 
         <!--Social Media Display-->
         <meta property="og:title" content="{{ title }}"/>
         <meta property="og:description" content="{{ description }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-        <meta property="og:image" content="/assets/images/og-image-hero3.jpg"/>
-        <meta property="og:image:secure_url" content="/assets/images/og-image-hero3.jpg"/>
+        <meta property="og:image" content="/assets/images/og-image.png"/>
+        <meta property="og:image:secure_url" content="/assets/images/og-image.png"/>
 
         <!--Favicons-->
         <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
@@ -40,7 +44,6 @@
         <!-- Sitewide Stylesheets and Scripts -->
         <link rel="stylesheet" href="/assets/css/root.css">
         <!-- <link rel="stylesheet" href="/assets/css/dark.css"> -->
-        <!-- <link rel="stylesheet" href="/assets/css/blog.css"> -->
         <!-- <script defer src="/assets/js/dark.js"></script> -->
         <script defer src="/assets/js/nav.js"></script>
 

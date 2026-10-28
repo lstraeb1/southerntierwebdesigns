@@ -249,6 +249,9 @@
     flex: none;
     align-items: flex-start;
   }
+  #hero-855 .cs-title {
+    max-width: 14ch;
+  }
   #hero-855 .cs-title,
   #hero-855 .cs-text {
     text-align: left;

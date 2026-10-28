@@ -299,6 +299,10 @@
             align-items: flex-start;
         }
 
+        .cs-title {
+            max-width: 14ch;
+        }
+
         .cs-title,
         .cs-text {
             text-align: left;

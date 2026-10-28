@@ -2,7 +2,14 @@
 https://leadwellgrowth.com/*        https://southerntierwebdesigns.com/:splat  301!
 https://www.leadwellgrowth.com/*    https://southerntierwebdesigns.com/:splat  301!
 
-/blog                               /about
-/blog/core-web-vitals-impact        /
-/blog/diy-websites                  /
-/blog/why-businesses-need-website   /
+# Retired pages (forced with ! because these pages are still built, and Netlify skips unforced redirects when a page exists)
+/testimonials                       /                 301!
+/web-design-portfolio               /web-design       301!
+/roi-calculator                     /seo-services     301!
+
+# Blog (retired)
+/blog                               /                 301!
+/content/pages/blog                 /                 301!
+/blog/core-web-vitals-impact        /web-design       301!
+/blog/diy-websites                  /                 301!
+/blog/why-businesses-need-website   /                 301!
