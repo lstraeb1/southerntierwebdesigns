@@ -103,7 +103,7 @@
         font-size: calc(16/16 * 1rem);
         font-weight: 700;
         /* 50px - 60px */
-        line-height: clamp(3.75rem, 5vw, 4.375rem);
+        line-height: clamp(3.75rem, 5vw, 3.375rem);
         text-align: center;
         text-decoration: none;
         min-width: calc(176/16 * 1rem);
@@ -506,7 +506,8 @@
             height: calc(44 / 16 * 1rem);
             margin: 0 0 0 auto;
             background-color: var(--primary);
-            // border: 1px solid #CFCFCF;
+            // border: 1px solid #ff0000;
+            outline: none;
             border-radius: 50%;
             display: flex;
             justify-content: center;
@@ -1324,68 +1325,9 @@
         }
 
         .cs-button-solid {
-            font-family: "Cabin";
-            font-size: calc(16/16 * 1rem);
-            font-weight: 700;
-            /* 50px - 60px */
-            line-height: clamp(3.75rem, 5vw, 4.375rem);
-            text-align: center;
-            text-decoration: none;
-            min-width: calc(176/16 * 1rem);
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            border-radius: calc(40 / 16 * 1rem);
-            padding: 0 calc(24 / 16 * 1rem) 0 0;
-            background: linear-gradient(#3BB9F9 0%, #119CE2 50%, #3BB9F9 100%);
-            box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
-            color: #ffffff;
-            display: inline-flex;
-            align-items: stretch;
-            justify-content: space-between;
-            gap: calc(24 / 16 * 1rem);
-            z-index: 1;
-            transition: 0.2s ease-in;
-
-            .button-text {
-                transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
-            }
-
-            .cs-wrapper {
-                width: calc(44 / 16 * 1rem);
-                height: auto;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                z-index: 1;
-                position: relative;
-                transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
-
-                // &:before {
-                //     content: "";
-                //     width: 100%;
-                //     height: 100%;
-                //     opacity: 1;
-                //     position: absolute;
-                //     display: block;
-                //     bottom: 0;
-                //     right: 0;
-                //     transition: width 0.3s;
-                //     z-index: -1;
-                // }
-            }
-
-            &:hover {
-                // box-shadow: none;
-                transform: scale(0.95);
-
-                .cs-wrapper { 
-                    transform: translateX(10px);
-                }
-
-                .button-text {
-                    transform: translateX(-10px);
-                }
-            }
+            background: #fff;
+            color: #1a1a1a;
+            background: linear-gradient(#ffffff 0%, #f3f3f3 50%, #ffffff 100%);
         }
 
         .laptop {
@@ -1533,6 +1475,12 @@
             -webkit-text-stroke: 1px var(--primary);
         }
 
+        .cs-button-solid {
+            background: #fff;
+            color: #1a1a1a;
+            background: linear-gradient(#ffffff 0%, #f3f3f3 50%, #ffffff 100%);
+        }
+
         .cs-header {
             font-size: calc(25/16 * 1rem);
             font-family: "Cabin";
@@ -1552,6 +1500,7 @@
         .cs-logo {
             width: calc(217/16 * 1rem);
             height: auto;
+            border-radius: calc(8 / 16 * 1rem);
         }
 
         .cs-text {

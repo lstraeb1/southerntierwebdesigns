@@ -5,7 +5,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #hero-855 {
-    padding: clamp(9.25rem, 23.82vw, 10.5rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+    padding: clamp(9.25rem, 23.82vw, 14.5rem) 1rem clamp(1.75rem, 7.82vw, 6.25rem);
     /* clips the svg wave from overflowing */
     overflow: hidden;
     position: relative;
@@ -68,9 +68,9 @@
   }
   #hero-855 .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+    font-size: clamp(2.7375rem, 5vw, 3.5625rem);
     font-weight: 400;
-    line-height: 1.2em;
+    line-height: 1em;
     text-align: center;
     /* 23 characters including spaces wide */
     max-width: 23ch;
@@ -86,7 +86,7 @@
     width: 100%;
     max-width: 33.1875rem;
     /* 28px - 40px */
-    margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+    margin: 0 0 1.75rem 0;
     color: var(--bodyTextColor);
   }
   #hero-855 .cs-button-group {
@@ -104,7 +104,7 @@
     font-size: 1rem;
     font-weight: 700;
     /* 50px - 60px */
-    line-height: clamp(3.75rem, 5.25vw, 4.375rem);
+    line-height: clamp(3.75rem, 5.25vw, 1.375rem);
     text-align: center;
     text-decoration: none;
     min-width: 11rem;
@@ -115,7 +115,7 @@
     padding: 0 1.5rem 0 0;
     background: none;
     color: #1a1a1a;
-    display: inline-flex;
+    display: none;
     align-items: stretch;
     justify-content: space-between;
     gap: 1.5rem;
@@ -149,7 +149,36 @@
     transform: translateX(-10px);
   }
   #hero-855 #list-1405 {
-    display: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+  #hero-855 #list-1405 .cs-li {
+    font-size: 0.8125rem;
+    padding: 0.25rem;
+    border-radius: 6.25rem;
+    list-style: none;
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+    display: flex;
+    /* push icon top the top so if the list item goes to two lines the icon stays at the top */
+    align-items: center;
+    gap: 0.25rem;
+    text-wrap: nowrap;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    box-shadow: 4px 4px 12px rgba(113, 113, 113, 0.1);
+  }
+  #hero-855 #list-1405 .cs-icon {
+    width: 1.25rem;
+    height: auto;
+    /* adds extra space between the icon and top of parent so it's more centered */
+    margin-top: 1px;
+    display: block;
   }
   #hero-855 .cs-picture {
     width: 100%;
@@ -178,6 +207,12 @@
   }
   #hero-855 .mobile {
     bottom: -0.4375rem;
+  }
+}
+/* Tablet - 1024px */
+@media only screen and (min-width: 48rem) {
+  #hero-855 .cs-button-transparent {
+    display: inline-flex;
   }
 }
 /* Small Desktop - 1024px */
@@ -224,12 +259,13 @@
   }
   #hero-855 #list-1405 {
     width: 100%;
-    margin: 1.5rem 0 0 0;
     padding: 0;
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
     gap: 1rem;
+    margin-bottom: 2.5rem;
   }
   #hero-855 #list-1405 .cs-li {
     font-size: 0.8125rem;
@@ -237,7 +273,6 @@
     line-height: 1.5em;
     color: var(--bodyTextColor);
     display: flex;
-    justify-content: flex-start;
     /* push icon top the top so if the list item goes to two lines the icon stays at the top */
     align-items: flex-start;
     gap: 0.5rem;
@@ -250,12 +285,12 @@
     display: block;
   }
   #hero-855 .cs-picture {
-    width: 90vw;
-    max-width: 88.5rem;
+    width: 100%;
+    max-width: 54.5rem;
     position: absolute;
     top: auto;
-    bottom: -10.25rem;
-    right: -16.25rem;
+    bottom: -7.25rem;
+    right: -7.25rem;
   }
   #hero-855 .cs-wave {
     width: 100%;
@@ -270,8 +305,8 @@
     padding-right: 1rem;
   }
   #hero-855 .cs-picture {
-    right: -20.375rem;
-    bottom: -16rem;
+    right: -3.375rem;
+    bottom: -7rem;
   }
 }
 /*-- -------------------------- -->

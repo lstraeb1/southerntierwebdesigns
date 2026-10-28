@@ -89,7 +89,7 @@
     font-size: 1rem;
     font-weight: 700;
     /* 50px - 60px */
-    line-height: clamp(3.75rem, 5vw, 4.375rem);
+    line-height: clamp(3.75rem, 5vw, 3.375rem);
     text-align: center;
     text-decoration: none;
     min-width: 11rem;
@@ -416,6 +416,7 @@
     height: 2.75rem;
     margin: 0 0 0 auto;
     background-color: var(--primary);
+    outline: none;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1120,49 +1121,9 @@
     padding: 2rem 1.5rem 0 1.5rem;
   }
   #cta-697 .cs-button-solid {
-    font-family: "Cabin";
-    font-size: 1rem;
-    font-weight: 700;
-    /* 50px - 60px */
-    line-height: clamp(3.75rem, 5vw, 4.375rem);
-    text-align: center;
-    text-decoration: none;
-    min-width: 11rem;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-    border-radius: 2.5rem;
-    padding: 0 1.5rem 0 0;
-    background: linear-gradient(#3BB9F9 0%, #119CE2 50%, #3BB9F9 100%);
-    box-shadow: 4px 4px 24px rgba(26, 26, 26, 0.15);
-    color: #ffffff;
-    display: inline-flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 1.5rem;
-    z-index: 1;
-    transition: 0.2s ease-in;
-  }
-  #cta-697 .cs-button-solid .button-text {
-    transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
-  }
-  #cta-697 .cs-button-solid .cs-wrapper {
-    width: 2.75rem;
-    height: auto;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    z-index: 1;
-    position: relative;
-    transition: 0.2s cubic-bezier(0.2, 0, 0.9, 1);
-  }
-  #cta-697 .cs-button-solid:hover {
-    transform: scale(0.95);
-  }
-  #cta-697 .cs-button-solid:hover .cs-wrapper {
-    transform: translateX(10px);
-  }
-  #cta-697 .cs-button-solid:hover .button-text {
-    transform: translateX(-10px);
+    background: #fff;
+    color: #1a1a1a;
+    background: linear-gradient(#ffffff 0%, #f3f3f3 50%, #ffffff 100%);
   }
   #cta-697 .laptop {
     width: 100%;
@@ -1287,6 +1248,11 @@
     /* text outline styles */
     -webkit-text-stroke: 1px var(--primary);
   }
+  #cs-footer-1761 .cs-button-solid {
+    background: #fff;
+    color: #1a1a1a;
+    background: linear-gradient(#ffffff 0%, #f3f3f3 50%, #ffffff 100%);
+  }
   #cs-footer-1761 .cs-header {
     font-size: 1.5625rem;
     font-family: "Cabin";
@@ -1304,6 +1270,7 @@
   #cs-footer-1761 .cs-logo {
     width: 13.5625rem;
     height: auto;
+    border-radius: 0.5rem;
   }
   #cs-footer-1761 .cs-text {
     max-width: 25.75rem;
