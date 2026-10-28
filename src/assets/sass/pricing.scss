@@ -57,7 +57,7 @@
             /* 16px - 40px left & right */
             padding: clamp(1.5rem, 3vw, 2.5rem) clamp(1rem, 3vw, 2.5rem);
             background-color: #fff;
-            border-radius: calc(16/16 * 1rem);
+            border-radius: calc(12/16 * 1rem);
             box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
             border: 1px solid #d9d9d9;
             display: flex;
@@ -90,7 +90,7 @@
         .cs-name {
             font-size: calc(20/16 * 1rem);
             font-family: "Cabin";
-            font-weight: 400;
+            font-weight: 700;
             line-height: 1.2em;
             margin: 0 0 calc(4/16 * 1rem);
             color: var(--secondary);
@@ -110,7 +110,7 @@
             /* 39px - 49px */
             font-size: clamp(2.4375rem, 5vw, 3.0625rem);
             font-family: "Cabin";
-            font-weight: 400;
+            font-weight: 700;
             line-height: 1.2em;
             display: flex;
             justify-content: flex-start;
@@ -137,7 +137,7 @@
             padding: calc(8/16 * 1rem);
             color: #FFF;
             background-color: var(--primary);
-            border-radius: calc(8/16 * 1rem);
+            border-radius: calc(4/16 * 1rem);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -168,6 +168,7 @@
 
         .cs-button-solid {
             margin-top: auto;
+            line-height: 4.275rem;
         }
 
         .cs-disabled {
@@ -185,57 +186,6 @@
             /* adds extra space between the icon and top of parent so it's more centered */
             margin-top: 1px;
             display: block;
-        }
-
-        .button-solid {
-            width: 100%;
-        }
-
-        .cs-button-transparent {
-            font-size: calc(16/16 * 1rem);
-            font-weight: 700;
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-align: center;
-            text-decoration: none;
-            min-width: calc(150/16 * 1rem);
-            margin: auto 0 0;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-            padding: 0 calc(24/16 * 1rem);
-            background-color: transparent;
-            overflow: hidden;
-            color: var(--headerColor);
-            border: 1px solid var(--headerColor);
-            border-radius: calc(8/16 * 1rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            transition: color 0.3s, border-color 0.3s, background-color 0.3s;
-
-            &:before {
-                content: "";
-                width: 0%;
-                height: 100%;
-                background: var(--primary);
-                opacity: 1;
-                border-radius: calc(4/16 * 1rem);
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                transition: width 0.3s;
-            }
-
-            &:hover {
-                background-color: var(--primary);
-                color: #fff;
-                border-color: var(--primary);
-
-                &:before {
-                    width: 100%;
-                }
-            }
         }
 
         .cs-popular {
@@ -380,4 +330,4 @@
             align-items: center;
         }
     }
-}
+}    
