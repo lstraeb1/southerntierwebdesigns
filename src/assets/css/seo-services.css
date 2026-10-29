@@ -234,7 +234,6 @@
     line-height: inherit;
     text-decoration: underline;
     color: var(--secondary);
-    filter: brightness(120%);
   }
   #content-page-1402 ol,
   #content-page-1402 ul {

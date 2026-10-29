@@ -1,24 +1,51 @@
-<!-- {% set schema = {
+{#- Structured data for the homepage. Pulls business details from src/_data/client.js -#}
+{% set schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
       "@id": client.domain ~ "/#website",
       "url": client.domain ~ "/",
-      "name": client.name
+      "name": client.name,
+      "publisher": { "@id": client.domain ~ "/#business" }
     },
     {
-      "@type": "Organization",
-      "@id": client.domain ~ "/#organization",
+      "@type": "ProfessionalService",
+      "@id": client.domain ~ "/#business",
       "name": client.name,
       "url": client.domain ~ "/",
+      "image": client.domain ~ "/assets/images/og-image.png",
+      "description": "Custom small business websites, built, hosted, and updated for one monthly price.",
       "email": client.email,
-      "telephone": client.phoneForTel
+      "telephone": "+1-" ~ client.phoneForTel,
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "name": "Liam Straebler"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": client.address.lineOne,
+        "addressLocality": client.address.city,
+        "addressRegion": client.address.state,
+        "postalCode": client.address.zip,
+        "addressCountry": "US"
+      },
+      "areaServed": "US",
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Web Design", "url": client.domain ~ "/web-design/" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "SEO Services", "url": client.domain ~ "/seo-services/" }
+        }
+      ]
     }
   ]
 } %}
 
 <script type="application/ld+json">
 {{ schema | dump | safe }}
-</script> -->
-
+</script>

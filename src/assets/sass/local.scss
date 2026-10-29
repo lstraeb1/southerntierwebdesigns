@@ -94,7 +94,7 @@
 
         .cs-item {
             list-style: none;
-            flex: 0 0 260px;            /* 100% of the .reviews-viewport width */
+            flex: 0 0 285px;            /* 100% of the .reviews-viewport width */
             max-width: none;
             box-sizing: border-box;
             /* keep your existing styling */
@@ -119,6 +119,19 @@
             width: clamp(3rem, 6vw, 4.5rem);
             height: auto;
             margin-bottom: calc(32 / 16 * 1rem);
+        }
+
+        .cs-stars {
+            margin-bottom: calc(12 / 16 * 1rem);
+            display: flex;
+            gap: calc(2 / 16 * 1rem);
+        }
+
+        .cs-star {
+            width: calc(20 / 16 * 1rem);
+            height: auto;
+            /* Google review yellow */
+            fill: #FBBC04;
         }
 
         .cs-review {
