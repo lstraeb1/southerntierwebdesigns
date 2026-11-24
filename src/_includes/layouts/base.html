@@ -59,7 +59,9 @@
         <main id="main">
             {% block body %}{% endblock %}
         </main>
-            {% include "components/chat-widget.html" %}
+            {% if not hideChatWidget %}
+                {% include "components/chat-widget.html" %}
+            {% endif %}
             {% include "components/footer.html" %}
 
         <!-- Google tag (gtag.js) -->
